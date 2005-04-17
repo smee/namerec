@@ -1,0 +1,25 @@
+Kommandozeilenparameter fürs NameRec
+
+Inputfiles:
+-ic <klassNames>				 fileKlass="klassNamen.txt";
+-ik <wissen klartext>				fileGrundstock="wissenAkt.txt"
+-ir <wissen regexps>				 fileRegexp="regexps.txt";	
+
+Modes für Regeln:
+-rl <rulefile> Loadrules				patFile="pats2.txt";
+-rp <ruleFile> Lade Regeln für NE-recognition		patfile_NE="patPers.txt"			
+
+Parameter
+-pk <n> Max. Sätze Kandidaten 			n_cands=30 
+-pt <d> Threshold für Akzeptanz neues Item	accepted=0.1
+
+
+Outputfiles:
+-oi <itemsfound>				itemFile="itemsFound.txt";
+-om <itemsmaybe>				maybeFile="maybeItems.txt";
+-or <rulematcheskontexts>			fileContexts="kontexts.txt";
+-og <NE-strings>				fileGranted="granted.txt";
+
+
+log auf console
+

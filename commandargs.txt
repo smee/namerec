@@ -1,0 +1,27 @@
+Kommandozeilenparameter fürs Pendel
+
+Inputfiles:
+-ic <klassNames>				 fileKlass="klassNamen.txt";
+-ik <wissen klartext>		 		 fileGrundstock="grundstock.txt"
+-ir <wissen regexps>				 fileRegexp="regexps.txt";	
+
+Modes für Regeln:
+-rl <rulefile> Loadrules				patFile="patterns.txt";			
+
+Parameter
+-pk <n> Max. Sätze Kandidaten 			n_cands=30 
+-pt <d> threshold für anerkennung item		acceptItem=0.1;
+
+
+
+Outputfiles:
+-oi <itemsfound>				itemFile="itemsFound.txt";
+-om <itemsmaybe>				maybeFile="maybeItems.txt";
+-or <rulematcheskontexts>			fileContexts="contexts.txt";
+
+
+log auf console
+
+
+Zum Ändern der Datenbanken:
+In Recognizer.java, Prozedur init, Variablen Verbindung_ws und Verbindung_akt

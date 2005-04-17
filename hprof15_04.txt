@@ -1,0 +1,2207 @@
+JAVA PROFILE 1.0.1, created Fri Apr 15 09:13:09 2005
+
+Header for -Xhprof ASCII Output
+
+Copyright 1998 Sun Microsystems, Inc. 901 San Antonio Road, Palo Alto,
+California, 94303, U.S.A.  All Rights Reserved.
+
+WARNING!  This file format is under development, and is subject to
+change without notice.
+
+This file contains the following types of records:
+
+THREAD START
+THREAD END      mark the lifetime of Java threads
+
+TRACE           represents a Java stack trace.  Each trace consists
+                of a series of stack frames.  Other records refer to
+                TRACEs to identify (1) where object allocations have
+                taken place, (2) the frames in which GC roots were
+                found, and (3) frequently executed methods.
+
+HEAP DUMP       is a complete snapshot of all live objects in the Java
+                heap.  Following distinctions are made:
+
+                ROOT    root set as determined by GC
+                CLS     classes 
+                OBJ     instances
+                ARR     arrays
+
+SITES           is a sorted list of allocation sites.  This identifies
+                the most heavily allocated object types, and the TRACE
+                at which those allocations occurred.
+
+CPU SAMPLES     is a statistical profile of program execution.  The VM
+                periodically samples all running threads, and assigns
+                a quantum to active TRACEs in those threads.  Entries
+                in this record are TRACEs ranked by the percentage of
+                total quanta they consumed; top-ranked TRACEs are
+                typically hot spots in the program.
+
+CPU TIME	is a profile of program execution obtained by measuring
+                the time spent in individual methods (excluding the time
+                spent in callees), as well as by counting the number of
+                times each method is called. Entries in this record are
+                TRACEs ranked by the percentage of total CPU time. The
+                "count" field indicates the number of times each TRACE 
+                is invoked.
+
+MONITOR TIME    is a profile of monitor contention obtained by measuring
+		the time spent by a thread waiting to enter a monitor.
+		Entries in this record are TRACEs ranked by the percentage
+		of total monitor contention time and a brief description
+		of the monitor.  The "count" field indicates the number of 
+		times the monitor was contended at that TRACE.
+
+MONITOR DUMP	is a complete snapshot of all the monitors and threads in 
+		the System.
+
+HEAP DUMP, SITES, CPU SAMPLES|TIME and MONITOR DUMP|TIME records are generated 
+at program exit.  They can also be obtained during program execution by typing 
+Ctrl-\ (on Solaris) or by typing Ctrl-Break (on Win32).
+
+--------
+
+THREAD START (obj=8118838, id = 1, name="Finalizer", group="system")
+THREAD START (obj=8118928, id = 2, name="Reference Handler", group="system")
+THREAD START (obj=81189f0, id = 3, name="main", group="main")
+THREAD START (obj=811a0a0, id = 4, name="HPROF CPU profiler", group="system")
+THREAD START (obj=811d4a8, id = 5, name="Signal Dispatcher", group="system")
+THREAD START (obj=81774b0, id = 6, name="SIGTERM handler", group="system")
+THREAD END (id = 6)
+TRACE 276:
+	java.util.Hashtable.put(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+TRACE 78:
+	java.util.regex.Matcher.reset(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:92)
+	Recognizer.main(Recognizer.java:273)
+TRACE 4:
+	<empty>
+TRACE 286:
+	TextProcessor.getCandidatesOfText(TextProcessor.java:108)
+	Recognizer.main(Recognizer.java:273)
+TRACE 197:
+	java.io.Writer.<init>(<Unknown>:Unknown line)
+	java.io.OutputStreamWriter.<init>(<Unknown>:Unknown line)
+	java.io.FileWriter.<init>(<Unknown>:Unknown line)
+	Rules.output(Rules.java:103)
+TRACE 279:
+	TextProcessor.tokenize(TextProcessor.java:59)
+	TextProcessor.getNEsOfText(TextProcessor.java:134)
+	Recognizer.main(Recognizer.java:280)
+TRACE 121:
+	sun.nio.cs.StreamEncoder$CharsetSE.writeBytes(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder$CharsetSE.implFlushBuffer(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder.flushBuffer(<Unknown>:Unknown line)
+	java.io.OutputStreamWriter.flushBuffer(<Unknown>:Unknown line)
+TRACE 372:
+	Recognizer.main(Recognizer.java:273)
+TRACE 169:
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.ResultSet.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.IO.buildResultSetWithRows(<Unknown>:Unknown line)
+TRACE 168:
+	java.net.SocketOutputStream.write(<Unknown>:Unknown line)
+	java.io.BufferedOutputStream.flushBuffer(<Unknown>:Unknown line)
+	java.io.BufferedOutputStream.flush(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.send(<Unknown>:Unknown line)
+TRACE 47:
+	java.lang.Character.digit(<Unknown>:Unknown line)
+	java.lang.Integer.parseInt(<Unknown>:Unknown line)
+	java.lang.Integer.<init>(<Unknown>:Unknown line)
+	Rules.candidates(Rules.java:135)
+TRACE 294:
+	java.io.OutputStreamWriter.<init>(<Unknown>:Unknown line)
+	java.io.FileWriter.<init>(<Unknown>:Unknown line)
+	Rules.output(Rules.java:103)
+	Rules.candidates(Rules.java:146)
+TRACE 334:
+	java.lang.String.getBytes(<Unknown>:Unknown line)
+	java.io.FileOutputStream.openAppend(<Unknown>:Native method)
+	java.io.FileOutputStream.<init>(<Unknown>:Unknown line)
+	java.io.FileOutputStream.<init>(<Unknown>:Unknown line)
+TRACE 208:
+	java.util.regex.Pattern$Loop.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$GroupTail.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match0(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+TRACE 21:
+	java.net.InetAddress.init(<Unknown>:Native method)
+	java.net.InetAddress.<clinit>(<Unknown>:Unknown line)
+	java.net.InetSocketAddress.<init>(<Unknown>:Unknown line)
+	java.net.Socket.<init>(<Unknown>:Unknown line)
+TRACE 365:
+	Recognizer.main(Recognizer.java:276)
+TRACE 242:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	Pattern.toString(Pattern.java:37)
+	Rules.output(Rules.java:112)
+	Rules.candidates(Rules.java:146)
+TRACE 265:
+	NameTable.insert(NameTable.java:109)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:117)
+	Recognizer.main(Recognizer.java:273)
+TRACE 246:
+	java.util.regex.Matcher.getTextLength(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:92)
+	Recognizer.main(Recognizer.java:273)
+TRACE 116:
+	java.util.Vector.elements(<Unknown>:Unknown line)
+	RulesNE.match(RulesNE.java:189)
+	TextProcessor.getNEsOfText(TextProcessor.java:169)
+	Recognizer.main(Recognizer.java:280)
+TRACE 186:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	RulesNE.output(RulesNE.java:160)
+	RulesNE.match(RulesNE.java:202)
+	TextProcessor.getNEsOfText(TextProcessor.java:169)
+TRACE 107:
+	java.lang.StringBuffer.expandCapacity(<Unknown>:Unknown line)
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Field.getFullName(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+TRACE 326:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:120)
+	Recognizer.main(Recognizer.java:273)
+TRACE 295:
+	java.nio.charset.CharsetDecoder.onMalformedInput(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.isLegalReplacement(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.replaceWith(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.<init>(<Unknown>:Unknown line)
+TRACE 179:
+	java.net.SocketInputStream.available(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.clearReceive(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.clearAllReceive(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+TRACE 314:
+	MatcherNam.getClassificationsOf(MatcherNam.java:529)
+	Recognizer.checkCandidates(Recognizer.java:193)
+	Recognizer.main(Recognizer.java:276)
+TRACE 218:
+	java.io.FileOutputStream.close0(<Unknown>:Native method)
+	java.io.FileOutputStream.close(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder$CharsetSE.implClose(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder.close(<Unknown>:Unknown line)
+TRACE 343:
+	java.lang.Integer.parseInt(<Unknown>:Unknown line)
+	java.lang.Integer.<init>(<Unknown>:Unknown line)
+	RulesNE.match(RulesNE.java:191)
+	TextProcessor.getNEsOfText(TextProcessor.java:169)
+TRACE 210:
+	sun.nio.cs.SingleByteEncoder.encodeArrayLoop(<Unknown>:Unknown line)
+	sun.nio.cs.SingleByteEncoder.encodeLoop(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.encode(<Unknown>:Unknown line)
+	java.lang.StringCoding$CharsetSE.encode(<Unknown>:Unknown line)
+TRACE 17:
+	java.lang.Class.forName0(<Unknown>:Native method)
+	java.lang.Class.forName(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Driver.connect(<Unknown>:Unknown line)
+	java.sql.DriverManager.getConnection(<Unknown>:Unknown line)
+TRACE 283:
+	java.lang.ref.Finalizer.<init>(<Unknown>:Unknown line)
+	java.lang.ref.Finalizer.register(<Unknown>:Unknown line)
+	java.io.FileWriter.<init>(<Unknown>:Unknown line)
+	RulesNE.output(RulesNE.java:155)
+TRACE 54:
+	java.io.FileOutputStream.writeBytes(<Unknown>:Native method)
+	java.io.FileOutputStream.write(<Unknown>:Unknown line)
+	java.io.BufferedOutputStream.flushBuffer(<Unknown>:Unknown line)
+	java.io.BufferedOutputStream.flush(<Unknown>:Unknown line)
+TRACE 327:
+	MatcherNam.getClassificationsOf(MatcherNam.java:530)
+	Recognizer.checkCandidates(Recognizer.java:193)
+	Recognizer.main(Recognizer.java:276)
+TRACE 266:
+	sun.nio.cs.StreamEncoder$CharsetSE.implWrite(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder.write(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder.write(<Unknown>:Unknown line)
+	java.io.OutputStreamWriter.write(<Unknown>:Unknown line)
+TRACE 33:
+	java.util.regex.Pattern$Slice.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match0(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+TRACE 320:
+	java.net.PlainSocketImpl.socketAvailable(<Unknown>:Native method)
+	java.net.PlainSocketImpl.available(<Unknown>:Unknown line)
+	java.net.SocketInputStream.available(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.clearAllReceive(<Unknown>:Unknown line)
+TRACE 262:
+	org.gjt.mm.mysql.Connection.execSQL(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Connection.execSQL(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Statement.executeQuery(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.Statement.executeQuery(<Unknown>:Unknown line)
+TRACE 187:
+	java.lang.ref.Finalizer.register(<Unknown>:Unknown line)
+	java.io.FileWriter.<init>(<Unknown>:Unknown line)
+	RulesNE.output(RulesNE.java:155)
+	RulesNE.match(RulesNE.java:202)
+TRACE 25:
+	org.gjt.mm.mysql.jdbc2.Connection.createStatement(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.Connection.createStatement(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Connection.connectionInit(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.Connection.connectionInit(<Unknown>:Unknown line)
+TRACE 250:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	Rules.output(Rules.java:108)
+	Rules.candidates(Rules.java:146)
+TRACE 248:
+	java.lang.Integer.toString(<Unknown>:Unknown line)
+	java.lang.String.valueOf(<Unknown>:Unknown line)
+	Recognizer.main(Recognizer.java:270)
+TRACE 375:
+	DBaccess.getNof(DBaccess.java:85)
+	DBaccess.getNof(DBaccess.java:72)
+	Recognizer.checkCandidates(Recognizer.java:190)
+	Recognizer.main(Recognizer.java:276)
+TRACE 170:
+	java.lang.Integer.toString(<Unknown>:Unknown line)
+	java.lang.Integer.toString(<Unknown>:Unknown line)
+	java.lang.String.valueOf(<Unknown>:Unknown line)
+	Recognizer.main(Recognizer.java:270)
+TRACE 350:
+	java.lang.ref.FinalReference.<init>(<Unknown>:Unknown line)
+	java.lang.ref.Finalizer.<init>(<Unknown>:Unknown line)
+	java.lang.ref.Finalizer.register(<Unknown>:Unknown line)
+	java.io.FileWriter.<init>(<Unknown>:Unknown line)
+TRACE 382:
+	java.lang.Integer.<init>(<Unknown>:Unknown line)
+	MatcherNam.getClassificationsOf(MatcherNam.java:496)
+	Recognizer.checkCandidates(Recognizer.java:193)
+	Recognizer.main(Recognizer.java:276)
+TRACE 161:
+	java.nio.charset.CharsetEncoder.replaceWith(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.<init>(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.<init>(<Unknown>:Unknown line)
+	sun.nio.cs.SingleByteEncoder.<init>(<Unknown>:Unknown line)
+TRACE 127:
+	sun.nio.cs.StreamEncoder.write(<Unknown>:Unknown line)
+	java.io.OutputStreamWriter.write(<Unknown>:Unknown line)
+	RulesNE.output(RulesNE.java:174)
+	RulesNE.match(RulesNE.java:202)
+TRACE 349:
+	sun.nio.cs.StreamEncoder$CharsetSE.flushLeftoverChar(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder$CharsetSE.implClose(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder.close(<Unknown>:Unknown line)
+	java.io.OutputStreamWriter.close(<Unknown>:Unknown line)
+TRACE 257:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	Recognizer.checkCandidates(Recognizer.java:187)
+	Recognizer.main(Recognizer.java:276)
+TRACE 95:
+	java.io.PrintStream.print(<Unknown>:Unknown line)
+	java.io.PrintStream.println(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:174)
+	Recognizer.main(Recognizer.java:280)
+TRACE 28:
+	org.gjt.mm.mysql.Field.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.getResultSet(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQuery(<Unknown>:Unknown line)
+TRACE 323:
+	DBaccess.getSentence(DBaccess.java:45)
+	DBaccess.getSentence(DBaccess.java:39)
+	Recognizer.main(Recognizer.java:282)
+TRACE 315:
+	java.lang.Character.digit(<Unknown>:Unknown line)
+	java.lang.Integer.parseInt(<Unknown>:Unknown line)
+	java.lang.Integer.<init>(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:98)
+TRACE 160:
+	java.net.PlainSocketImpl.available(<Unknown>:Unknown line)
+	java.net.SocketInputStream.available(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.clearAllReceive(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+TRACE 339:
+	java.lang.Integer.<init>(<Unknown>:Unknown line)
+	Rules.candidates(Rules.java:135)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+	Recognizer.main(Recognizer.java:273)
+TRACE 146:
+	TextProcessor.getNEsOfText(TextProcessor.java:162)
+	Recognizer.main(Recognizer.java:280)
+TRACE 374:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	java.util.Hashtable.toString(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:174)
+	Recognizer.main(Recognizer.java:280)
+TRACE 39:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:38)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:79)
+	Recognizer.main(Recognizer.java:273)
+TRACE 20:
+	java.lang.ClassLoader$NativeLibrary.load(<Unknown>:Native method)
+	java.lang.ClassLoader.loadLibrary0(<Unknown>:Unknown line)
+	java.lang.ClassLoader.loadLibrary(<Unknown>:Unknown line)
+	java.lang.Runtime.loadLibrary0(<Unknown>:Unknown line)
+TRACE 183:
+	java.lang.String.equals(<Unknown>:Unknown line)
+	java.util.Hashtable.get(<Unknown>:Unknown line)
+	RulesNE.match(RulesNE.java:191)
+	TextProcessor.getNEsOfText(TextProcessor.java:169)
+TRACE 198:
+	org.gjt.mm.mysql.EscapeProcessor.escapeSQL(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Statement.executeQuery(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.Statement.executeQuery(<Unknown>:Unknown line)
+	DBaccess.getNof(DBaccess.java:85)
+TRACE 289:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:54)
+	TextProcessor.getNEsOfText(TextProcessor.java:134)
+TRACE 37:
+	java.util.regex.Pattern.matcher(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:147)
+	Recognizer.main(Recognizer.java:280)
+TRACE 62:
+	Annotate.annotate(Annotate.java:88)
+	Recognizer.checkCandidates(Recognizer.java:192)
+	Recognizer.main(Recognizer.java:276)
+TRACE 381:
+	Recognizer.checkCandidates(Recognizer.java:161)
+	Recognizer.main(Recognizer.java:276)
+TRACE 284:
+	java.util.Hashtable$Enumerator.next(<Unknown>:Unknown line)
+	java.util.Hashtable.toString(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:120)
+	Recognizer.main(Recognizer.java:273)
+TRACE 202:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	Rules.output(Rules.java:112)
+	Rules.candidates(Rules.java:146)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+TRACE 6:
+	Recognizer.<clinit>(Recognizer.java:66)
+TRACE 46:
+	java.util.regex.Matcher.<init>(<Unknown>:Unknown line)
+	java.util.regex.Pattern.matcher(<Unknown>:Unknown line)
+	Annotate.annotate(Annotate.java:92)
+	Recognizer.checkCandidates(Recognizer.java:192)
+TRACE 224:
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQuery(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Connection.execSQL(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Connection.execSQL(<Unknown>:Unknown line)
+TRACE 81:
+	TextProcessor.getNEsOfText(TextProcessor.java:144)
+	Recognizer.main(Recognizer.java:280)
+TRACE 72:
+	Annotate.tokenize(Annotate.java:36)
+	Recognizer.checkCandidates(Recognizer.java:191)
+	Recognizer.main(Recognizer.java:276)
+TRACE 57:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:38)
+	TextProcessor.getNEsOfText(TextProcessor.java:134)
+TRACE 227:
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+TRACE 85:
+	java.lang.StringCoding.decode(<Unknown>:Unknown line)
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Buffer.readLenString(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.getResultSet(<Unknown>:Unknown line)
+TRACE 3:
+	java.util.jar.JarFile.<clinit>(<Unknown>:Unknown line)
+	sun.misc.URLClassPath$JarLoader.getJarFile(<Unknown>:Unknown line)
+	sun.misc.URLClassPath$JarLoader.<init>(<Unknown>:Unknown line)
+	sun.misc.URLClassPath$3.run(<Unknown>:Unknown line)
+TRACE 356:
+	java.util.Hashtable.put(<Unknown>:Unknown line)
+	NameTable.insert(NameTable.java:111)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:117)
+	Recognizer.main(Recognizer.java:273)
+TRACE 7:
+	Recognizer.<clinit>(Recognizer.java:67)
+TRACE 180:
+	java.util.Hashtable$Enumerator.hasMoreElements(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:143)
+	Recognizer.main(Recognizer.java:280)
+TRACE 302:
+	Recognizer.main(Recognizer.java:282)
+TRACE 223:
+	java.lang.String.substring(<Unknown>:Unknown line)
+	java.util.StringTokenizer.nextToken(<Unknown>:Unknown line)
+	Annotate.tokenize(Annotate.java:60)
+	Recognizer.checkCandidates(Recognizer.java:191)
+TRACE 243:
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Field.getFullName(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+TRACE 177:
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match0(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+TRACE 102:
+	java.util.AbstractCollection.<init>(<Unknown>:Unknown line)
+	java.util.AbstractList.<init>(<Unknown>:Unknown line)
+	java.util.Vector.<init>(<Unknown>:Unknown line)
+	java.util.Vector.<init>(<Unknown>:Unknown line)
+TRACE 216:
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	NameTable.<init>(NameTable.java:29)
+	Recognizer.checkCandidates(Recognizer.java:170)
+TRACE 338:
+	org.gjt.mm.mysql.ResultSet.getString(<Unknown>:Unknown line)
+	DBaccess.getSentence(DBaccess.java:63)
+	DBaccess.getSentence(DBaccess.java:39)
+	Recognizer.main(Recognizer.java:282)
+TRACE 206:
+	sun.nio.cs.StreamEncoder$CharsetSE.implWrite(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder.write(<Unknown>:Unknown line)
+	java.io.OutputStreamWriter.write(<Unknown>:Unknown line)
+	java.io.BufferedWriter.flushBuffer(<Unknown>:Unknown line)
+TRACE 148:
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+TRACE 298:
+	java.lang.Character.digit(<Unknown>:Unknown line)
+	java.lang.Integer.parseInt(<Unknown>:Unknown line)
+	java.lang.Integer.<init>(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:152)
+TRACE 201:
+	java.lang.StringCoding.encode(<Unknown>:Unknown line)
+	java.lang.StringCoding.encode(<Unknown>:Unknown line)
+	java.lang.String.getBytes(<Unknown>:Unknown line)
+	java.io.FileOutputStream.openAppend(<Unknown>:Native method)
+TRACE 92:
+	java.nio.Buffer.<init>(<Unknown>:Unknown line)
+	java.nio.CharBuffer.<init>(<Unknown>:Unknown line)
+	java.nio.HeapCharBuffer.<init>(<Unknown>:Unknown line)
+	java.nio.CharBuffer.wrap(<Unknown>:Unknown line)
+TRACE 313:
+	TextProcessor.getNEsOfText(TextProcessor.java:127)
+	Recognizer.main(Recognizer.java:280)
+TRACE 132:
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	NameTable.<init>(NameTable.java:29)
+	Rules.candidates(Rules.java:129)
+TRACE 56:
+	org.gjt.mm.mysql.Field.isBinary(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Field.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.getResultSet(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+TRACE 214:
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+TRACE 358:
+	org.gjt.mm.mysql.ResultSet.checkRowPos(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.getString(<Unknown>:Unknown line)
+	DBaccess.getSentence(DBaccess.java:63)
+	DBaccess.getSentence(DBaccess.java:39)
+TRACE 351:
+	java.util.Hashtable.containsKey(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:105)
+	Recognizer.main(Recognizer.java:273)
+TRACE 305:
+	java.util.Vector.<init>(<Unknown>:Unknown line)
+	java.util.Vector.<init>(<Unknown>:Unknown line)
+	java.util.Vector.<init>(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:15)
+TRACE 230:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:54)
+	TextProcessor.getNEsOfText(TextProcessor.java:134)
+	Recognizer.main(Recognizer.java:280)
+TRACE 274:
+	org.gjt.mm.mysql.ResultSet.getUpdateID(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Statement.executeQuery(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.Statement.executeQuery(<Unknown>:Unknown line)
+	DBaccess.getSentence(DBaccess.java:51)
+TRACE 147:
+	java.lang.String.substring(<Unknown>:Unknown line)
+	java.util.StringTokenizer.nextToken(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:62)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:79)
+TRACE 131:
+	TextProcessor.getNEsOfText(TextProcessor.java:152)
+	Recognizer.main(Recognizer.java:280)
+TRACE 124:
+	java.lang.StringCoding$CharsetSE.encode(<Unknown>:Unknown line)
+	java.lang.StringCoding.encode(<Unknown>:Unknown line)
+	java.lang.StringCoding.encode(<Unknown>:Unknown line)
+	java.lang.String.getBytes(<Unknown>:Unknown line)
+TRACE 128:
+	java.lang.Integer.<init>(<Unknown>:Unknown line)
+	RulesNE.match(RulesNE.java:191)
+	TextProcessor.getNEsOfText(TextProcessor.java:169)
+	Recognizer.main(Recognizer.java:280)
+TRACE 188:
+	java.util.Hashtable.get(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:96)
+	Recognizer.main(Recognizer.java:273)
+TRACE 181:
+	java.net.SocketInputStream.read(<Unknown>:Unknown line)
+	java.net.SocketInputStream.read(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.readPacket(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.getResultSet(<Unknown>:Unknown line)
+TRACE 83:
+	java.util.regex.Pattern$Curly.match0(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+TRACE 233:
+	java.util.regex.Pattern$BitClass.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Slice.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match0(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+TRACE 310:
+	Annotate.annotate(Annotate.java:105)
+	Recognizer.checkCandidates(Recognizer.java:192)
+	Recognizer.main(Recognizer.java:276)
+TRACE 133:
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match0(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$GroupHead.match(<Unknown>:Unknown line)
+TRACE 51:
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	NameTable.<init>(NameTable.java:29)
+	RulesNE.match(RulesNE.java:185)
+TRACE 377:
+	TextProcessor.getCandidatesOfText(TextProcessor.java:120)
+	Recognizer.main(Recognizer.java:273)
+TRACE 300:
+	TextProcessor.getNEsOfText(TextProcessor.java:137)
+	Recognizer.main(Recognizer.java:280)
+TRACE 153:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	Rules.output(Rules.java:110)
+	Rules.candidates(Rules.java:146)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+TRACE 137:
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+	Annotate.annotate(Annotate.java:92)
+	Recognizer.checkCandidates(Recognizer.java:192)
+TRACE 42:
+	java.util.regex.Pattern.matcher(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:92)
+	Recognizer.main(Recognizer.java:273)
+TRACE 5:
+	Recognizer.<clinit>(Recognizer.java:55)
+TRACE 369:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:38)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:79)
+	Recognizer.main(Recognizer.java:273)
+TRACE 306:
+	java.lang.Character.toUpperCaseEx(<Unknown>:Unknown line)
+	java.lang.String.toUpperCase(<Unknown>:Unknown line)
+	java.lang.String.toUpperCase(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+TRACE 114:
+	sun.nio.cs.Surrogate$Parser.<init>(<Unknown>:Unknown line)
+	sun.nio.cs.SingleByteEncoder.<init>(<Unknown>:Unknown line)
+	sun.nio.cs.ISO_8859_15$Encoder.<init>(<Unknown>:Unknown line)
+	sun.nio.cs.ISO_8859_15.newEncoder(<Unknown>:Unknown line)
+TRACE 344:
+	TextProcessor.getNEsOfText(TextProcessor.java:130)
+	Recognizer.main(Recognizer.java:280)
+TRACE 108:
+	sun.nio.cs.StreamEncoder.close(<Unknown>:Unknown line)
+	java.io.OutputStreamWriter.close(<Unknown>:Unknown line)
+	RulesNE.output(RulesNE.java:176)
+	RulesNE.match(RulesNE.java:202)
+TRACE 73:
+	java.lang.String.indexOf(<Unknown>:Unknown line)
+	java.lang.String.indexOf(<Unknown>:Unknown line)
+	java.lang.String.indexOf(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.EscapeProcessor.escapeSQL(<Unknown>:Unknown line)
+TRACE 30:
+	java.net.SocketInputStream.socketRead0(<Unknown>:Native method)
+	java.net.SocketInputStream.read(<Unknown>:Unknown line)
+	java.net.SocketInputStream.read(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.reuseAndReadPacket(<Unknown>:Unknown line)
+TRACE 136:
+	sun.nio.cs.SingleByteEncoder.encodeArrayLoop(<Unknown>:Unknown line)
+	sun.nio.cs.SingleByteEncoder.encodeLoop(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.encode(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder$CharsetSE.implWrite(<Unknown>:Unknown line)
+TRACE 130:
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	DBaccess.getSentence(DBaccess.java:45)
+	DBaccess.getSentence(DBaccess.java:39)
+	Recognizer.main(Recognizer.java:282)
+TRACE 67:
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:147)
+TRACE 164:
+	java.net.SocketInputStream.read(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.readPacket(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.getResultSet(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+TRACE 378:
+	java.lang.StringBuffer.expandCapacity(<Unknown>:Unknown line)
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	DBaccess.getSentence(DBaccess.java:63)
+	DBaccess.getSentence(DBaccess.java:39)
+TRACE 336:
+	RulesNE.output(RulesNE.java:170)
+	RulesNE.match(RulesNE.java:202)
+	TextProcessor.getNEsOfText(TextProcessor.java:169)
+	Recognizer.main(Recognizer.java:280)
+TRACE 111:
+	java.nio.CharBuffer.wrap(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder$CharsetSE.implWrite(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder.write(<Unknown>:Unknown line)
+	java.io.OutputStreamWriter.write(<Unknown>:Unknown line)
+TRACE 31:
+	java.lang.System.arraycopy(<Unknown>:Native method)
+	java.util.Vector.ensureCapacityHelper(<Unknown>:Unknown line)
+	java.util.Vector.addElement(<Unknown>:Unknown line)
+	Rules.loadPatterns(Rules.java:79)
+TRACE 362:
+	java.io.UnixFileSystem.prefixLength(<Unknown>:Unknown line)
+	java.io.File.<init>(<Unknown>:Unknown line)
+	java.io.FileOutputStream.<init>(<Unknown>:Unknown line)
+	java.io.FileWriter.<init>(<Unknown>:Unknown line)
+TRACE 220:
+	java.util.Hashtable.getIterator(<Unknown>:Unknown line)
+	java.util.Hashtable.access$100(<Unknown>:Unknown line)
+	java.util.Hashtable$EntrySet.iterator(<Unknown>:Unknown line)
+	java.util.Collections$SynchronizedCollection.iterator(<Unknown>:Unknown line)
+TRACE 212:
+	java.util.Hashtable$Enumerator.hasMoreElements(<Unknown>:Unknown line)
+	Annotate.annotate(Annotate.java:88)
+	Recognizer.checkCandidates(Recognizer.java:192)
+	Recognizer.main(Recognizer.java:276)
+TRACE 337:
+	TextProcessor.getNEsOfText(TextProcessor.java:128)
+	Recognizer.main(Recognizer.java:280)
+TRACE 317:
+	Annotate.annotate(Annotate.java:108)
+	Recognizer.checkCandidates(Recognizer.java:192)
+	Recognizer.main(Recognizer.java:276)
+TRACE 241:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	Pattern.toString(Pattern.java:36)
+	Rules.output(Rules.java:112)
+TRACE 32:
+	java.lang.StringBuffer.expandCapacity(<Unknown>:Unknown line)
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	Pattern.toString(Pattern.java:35)
+	RulesNE.loadPatterns(RulesNE.java:79)
+TRACE 342:
+	DBaccess.getSentence(DBaccess.java:39)
+	Recognizer.main(Recognizer.java:282)
+TRACE 258:
+	java.util.Hashtable.containsKey(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:159)
+	Recognizer.main(Recognizer.java:280)
+TRACE 105:
+	TextProcessor.getNEsOfText(TextProcessor.java:147)
+	Recognizer.main(Recognizer.java:280)
+TRACE 41:
+	java.util.regex.Matcher.<init>(<Unknown>:Unknown line)
+	java.util.regex.Pattern.matcher(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:147)
+	Recognizer.main(Recognizer.java:280)
+TRACE 240:
+	java.lang.StringBuffer.expandCapacity(<Unknown>:Unknown line)
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	Pattern.toString(Pattern.java:35)
+	RulesNE.output(RulesNE.java:170)
+TRACE 238:
+	java.lang.Character.digit(<Unknown>:Unknown line)
+	java.lang.Integer.parseInt(<Unknown>:Unknown line)
+	java.lang.Integer.<init>(<Unknown>:Unknown line)
+	MatcherNam.getClassificationsOf(MatcherNam.java:496)
+TRACE 159:
+	java.util.regex.Pattern$BitClass.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+TRACE 10:
+	Recognizer.<clinit>(Recognizer.java:151)
+TRACE 368:
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	Recognizer.checkCandidates(Recognizer.java:162)
+	Recognizer.main(Recognizer.java:276)
+TRACE 23:
+	java.net.PlainSocketImpl.socketCreate(<Unknown>:Native method)
+	java.net.PlainSocketImpl.create(<Unknown>:Unknown line)
+	java.net.Socket.createImpl(<Unknown>:Unknown line)
+	java.net.Socket.<init>(<Unknown>:Unknown line)
+TRACE 99:
+	java.util.Hashtable.entrySet(<Unknown>:Unknown line)
+	java.util.Hashtable.toString(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:120)
+	Recognizer.main(Recognizer.java:273)
+TRACE 316:
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:38)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:79)
+TRACE 229:
+	java.util.Hashtable.get(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:150)
+	Recognizer.main(Recognizer.java:280)
+TRACE 19:
+	org.gjt.mm.mysql.MysqlIO.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.IO.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.Connection.createNewIO(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Connection.connectionInit(<Unknown>:Unknown line)
+TRACE 9:
+	Recognizer.<clinit>(Recognizer.java:149)
+TRACE 308:
+	RulesNE.match(RulesNE.java:190)
+	TextProcessor.getNEsOfText(TextProcessor.java:169)
+	Recognizer.main(Recognizer.java:280)
+TRACE 63:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:38)
+	TextProcessor.getNEsOfText(TextProcessor.java:134)
+	Recognizer.main(Recognizer.java:280)
+TRACE 211:
+	Rules.output(Rules.java:110)
+	Rules.candidates(Rules.java:146)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+	Recognizer.main(Recognizer.java:273)
+TRACE 200:
+	java.util.Hashtable.getEnumeration(<Unknown>:Unknown line)
+	java.util.Hashtable.keys(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:143)
+	Recognizer.main(Recognizer.java:280)
+TRACE 178:
+	RulesNE.match(RulesNE.java:189)
+	TextProcessor.getNEsOfText(TextProcessor.java:169)
+	Recognizer.main(Recognizer.java:280)
+TRACE 166:
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	java.util.Hashtable.toString(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:120)
+	Recognizer.main(Recognizer.java:273)
+TRACE 22:
+	java.net.Inet4Address.init(<Unknown>:Native method)
+	java.net.Inet4Address.<clinit>(<Unknown>:Unknown line)
+	java.net.Inet4AddressImpl.anyLocalAddress(<Unknown>:Unknown line)
+	java.net.InetAddress.cacheInitIfNeeded(<Unknown>:Unknown line)
+TRACE 340:
+	java.util.Hashtable.toString(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:120)
+	Recognizer.main(Recognizer.java:273)
+TRACE 109:
+	java.util.Hashtable.get(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:98)
+	Recognizer.main(Recognizer.java:273)
+TRACE 191:
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	MatcherNam.getClassificationsOf(MatcherNam.java:529)
+	Recognizer.checkCandidates(Recognizer.java:193)
+	Recognizer.main(Recognizer.java:276)
+TRACE 122:
+	java.util.Vector.elements(<Unknown>:Unknown line)
+	Rules.candidates(Rules.java:133)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+	Recognizer.main(Recognizer.java:273)
+TRACE 88:
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match0(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+TRACE 84:
+	java.lang.StringCoding.decode(<Unknown>:Unknown line)
+	java.lang.StringCoding.decode(<Unknown>:Unknown line)
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	java.lang.String.<init>(<Unknown>:Unknown line)
+TRACE 380:
+	java.util.regex.Pattern$BitClass.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match0(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+TRACE 126:
+	MatcherNam.getClassificationsOf(MatcherNam.java:496)
+	Recognizer.checkCandidates(Recognizer.java:193)
+	Recognizer.main(Recognizer.java:276)
+TRACE 112:
+	java.nio.CharBuffer.wrap(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder$CharsetSE.implWrite(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder.write(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder.write(<Unknown>:Unknown line)
+TRACE 345:
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:54)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:79)
+	Recognizer.main(Recognizer.java:273)
+TRACE 259:
+	java.io.FileOutputStream.<init>(<Unknown>:Unknown line)
+	java.io.FileWriter.<init>(<Unknown>:Unknown line)
+	Rules.output(Rules.java:103)
+	Rules.candidates(Rules.java:146)
+TRACE 129:
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+TRACE 66:
+	Rules.candidates(Rules.java:135)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+	Recognizer.main(Recognizer.java:273)
+TRACE 97:
+	TextProcessor.tokenize(TextProcessor.java:54)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:79)
+	Recognizer.main(Recognizer.java:273)
+TRACE 253:
+	sun.nio.cs.SingleByteDecoder.decodeArrayLoop(<Unknown>:Unknown line)
+	sun.nio.cs.SingleByteDecoder.decodeLoop(<Unknown>:Unknown line)
+	java.nio.charset.CharsetDecoder.decode(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.isLegalReplacement(<Unknown>:Unknown line)
+TRACE 364:
+	TextProcessor.tokenize(TextProcessor.java:45)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:79)
+	Recognizer.main(Recognizer.java:273)
+TRACE 270:
+	TextProcessor.getNEsOfText(TextProcessor.java:174)
+	Recognizer.main(Recognizer.java:280)
+TRACE 213:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	Recognizer.checkCandidates(Recognizer.java:187)
+	Recognizer.main(Recognizer.java:276)
+TRACE 115:
+	TextProcessor.getNEsOfText(TextProcessor.java:143)
+	Recognizer.main(Recognizer.java:280)
+TRACE 231:
+	java.io.FileWriter.<init>(<Unknown>:Unknown line)
+	Rules.output(Rules.java:103)
+	Rules.candidates(Rules.java:146)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+TRACE 125:
+	java.net.SocketInputStream.socketRead0(<Unknown>:Native method)
+	java.net.SocketInputStream.read(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.readFully(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.reuseAndReadPacket(<Unknown>:Unknown line)
+TRACE 371:
+	Recognizer.main(Recognizer.java:270)
+TRACE 367:
+	java.lang.StringBuffer.expandCapacity(<Unknown>:Unknown line)
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	RulesNE.output(RulesNE.java:170)
+	RulesNE.match(RulesNE.java:202)
+TRACE 70:
+	java.nio.charset.CharsetEncoder.<init>(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.<init>(<Unknown>:Unknown line)
+	sun.nio.cs.SingleByteEncoder.<init>(<Unknown>:Unknown line)
+	sun.nio.cs.ISO_8859_15$Encoder.<init>(<Unknown>:Unknown line)
+TRACE 150:
+	java.util.regex.Matcher.reset(<Unknown>:Unknown line)
+	java.util.regex.Matcher.<init>(<Unknown>:Unknown line)
+	java.util.regex.Pattern.matcher(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:92)
+TRACE 98:
+	sun.nio.cs.StreamEncoder.write(<Unknown>:Unknown line)
+	java.io.OutputStreamWriter.write(<Unknown>:Unknown line)
+	java.io.BufferedWriter.flushBuffer(<Unknown>:Unknown line)
+	java.io.PrintStream.write(<Unknown>:Unknown line)
+TRACE 24:
+	org.gjt.mm.mysql.MysqlIO.init(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Connection.connectionInit(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.Connection.connectionInit(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Driver.connect(<Unknown>:Unknown line)
+TRACE 232:
+	Annotate.annotate(Annotate.java:98)
+	Recognizer.checkCandidates(Recognizer.java:192)
+	Recognizer.main(Recognizer.java:276)
+TRACE 76:
+	java.util.regex.Pattern$Curly.match0(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$GroupHead.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Loop.matchInit(<Unknown>:Unknown line)
+TRACE 38:
+	sun.nio.cs.StreamEncoder.write(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder.write(<Unknown>:Unknown line)
+	java.io.OutputStreamWriter.write(<Unknown>:Unknown line)
+	Rules.output(Rules.java:118)
+TRACE 357:
+	Annotate.annotate(Annotate.java:114)
+	Recognizer.checkCandidates(Recognizer.java:192)
+	Recognizer.main(Recognizer.java:276)
+TRACE 272:
+	org.gjt.mm.mysql.jdbc2.Statement.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.Connection.createStatement(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.Connection.createStatement(<Unknown>:Unknown line)
+	DBaccess.getSentence(DBaccess.java:50)
+TRACE 59:
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:147)
+	Recognizer.main(Recognizer.java:280)
+TRACE 275:
+	Recognizer.checkCandidates(Recognizer.java:178)
+	Recognizer.main(Recognizer.java:276)
+TRACE 199:
+	java.io.FileOutputStream.writeBytes(<Unknown>:Native method)
+	java.io.FileOutputStream.write(<Unknown>:Unknown line)
+	java.io.BufferedOutputStream.write(<Unknown>:Unknown line)
+	java.io.PrintStream.write(<Unknown>:Unknown line)
+TRACE 156:
+	org.gjt.mm.mysql.Buffer.writeByte(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.send(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sendCommand(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+TRACE 185:
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+TRACE 163:
+	TextProcessor.getCandidatesOfText(TextProcessor.java:89)
+	Recognizer.main(Recognizer.java:273)
+TRACE 290:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	Recognizer.main(Recognizer.java:270)
+TRACE 324:
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:38)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:79)
+TRACE 15:
+	Recognizer.main(Recognizer.java:254)
+TRACE 285:
+	java.lang.ref.Finalizer.<init>(<Unknown>:Unknown line)
+	java.lang.ref.Finalizer.register(<Unknown>:Unknown line)
+	java.io.FileWriter.<init>(<Unknown>:Unknown line)
+	Rules.output(Rules.java:103)
+TRACE 158:
+	TextProcessor.getCandidatesOfText(TextProcessor.java:92)
+	Recognizer.main(Recognizer.java:273)
+TRACE 35:
+	java.util.regex.Matcher.<init>(<Unknown>:Unknown line)
+	java.util.regex.Pattern.matcher(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:92)
+	Recognizer.main(Recognizer.java:273)
+TRACE 12:
+	java.lang.String.substring(<Unknown>:Unknown line)
+	java.util.StringTokenizer.nextToken(<Unknown>:Unknown line)
+	NameTable.loadFromFile(NameTable.java:71)
+	Recognizer.init(Recognizer.java:138)
+TRACE 366:
+	MatcherNam.getClassificationsOf(MatcherNam.java:536)
+	Recognizer.checkCandidates(Recognizer.java:193)
+	Recognizer.main(Recognizer.java:276)
+TRACE 221:
+	java.util.Hashtable$Enumerator.hasMoreElements(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:88)
+	Recognizer.main(Recognizer.java:273)
+TRACE 292:
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:74)
+	Recognizer.main(Recognizer.java:273)
+TRACE 288:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Field.getFullName(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+TRACE 26:
+	org.gjt.mm.mysql.Statement.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.Statement.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.Connection.createStatement(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.Connection.createStatement(<Unknown>:Unknown line)
+TRACE 86:
+	java.net.SocketInputStream.read(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.reuseAndReadPacket(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.nextRow(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.getResultSet(<Unknown>:Unknown line)
+TRACE 385:
+	java.lang.Thread.start(<Unknown>:Native method)
+	sun.misc.Signal.dispatch(<Unknown>:Unknown line)
+TRACE 167:
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+TRACE 346:
+	Pattern.toString(Pattern.java:36)
+	Rules.output(Rules.java:112)
+	Rules.candidates(Rules.java:146)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+TRACE 190:
+	org.gjt.mm.mysql.MysqlIO.clearAllReceive(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQuery(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Connection.execSQL(<Unknown>:Unknown line)
+TRACE 322:
+	TextProcessor.getCandidatesOfText(TextProcessor.java:73)
+	Recognizer.main(Recognizer.java:273)
+TRACE 291:
+	sun.nio.cs.SingleByteDecoder.decodeArrayLoop(<Unknown>:Unknown line)
+	sun.nio.cs.SingleByteDecoder.decodeLoop(<Unknown>:Unknown line)
+	java.nio.charset.CharsetDecoder.decode(<Unknown>:Unknown line)
+	java.lang.StringCoding$CharsetSD.decode(<Unknown>:Unknown line)
+TRACE 64:
+	org.gjt.mm.mysql.Buffer.readLenString(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.getResultSet(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQuery(<Unknown>:Unknown line)
+TRACE 44:
+	java.io.FileOutputStream.writeBytes(<Unknown>:Native method)
+	java.io.FileOutputStream.write(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder$CharsetSE.writeBytes(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder$CharsetSE.implClose(<Unknown>:Unknown line)
+TRACE 348:
+	java.lang.String.toLowerCase(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+TRACE 309:
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+	Recognizer.main(Recognizer.java:273)
+TRACE 261:
+	MatcherNam.getClassificationsOf(MatcherNam.java:491)
+	Recognizer.checkCandidates(Recognizer.java:193)
+	Recognizer.main(Recognizer.java:276)
+TRACE 239:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	DBaccess.getNof(DBaccess.java:98)
+	DBaccess.getNof(DBaccess.java:72)
+	Recognizer.checkCandidates(Recognizer.java:190)
+TRACE 249:
+	sun.nio.cs.ISO_8859_15.newDecoder(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.isLegalReplacement(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.replaceWith(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.<init>(<Unknown>:Unknown line)
+TRACE 52:
+	RulesNE.match(RulesNE.java:191)
+	TextProcessor.getNEsOfText(TextProcessor.java:169)
+	Recognizer.main(Recognizer.java:280)
+TRACE 383:
+	java.lang.Double.doubleToLongBits(<Unknown>:Native method)
+	java.lang.FloatingDecimal.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	Pattern.toString(Pattern.java:37)
+TRACE 331:
+	Recognizer.checkCandidates(Recognizer.java:162)
+	Recognizer.main(Recognizer.java:276)
+TRACE 80:
+	java.io.FileOutputStream.openAppend(<Unknown>:Native method)
+	java.io.FileOutputStream.<init>(<Unknown>:Unknown line)
+	java.io.FileOutputStream.<init>(<Unknown>:Unknown line)
+	java.io.FileWriter.<init>(<Unknown>:Unknown line)
+TRACE 96:
+	java.lang.String.indexOf(<Unknown>:Unknown line)
+	java.io.PrintStream.write(<Unknown>:Unknown line)
+	java.io.PrintStream.print(<Unknown>:Unknown line)
+	RulesNE.output(RulesNE.java:170)
+TRACE 255:
+	DBaccess.getNof(DBaccess.java:128)
+	DBaccess.getNof(DBaccess.java:72)
+	Recognizer.checkCandidates(Recognizer.java:190)
+	Recognizer.main(Recognizer.java:276)
+TRACE 18:
+	org.gjt.mm.mysql.jdbc2.Connection.createNewIO(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Connection.connectionInit(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.Connection.connectionInit(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Driver.connect(<Unknown>:Unknown line)
+TRACE 353:
+	java.util.regex.Pattern$Curly.match0(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+TRACE 282:
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+	Annotate.annotate(Annotate.java:92)
+	Recognizer.checkCandidates(Recognizer.java:192)
+	Recognizer.main(Recognizer.java:276)
+TRACE 280:
+	java.lang.StringCoding.encode(<Unknown>:Unknown line)
+	java.lang.String.getBytes(<Unknown>:Unknown line)
+	java.io.FileOutputStream.openAppend(<Unknown>:Native method)
+	java.io.FileOutputStream.<init>(<Unknown>:Unknown line)
+TRACE 50:
+	java.net.SocketOutputStream.socketWrite0(<Unknown>:Native method)
+	java.net.SocketOutputStream.socketWrite(<Unknown>:Unknown line)
+	java.net.SocketOutputStream.write(<Unknown>:Unknown line)
+	java.io.BufferedOutputStream.flushBuffer(<Unknown>:Unknown line)
+TRACE 251:
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	NameTable.<init>(NameTable.java:29)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:72)
+TRACE 120:
+	java.util.regex.Pattern$BitClass.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+TRACE 104:
+	org.gjt.mm.mysql.MysqlIO.readPacket(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sendCommand(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQuery(<Unknown>:Unknown line)
+TRACE 36:
+	TextProcessor.getCandidatesOfText(TextProcessor.java:72)
+	Recognizer.main(Recognizer.java:273)
+TRACE 77:
+	java.util.Hashtable.toString(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:174)
+	Recognizer.main(Recognizer.java:280)
+TRACE 60:
+	TextProcessor.tokenize(TextProcessor.java:38)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:79)
+	Recognizer.main(Recognizer.java:273)
+TRACE 355:
+	java.lang.ref.Finalizer.register(<Unknown>:Unknown line)
+	java.io.FileWriter.<init>(<Unknown>:Unknown line)
+	Rules.output(Rules.java:103)
+	Rules.candidates(Rules.java:146)
+TRACE 123:
+	java.lang.Integer.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+TRACE 100:
+	java.lang.String.indexOf(<Unknown>:Unknown line)
+	java.util.StringTokenizer.skipDelimiters(<Unknown>:Unknown line)
+	java.util.StringTokenizer.hasMoreTokens(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:61)
+TRACE 312:
+	java.util.regex.Matcher.reset(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+	Annotate.annotate(Annotate.java:92)
+	Recognizer.checkCandidates(Recognizer.java:192)
+TRACE 89:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	DBaccess.getSentence(DBaccess.java:45)
+	DBaccess.getSentence(DBaccess.java:39)
+	Recognizer.main(Recognizer.java:282)
+TRACE 48:
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match0(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+TRACE 14:
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	java.io.BufferedReader.readLine(<Unknown>:Unknown line)
+	java.io.BufferedReader.readLine(<Unknown>:Unknown line)
+	NameTable.loadFromFile(NameTable.java:67)
+TRACE 49:
+	java.util.regex.Pattern.matcher(<Unknown>:Unknown line)
+	Annotate.annotate(Annotate.java:92)
+	Recognizer.checkCandidates(Recognizer.java:192)
+	Recognizer.main(Recognizer.java:276)
+TRACE 235:
+	TextProcessor.getCandidatesOfText(TextProcessor.java:105)
+	Recognizer.main(Recognizer.java:273)
+TRACE 162:
+	java.io.PrintStream.write(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder$CharsetSE.writeBytes(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder$CharsetSE.implFlushBuffer(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder.flushBuffer(<Unknown>:Unknown line)
+TRACE 82:
+	java.util.Hashtable.put(<Unknown>:Unknown line)
+	Rules.candidates(Rules.java:145)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+	Recognizer.main(Recognizer.java:273)
+TRACE 149:
+	RulesNE.resetRules(RulesNE.java:91)
+	Recognizer.main(Recognizer.java:279)
+TRACE 75:
+	sun.io.Converters.getDefaultEncodingName(<Unknown>:Unknown line)
+	java.lang.StringCoding.decode(<Unknown>:Unknown line)
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Buffer.readLenString(<Unknown>:Unknown line)
+TRACE 65:
+	java.lang.String.substring(<Unknown>:Unknown line)
+	java.util.StringTokenizer.nextToken(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:62)
+	TextProcessor.getNEsOfText(TextProcessor.java:134)
+TRACE 352:
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+TRACE 203:
+	java.nio.HeapByteBuffer.<init>(<Unknown>:Unknown line)
+	java.nio.ByteBuffer.allocate(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder$CharsetSE.<init>(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder$CharsetSE.<init>(<Unknown>:Unknown line)
+TRACE 219:
+	java.lang.Integer.parseInt(<Unknown>:Unknown line)
+	java.lang.Integer.<init>(<Unknown>:Unknown line)
+	Rules.candidates(Rules.java:135)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+TRACE 58:
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:92)
+	Recognizer.main(Recognizer.java:273)
+TRACE 194:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	Annotate.tokenize(Annotate.java:36)
+	Recognizer.checkCandidates(Recognizer.java:191)
+	Recognizer.main(Recognizer.java:276)
+TRACE 1:
+	sun.misc.URLClassPath.getLoader(<Unknown>:Unknown line)
+	sun.misc.URLClassPath.getLoader(<Unknown>:Unknown line)
+	sun.misc.URLClassPath.getResource(<Unknown>:Unknown line)
+	java.net.URLClassLoader$1.run(<Unknown>:Unknown line)
+TRACE 192:
+	java.util.Hashtable.get(<Unknown>:Unknown line)
+	MatcherNam.getClassificationsOf(MatcherNam.java:496)
+	Recognizer.checkCandidates(Recognizer.java:193)
+	Recognizer.main(Recognizer.java:276)
+TRACE 103:
+	java.util.Hashtable.get(<Unknown>:Unknown line)
+	Rules.candidates(Rules.java:135)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+	Recognizer.main(Recognizer.java:273)
+TRACE 27:
+	org.gjt.mm.mysql.MysqlIO.getResultSet(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQuery(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Connection.execSQL(<Unknown>:Unknown line)
+TRACE 157:
+	java.net.SocketInputStream.read(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.readPacket(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sendCommand(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+TRACE 135:
+	TextProcessor.tokenize(TextProcessor.java:24)
+	TextProcessor.getNEsOfText(TextProcessor.java:134)
+	Recognizer.main(Recognizer.java:280)
+TRACE 119:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:120)
+	Recognizer.main(Recognizer.java:273)
+TRACE 68:
+	java.net.SocketInputStream.socketRead0(<Unknown>:Native method)
+	java.net.SocketInputStream.read(<Unknown>:Unknown line)
+	java.net.SocketInputStream.read(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.readPacket(<Unknown>:Unknown line)
+TRACE 217:
+	Rules.candidates(Rules.java:129)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+	Recognizer.main(Recognizer.java:273)
+TRACE 2:
+	sun.misc.URLClassPath$JarLoader.getJarFile(<Unknown>:Unknown line)
+	sun.misc.URLClassPath$JarLoader.<init>(<Unknown>:Unknown line)
+	sun.misc.URLClassPath$3.run(<Unknown>:Unknown line)
+	java.security.AccessController.doPrivileged(<Unknown>:Native method)
+TRACE 328:
+	java.nio.ByteBuffer.wrap(<Unknown>:Unknown line)
+	java.lang.StringCoding$CharsetSD.decode(<Unknown>:Unknown line)
+	java.lang.StringCoding.decode(<Unknown>:Unknown line)
+	java.lang.StringCoding.decode(<Unknown>:Unknown line)
+TRACE 330:
+	java.util.Hashtable.containsKey(<Unknown>:Unknown line)
+	Annotate.annotate(Annotate.java:105)
+	Recognizer.checkCandidates(Recognizer.java:192)
+	Recognizer.main(Recognizer.java:276)
+TRACE 281:
+	java.nio.ByteBuffer.wrap(<Unknown>:Unknown line)
+	java.nio.ByteBuffer.wrap(<Unknown>:Unknown line)
+	java.lang.StringCoding$CharsetSE.encode(<Unknown>:Unknown line)
+	java.lang.StringCoding.encode(<Unknown>:Unknown line)
+TRACE 252:
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	Rules.output(Rules.java:104)
+	Rules.candidates(Rules.java:146)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+TRACE 113:
+	sun.nio.cs.StreamEncoder$CharsetSE.<init>(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder.forOutputStreamWriter(<Unknown>:Unknown line)
+	java.io.OutputStreamWriter.<init>(<Unknown>:Unknown line)
+	java.io.FileWriter.<init>(<Unknown>:Unknown line)
+TRACE 359:
+	org.gjt.mm.mysql.MysqlIO.sendCommand(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQuery(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Connection.execSQL(<Unknown>:Unknown line)
+TRACE 363:
+	java.util.Hashtable.get(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:152)
+	Recognizer.main(Recognizer.java:280)
+TRACE 139:
+	java.lang.String.toUpperCase(<Unknown>:Unknown line)
+	java.lang.String.toUpperCase(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+TRACE 304:
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	Rules.output(Rules.java:108)
+	Rules.candidates(Rules.java:146)
+TRACE 299:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Field.getFullName(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+TRACE 260:
+	java.util.regex.Pattern$BitClass.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+TRACE 43:
+	java.util.regex.Pattern$Range.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+TRACE 296:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	Rules.output(Rules.java:109)
+	Rules.candidates(Rules.java:146)
+TRACE 271:
+	Annotate.annotate(Annotate.java:89)
+	Recognizer.checkCandidates(Recognizer.java:192)
+	Recognizer.main(Recognizer.java:276)
+TRACE 71:
+	java.lang.String.equals(<Unknown>:Unknown line)
+	java.util.Hashtable.get(<Unknown>:Unknown line)
+	Rules.candidates(Rules.java:135)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+TRACE 376:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:54)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:79)
+TRACE 301:
+	TextProcessor.tokenize(TextProcessor.java:59)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:79)
+	Recognizer.main(Recognizer.java:273)
+TRACE 278:
+	org.gjt.mm.mysql.MysqlIO.sqlQuery(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Connection.execSQL(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Connection.execSQL(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.Statement.executeQuery(<Unknown>:Unknown line)
+TRACE 268:
+	java.nio.CharBuffer.wrap(<Unknown>:Unknown line)
+	java.nio.CharBuffer.wrap(<Unknown>:Unknown line)
+	java.lang.StringCoding$CharsetSD.decode(<Unknown>:Unknown line)
+	java.lang.StringCoding.decode(<Unknown>:Unknown line)
+TRACE 256:
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	NameTable.<init>(NameTable.java:29)
+	Rules.candidates(Rules.java:129)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+TRACE 228:
+	TextProcessor.tokenize(TextProcessor.java:54)
+	TextProcessor.getNEsOfText(TextProcessor.java:134)
+	Recognizer.main(Recognizer.java:280)
+TRACE 94:
+	java.lang.Character.digit(<Unknown>:Unknown line)
+	java.lang.Integer.parseInt(<Unknown>:Unknown line)
+	java.lang.Integer.<init>(<Unknown>:Unknown line)
+	RulesNE.match(RulesNE.java:191)
+TRACE 354:
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	java.lang.Integer.appendTo(<Unknown>:Unknown line)
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	DBaccess.getSentence(DBaccess.java:45)
+TRACE 171:
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.ResultSet.<init>(<Unknown>:Unknown line)
+TRACE 361:
+	TextProcessor.tokenize(TextProcessor.java:45)
+	TextProcessor.getNEsOfText(TextProcessor.java:134)
+	Recognizer.main(Recognizer.java:280)
+TRACE 335:
+	Rules.resetRules(Rules.java:90)
+	Recognizer.main(Recognizer.java:271)
+TRACE 142:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.util.Hashtable.toString(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:174)
+TRACE 93:
+	java.nio.charset.CharsetDecoder.<init>(<Unknown>:Unknown line)
+	java.nio.charset.CharsetDecoder.<init>(<Unknown>:Unknown line)
+	sun.nio.cs.SingleByteDecoder.<init>(<Unknown>:Unknown line)
+	sun.nio.cs.ISO_8859_15$Decoder.<init>(<Unknown>:Unknown line)
+TRACE 244:
+	TextProcessor.getNEsOfText(TextProcessor.java:159)
+	Recognizer.main(Recognizer.java:280)
+TRACE 205:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:45)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:79)
+TRACE 193:
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:147)
+	Recognizer.main(Recognizer.java:280)
+TRACE 118:
+	java.util.Hashtable.getEnumeration(<Unknown>:Unknown line)
+	java.util.Hashtable.keys(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:88)
+	Recognizer.main(Recognizer.java:273)
+TRACE 90:
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match0(<Unknown>:Unknown line)
+TRACE 55:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:38)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:79)
+TRACE 269:
+	java.nio.charset.CharsetEncoder.isLegalReplacement(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.replaceWith(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.<init>(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.<init>(<Unknown>:Unknown line)
+TRACE 45:
+	Annotate.tokenize(Annotate.java:57)
+	Recognizer.checkCandidates(Recognizer.java:191)
+	Recognizer.main(Recognizer.java:276)
+TRACE 293:
+	DBaccess.getSentence(DBaccess.java:62)
+	DBaccess.getSentence(DBaccess.java:39)
+	Recognizer.main(Recognizer.java:282)
+TRACE 245:
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+TRACE 287:
+	java.lang.String.equals(<Unknown>:Unknown line)
+	java.util.Hashtable.get(<Unknown>:Unknown line)
+	Annotate.annotate(Annotate.java:98)
+	Recognizer.checkCandidates(Recognizer.java:192)
+TRACE 373:
+	RulesNE.output(RulesNE.java:155)
+	RulesNE.match(RulesNE.java:202)
+	TextProcessor.getNEsOfText(TextProcessor.java:169)
+	Recognizer.main(Recognizer.java:280)
+TRACE 222:
+	java.util.regex.Pattern$GroupTail.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match0(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+TRACE 184:
+	java.util.Hashtable$Enumerator.nextElement(<Unknown>:Unknown line)
+	java.util.Hashtable$Enumerator.next(<Unknown>:Unknown line)
+	java.util.Hashtable.toString(<Unknown>:Unknown line)
+	Recognizer.main(Recognizer.java:275)
+TRACE 311:
+	org.gjt.mm.mysql.ResultSet.checkRowPos(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.getLong(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.getInt(<Unknown>:Unknown line)
+	DBaccess.getNof(DBaccess.java:93)
+TRACE 264:
+	Recognizer.main(Recognizer.java:268)
+TRACE 145:
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:45)
+	TextProcessor.getNEsOfText(TextProcessor.java:134)
+TRACE 40:
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+TRACE 215:
+	Rules.candidates(Rules.java:133)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+	Recognizer.main(Recognizer.java:273)
+TRACE 175:
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:38)
+	TextProcessor.getNEsOfText(TextProcessor.java:134)
+TRACE 225:
+	java.util.Vector.elements(<Unknown>:Unknown line)
+	MatcherNam.getClassificationsOf(MatcherNam.java:490)
+	Recognizer.checkCandidates(Recognizer.java:193)
+	Recognizer.main(Recognizer.java:276)
+TRACE 196:
+	org.gjt.mm.mysql.MysqlIO.versionMeetsMinimum(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.getResultSet(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQuery(<Unknown>:Unknown line)
+TRACE 151:
+	sun.nio.cs.SingleByteEncoder.encodeLoop(<Unknown>:Unknown line)
+	java.nio.charset.CharsetEncoder.encode(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder$CharsetSE.implWrite(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder.write(<Unknown>:Unknown line)
+TRACE 141:
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	NameTable.<init>(NameTable.java:29)
+	TextProcessor.getNEsOfText(TextProcessor.java:127)
+TRACE 307:
+	sun.nio.cs.StreamEncoder.forOutputStreamWriter(<Unknown>:Unknown line)
+	java.io.OutputStreamWriter.<init>(<Unknown>:Unknown line)
+	java.io.FileWriter.<init>(<Unknown>:Unknown line)
+	Rules.output(Rules.java:103)
+TRACE 236:
+	java.util.Hashtable.getEnumeration(<Unknown>:Unknown line)
+	java.util.Hashtable.keys(<Unknown>:Unknown line)
+	Annotate.annotate(Annotate.java:88)
+	Recognizer.checkCandidates(Recognizer.java:192)
+TRACE 61:
+	java.util.Hashtable.get(<Unknown>:Unknown line)
+	RulesNE.match(RulesNE.java:191)
+	TextProcessor.getNEsOfText(TextProcessor.java:169)
+	Recognizer.main(Recognizer.java:280)
+TRACE 319:
+	java.util.Vector.elements(<Unknown>:Unknown line)
+	Rules.resetRules(Rules.java:90)
+	Recognizer.main(Recognizer.java:271)
+TRACE 165:
+	TextProcessor.getCandidatesOfText(TextProcessor.java:88)
+	Recognizer.main(Recognizer.java:273)
+TRACE 16:
+	java.lang.Class.forName0(<Unknown>:Native method)
+	java.lang.Class.forName(<Unknown>:Unknown line)
+	DBaccess.<init>(DBaccess.java:18)
+	DBaccess.<init>(DBaccess.java:33)
+TRACE 384:
+	java.net.SocketInputStream.read(<Unknown>:Unknown line)
+	java.net.SocketInputStream.read(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.reuseAndReadPacket(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.nextRow(<Unknown>:Unknown line)
+TRACE 173:
+	Rules.candidates(Rules.java:134)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+	Recognizer.main(Recognizer.java:273)
+TRACE 106:
+	Recognizer.checkCandidates(Recognizer.java:186)
+	Recognizer.main(Recognizer.java:276)
+TRACE 277:
+	java.util.Hashtable.<init>(<Unknown>:Unknown line)
+	NameTable.<init>(NameTable.java:29)
+	RulesNE.match(RulesNE.java:185)
+	TextProcessor.getNEsOfText(TextProcessor.java:169)
+TRACE 91:
+	java.util.regex.Matcher.reset(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:147)
+	Recognizer.main(Recognizer.java:280)
+TRACE 332:
+	java.nio.charset.CharsetDecoder.replaceWith(<Unknown>:Unknown line)
+	java.nio.charset.CharsetDecoder.<init>(<Unknown>:Unknown line)
+	java.nio.charset.CharsetDecoder.<init>(<Unknown>:Unknown line)
+	sun.nio.cs.SingleByteDecoder.<init>(<Unknown>:Unknown line)
+TRACE 204:
+	java.net.SocketInputStream.available(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.clearAllReceive(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQuery(<Unknown>:Unknown line)
+TRACE 69:
+	org.gjt.mm.mysql.Field.getName(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+TRACE 34:
+	java.net.SocketInputStream.socketRead0(<Unknown>:Native method)
+	java.net.SocketInputStream.read(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.readFully(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.readPacket(<Unknown>:Unknown line)
+TRACE 155:
+	org.gjt.mm.mysql.MysqlIO.nextRow(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.getResultSet(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQuery(<Unknown>:Unknown line)
+TRACE 87:
+	sun.nio.cs.StreamEncoder.write(<Unknown>:Unknown line)
+	java.io.OutputStreamWriter.write(<Unknown>:Unknown line)
+	Rules.output(Rules.java:118)
+	Rules.candidates(Rules.java:146)
+TRACE 341:
+	java.net.SocketOutputStream.socketWrite(<Unknown>:Unknown line)
+	java.net.SocketOutputStream.write(<Unknown>:Unknown line)
+	java.io.BufferedOutputStream.flushBuffer(<Unknown>:Unknown line)
+	java.io.BufferedOutputStream.flush(<Unknown>:Unknown line)
+TRACE 13:
+	java.lang.System.arraycopy(<Unknown>:Native method)
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	java.io.BufferedReader.readLine(<Unknown>:Unknown line)
+	java.io.BufferedReader.readLine(<Unknown>:Unknown line)
+TRACE 347:
+	org.gjt.mm.mysql.MysqlIO.send(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sendCommand(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQuery(<Unknown>:Unknown line)
+TRACE 117:
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	Annotate.annotate(Annotate.java:114)
+	Recognizer.checkCandidates(Recognizer.java:192)
+	Recognizer.main(Recognizer.java:276)
+TRACE 53:
+	java.util.regex.Matcher.reset(<Unknown>:Unknown line)
+	java.util.regex.Matcher.<init>(<Unknown>:Unknown line)
+	java.util.regex.Pattern.matcher(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:147)
+TRACE 303:
+	java.nio.ByteBuffer.<init>(<Unknown>:Unknown line)
+	java.nio.HeapByteBuffer.<init>(<Unknown>:Unknown line)
+	java.nio.ByteBuffer.wrap(<Unknown>:Unknown line)
+	java.nio.ByteBuffer.wrap(<Unknown>:Unknown line)
+TRACE 152:
+	org.gjt.mm.mysql.MysqlIO.readPacket(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.getResultSet(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQuery(<Unknown>:Unknown line)
+TRACE 247:
+	java.util.regex.Matcher.getTextLength(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:147)
+	Recognizer.main(Recognizer.java:280)
+TRACE 263:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	Rules.output(Rules.java:108)
+	Rules.candidates(Rules.java:146)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+TRACE 333:
+	java.lang.System.arraycopy(<Unknown>:Native method)
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	java.lang.Integer.appendTo(<Unknown>:Unknown line)
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+TRACE 329:
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	DBaccess.getSentence(DBaccess.java:63)
+	DBaccess.getSentence(DBaccess.java:39)
+TRACE 79:
+	TextProcessor.tokenize(TextProcessor.java:38)
+	TextProcessor.getNEsOfText(TextProcessor.java:134)
+	Recognizer.main(Recognizer.java:280)
+TRACE 321:
+	java.nio.charset.Charset.isSupported(<Unknown>:Unknown line)
+	sun.nio.cs.StreamEncoder.forOutputStreamWriter(<Unknown>:Unknown line)
+	java.io.OutputStreamWriter.<init>(<Unknown>:Unknown line)
+	java.io.FileWriter.<init>(<Unknown>:Unknown line)
+TRACE 226:
+	org.gjt.mm.mysql.jdbc2.ResultSet.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.IO.buildResultSetWithRows(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.getResultSet(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+TRACE 144:
+	java.lang.Integer.toString(<Unknown>:Unknown line)
+	java.lang.Integer.toString(<Unknown>:Unknown line)
+	java.lang.String.valueOf(<Unknown>:Unknown line)
+	Annotate.annotate(Annotate.java:114)
+TRACE 207:
+	java.lang.Character.digit(<Unknown>:Unknown line)
+	java.lang.Integer.parseInt(<Unknown>:Unknown line)
+	java.lang.Integer.<init>(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:108)
+TRACE 189:
+	java.util.Hashtable.toString(<Unknown>:Unknown line)
+	Recognizer.main(Recognizer.java:275)
+TRACE 176:
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+TRACE 254:
+	java.util.Hashtable.rehash(<Unknown>:Unknown line)
+	java.util.Hashtable.put(<Unknown>:Unknown line)
+	NameTable.insert(NameTable.java:111)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:117)
+TRACE 182:
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:92)
+	Recognizer.main(Recognizer.java:273)
+TRACE 8:
+	Recognizer.<clinit>(Recognizer.java:68)
+TRACE 370:
+	Pattern.toString(Pattern.java:37)
+	Rules.output(Rules.java:112)
+	Rules.candidates(Rules.java:146)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+TRACE 273:
+	java.lang.StringBuffer.append(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	TextProcessor.tokenize(TextProcessor.java:38)
+	TextProcessor.getNEsOfText(TextProcessor.java:134)
+TRACE 172:
+	java.util.regex.Matcher.reset(<Unknown>:Unknown line)
+	java.util.regex.Matcher.<init>(<Unknown>:Unknown line)
+	java.util.regex.Pattern.matcher(<Unknown>:Unknown line)
+	Annotate.annotate(Annotate.java:92)
+TRACE 134:
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.matches(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:92)
+TRACE 11:
+	MatcherNam.loadPatterns(MatcherNam.java:61)
+	Recognizer.main(Recognizer.java:251)
+TRACE 325:
+	Rules.output(Rules.java:104)
+	Rules.candidates(Rules.java:146)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+	Recognizer.main(Recognizer.java:273)
+TRACE 110:
+	java.util.Vector.elementAt(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.ResultSet.<init>(<Unknown>:Unknown line)
+TRACE 234:
+	java.lang.StringBuffer.toString(<Unknown>:Unknown line)
+	java.util.Hashtable.toString(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:120)
+	Recognizer.main(Recognizer.java:273)
+TRACE 74:
+	java.lang.StringCoding$CharsetSD.decode(<Unknown>:Unknown line)
+	java.lang.StringCoding.decode(<Unknown>:Unknown line)
+	java.lang.StringCoding.decode(<Unknown>:Unknown line)
+	java.lang.String.<init>(<Unknown>:Unknown line)
+TRACE 154:
+	java.lang.String.<init>(<Unknown>:Unknown line)
+	Recognizer.checkCandidates(Recognizer.java:161)
+	Recognizer.main(Recognizer.java:276)
+TRACE 318:
+	Rules.output(Rules.java:103)
+	Rules.candidates(Rules.java:146)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:115)
+	Recognizer.main(Recognizer.java:273)
+TRACE 360:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	Rules.output(Rules.java:112)
+	Rules.candidates(Rules.java:146)
+TRACE 297:
+	MatcherNam.getClassificationsOf(MatcherNam.java:494)
+	Recognizer.checkCandidates(Recognizer.java:193)
+	Recognizer.main(Recognizer.java:276)
+TRACE 174:
+	TextProcessor.getCandidatesOfText(TextProcessor.java:98)
+	Recognizer.main(Recognizer.java:273)
+TRACE 267:
+	java.util.Vector.elements(<Unknown>:Unknown line)
+	TextProcessor.getNEsOfText(TextProcessor.java:136)
+	Recognizer.main(Recognizer.java:280)
+TRACE 237:
+	java.lang.String.equals(<Unknown>:Unknown line)
+	java.lang.String.toUpperCase(<Unknown>:Unknown line)
+	java.lang.String.toUpperCase(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+TRACE 29:
+	org.gjt.mm.mysql.jdbc2.IO.buildResultSetWithRows(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.getResultSet(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQueryDirect(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.MysqlIO.sqlQuery(<Unknown>:Unknown line)
+TRACE 140:
+	org.gjt.mm.mysql.Field.getFullName(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.buildIndexMapping(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.ResultSet.<init>(<Unknown>:Unknown line)
+TRACE 379:
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Add.match(<Unknown>:Unknown line)
+	java.util.regex.Pattern$Curly.match(<Unknown>:Unknown line)
+	java.util.regex.Matcher.match(<Unknown>:Unknown line)
+TRACE 195:
+	org.gjt.mm.mysql.Statement.executeQuery(<Unknown>:Unknown line)
+	org.gjt.mm.mysql.jdbc2.Statement.executeQuery(<Unknown>:Unknown line)
+	DBaccess.getSentence(DBaccess.java:51)
+	DBaccess.getSentence(DBaccess.java:39)
+TRACE 101:
+	java.util.Vector.elements(<Unknown>:Unknown line)
+	TextProcessor.getCandidatesOfText(TextProcessor.java:81)
+	Recognizer.main(Recognizer.java:273)
+TRACE 209:
+	TextProcessor.tokenize(TextProcessor.java:62)
+	TextProcessor.getNEsOfText(TextProcessor.java:134)
+	Recognizer.main(Recognizer.java:280)
+TRACE 143:
+	RulesNE.match(RulesNE.java:185)
+	TextProcessor.getNEsOfText(TextProcessor.java:169)
+	Recognizer.main(Recognizer.java:280)
+TRACE 138:
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	java.lang.StringBuffer.<init>(<Unknown>:Unknown line)
+	Annotate.tokenize(Annotate.java:36)
+	Recognizer.checkCandidates(Recognizer.java:191)
+CPU SAMPLES BEGIN (total = 9011) Fri Apr 15 09:19:14 2005
+rank   self  accum   count trace method
+   1 18.04% 18.04%    1626    68 java.net.SocketInputStream.socketRead0
+   2 10.04% 28.09%     905    41 java.util.regex.Matcher.<init>
+   3  9.51% 37.60%     857    35 java.util.regex.Matcher.<init>
+   4  8.23% 45.83%     742    42 java.util.regex.Pattern.matcher
+   5  8.09% 53.92%     729    37 java.util.regex.Pattern.matcher
+   6  4.68% 58.61%     422    54 java.io.FileOutputStream.writeBytes
+   7  4.13% 62.73%     372    40 java.util.regex.Pattern$Add.match
+   8  3.00% 65.73%     270    52 RulesNE.match
+   9  3.00% 68.73%     270    50 java.net.SocketOutputStream.socketWrite0
+  10  2.63% 71.36%     237    66 Rules.candidates
+  11  2.01% 73.37%     181    44 java.io.FileOutputStream.writeBytes
+  12  1.65% 75.02%     149    46 java.util.regex.Matcher.<init>
+  13  1.50% 76.52%     135    49 java.util.regex.Pattern.matcher
+  14  1.11% 77.63%     100    43 java.util.regex.Pattern$Range.match
+  15  0.85% 78.48%      77   120 java.util.regex.Pattern$BitClass.match
+  16  0.81% 79.29%      73    83 java.util.regex.Pattern$Curly.match0
+  17  0.78% 80.07%      70    55 java.lang.StringBuffer.<init>
+  18  0.65% 80.72%      59    57 java.lang.StringBuffer.<init>
+  19  0.62% 81.35%      56    63 java.lang.StringBuffer.toString
+  20  0.57% 81.91%      51    48 java.util.regex.Pattern$Add.match
+  21  0.54% 82.45%      49    88 java.util.regex.Pattern$Add.match
+  22  0.54% 83.00%      49    59 java.util.regex.Matcher.match
+  23  0.50% 83.50%      45    78 java.util.regex.Matcher.reset
+  24  0.50% 84.00%      45    60 TextProcessor.tokenize
+  25  0.49% 84.49%      44    39 java.lang.StringBuffer.toString
+  26  0.43% 84.92%      39    58 java.util.regex.Matcher.match
+  27  0.43% 85.35%      39    91 java.util.regex.Matcher.reset
+  28  0.41% 85.76%      37   126 MatcherNam.getClassificationsOf
+  29  0.41% 86.17%      37    94 java.lang.Character.digit
+  30  0.40% 86.57%      36    79 TextProcessor.tokenize
+  31  0.36% 86.93%      32    47 java.lang.Character.digit
+  32  0.32% 87.25%      29   199 java.io.FileOutputStream.writeBytes
+  33  0.31% 87.56%      28    53 java.util.regex.Matcher.reset
+  34  0.30% 87.86%      27   112 java.nio.CharBuffer.wrap
+  35  0.29% 88.15%      26   150 java.util.regex.Matcher.reset
+  36  0.29% 88.44%      26    90 java.util.regex.Pattern$Add.match
+  37  0.28% 88.71%      25   134 java.util.regex.Pattern$Add.match
+  38  0.27% 88.98%      24    61 java.util.Hashtable.get
+  39  0.27% 89.25%      24    87 sun.nio.cs.StreamEncoder.write
+  40  0.22% 89.47%      20   176 java.util.regex.Pattern$Add.match
+  41  0.20% 89.67%      18    33 java.util.regex.Pattern$Slice.match
+  42  0.20% 89.87%      18   182 java.util.regex.Matcher.matches
+  43  0.18% 90.05%      16   183 java.lang.String.equals
+  44  0.18% 90.22%      16   132 java.util.Hashtable.<init>
+  45  0.18% 90.40%      16   111 java.nio.CharBuffer.wrap
+  46  0.17% 90.57%      15   167 java.util.regex.Pattern$Add.match
+  47  0.17% 90.73%      15    80 java.io.FileOutputStream.openAppend
+  48  0.17% 90.90%      15   193 java.util.regex.Matcher.matches
+  49  0.16% 91.06%      14   178 RulesNE.match
+  50  0.14% 91.20%      13   103 java.util.Hashtable.get
+  51  0.12% 91.32%      11    81 TextProcessor.getNEsOfText
+  52  0.12% 91.44%      11    51 java.util.Hashtable.<init>
+  53  0.12% 91.57%      11   136 sun.nio.cs.SingleByteEncoder.encodeArrayLoop
+  54  0.12% 91.69%      11    67 java.util.regex.Pattern$Add.match
+  55  0.12% 91.81%      11   163 TextProcessor.getCandidatesOfText
+  56  0.12% 91.93%      11   203 java.nio.HeapByteBuffer.<init>
+  57  0.12% 92.05%      11    71 java.lang.String.equals
+  58  0.12% 92.18%      11   118 java.util.Hashtable.getEnumeration
+  59  0.12% 92.30%      11   174 TextProcessor.getCandidatesOfText
+  60  0.12% 92.42%      11   138 java.lang.StringBuffer.<init>
+  61  0.11% 92.53%      10   129 java.util.regex.Pattern$Curly.match
+  62  0.11% 92.64%      10   217 Rules.candidates
+  63  0.11% 92.75%      10   215 Rules.candidates
+  64  0.11% 92.86%      10   143 RulesNE.match
+  65  0.10% 92.96%       9   116 java.util.Vector.elements
+  66  0.10% 93.06%       9   148 java.util.regex.Pattern$Add.match
+  67  0.10% 93.16%       9   128 java.lang.Integer.<init>
+  68  0.10% 93.26%       9   137 java.util.regex.Matcher.match
+  69  0.10% 93.36%       9   157 java.net.SocketInputStream.read
+  70  0.10% 93.46%       9   173 Rules.candidates
+  71  0.09% 93.55%       8   147 java.lang.String.substring
+  72  0.09% 93.64%       8   131 TextProcessor.getNEsOfText
+  73  0.09% 93.73%       8   122 java.util.Vector.elements
+  74  0.08% 93.81%       7   227 java.util.regex.Pattern$Add.match
+  75  0.08% 93.89%       7   105 TextProcessor.getNEsOfText
+  76  0.08% 93.96%       7   115 TextProcessor.getNEsOfText
+  77  0.08% 94.04%       7    27 org.gjt.mm.mysql.MysqlIO.getResultSet
+  78  0.08% 94.12%       7   260 java.util.regex.Pattern$BitClass.match
+  79  0.07% 94.18%       6   127 sun.nio.cs.StreamEncoder.write
+  80  0.07% 94.25%       6   180 java.util.Hashtable$Enumerator.hasMoreElements
+  81  0.07% 94.32%       6   159 java.util.regex.Pattern$BitClass.match
+  82  0.07% 94.38%       6   158 TextProcessor.getCandidatesOfText
+  83  0.07% 94.45%       6   245 java.util.regex.Pattern$Add.match
+  84  0.07% 94.52%       6   165 TextProcessor.getCandidatesOfText
+  85  0.06% 94.57%       5   320 java.net.PlainSocketImpl.socketAvailable
+  86  0.06% 94.63%       5   315 java.lang.Character.digit
+  87  0.06% 94.68%       5    72 Annotate.tokenize
+  88  0.06% 94.74%       5   238 java.lang.Character.digit
+  89  0.06% 94.80%       5   200 java.util.Hashtable.getEnumeration
+  90  0.06% 94.85%       5   104 org.gjt.mm.mysql.MysqlIO.readPacket
+  91  0.06% 94.91%       5   236 java.util.Hashtable.getEnumeration
+  92  0.06% 94.96%       5   155 org.gjt.mm.mysql.MysqlIO.nextRow
+  93  0.06% 95.02%       5   117 java.lang.String.<init>
+  94  0.04% 95.06%       4   169 org.gjt.mm.mysql.ResultSet.<init>
+  95  0.04% 95.11%       4   218 java.io.FileOutputStream.close0
+  96  0.04% 95.15%       4   323 DBaccess.getSentence
+  97  0.04% 95.19%       4   224 org.gjt.mm.mysql.MysqlIO.sqlQueryDirect
+  98  0.04% 95.24%       4   124 java.lang.StringCoding$CharsetSE.encode
+  99  0.04% 95.28%       4    30 java.net.SocketInputStream.socketRead0
+ 100  0.04% 95.33%       4    98 sun.nio.cs.StreamEncoder.write
+ 101  0.04% 95.37%       4   221 java.util.Hashtable$Enumerator.hasMoreElements
+ 102  0.04% 95.42%       4    36 TextProcessor.getCandidatesOfText
+ 103  0.04% 95.46%       4    65 java.lang.String.substring
+ 104  0.04% 95.51%       4   171 org.gjt.mm.mysql.ResultSet.buildIndexMapping
+ 105  0.04% 95.55%       4    69 org.gjt.mm.mysql.Field.getName
+ 106  0.04% 95.59%       4   172 java.util.regex.Matcher.reset
+ 107  0.04% 95.64%       4   140 org.gjt.mm.mysql.Field.getFullName
+ 108  0.03% 95.67%       3   286 TextProcessor.getCandidatesOfText
+ 109  0.03% 95.71%       3   121 sun.nio.cs.StreamEncoder$CharsetSE.writeBytes
+ 110  0.03% 95.74%       3   314 MatcherNam.getClassificationsOf
+ 111  0.03% 95.77%       3   343 java.lang.Integer.parseInt
+ 112  0.03% 95.81%       3   146 TextProcessor.getNEsOfText
+ 113  0.03% 95.84%       3   243 java.lang.StringBuffer.append
+ 114  0.03% 95.87%       3   216 java.util.Hashtable.<init>
+ 115  0.03% 95.90%       3   201 java.lang.StringCoding.encode
+ 116  0.03% 95.94%       3   188 java.util.Hashtable.get
+ 117  0.03% 95.97%       3   133 java.util.regex.Pattern$Curly.match
+ 118  0.03% 96.00%       3   229 java.util.Hashtable.get
+ 119  0.03% 96.04%       3   125 java.net.SocketInputStream.socketRead0
+ 120  0.03% 96.07%       3   288 java.lang.StringBuffer.<init>
+ 121  0.03% 96.10%       3    64 org.gjt.mm.mysql.Buffer.readLenString
+ 122  0.03% 96.14%       3    77 java.util.Hashtable.toString
+ 123  0.03% 96.17%       3   312 java.util.regex.Matcher.reset
+ 124  0.03% 96.20%       3   162 java.io.PrintStream.write
+ 125  0.03% 96.24%       3   149 RulesNE.resetRules
+ 126  0.03% 96.27%       3   219 java.lang.Integer.parseInt
+ 127  0.03% 96.30%       3   192 java.util.Hashtable.get
+ 128  0.03% 96.34%       3   139 java.lang.String.toUpperCase
+ 129  0.03% 96.37%       3   256 java.util.Hashtable.<init>
+ 130  0.03% 96.40%       3   152 org.gjt.mm.mysql.MysqlIO.readPacket
+ 131  0.03% 96.44%       3   247 java.util.regex.Matcher.getTextLength
+ 132  0.03% 96.47%       3    74 java.lang.StringCoding$CharsetSD.decode
+ 133  0.03% 96.50%       3   154 java.lang.String.<init>
+ 134  0.03% 96.54%       3    29 org.gjt.mm.mysql.jdbc2.IO.buildResultSetWithRows
+ 135  0.02% 96.56%       2   294 java.io.OutputStreamWriter.<init>
+ 136  0.02% 96.58%       2   265 NameTable.insert
+ 137  0.02% 96.60%       2   210 sun.nio.cs.SingleByteEncoder.encodeArrayLoop
+ 138  0.02% 96.63%       2   283 java.lang.ref.Finalizer.<init>
+ 139  0.02% 96.65%       2   262 org.gjt.mm.mysql.Connection.execSQL
+ 140  0.02% 96.67%       2   170 java.lang.Integer.toString
+ 141  0.02% 96.69%       2   257 java.lang.StringBuffer.<init>
+ 142  0.02% 96.72%       2    95 java.io.PrintStream.print
+ 143  0.02% 96.74%       2   160 java.net.PlainSocketImpl.available
+ 144  0.02% 96.76%       2   289 java.lang.StringBuffer.<init>
+ 145  0.02% 96.78%       2   284 java.util.Hashtable$Enumerator.next
+ 146  0.02% 96.80%       2    85 java.lang.StringCoding.decode
+ 147  0.02% 96.83%       2   223 java.lang.String.substring
+ 148  0.02% 96.85%       2   338 org.gjt.mm.mysql.ResultSet.getString
+ 149  0.02% 96.87%       2   206 sun.nio.cs.StreamEncoder$CharsetSE.implWrite
+ 150  0.02% 96.89%       2   351 java.util.Hashtable.containsKey
+ 151  0.02% 96.91%       2   377 TextProcessor.getCandidatesOfText
+ 152  0.02% 96.94%       2   306 java.lang.Character.toUpperCaseEx
+ 153  0.02% 96.96%       2   164 java.net.SocketInputStream.read
+ 154  0.02% 96.98%       2   378 java.lang.StringBuffer.expandCapacity
+ 155  0.02% 97.00%       2   220 java.util.Hashtable.getIterator
+ 156  0.02% 97.03%       2   342 DBaccess.getSentence
+ 157  0.02% 97.05%       2   258 java.util.Hashtable.containsKey
+ 158  0.02% 97.07%       2   240 java.lang.StringBuffer.expandCapacity
+ 159  0.02% 97.09%       2   316 java.lang.String.<init>
+ 160  0.02% 97.11%       2   308 RulesNE.match
+ 161  0.02% 97.14%       2   166 java.lang.StringBuffer.append
+ 162  0.02% 97.16%       2   340 java.util.Hashtable.toString
+ 163  0.02% 97.18%       2   191 java.lang.String.<init>
+ 164  0.02% 97.20%       2   259 java.io.FileOutputStream.<init>
+ 165  0.02% 97.23%       2    97 TextProcessor.tokenize
+ 166  0.02% 97.25%       2   253 sun.nio.cs.SingleByteDecoder.decodeArrayLoop
+ 167  0.02% 97.27%       2   364 TextProcessor.tokenize
+ 168  0.02% 97.29%       2   231 java.io.FileWriter.<init>
+ 169  0.02% 97.31%       2   232 Annotate.annotate
+ 170  0.02% 97.34%       2    76 java.util.regex.Pattern$Curly.match0
+ 171  0.02% 97.36%       2   357 Annotate.annotate
+ 172  0.02% 97.38%       2   285 java.lang.ref.Finalizer.<init>
+ 173  0.02% 97.40%       2    12 java.lang.String.substring
+ 174  0.02% 97.43%       2    86 java.net.SocketInputStream.read
+ 175  0.02% 97.45%       2   190 org.gjt.mm.mysql.MysqlIO.clearAllReceive
+ 176  0.02% 97.47%       2   249 sun.nio.cs.ISO_8859_15.newDecoder
+ 177  0.02% 97.49%       2   282 java.util.regex.Matcher.matches
+ 178  0.02% 97.51%       2   280 java.lang.StringCoding.encode
+ 179  0.02% 97.54%       2   251 java.util.Hashtable.<init>
+ 180  0.02% 97.56%       2    89 java.lang.StringBuffer.toString
+ 181  0.02% 97.58%       2   235 TextProcessor.getCandidatesOfText
+ 182  0.02% 97.60%       2   352 java.util.Hashtable.<init>
+ 183  0.02% 97.63%       2   194 java.lang.StringBuffer.toString
+ 184  0.02% 97.65%       2   135 TextProcessor.tokenize
+ 185  0.02% 97.67%       2   119 java.lang.StringBuffer.<init>
+ 186  0.02% 97.69%       2   328 java.nio.ByteBuffer.wrap
+ 187  0.02% 97.71%       2   281 java.nio.ByteBuffer.wrap
+ 188  0.02% 97.74%       2   271 Annotate.annotate
+ 189  0.02% 97.76%       2   301 TextProcessor.tokenize
+ 190  0.02% 97.78%       2   278 org.gjt.mm.mysql.MysqlIO.sqlQuery
+ 191  0.02% 97.80%       2   228 TextProcessor.tokenize
+ 192  0.02% 97.82%       2   354 java.lang.StringBuffer.append
+ 193  0.02% 97.85%       2   335 Rules.resetRules
+ 194  0.02% 97.87%       2    93 java.nio.charset.CharsetDecoder.<init>
+ 195  0.02% 97.89%       2   205 java.lang.StringBuffer.<init>
+ 196  0.02% 97.91%       2   269 java.nio.charset.CharsetEncoder.isLegalReplacement
+ 197  0.02% 97.94%       2   293 DBaccess.getSentence
+ 198  0.02% 97.96%       2   222 java.util.regex.Pattern$GroupTail.match
+ 199  0.02% 97.98%       2   264 Recognizer.main
+ 200  0.02% 98.00%       2   175 java.lang.String.<init>
+ 201  0.02% 98.02%       2   225 java.util.Vector.elements
+ 202  0.02% 98.05%       2   307 sun.nio.cs.StreamEncoder.forOutputStreamWriter
+ 203  0.02% 98.07%       2   204 java.net.SocketInputStream.available
+ 204  0.02% 98.09%       2    34 java.net.SocketInputStream.socketRead0
+ 205  0.02% 98.11%       2   341 java.net.SocketOutputStream.socketWrite
+ 206  0.02% 98.14%       2   333 java.lang.System.arraycopy
+ 207  0.02% 98.16%       2   144 java.lang.Integer.toString
+ 208  0.02% 98.18%       2   110 java.util.Vector.elementAt
+ 209  0.02% 98.20%       2   234 java.lang.StringBuffer.toString
+ 210  0.02% 98.22%       2   297 MatcherNam.getClassificationsOf
+ 211  0.02% 98.25%       2   237 java.lang.String.equals
+ 212  0.02% 98.27%       2   101 java.util.Vector.elements
+ 213  0.01% 98.28%       1   276 java.util.Hashtable.put
+ 214  0.01% 98.29%       1   197 java.io.Writer.<init>
+ 215  0.01% 98.30%       1   279 TextProcessor.tokenize
+ 216  0.01% 98.31%       1   372 Recognizer.main
+ 217  0.01% 98.32%       1   168 java.net.SocketOutputStream.write
+ 218  0.01% 98.34%       1   334 java.lang.String.getBytes
+ 219  0.01% 98.35%       1   208 java.util.regex.Pattern$Loop.match
+ 220  0.01% 98.36%       1   365 Recognizer.main
+ 221  0.01% 98.37%       1   242 java.lang.StringBuffer.toString
+ 222  0.01% 98.38%       1   246 java.util.regex.Matcher.getTextLength
+ 223  0.01% 98.39%       1   186 java.lang.StringBuffer.toString
+ 224  0.01% 98.40%       1   107 java.lang.StringBuffer.expandCapacity
+ 225  0.01% 98.41%       1   326 java.lang.StringBuffer.toString
+ 226  0.01% 98.42%       1   295 java.nio.charset.CharsetDecoder.onMalformedInput
+ 227  0.01% 98.44%       1   179 java.net.SocketInputStream.available
+ 228  0.01% 98.45%       1   327 MatcherNam.getClassificationsOf
+ 229  0.01% 98.46%       1   266 sun.nio.cs.StreamEncoder$CharsetSE.implWrite
+ 230  0.01% 98.47%       1   187 java.lang.ref.Finalizer.register
+ 231  0.01% 98.48%       1    25 org.gjt.mm.mysql.jdbc2.Connection.createStatement
+ 232  0.01% 98.49%       1   250 java.lang.StringBuffer.<init>
+ 233  0.01% 98.50%       1   248 java.lang.Integer.toString
+ 234  0.01% 98.51%       1   375 DBaccess.getNof
+ 235  0.01% 98.52%       1   350 java.lang.ref.FinalReference.<init>
+ 236  0.01% 98.54%       1   382 java.lang.Integer.<init>
+ 237  0.01% 98.55%       1   161 java.nio.charset.CharsetEncoder.replaceWith
+ 238  0.01% 98.56%       1   349 sun.nio.cs.StreamEncoder$CharsetSE.flushLeftoverChar
+ 239  0.01% 98.57%       1    28 org.gjt.mm.mysql.Field.<init>
+ 240  0.01% 98.58%       1   339 java.lang.Integer.<init>
+ 241  0.01% 98.59%       1   374 java.lang.StringBuffer.toString
+ 242  0.01% 98.60%       1    20 java.lang.ClassLoader$NativeLibrary.load
+ 243  0.01% 98.61%       1   198 org.gjt.mm.mysql.EscapeProcessor.escapeSQL
+ 244  0.01% 98.62%       1    62 Annotate.annotate
+ 245  0.01% 98.63%       1   381 Recognizer.checkCandidates
+ 246  0.01% 98.65%       1   202 java.lang.StringBuffer.<init>
+ 247  0.01% 98.66%       1     3 java.util.jar.JarFile.<clinit>
+ 248  0.01% 98.67%       1   356 java.util.Hashtable.put
+ 249  0.01% 98.68%       1   302 Recognizer.main
+ 250  0.01% 98.69%       1   177 java.util.regex.Pattern$Add.match
+ 251  0.01% 98.70%       1   102 java.util.AbstractCollection.<init>
+ 252  0.01% 98.71%       1   298 java.lang.Character.digit
+ 253  0.01% 98.72%       1    92 java.nio.Buffer.<init>
+ 254  0.01% 98.73%       1   313 TextProcessor.getNEsOfText
+ 255  0.01% 98.75%       1    56 org.gjt.mm.mysql.Field.isBinary
+ 256  0.01% 98.76%       1   214 java.util.Hashtable.<init>
+ 257  0.01% 98.77%       1   358 org.gjt.mm.mysql.ResultSet.checkRowPos
+ 258  0.01% 98.78%       1   305 java.util.Vector.<init>
+ 259  0.01% 98.79%       1   230 java.lang.StringBuffer.toString
+ 260  0.01% 98.80%       1   274 org.gjt.mm.mysql.ResultSet.getUpdateID
+ 261  0.01% 98.81%       1   181 java.net.SocketInputStream.read
+ 262  0.01% 98.82%       1   233 java.util.regex.Pattern$BitClass.match
+ 263  0.01% 98.83%       1   310 Annotate.annotate
+ 264  0.01% 98.85%       1   300 TextProcessor.getNEsOfText
+ 265  0.01% 98.86%       1   153 java.lang.StringBuffer.toString
+ 266  0.01% 98.87%       1   369 java.lang.StringBuffer.<init>
+ 267  0.01% 98.88%       1   114 sun.nio.cs.Surrogate$Parser.<init>
+ 268  0.01% 98.89%       1   344 TextProcessor.getNEsOfText
+ 269  0.01% 98.90%       1   108 sun.nio.cs.StreamEncoder.close
+ 270  0.01% 98.91%       1    73 java.lang.String.indexOf
+ 271  0.01% 98.92%       1   130 java.lang.StringBuffer.append
+ 272  0.01% 98.93%       1   336 RulesNE.output
+ 273  0.01% 98.95%       1    31 java.lang.System.arraycopy
+ 274  0.01% 98.96%       1   362 java.io.UnixFileSystem.prefixLength
+ 275  0.01% 98.97%       1   212 java.util.Hashtable$Enumerator.hasMoreElements
+ 276  0.01% 98.98%       1   337 TextProcessor.getNEsOfText
+ 277  0.01% 98.99%       1   317 Annotate.annotate
+ 278  0.01% 99.00%       1   241 java.lang.StringBuffer.<init>
+ 279  0.01% 99.01%       1    32 java.lang.StringBuffer.expandCapacity
+ 280  0.01% 99.02%       1   368 java.lang.String.<init>
+ 281  0.01% 99.03%       1    99 java.util.Hashtable.entrySet
+ 282  0.01% 99.05%       1   211 Rules.output
+ 283  0.01% 99.06%       1   109 java.util.Hashtable.get
+ 284  0.01% 99.07%       1    84 java.lang.StringCoding.decode
+ 285  0.01% 99.08%       1   380 java.util.regex.Pattern$BitClass.match
+ 286  0.01% 99.09%       1   345 java.lang.StringBuffer.append
+ 287  0.01% 99.10%       1   270 TextProcessor.getNEsOfText
+ 288  0.01% 99.11%       1   213 java.lang.StringBuffer.toString
+ 289  0.01% 99.12%       1   371 Recognizer.main
+ 290  0.01% 99.13%       1   367 java.lang.StringBuffer.expandCapacity
+ 291  0.01% 99.15%       1    70 java.nio.charset.CharsetEncoder.<init>
+ 292  0.01% 99.16%       1    38 sun.nio.cs.StreamEncoder.write
+ 293  0.01% 99.17%       1   272 org.gjt.mm.mysql.jdbc2.Statement.<init>
+ 294  0.01% 99.18%       1   275 Recognizer.checkCandidates
+ 295  0.01% 99.19%       1   156 org.gjt.mm.mysql.Buffer.writeByte
+ 296  0.01% 99.20%       1   185 java.util.regex.Pattern$Add.match
+ 297  0.01% 99.21%       1   290 java.lang.StringBuffer.<init>
+ 298  0.01% 99.22%       1   324 java.lang.StringBuffer.append
+ 299  0.01% 99.23%       1   366 MatcherNam.getClassificationsOf
+ 300  0.01% 99.25%       1   292 java.lang.String.<init>
+ 301  0.01% 99.26%       1    26 org.gjt.mm.mysql.Statement.<init>
+ 302  0.01% 99.27%       1   385 java.lang.Thread.start
+ 303  0.01% 99.28%       1   346 Pattern.toString
+ 304  0.01% 99.29%       1   322 TextProcessor.getCandidatesOfText
+ 305  0.01% 99.30%       1   291 sun.nio.cs.SingleByteDecoder.decodeArrayLoop
+ 306  0.01% 99.31%       1   348 java.lang.String.toLowerCase
+ 307  0.01% 99.32%       1   309 TextProcessor.getCandidatesOfText
+ 308  0.01% 99.33%       1   261 MatcherNam.getClassificationsOf
+ 309  0.01% 99.35%       1   239 java.lang.StringBuffer.toString
+ 310  0.01% 99.36%       1   383 java.lang.Double.doubleToLongBits
+ 311  0.01% 99.37%       1   331 Recognizer.checkCandidates
+ 312  0.01% 99.38%       1    96 java.lang.String.indexOf
+ 313  0.01% 99.39%       1   255 DBaccess.getNof
+ 314  0.01% 99.40%       1   353 java.util.regex.Pattern$Curly.match0
+ 315  0.01% 99.41%       1   355 java.lang.ref.Finalizer.register
+ 316  0.01% 99.42%       1   123 java.lang.Integer.<init>
+ 317  0.01% 99.43%       1   100 java.lang.String.indexOf
+ 318  0.01% 99.45%       1    14 java.lang.String.<init>
+ 319  0.01% 99.46%       1    82 java.util.Hashtable.put
+ 320  0.01% 99.47%       1    75 sun.io.Converters.getDefaultEncodingName
+ 321  0.01% 99.48%       1     1 sun.misc.URLClassPath.getLoader
+ 322  0.01% 99.49%       1     2 sun.misc.URLClassPath$JarLoader.getJarFile
+ 323  0.01% 99.50%       1   330 java.util.Hashtable.containsKey
+ 324  0.01% 99.51%       1   252 java.lang.String.<init>
+ 325  0.01% 99.52%       1   113 sun.nio.cs.StreamEncoder$CharsetSE.<init>
+ 326  0.01% 99.53%       1   359 org.gjt.mm.mysql.MysqlIO.sendCommand
+ 327  0.01% 99.55%       1   363 java.util.Hashtable.get
+ 328  0.01% 99.56%       1   304 java.lang.String.<init>
+ 329  0.01% 99.57%       1   299 java.lang.StringBuffer.toString
+ 330  0.01% 99.58%       1   296 java.lang.StringBuffer.<init>
+ 331  0.01% 99.59%       1   376 java.lang.StringBuffer.<init>
+ 332  0.01% 99.60%       1   268 java.nio.CharBuffer.wrap
+ 333  0.01% 99.61%       1   361 TextProcessor.tokenize
+ 334  0.01% 99.62%       1   142 java.lang.StringBuffer.<init>
+ 335  0.01% 99.63%       1   244 TextProcessor.getNEsOfText
+ 336  0.01% 99.65%       1    45 Annotate.tokenize
+ 337  0.01% 99.66%       1   287 java.lang.String.equals
+ 338  0.01% 99.67%       1   373 RulesNE.output
+ 339  0.01% 99.68%       1   184 java.util.Hashtable$Enumerator.nextElement
+ 340  0.01% 99.69%       1   311 org.gjt.mm.mysql.ResultSet.checkRowPos
+ 341  0.01% 99.70%       1   145 java.lang.String.<init>
+ 342  0.01% 99.71%       1   196 org.gjt.mm.mysql.MysqlIO.versionMeetsMinimum
+ 343  0.01% 99.72%       1   151 sun.nio.cs.SingleByteEncoder.encodeLoop
+ 344  0.01% 99.73%       1   141 java.util.Hashtable.<init>
+ 345  0.01% 99.75%       1   319 java.util.Vector.elements
+ 346  0.01% 99.76%       1   384 java.net.SocketInputStream.read
+ 347  0.01% 99.77%       1   106 Recognizer.checkCandidates
+ 348  0.01% 99.78%       1   277 java.util.Hashtable.<init>
+ 349  0.01% 99.79%       1   332 java.nio.charset.CharsetDecoder.replaceWith
+ 350  0.01% 99.80%       1    13 java.lang.System.arraycopy
+ 351  0.01% 99.81%       1   347 org.gjt.mm.mysql.MysqlIO.send
+ 352  0.01% 99.82%       1   303 java.nio.ByteBuffer.<init>
+ 353  0.01% 99.83%       1   263 java.lang.StringBuffer.toString
+ 354  0.01% 99.84%       1   329 java.lang.String.<init>
+ 355  0.01% 99.86%       1   321 java.nio.charset.Charset.isSupported
+ 356  0.01% 99.87%       1   226 org.gjt.mm.mysql.jdbc2.ResultSet.<init>
+ 357  0.01% 99.88%       1   207 java.lang.Character.digit
+ 358  0.01% 99.89%       1   189 java.util.Hashtable.toString
+ 359  0.01% 99.90%       1   254 java.util.Hashtable.rehash
+ 360  0.01% 99.91%       1   370 Pattern.toString
+ 361  0.01% 99.92%       1   273 java.lang.StringBuffer.append
+ 362  0.01% 99.93%       1   325 Rules.output
+ 363  0.01% 99.94%       1   318 Rules.output
+ 364  0.01% 99.96%       1   360 java.lang.StringBuffer.<init>
+ 365  0.01% 99.97%       1   267 java.util.Vector.elements
+ 366  0.01% 99.98%       1   379 java.util.regex.Pattern$Add.match
+ 367  0.01% 99.99%       1   195 org.gjt.mm.mysql.Statement.executeQuery
+ 368  0.01% 100.00%       1   209 TextProcessor.tokenize
+CPU SAMPLES END

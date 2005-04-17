@@ -1,0 +1,3 @@
+Zu dne versionen
+Namerec 1.0 und NameRec 1.1 ist dasselbe, aber für eine groessere
+Namensliste wurde nur NameRec1.0 verwendet.

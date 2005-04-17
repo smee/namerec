@@ -1,0 +1,6083 @@
+Dieter Schulte 	VN NN 
+DGB-Chef Dieter Schulte 	TIT VN NN 
+Dieter Schulte 	VN NN 
+DGB-Chef Dieter Schulte 	TIT VN NN 
+Dieter Schulte 	VN NN 
+DGB-Chef Dieter Schulte 	TIT VN NN 
+Dieter Schulte 	VN NN 
+DGB-Chef Dieter Schulte 	TIT VN NN 
+Andreas Grabinski 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Jürgen Echternach 	VN NN 
+Ex-Vorsitzenden Jürgen Echternach 	TIT VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Veronica Martinez 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Dieter Backhaus 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Jürgen Echternach 	VN NN 
+Ex-Vorsitzenden Jürgen Echternach 	TIT VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Jürgen Echternach 	VN NN 
+Ex-Vorsitzenden Jürgen Echternach 	TIT VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Veronica Martinez 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Dieter Backhaus 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Katherine Römer 	VN NN 
+Mathias Nagel 	VN NN 
+Thomas Kurrer 	VN NN 
+Manfred Reuter 	VN NN 
+Amtsleiter Manfred Reuter 	TIT VN NN 
+Hans-Peter Dücker 	VN NN 
+Christa Goetsch 	VN NN 
+GAL-Fraktionschefin Christa Goetsch 	TIT VN NN 
+Frank Schöndube 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Senator Nagel 	TIT NN 
+Wolfgang Sielaff 	VN NN 
+Klaus Püschel 	VN NN 
+Prof . Klaus Püschel 	TIT PU VN NN 
+Jan Philipp Reemtsma 	VN VN NN 
+Kathrin Fechner 	VN NN 
+Wolfgang Rose 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Michael Göring 	VN NN 
+Professor Michael Göring 	TIT VN NN 
+Detlef Gottschalck 	VN NN 
+Vorsitzende Richter 	TIT NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Shimon Stein 	VN NN 
+Niels Hansen 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Rolf-Peter Rocke 	VN NN 
+Beate Böttcher 	VN NN 
+Beate Böttcher 	VN NN 
+St . Nikolai 	TIT PU NN 
+Rudolf Feige 	VN NN 
+Johannes Westendorf 	VN NN 
+Prof . Johannes Westendorf 	TIT PU VN NN 
+Rainer Doleschall 	VN NN 
+Ralf Kunz 	VN NN 
+Polizeisprecher Ralf Kunz 	TIT VN NN 
+Volker Okun 	VN NN 
+Gerhard Fuchs 	VN NN 
+Bezirksamtsleiter Gerhard Fuchs 	TIT VN NN 
+Frank Schmidt 	VN NN 
+Hildegund Bauer 	VN NN 
+Moderatorin Hildegund Bauer 	TIT VN NN 
+Klaus Peter Hesse 	VN VN NN 
+Verkehrsexperten Klaus Peter Hesse 	TIT VN VN NN 
+Birgit Enke 	VN NN 
+Susanne Freese 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Jürgen Echternach 	VN NN 
+Ex-Vorsitzenden Jürgen Echternach 	TIT VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Veronica Martinez 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Dieter Backhaus 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Katherine Römer 	VN NN 
+Mathias Nagel 	VN NN 
+Thomas Kurrer 	VN NN 
+Manfred Reuter 	VN NN 
+Amtsleiter Manfred Reuter 	TIT VN NN 
+Hans-Peter Dücker 	VN NN 
+Christa Goetsch 	VN NN 
+GAL-Fraktionschefin Christa Goetsch 	TIT VN NN 
+Frank Schöndube 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Senator Nagel 	TIT NN 
+Wolfgang Sielaff 	VN NN 
+Klaus Püschel 	VN NN 
+Prof . Klaus Püschel 	TIT PU VN NN 
+Jan Philipp Reemtsma 	VN VN NN 
+Kathrin Fechner 	VN NN 
+Wolfgang Rose 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Michael Göring 	VN NN 
+Professor Michael Göring 	TIT VN NN 
+Detlef Gottschalck 	VN NN 
+Vorsitzende Richter 	TIT NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Shimon Stein 	VN NN 
+Niels Hansen 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Rolf-Peter Rocke 	VN NN 
+Beate Böttcher 	VN NN 
+Beate Böttcher 	VN NN 
+St . Nikolai 	TIT PU NN 
+Rudolf Feige 	VN NN 
+Johannes Westendorf 	VN NN 
+Prof . Johannes Westendorf 	TIT PU VN NN 
+Rainer Doleschall 	VN NN 
+Ralf Kunz 	VN NN 
+Polizeisprecher Ralf Kunz 	TIT VN NN 
+Volker Okun 	VN NN 
+Gerhard Fuchs 	VN NN 
+Bezirksamtsleiter Gerhard Fuchs 	TIT VN NN 
+Frank Schmidt 	VN NN 
+Hildegund Bauer 	VN NN 
+Moderatorin Hildegund Bauer 	TIT VN NN 
+Klaus Peter Hesse 	VN VN NN 
+Verkehrsexperten Klaus Peter Hesse 	TIT VN VN NN 
+Birgit Enke 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Manfred Dankert 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Erich Loose 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Gitta Meyer 	VN NN 
+Gewerkschaftssekretärin Gitta Meyer 	TIT VN NN 
+Elisabeth Zahn 	VN NN 
+Helgo Matthias Haak 	VN VN NN 
+Holger Weißmann 	VN NN 
+Elisabeth Zahn 	VN NN 
+Pastor Haak 	VN NN 
+Tobias Wriedt 	VN NN 
+Pastor Haak 	VN NN 
+Klaus Hempel 	VN NN 
+Prof . Klaus Hempel 	TIT PU VN NN 
+Uli Timm 	VN NN 
+Rainer Winter 	VN NN 
+Karin Wiedemann 	VN NN 
+Uwe Stephenson 	VN NN 
+Anita Klahn 	VN NN 
+Uwe Stephenson 	VN NN 
+Uwe Stephenson 	VN NN 
+Brigitte Stein 	VN NN 
+Ulla Thiele 	VN NN 
+Frank Bloch 	VN NN 
+Hendrike Heitmann 	VN NN 
+Spielführerin Hendrike Heitmann 	TIT VN NN 
+Andrea Nagel 	VN NN 
+Svenja Klotz 	VN NN 
+Hendrike Heitmann 	VN NN 
+Janina Horn 	VN NN 
+Laura Hilger 	VN NN 
+Wiebke Ahlers 	VN NN 
+Nadine Niedermeyer 	VN NN 
+Anna Wiebke Schulz 	VN VN NN 
+Rainer Fischer 	VN NN 
+Klaus Gehrmann 	VN NN 
+Trainer Klaus Gehrmann 	TIT VN NN 
+Steffi Fleischmann 	VN NN 
+Marieke Maeder 	VN NN 
+Grit Lindemann 	VN NN 
+Claudia Burmeister 	VN NN 
+Katrin Niemeier 	VN NN 
+Britta Möller 	VN NN 
+Johanna Harnack 	VN NN 
+Dörte Möller 	VN NN 
+Melanie Kröger 	VN NN 
+Sven Baumann 	VN NN 
+Philipp Ruge 	VN NN 
+Kai Richter 	VN NN 
+Außenspieler Kai Richter 	TIT VN NN 
+Hans Melzer 	VN NN 
+Bundestrainer Hans Melzer 	TIT VN NN 
+Adrian Haase 	VN NN 
+Arne Linke 	VN NN 
+Stefan Paetz 	VN NN 
+Gunter Armonat 	VN NN 
+Landrat Gunter Armonat 	TIT VN NN 
+Landschaftsarchitekten Theis 	TIT NN 
+Bernd Bauer 	VN NN 
+Rektor Bernd Bauer 	TIT VN NN 
+Kerstin Hintz 	VN NN 
+Rektor Bauer 	TIT NN 
+Quentin Weber 	VN NN 
+Juniorchef Quentin Weber 	TIT VN NN 
+Quentin Weber 	VN NN 
+Wolf Hartmut Weber 	VN VN NN 
+Kommunalpolitikers Wolf Hartmut Weber 	TIT VN VN NN 
+Quentin Weber 	VN NN 
+Quentin Weber 	VN NN 
+Wolf Hartmut Weber 	VN VN NN 
+Quentin Weber 	VN NN 
+Quentin Weber 	VN NN 
+Quentin Weber 	VN NN 
+Marc Kühlborn 	VN NN 
+Andreas Schäfer 	VN NN 
+Andreas Schäfer 	VN NN 
+Andreas Göhring 	VN NN 
+Manfred Schulz 	VN NN 
+SPD-Politikers Manfred Schulz 	TIT VN NN 
+Manfred Schulz 	VN NN 
+Bürgermeister Böhme 	TIT NN 
+Bürgermeister Böhme 	TIT NN 
+Bürgermeister Böhme 	TIT NN 
+Ralf-Dieter Fischer 	VN NN 
+Volker Okun 	VN NN 
+Bürgerschaftsabgeordneten Volker Okun 	TIT VN NN 
+Ernst Hornung 	VN NN 
+Helga Stöver 	VN NN 
+Enno Stöver 	VN NN 
+Gothart Stier 	VN NN 
+Fritz Bultmann 	VN NN 
+Martin Janz 	VN NN 
+Prof . Martin Janz 	TIT PU VN NN 
+Julia Thelen 	VN NN 
+Richterin Julia Thelen 	TIT VN NN 
+Jan Christoph Amelung 	VN VN NN 
+Jana Veh 	VN NN 
+Udo Krapf 	VN NN 
+Maximilian Herget 	VN NN 
+Maximilian Herget 	VN NN 
+Maximilian Herget 	VN NN 
+Bernd Lehmann 	VN NN 
+Sebastian Beyer 	VN NN 
+Karsten Frommann 	VN NN 
+Stephanie Frommann 	VN NN 
+Kerstin Beyer 	VN NN 
+Inga Lund 	VN NN 
+Corinna Neumann 	VN NN 
+Ina Heitmann 	VN NN 
+Anna Haun 	VN NN 
+Susann Thiele 	VN NN 
+Jenny Hacker 	VN NN 
+Ralf Zumdick 	VN NN 
+Hans-Hinrich Duncker 	VN NN 
+Co-Trainer Hans-Hinrich Duncker 	TIT VN NN 
+Anke Fries 	VN NN 
+Ligabüro-Mitarbeiterin Anke Fries 	TIT VN NN 
+Horst Lüders 	VN NN 
+Manager Horst Lüders 	TIT VN NN 
+Andreas Roloff 	VN NN 
+Trainer Andreas Roloff 	TIT VN NN 
+Arne Birkner 	VN NN 
+Trainer Arne Birkner 	TIT VN NN 
+Otto Geise 	VN NN 
+Felix Morawski 	VN NN 
+Otto Geise 	VN NN 
+Vanessa Lewin 	VN NN 
+Mona Pfaffenbach 	VN NN 
+Gunda Wiebusch 	VN NN 
+Gunda Wiebusch 	VN NN 
+Gunda Wiebusch 	VN NN 
+Jürgen Schulz 	VN NN 
+Kristiane Helmke 	VN NN 
+Claudia Lipski 	VN NN 
+Jana Scharnberg 	VN NN 
+Thomas Bosse 	VN NN 
+Baudezernent Thomas Bosse 	TIT VN NN 
+Michaela Merten 	VN NN 
+Michaela Merten 	VN NN 
+Michaela Mertens 	VN NN 
+Thomas Bosse 	VN NN 
+Baudezernent Thomas Bosse 	TIT VN NN 
+Tatjana Kasper 	VN NN 
+Christiane Petersen 	VN NN 
+Ärztin Christiane Petersen 	TIT VN NN 
+Irene Brockmann 	VN NN 
+Tatjana Kasper 	VN NN 
+Tatjana Kasper 	VN NN 
+Gero Storjohann 	VN NN 
+CDU-Bundestagsabgeordnete Gero Storjohann 	TIT VN NN 
+Sigrid Krüger 	VN NN 
+Gero Storjohann 	VN NN 
+Uwe Voss 	VN NN 
+Kreisgeschäftsführer Uwe Voss 	TIT VN NN 
+Jens-Peter Timm 	VN NN 
+Wolfgang Selig 	VN NN 
+Karin Stein 	VN NN 
+Hanns Eisler 	VN NN 
+Werner Richard Heymann 	VN VN NN 
+Friedrich Hollaender 	VN NN 
+Bernhard Tuchel 	VN NN 
+Günter Meier 	VN NN 
+Eva Stoltenberg 	VN NN 
+Pastor Tegtmeyer 	VN NN 
+Tim Böge 	VN NN 
+Mirko Heyer 	VN NN 
+Susanne Krehl 	VN NN 
+Jan Schmidt 	VN NN 
+Kathy Brüning 	VN NN 
+Victoria Lauenroth 	VN NN 
+Leslie Harrington 	VN NN 
+Renate Wölk 	VN NN 
+Renate Wölk 	VN NN 
+Leslie Harrington 	VN NN 
+Janina Gies 	VN NN 
+Michelle Klebe 	VN NN 
+Janina Gies 	VN NN 
+Marco Prey 	VN NN 
+Regionalliga Nord 	TIT NN 
+Marco Prey 	VN NN 
+Regionalliga Nord 	TIT NN 
+Sarah Gampe 	VN NN 
+Juliane Pohl 	VN NN 
+Inga Fuhrmann 	VN NN 
+Kathrin Weiler 	VN NN 
+Melanie Koppel 	VN NN 
+Manuela Zwiener 	VN NN 
+Jens Scheunemann 	VN NN 
+Trainer Jens Scheunemann 	TIT VN NN 
+Nadine Wrage 	VN NN 
+Jens Scheunemann 	VN NN 
+Thomas Kahlert 	VN NN 
+Ralf Bohnsack 	VN NN 
+Hartmut Porth 	VN NN 
+Rüdiger Schäfer 	VN NN 
+Vereinschef Rüdiger Schäfer 	TIT VN NN 
+Tanja Rathmann 	VN NN 
+Jugendwartin Tanja Rathmann 	TIT VN NN 
+Tanja Rathmann 	VN NN 
+Andreas Schulz 	VN NN 
+Uwe Schmidt 	VN NN 
+Matthias Wermke 	VN NN 
+Hendrik Peters 	VN NN 
+FFC-Trainer Hendrik Peters 	TIT VN NN 
+Simon Speth 	VN NN 
+Matthias Krüger 	VN NN 
+Olaf Dettmering 	VN NN 
+Stefan Pingel 	VN NN 
+Christian Möck 	VN NN 
+Stefan Pingel 	VN NN 
+Jan Hasenkamp 	VN NN 
+Mittelfeldspieler Jan Hasenkamp 	TIT VN NN 
+Tobias Schadendorf 	VN NN 
+Thimo Brinkmann 	VN NN 
+Maximilian Löw 	VN NN 
+Simon Winter 	VN NN 
+Christine Köhn 	VN NN 
+Jana Liesegang 	VN NN 
+Nadine Synold 	VN NN 
+Krystina Ehm 	VN NN 
+Kristin Borchers 	VN NN 
+Isabelle Peltier 	VN NN 
+Maximilian Löw 	VN NN 
+Lennart Jakobs 	VN NN 
+Felix Thomsen 	VN NN 
+Jan Reimann 	VN NN 
+Hendrik Eisenhut 	VN NN 
+Hendrik Böttcher 	VN NN 
+Oliver Lenz 	VN NN 
+Patrick Lamm 	VN NN 
+Birger Scholz 	VN NN 
+Christoph Schütz 	VN NN 
+Malte Pohlmann 	VN NN 
+Jörg Brück 	VN NN 
+Achim Nawrath 	VN NN 
+Christian Fey 	VN NN 
+Andreas Lund 	VN NN 
+Malte Riehl 	VN NN 
+Jörg Kunz 	VN NN 
+Dietmar Kühl 	VN NN 
+Bruno Egge 	VN NN 
+Bürgermeister Bruno Egge 	TIT VN NN 
+Ines Strehlau 	VN NN 
+Grünen-Fraktionschefin Ines Strehlau 	TIT VN NN 
+Helmuth Jahnke 	VN NN 
+SPD-Fraktionschef Helmuth Jahnke 	TIT VN NN 
+Wolfgang Grimme 	VN NN 
+Landrat Wolfgang Grimme 	TIT VN NN 
+Stadtwerkedirektor Henning 	TIT NN 
+Arno Nicolaisen 	VN NN 
+Bäderleiter Arno Nicolaisen 	TIT VN NN 
+Hans-Helmut Birke 	VN NN 
+Fraktionschef Hans-Helmut Birke 	TIT VN NN 
+Karin Reschke 	VN NN 
+Elternvertreterin Karin Reschke 	TIT VN NN 
+Karin Reschke 	VN NN 
+Karin Reschke 	VN NN 
+Anke Schmelzer 	VN NN 
+Niels Schmidt 	VN NN 
+Bürgermeister Niels Schmidt 	TIT VN NN 
+Fritz Tietgen 	VN NN 
+Johannes Tietgen 	VN NN 
+Johannes Tietgen 	VN NN 
+Firmenchef Johannes Tietgen 	TIT VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Andrea Faltin 	VN NN 
+Simone Eckert 	VN NN 
+Johann Sebastian Bach 	VN VN NN 
+Arne Weber 	VN NN 
+Bauunternehmer Arne Weber 	TIT VN NN 
+Dr . Schaal 	TIT PU NN 
+Dirk Römmer 	VN NN 
+Giovanni Gabrieli 	VN NN 
+Casa Don Bosco 	VN VN NN 
+Markus Schwarz 	VN NN 
+Tobias Kordt 	VN NN 
+Quarterback Tobias Kordt 	TIT VN NN 
+Jan Hellwig 	VN NN 
+Karsten Schümann 	VN NN 
+Ingo Jopp 	VN NN 
+Union-Trainer Ingo Jopp 	TIT VN NN 
+Benjamin Köhnke 	VN NN 
+Serdar Dur 	VN NN 
+Gyula Wetzel 	VN NN 
+Helge Voth 	VN NN 
+Christian Hink 	VN NN 
+Patrick Steinmüller 	VN NN 
+Torben Lohse 	VN NN 
+Marco Kolberg 	VN NN 
+Lars Henkel 	VN NN 
+Thomas Rudloff 	VN NN 
+Marco Kolberg 	VN NN 
+Marc Draeger 	VN NN 
+Torben Berger 	VN NN 
+Clemens Jansen 	VN NN 
+Christian Moormann 	VN NN 
+Jan Diercks 	VN NN 
+Torwart Jan Diercks 	TIT VN NN 
+Christian Carstens 	VN NN 
+Mustafa Yilmaz 	VN NN 
+Christina Jansen 	VN NN 
+Daniel Schmidt 	VN NN 
+Thomas Rohde 	VN NN 
+Jörn Andresen 	VN NN 
+Anja Hauschildt 	VN NN 
+Marie Nissen 	VN NN 
+Jörg Hubrich 	VN NN 
+TuS-Spielführer Jörg Hubrich 	TIT VN NN 
+Georg Pohls 	VN NN 
+Georg Pohl 	VN NN 
+Matthias Menzel 	VN NN 
+Rouven Kanitz 	VN NN 
+Jakob Wehmeier 	VN NN 
+Thorsten Müller 	VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Stefan Arlt 	VN NN 
+Heide-Park-Sprecher Stefan Arlt 	TIT VN NN 
+Gerhard Schmid 	VN NN 
+Mobilcom-Chefs Gerhard Schmid 	TIT VN NN 
+Bernhard Uzun 	VN NN 
+Wolfgang Bosbach 	VN NN 
+Konrad Freiberg 	VN NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Michael Knipper 	VN NN 
+Hauptgeschäftsführer Michael Knipper 	TIT VN NN 
+Bernhard Uzun 	VN NN 
+Hansjürgen Garstka 	VN NN 
+Michael Glos 	VN NN 
+Landesgruppenchef Michael Glos 	TIT VN NN 
+Hans Eichel 	VN NN 
+Finanzminister Hans Eichel 	TIT VN NN 
+Olaf Scholz 	VN NN 
+Joschka Fischer 	VN NN 
+Außenminister Joschka Fischer 	TIT VN NN 
+Außenminister Fischer 	TIT NN 
+Lex Fischer 	VN NN 
+Jörg Schönbohm 	VN NN 
+Landesinnenminister Jörg Schönbohm 	TIT VN NN 
+Angela Merkel 	VN NN 
+CDU-Chefin Angela Merkel 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Roman Herzog 	VN NN 
+Alt-Bundespräsident Roman Herzog 	TIT VN NN 
+Henry Kissinger 	VN NN 
+Ex-US-Außenminister Henry Kissinger 	TIT VN NN 
+Monika Hohlmeier 	VN NN 
+Kultusministerin Monika Hohlmeier 	TIT VN NN 
+Edmund Stoiber 	VN NN 
+Ministerpräsident Edmund Stoiber 	TIT VN NN 
+Joschka Fischer 	VN NN 
+Außenminister Joschka Fischer 	TIT VN NN 
+Michael Howard 	VN NN 
+Tory-Spitzenkandidat Michael Howard 	TIT VN NN 
+Tony Blair 	VN NN 
+Michael Howard 	VN NN 
+Charles Kennedy 	VN NN 
+Konstantin von Tischendorf 	VN ZN NN 
+Leipziger Theologieprofessor Konstantin von Tischendorf 	TIT TIT VN ZN NN 
+Ekkehard Henschke 	VN NN 
+Lech Walesa 	VN NN 
+Friedensnobelpreisträger Lech Walesa 	TIT VN NN 
+Silvan Schalom 	VN NN 
+Außenministers Silvan Schalom 	TIT VN NN 
+Donald Rumsfeld 	VN NN 
+Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Harald Pinger 	VN NN 
+Matthias Bellmann 	VN NN 
+Personalvorstand Matthias Bellmann 	TIT VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Walter Hering 	VN NN 
+Walter Hering 	VN NN 
+Thomas Cook 	VN NN 
+Jürgen Branse 	VN NN 
+Holiday-Jack-Geschäftsführer Jürgen Branse 	TIT VN NN 
+Thomas Cook 	VN NN 
+Martin Fliedner 	VN NN 
+Harper Petersen 	VN NN 
+Peter Kruse 	VN NN 
+Wendelin Wiedeking 	VN NN 
+Porsche-Chef Wendelin Wiedeking 	TIT VN NN 
+Josef Ackermann 	VN NN 
+Deutsche-Bank-Chef Josef Ackermann 	TIT VN NN 
+Georg Wilhelm Adamowitsch 	VN VN NN 
+Wirtschaftsstaatssekretär Georg Wilhelm Adamowitsch 	TIT VN VN NN 
+Andreas Schweickert 	VN NN 
+Frank Bohmann 	VN NN 
+HBL-Geschäftsführer Frank Bohmann 	TIT VN NN 
+Thorsten Storm 	VN NN 
+Geschäftsführer Thorsten Storm 	TIT VN NN 
+Bernd Rigterink 	VN NN 
+Manager Bernd Rigterink 	TIT VN NN 
+Achim Feifel 	VN NN 
+Gerd Hein 	VN NN 
+HSV-Aufsichtsrat Gerd Hein 	TIT VN NN 
+Hartmut Engel 	VN NN 
+Gerd Hein 	VN NN 
+Kathrin Platz 	VN NN 
+Geschäftsführerin Kathrin Platz 	TIT VN NN 
+Anneke Böhmert 	VN NN 
+Melanie Cremer 	VN NN 
+Michaela Scheibe 	VN NN 
+Peter Krueger 	VN NN 
+Joachim Mahn 	VN NN 
+Meistertrainer Joachim Mahn 	TIT VN NN 
+Immobilienmakler Engel 	TIT NN 
+Moritz Falcke 	VN NN 
+Eike Duckwitz 	VN NN 
+Sebastian Biederlack 	VN NN 
+Eike Duckwitz 	VN NN 
+Joachim Mahn 	VN NN 
+Trainer Joachim Mahn 	TIT VN NN 
+Michael Schumacher 	VN NN 
+Dirk Nowitzki 	VN NN 
+Jon Mewes 	VN NN 
+Winfried M . Klimek 	VN MIX PU NN 
+Steffen Karg 	VN NN 
+Nikolaus Mondt 	VN NN 
+Teamkollegen Nikolaus Mondt 	TIT VN NN 
+Jan Benda 	VN NN 
+Steffen Hoffmann 	VN NN 
+Michael Fischer 	VN NN 
+Ulrich Natusch 	VN NN 
+Trainer Ulrich Natusch 	TIT VN NN 
+Christian Wriedt 	VN NN 
+Alex Petkovic 	VN NN 
+Cruisergewichtsprofi Alex Petkovic 	TIT VN NN 
+Dagmar Klostermann 	VN NN 
+Ärztin Dagmar Klostermann 	TIT VN NN 
+Regionalliga Nord 	TIT NN 
+Birgit Fischer 	VN NN 
+Florian Mayer 	VN NN 
+Tennisprofi Florian Mayer 	TIT VN NN 
+Nicolas Kiefer 	VN NN 
+Dietmar Beiersdorfer 	VN NN 
+Simon Rolfes 	VN NN 
+Thomas Doll 	VN NN 
+Trainer Thomas Doll 	TIT VN NN 
+Thomas Doll 	VN NN 
+Trainer Thomas Doll 	TIT VN NN 
+Champions League 	TIT NN 
+Champions League 	TIT NN 
+Fabio Cannavaro 	VN NN 
+Kapitän Fabio Cannavaro 	TIT VN NN 
+Fabio Capello 	VN NN 
+Rafael Benitez 	VN NN 
+Teammanager Rafael Benitez 	TIT VN NN 
+Steven Gerrard 	VN NN 
+Ralf Peters 	VN NN 
+Cony Theis 	VN NN 
+Elke Dröscher 	VN NN 
+Robert Fleck 	VN NN 
+Deichtorhallendirektor Robert Fleck 	TIT VN NN 
+Fred Astaire 	VN NN 
+Franz Rompel 	VN NN 
+Hans Zehetmair 	VN NN 
+Renate Schmidt 	VN NN 
+Bundesfamilienministerin Renate Schmidt 	TIT VN NN 
+Marianne Leuzinger-Bohleber 	VN NN 
+Kate Atkinson 	VN NN 
+Schottin Kate Atkinson 	TIT VN NN 
+Privatdetektiv Brodie 	TIT NN 
+Ulrike Kriener 	VN NN 
+Schauspielerin Ulrike Kriener 	TIT VN NN 
+Ulrich Wickert 	VN NN 
+Jan Hofer 	VN NN 
+Claus Kleber 	VN NN 
+Marietta Slomka 	VN NN 
+Sarah Kuttner 	VN NN 
+Moderatorin Sarah Kuttner 	TIT VN NN 
+Sarah Kuttner 	VN NN 
+Charlotte Roche 	VN NN 
+Catherine Mühlemann 	VN NN 
+Charlotte Roche 	VN NN 
+Wolfgang Stein 	VN NN 
+Holger Karsten Schmidt 	VN VN NN 
+Stephan Wagner 	VN NN 
+Regisseur Stephan Wagner 	TIT VN NN 
+Wolfgang Stein 	VN NN 
+Volker Erler 	VN NN 
+Matthias Brandt 	VN NN 
+Hannes Jaenicke 	VN NN 
+Johannes Pauls 	VN NN 
+Bundeskanzler Weyer 	TIT NN 
+Klaus J . Behrendt 	VN MIX PU NN 
+Heidi Klum 	VN NN 
+Popstar Seal 	TIT NN 
+Klaus Töpfer 	VN NN 
+Maria Jepsen 	VN NN 
+Hans-Jochen Jaschke 	VN NN 
+Weihbischof Dr . Hans-Jochen Jaschke 	TIT TIT PU VN NN 
+Albert Einstein 	VN NN 
+Malte Wichmann 	VN NN 
+Christian Wedekind 	VN NN 
+Inga Schröder 	VN NN 
+David Brandes 	VN NN 
+Produzenten David Brandes 	TIT VN NN 
+Karl Heinz Kögel 	VN VN NN 
+Media-Control-Chef Karl Heinz Kögel 	TIT VN VN NN 
+Jeanette Biedermann 	VN NN 
+Nicole Süßmilch 	VN NN 
+Michael Jackson 	VN NN 
+Bohuslav Martinus 	VN NN 
+Jean Michel Jarre 	VN VN NN 
+Joseph Goebbels 	VN NN 
+Lutz Hachmeister 	VN NN 
+Udo Samel 	VN NN 
+Alan Parkers 	VN NN 
+Anna Maria Kaufmann 	VN VN NN 
+Matthias Scheuring 	VN NN 
+Michael Weber 	VN NN 
+Schorsch Kamerun 	VN NN 
+Else Kindt 	VN NN 
+Else Kindt 	VN NN 
+Else Kindt 	VN NN 
+Ministerin Schmidt 	TIT NN 
+Renate Schmidt 	VN NN 
+Bundesfamilienministerin Renate Schmidt 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Kanzler Gerhard Schröder 	TIT VN NN 
+Renate Schmidt 	VN NN 
+Jörg Stumpf 	VN NN 
+Ernst-Otto Kock 	VN NN 
+Ernst-Otto Kock 	VN NN 
+Beate Stoffers 	VN NN 
+Sprecherin Beate Stoffers 	TIT VN NN 
+Karin Leukefeld 	VN NN 
+Karin Leukefeld 	VN NN 
+Karin Leukefeld 	VN NN 
+Karin Leukefeld 	VN NN 
+Karin Leukefeld 	VN NN 
+Karin Leukefeld 	VN NN 
+Thomas Grabka 	VN NN 
+Karin Leukefeld 	VN NN 
+Thomas Grabka 	VN NN 
+Karin Leukefeld 	VN NN 
+Karin Leukefeld 	VN NN 
+Karin Leukefeld 	VN NN 
+Helmut Kohl 	VN NN 
+Dr . Helmut Kohl 	TIT PU VN NN 
+Helmut Kohl 	VN NN 
+Helmut Kohl 	VN NN 
+Henry Kissinger 	VN NN 
+Wolfgang Schäuble 	VN NN 
+Helmut Kohl 	VN NN 
+Wolfgang Schäuble 	VN NN 
+Gefolgsmann Wolfgang Schäuble 	TIT VN NN 
+Wolfgang Schäuble 	VN NN 
+Helmut Kohl 	VN NN 
+Manfred Kanther 	VN NN 
+Brigitte Baumeister 	VN NN 
+Waffenhändlers Schreiber 	TIT NN 
+Hans Terlinden 	VN NN 
+Klaus Landowsky 	VN NN 
+Helmut Kohl 	VN NN 
+Angela Merkel 	VN NN 
+Helmut Kohl 	VN NN 
+Roman Herzog 	VN NN 
+Helmut Kohl 	VN NN 
+Dr . Kohl 	TIT PU NN 
+Bernhard Vogel 	VN NN 
+Angela Merkel 	VN NN 
+Horst Köhler 	VN NN 
+Karlsruher Richter 	TIT NN 
+Peter Marx 	VN NN 
+OB-Kandidaten Peter Marx 	TIT VN NN 
+Geschäftsführer Marx 	TIT NN 
+Peter Marx 	VN NN 
+Lech Walesa 	VN NN 
+Wolfgang Huber 	VN NN 
+Bischof Wolfgang Huber 	TIT VN NN 
+Joaquin Navarro-Valls 	VN NN 
+Vatikan-Sprecher Joaquin Navarro-Valls 	TIT VN NN 
+Johannes Pauls 	VN NN 
+Schlagersängerin Gracia 	TIT NN 
+David Brandes 	VN NN 
+Produzent David Brandes 	TIT VN NN 
+Produzent Brandes 	TIT NN 
+Jürgen Trittin 	VN NN 
+Karlsruher Richter 	TIT NN 
+Otto Schily 	VN NN 
+Innenminister Otto Schily 	TIT VN NN 
+Hansjürgen Garstka 	VN NN 
+Thilo Weichert 	VN NN 
+Andreas Pinkwart 	VN NN 
+Hansjürgen Garstka 	VN NN 
+Donald Rumsfeld 	VN NN 
+US-Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Ministerpräsidenten Ibrahim 	TIT NN 
+Roland Koch 	VN NN 
+Ministerpräsident Roland Koch 	TIT VN NN 
+Hans-Jürgen Hielscher 	VN NN 
+Wolfgang Hessenauer 	VN NN 
+Sozialdezernent Wolfgang Hessenauer 	TIT VN NN 
+Reinhard Bütikofer 	VN NN 
+Parteichef Reinhard Bütikofer 	TIT VN NN 
+Brigitte Zypries 	VN NN 
+Bundesjustizministerin Brigitte Zypries 	TIT VN NN 
+Otto Schily 	VN NN 
+Parteifreund Otto Schily 	TIT VN NN 
+Hans-Christian Ströble 	VN NN 
+Altlinke Hans-Christian Ströble 	TIT VN NN 
+Jürgen Mlynek 	VN NN 
+Donald Rumsfeld 	VN NN 
+US-Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Ministerpräsident Ibrahim 	TIT NN 
+Champions League 	TIT NN 
+Jürgen Mlynek 	VN NN 
+HU-Präsident Jürgen Mlynek 	TIT VN NN 
+Champions League 	TIT NN 
+Scheich Hamad Bin Hamdan 	VN VN ZN NN 
+Peter Salender 	VN NN 
+Heidi Klum 	VN NN 
+Brad Pitt 	VN NN 
+Jennifer Lopez 	VN NN 
+Michael Platt 	VN NN 
+Dr . Platt 	TIT PU NN 
+Jennifer Lopez 	VN NN 
+Lutz Hachmeister 	VN NN 
+Joseph Goebbels 	VN NN 
+Andreas Blum 	VN NN 
+Pressesprecher Andreas Blum 	TIT VN NN 
+Andreas Blum 	VN NN 
+Elsbeth Voelkel 	VN NN 
+Psychologin Elsbeth Voelkel 	TIT VN NN 
+Andreas Blum 	VN NN 
+Andreas Blum 	VN NN 
+Georg Kolbes 	VN NN 
+Fritz Cremer 	VN NN 
+Hanns Eisler 	VN NN 
+Franz Fühmann 	VN NN 
+Sensburger Allee 	TIT NN 
+Konstantin Gorny 	VN NN 
+Alexander von Schönburg 	VN ZN NN 
+Susanne Linke 	VN NN 
+Susanne Linke 	VN NN 
+Susanne Linke 	VN NN 
+Andrea Dworkin 	VN NN 
+Andrea Dworkin 	VN NN 
+Richard Helmer 	VN NN 
+Jürgen Mlynek 	VN NN 
+Jürgen Mlynek 	VN NN 
+DAK-Landesgeschäftsführer Mrotzeck 	TIT NN 
+Judith Becker 	VN NN 
+Felicitas Kubala 	VN NN 
+Sprecherin Felicitas Kubala 	TIT VN NN 
+Wilhelm Piecks 	VN NN 
+Rudi Dutschke 	VN NN 
+Studentenführer Rudi Dutschke 	TIT VN NN 
+Harald Juhnke 	VN NN 
+Brigitte Mira 	VN NN 
+Horst Buchholz 	VN NN 
+Karl Liebknecht 	VN NN 
+Sozialisten Karl Liebknecht 	TIT VN NN 
+Glenn Lacey 	VN NN 
+Holger Steinle 	VN NN 
+Mr . Lacey 	TIT PU NN 
+Claudia Hämmerling 	VN NN 
+Leipziger Platz 	TIT NN 
+Benjamin Schmidt 	VN NN 
+Ralf Baumann 	VN NN 
+Christian Thomasius 	VN NN 
+Stefanie Welz 	VN NN 
+Vorsitzende Richter 	TIT NN 
+Herbert Weber 	VN NN 
+Bezirksbürgermeister Herbert Weber 	TIT VN NN 
+Kay Heinz Ehrhardt 	VN VN NN 
+Fraktionsvorsitzende Kay Heinz Ehrhardt 	TIT VN VN NN 
+Erich Mende 	VN NN 
+Vizekanzlers Erich Mende 	TIT VN NN 
+Ekkehard Streletzki 	VN NN 
+Kanzlei Kühnel 	TIT NN 
+Christoph Lang 	VN NN 
+Alexander Scheer 	VN NN 
+Schauspieler Alexander Scheer 	TIT VN NN 
+Burkhard Ahlert 	VN NN 
+Bahnsprecher Burkhard Ahlert 	TIT VN NN 
+Alexander Scheer 	VN NN 
+Daniel Palik 	VN NN 
+Peter Liebsch 	VN NN 
+St . Hedwigs-Kathedrale 	TIT PU NN 
+Wolfgang Weider 	VN NN 
+Monsignore Wolfgang Weider 	TIT VN NN 
+Fürst Rainier 	TIT NN 
+Renate Rauch 	VN NN 
+Physiker Einstein 	TIT NN 
+Jörg Schönbohm 	VN NN 
+Innenminister Jörg Schönbohm 	TIT VN NN 
+Bruno Küppers 	VN NN 
+Polizeipräsident Bruno Küppers 	TIT VN NN 
+Sven Petke 	VN NN 
+CDU-Generalsekretär Sven Petke 	TIT VN NN 
+Vorsitzender Petke 	TIT NN 
+Beate Blechinger 	VN NN 
+Justizministerin Beate Blechinger 	TIT VN NN 
+Andreas Müller 	VN NN 
+Amtsrichters Andreas Müller 	TIT VN NN 
+Christoph Schulze 	VN NN 
+PKK-Chef Christoph Schulze 	TIT VN NN 
+Ministerpräsident Platzeck 	TIT NN 
+Tobias Künzel 	VN NN 
+Christian Berg 	VN NN 
+Christian Berg 	VN NN 
+Jim Knopf 	VN NN 
+Sydney Pollack 	VN NN 
+Oscar-Preisträger Sydney Pollack 	TIT VN NN 
+Henry Hübchen 	VN NN 
+Schauspieler Henry Hübchen 	TIT VN NN 
+Corinna Harfouch 	VN NN 
+Moritz Bleibtreu 	VN NN 
+Corinna Harfouch 	VN NN 
+Vincent Klink 	VN NN 
+Sternekoch Vincent Klink 	TIT VN NN 
+Sandra Bullock 	VN NN 
+Winona Ryder 	VN NN 
+Christine Eichel 	VN NN 
+Schriftstellerin Christine Eichel 	TIT VN NN 
+Werner Müller 	VN NN 
+RAG-Vorstandschef Werner Müller 	TIT VN NN 
+Matthias Bellmann 	VN NN 
+Personalvorstand Matthias Bellmann 	TIT VN NN 
+Thomas Cook 	VN NN 
+Christoph Achenbach 	VN NN 
+Konzernchef Christoph Achenbach 	TIT VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Task Force 	VN NN 
+Task Force 	VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Wladimir Putin 	VN NN 
+Staatspräsident Wladimir Putin 	TIT VN NN 
+Axel Fuisting 	VN NN 
+Thomas Isenberg 	VN NN 
+Annette Rogalla 	VN NN 
+Verbandssprecherin Annette Rogalla 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Petra Roth 	VN NN 
+Manfred Stolpe 	VN NN 
+Bundesverkehrsminister Manfred Stolpe 	TIT VN NN 
+Bernd Gottschalk 	VN NN 
+Renate Künast 	VN NN 
+Bundesverbraucherministerin Renate Künast 	TIT VN NN 
+Donnie Nelson 	VN NN 
+Don Nelson 	VN NN 
+Dirk Nowitzki 	VN NN 
+Dirk Nowitzki 	VN NN 
+Charles Barkley 	VN NN 
+Profi Charles Barkley 	TIT VN NN 
+Michael Finley 	VN NN 
+Avery Johnson 	VN NN 
+Trainer Johnson 	TIT NN 
+Dieter Frey 	VN NN 
+Sportrecht-Experte Frey 	TIT NN 
+Tom Bender 	VN NN 
+DFL-Sprecher Tom Bender 	TIT VN NN 
+Jonathan Hill 	VN NN 
+Jean Marc Guillou 	VN VN NN 
+Franzose Jean Marc Guillou 	TIT VN VN NN 
+Champions League 	TIT NN 
+Robert Huth 	VN NN 
+Roberto Huth 	VN NN 
+Claudio Pizarro 	VN NN 
+Joe Cole 	VN NN 
+Felix Magath 	VN NN 
+Roy Makaay 	VN NN 
+Claudio Pizarro 	VN NN 
+Michael Ballack 	VN NN 
+Uli Hoeneß 	VN NN 
+Manager Uli Hoeneß 	TIT VN NN 
+Robert Kovac 	VN NN 
+Verteidiger Robert Kovac 	TIT VN NN 
+Trainer Magath 	TIT NN 
+Stefan Reuter 	VN NN 
+Teammanager Stefan Reuter 	TIT VN NN 
+Gerd Niebaum 	VN NN 
+Geschäftsführer Gerd Niebaum 	TIT VN NN 
+Lars Ricken 	VN NN 
+Dortmunder Lars Ricken 	TIT VN NN 
+Jan Koller 	VN NN 
+Rudi Assauer 	VN NN 
+Markus Merk 	VN NN 
+Schiedsrichter Markus Merk 	TIT VN NN 
+Andrej Schewtschenko 	VN NN 
+Champions League 	TIT NN 
+Helmut Kraus 	VN NN 
+Eisschnelllauf-Bundestrainer Helmut Kraus 	TIT VN NN 
+Gerhard Zimmermann 	VN NN 
+Bernd Schiphorst 	VN NN 
+Präsident Bernd Schiphorst 	TIT VN NN 
+Horst Hilpert 	VN NN 
+Kontrollausschuss-Vorsitzende Horst Hilpert 	TIT VN NN 
+Torsten Koop 	VN NN 
+Schiedsrichter Torsten Koop 	TIT VN NN 
+Peter-Michael Diestel 	VN NN 
+Anwalt Peter-Michael Diestel 	TIT VN NN 
+Mirko Culic 	VN NN 
+Trainer Mirko Culic 	TIT VN NN 
+Sergio Campana 	VN NN 
+Ralf Lempke 	VN NN 
+Manager Ralf Lempke 	TIT VN NN 
+Kanzler Schröder 	TIT NN 
+Tony Blair 	VN NN 
+Premier Tony Blair 	TIT VN NN 
+Rechtsprofessor Simitis 	TIT NN 
+Thilo Weichert 	VN NN 
+Gerd Andres 	VN NN 
+Ursula Engelen-Kefer 	VN NN 
+DGB-Vize Ursula Engelen-Kefer 	TIT VN NN 
+Karl Robl 	VN NN 
+Günther Verheugen 	VN NN 
+EU-Kommissar Günther Verheugen 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Renate Schmidt 	VN NN 
+Familienministerin Renate Schmidt 	TIT VN NN 
+Dieter Hundt 	VN NN 
+Arbeitgeberpräsident Dieter Hundt 	TIT VN NN 
+Maria Böhmer 	VN NN 
+Familienpolitikerin Maria Böhmer 	TIT VN NN 
+Claus Möller 	VN NN 
+SPD-Parteichef Claus Möller 	TIT VN NN 
+Ralf Stegner 	VN NN 
+Finanzminister Ralf Stegner 	TIT VN NN 
+Ute Erdsiek-Rave 	VN NN 
+Bildungsministerin Ute Erdsiek-Rave 	TIT VN NN 
+Gitta Trauernicht 	VN NN 
+Sozialministerin Gitta Trauernicht 	TIT VN NN 
+Peter Harry Carstensen 	VN VN NN 
+Christian von Boetticher 	VN ZN NN 
+Ex-EU-Abgeordnete Christian von Boetticher 	TIT VN ZN NN 
+Klaus Schlie 	VN NN 
+Innenexperte Klaus Schlie 	TIT VN NN 
+Dietrich Austermann 	VN NN 
+Bundestagsabgeordnete Dietrich Austermann 	TIT VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Wilhelm Schmidt 	VN NN 
+Volker Beck 	VN NN 
+Volker Beck 	VN NN 
+Hartmut Koschyk 	VN NN 
+Thomas Strobl 	VN NN 
+Modeschöpfer Rudolph 	TIT NN 
+Brigitte Zypries 	VN NN 
+Bundesjustizministerin Brigitte Zypries 	TIT VN NN 
+Matthias Herdegen 	VN NN 
+Staatsrechtlers Matthias Herdegen 	TIT VN NN 
+Roger Kusch 	VN NN 
+Senator Roger Kusch 	TIT VN NN 
+Ulla Schmidt 	VN NN 
+Gesundheitsministerin Ulla Schmidt 	TIT VN NN 
+Reinhard Kurth 	VN NN 
+Hartmut Nassauer 	VN NN 
+Markus Ferber 	VN NN 
+Daniel Cohn-Bendit 	VN NN 
+Grünen-Abgeordnete Daniel Cohn-Bendit 	TIT VN NN 
+Alexander Graf 	VN NN 
+Hans-Joachim Hacker 	VN NN 
+Hans-Joachim Hacker 	VN NN 
+Michael Howard 	VN NN 
+Herausforderers Michael Howard 	TIT VN NN 
+Tony Blair 	VN NN 
+Gordon Brown 	VN NN 
+Schatzkanzler Gordon Brown 	TIT VN NN 
+Oppositionsführer Howard 	TIT NN 
+Charles Kennedy 	VN NN 
+Sami Kohen 	VN NN 
+Publizist Sami Kohen 	TIT VN NN 
+Ahmet Necdet 	VN NN 
+Staatspräsident Ahmet Necdet 	TIT VN NN 
+Ahmet Necdet Sezer 	VN NN NN 
+Staatspräsident Ahmet Necdet Sezer 	TIT VN NN NN 
+Wladimir Putin 	VN NN 
+Ministerpräsident Erdogan 	TIT NN 
+Carlo Ciampi 	VN NN 
+Staatschef Carlo Ciampi 	TIT VN NN 
+Francesco Rutelli 	VN NN 
+Ex-Spitzenkandidat Francesco Rutelli 	TIT VN NN 
+Gianfranco Fini 	VN NN 
+AN-Chef Gianfranco Fini 	TIT VN NN 
+Rivalen Frank Jensen 	VN VN NN 
+Franz Müntefering 	VN NN 
+SPD-Chef Franz Müntefering 	TIT VN NN 
+Dieter Hundt 	VN NN 
+Arbeitnehmer-Präsident Dieter Hundt 	TIT VN NN 
+Olaf Scholz 	VN NN 
+Generalsekretär Olaf Scholz 	TIT VN NN 
+Petra Roth 	VN NN 
+Städtetagspräsidentin Petra Roth 	TIT VN NN 
+Hans Eichel 	VN NN 
+Minister Hans Eichel 	TIT VN NN 
+US-Soldat Blake 	TIT NN 
+Joschka Fischer 	VN NN 
+Außenminister Joschka Fischer 	TIT VN NN 
+Horst Köhler 	VN NN 
+Bundespräsident Horst Köhler 	TIT VN NN 
+Hans-Dietrich Genscher 	VN NN 
+Außenminister Hans-Dietrich Genscher 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Volker Beck 	VN NN 
+Wolfgang Huber 	VN NN 
+Dieter Hundt 	VN NN 
+Arbeitgeberpräsident Dieter Hundt 	TIT VN NN 
+Renate Schmidt 	VN NN 
+Familienministerin Renate Schmidt 	TIT VN NN 
+Arbeitgeberchef Hundt 	TIT NN 
+Ekin Deligöz 	VN NN 
+Familienpolitikerin Ekin Deligöz 	TIT VN NN 
+Ministerin Schmidt 	TIT NN 
+Richard Boucher 	VN NN 
+Außenamtssprecher Richard Boucher 	TIT VN NN 
+Ahmed Kureia 	VN NN 
+Ministerpräsident Ahmed Kureia 	TIT VN NN 
+Evelyne Gebhardt 	VN NN 
+Joachim Wuermeling 	VN NN 
+Wolfgang Clement 	VN NN 
+Wirtschaftsminister Wolfgang Clement 	TIT VN NN 
+Harald Schartau 	VN NN 
+Brigitte Weiss 	VN NN 
+Wolfgang Clement 	VN NN 
+Wirtschaftsminister Wolfgang Clement 	TIT VN NN 
+Peer Steinbrück 	VN NN 
+SPD-Ministerpräsident Peer Steinbrück 	TIT VN NN 
+Jürgen Rüttgers 	VN NN 
+Karl-Josef Laumann 	VN NN 
+Wolfgang Clement 	VN NN 
+Vorgänger Wolfgang Clement 	TIT VN NN 
+Minister Schartau 	TIT NN 
+Brigitte Weiss 	VN NN 
+Klaus Hurrelmann 	VN NN 
+Scheich Nasrallah 	VN NN 
+Arbeitgeberchef Hundt 	TIT NN 
+Scheich Nasrallah 	VN NN 
+Ahmed Hussein 	VN NN 
+Pierre Gemayel 	VN NN 
+Abgeordnete Pierre Gemayel 	TIT VN NN 
+Amin Gemayel 	VN NN 
+Staatspräsidenten Amin Gemayel 	TIT VN NN 
+William Shawcross 	VN NN 
+Journalist William Shawcross 	TIT VN NN 
+Ulla Schmidt 	VN NN 
+Ulla Schmidt 	VN NN 
+Camilla Parker 	VN NN 
+Camilla Parker Bowles 	VN NN NN 
+Rainer Schmidt 	VN NN 
+Landschaftsarchitekt Rainer Schmidt 	TIT VN NN 
+Bernhard Fricke 	VN NN 
+Timofej Prochorow 	VN NN 
+Erika Runge 	VN NN 
+Filmemacherin Erika Runge 	TIT VN NN 
+Roland Koch 	VN NN 
+Johanna Tesch 	VN NN 
+Planungsdezernent Schwarz 	TIT NN 
+Roland Koch 	VN NN 
+Edelgard Buhlman 	VN NN 
+Bundesbildungsministerin Edelgard Buhlman 	TIT VN NN 
+Edelgard Buhlman 	VN NN 
+Wolfgang Thierse 	VN NN 
+Karl Lauterbach 	VN NN 
+Bischof Huber 	TIT NN 
+Britney Spears 	VN NN 
+Richard Thomson 	VN NN 
+WHO-Sprecher Richard Thomson 	TIT VN NN 
+Harald Ermel 	VN NN 
+Verteidiger Harald Ermel 	TIT VN NN 
+Bundesanwalt Senge 	TIT NN 
+Harald Ermel 	VN NN 
+Meiwes-Anwalt Harald Ermel 	TIT VN NN 
+Kurt Cobain 	VN NN 
+Stefan Effenberg 	VN NN 
+Thomas Urban 	VN NN 
+DAV-Vorsitzender Thomas Urban 	TIT VN NN 
+Klaus Töpfer 	VN NN 
+Michael Kramer 	VN NN 
+Wladimir Putin 	VN NN 
+Präsidenten Wladimir Putin 	TIT VN NN 
+Präsident Chirac 	TIT NN 
+Evelyne Gebhardt 	VN NN 
+Jacques Chirac 	VN NN 
+Evelyne Gebhardt 	VN NN 
+Jacques Chirac 	VN NN 
+Staatspräsident Jacques Chirac 	TIT VN NN 
+Jean-Pierre Landau 	VN NN 
+Manuel Barroso 	VN NN 
+EU-Kommissionspräsident Barroso 	TIT NN 
+Heidemarie Wieczorek-Zeul 	VN NN 
+Entwicklungsministerin Heidemarie Wieczorek-Zeul 	TIT VN NN 
+Otto Bock 	VN NN 
+Otto Bock 	VN NN 
+Otto Bock 	VN NN 
+Otto Bock 	VN NN 
+Hans Georg Näder 	VN VN NN 
+Otto Bock 	VN NN 
+Ulrich Middelmann 	VN NN 
+Thyssen-Krupp-Steel-Chef Ulrich Middelmann 	TIT VN NN 
+Wilbur Ross 	VN NN 
+ISG-Verkäufer Ross 	TIT NN 
+Bill Gates 	VN NN 
+Microsoft-Verwaltungsratschef Bill Gates 	TIT VN NN 
+Oliver Flor 	VN NN 
+Geschäftsführer Oliver Flor 	TIT VN NN 
+Michael Ott 	VN NN 
+Betriebsratsvorsitzende Michael Ott 	TIT VN NN 
+Oliver Flor 	VN NN 
+Karl-Heinz Streibich 	VN NN 
+Vorstandschef Karl-Heinz Streibich 	TIT VN NN 
+Spencer-Chef Stuart 	TIT NN 
+Götz Wricke 	VN NN 
+HM-Vorstandschef Götz Wricke 	TIT VN NN 
+Marktführern Jacobs 	TIT NN 
+Achim Egner 	VN NN 
+Debitel-Vize-Chef Achim Egner 	TIT VN NN 
+Alfred Richmann 	VN NN 
+VIK-Geschäftsführer Alfred Richmann 	TIT VN NN 
+Renate Künast 	VN NN 
+Landwirtschaftsministerin Renate Künast 	TIT VN NN 
+Jürgen Trittin 	VN NN 
+Bundesumweltminister Jürgen Trittin 	TIT VN NN 
+Robin Hood 	VN NN 
+Felix Magath 	VN NN 
+Champions League 	TIT NN 
+Uli Hoeneß 	VN NN 
+Champions League 	TIT NN 
+Roman Abramowitsch 	VN NN 
+Stamford Bridge 	TIT NN 
+Oliver Kahn 	VN NN 
+Joe Cole 	VN NN 
+Michael Ballack 	VN NN 
+Claudio Pizarro 	VN NN 
+Champions League 	TIT NN 
+Uli Hoeneß 	VN NN 
+Manager Uli Hoeneß 	TIT VN NN 
+Champions League 	TIT NN 
+Roy Makaay 	VN NN 
+Paolo Guerrero 	VN NN 
+Mehmet Scholl 	VN NN 
+Champions League 	TIT NN 
+Oliver Kahn 	VN NN 
+Kapitän Oliver Kahn 	TIT VN NN 
+Champions League 	TIT NN 
+Massimo Moratti 	VN NN 
+Silvio Berlusconi 	VN NN 
+Roberto Mancini 	VN NN 
+Inter-Trainer Roberto Mancini 	TIT VN NN 
+Torschütze Andrej Schewtschenko 	VN VN NN 
+Alexander Meier 	VN NN 
+Andree Wiedener 	VN NN 
+Präsidenten Roh 	TIT NN 
+Markus Weissenberger 	VN NN 
+Glen Williamson 	VN NN 
+Lance Nethery 	VN NN 
+Manager Lance Nethery 	TIT VN NN 
+Trainer Rich 	TIT NN 
+Sam Simmons 	VN NN 
+Ballfänger Sam Simmons 	TIT VN NN 
+Jeff Brown 	VN NN 
+Engländer Jeff Brown 	TIT VN NN 
+Manfred von Richthofen 	VN ZN NN 
+DSB-Präsident Manfred von Richthofen 	TIT VN ZN NN 
+Günter Schulze 	VN NN 
+Herbert Hartmann 	VN NN 
+DSB-Vizepräsident Herbert Hartmann 	TIT VN NN 
+Julia Schruff 	VN NN 
+Barbara Rittner 	VN NN 
+Teamchefin Barbara Rittner 	TIT VN NN 
+Anca Barna 	VN NN 
+Nürnbergerin Anca Barna 	TIT VN NN 
+Sandra Klösel 	VN NN 
+Münchnerin Sandra Klösel 	TIT VN NN 
+Barbara Rittner 	VN NN 
+Julia Schruff 	VN NN 
+Marlene Weingärtner 	VN NN 
+Joachim Löw 	VN NN 
+Stamford Bridge 	TIT NN 
+Mikael Forssell 	VN NN 
+Roman Abramowitsch 	VN NN 
+Roman Abramowitsch 	VN NN 
+Markus Merk 	VN NN 
+Schiedsrichter Markus Merk 	TIT VN NN 
+Keeper Dida 	TIT NN 
+Bernard Lagat 	VN NN 
+Otto Reintjes 	VN NN 
+Klaus Beck 	VN NN 
+Champions League 	TIT NN 
+Dwayne Norris 	VN NN 
+Mannheimer Adlern 	TIT NN 
+Jason Young 	VN NN 
+Kapitän Jason Young 	TIT VN NN 
+Dwayne Norris 	VN NN 
+Jason Young 	VN NN 
+St . Petersburg 	TIT PU NN 
+Markus Jocher 	VN NN 
+Mikael Magnusson 	VN NN 
+Verteidiger Mikael Magnusson 	TIT VN NN 
+Nadine Hagmann 	VN NN 
+Frederike Engel 	VN NN 
+Frank Fahle 	VN NN 
+Trainer Frank Fahle 	TIT VN NN 
+Katrin Patzke 	VN NN 
+Rebecca Smith 	VN NN 
+Jenny Meier 	VN NN 
+Geburtstagskind Jenny Meier 	TIT VN NN 
+Bieberer Berg 	TIT NN 
+Luis Ferradas 	VN NN 
+Trainer Luis Ferradas 	TIT VN NN 
+Marco Link 	VN NN 
+Jan Zeug 	VN NN 
+Jens Link 	VN NN 
+Rüdiger Lamm 	VN NN 
+Champions League 	TIT NN 
+Guus Hiddink 	VN NN 
+Trainer Guus Hiddink 	TIT VN NN 
+Fabio Cannavaro 	VN NN 
+Abwehrspieler Fabio Cannavaro 	TIT VN NN 
+Boris Godunow 	VN NN 
+Andrea Dworkin 	VN NN 
+Lutz Hachmeister 	VN NN 
+Richard Strauss 	VN NN 
+Rolf Dieter Brinkmann 	VN VN NN 
+Gottfried Benn 	VN NN 
+Gerry Mulligan 	VN NN 
+Dieter Wellershoff 	VN NN 
+Nicolas Born 	VN NN 
+Günter Seuren 	VN NN 
+Boris Godunow 	VN NN 
+Peter Sellars 	VN NN 
+Regisseur Peter Sellars 	TIT VN NN 
+Zumal Waltraud Meiers 	VN VN NN 
+Franz-Josef Selig 	VN NN 
+Yvonne Naef 	VN NN 
+Andrea Dworkin 	VN NN 
+Andrea Dworkin 	VN NN 
+Kenneth Starr 	VN NN 
+Andrea Dworkin 	VN NN 
+Dr . Caligari 	TIT PU NN 
+Christoph Girardet 	VN NN 
+Videokünstler Christoph Girardet 	TIT VN NN 
+Konstanze Lauterbach 	VN NN 
+Regisseurin Konstanze Lauterbach 	TIT VN NN 
+Loren Lang 	VN NN 
+Stefan Klingele 	VN NN 
+Joni Mitchell 	VN NN 
+Johnny Cash 	VN NN 
+Alan Jackson 	VN NN 
+Kenny Chesney 	VN NN 
+George W . Bush 	VN MIX PU NN 
+Präsidenten George W . Bush 	TIT VN MIX PU NN 
+Manfred Beilharz 	VN NN 
+Rita Thies 	VN NN 
+Kulturdezernentin Rita Thies 	TIT VN NN 
+Richard Strauss 	VN NN 
+Reinhard Keiser 	VN NN 
+Hermann Schmidt-Rahmer 	VN NN 
+John Dew 	VN NN 
+Konstanze Lauterbach 	VN NN 
+Ladies Night 	TIT NN 
+Dietrich Hilsdorf 	VN NN 
+Joachim Bauscher 	VN NN 
+Verwaltungsdirektor Joachim Bauscher 	TIT VN NN 
+David Rockefeller 	VN NN 
+Bankier David Rockefeller 	TIT VN NN 
+Jack Johnson 	VN NN 
+Josh Rouse 	VN NN 
+Jack Johnsons 	VN NN 
+Günter Grass 	VN NN 
+Literatur-Nobelpreisträger Günter Grass 	TIT VN NN 
+Bernd Loebe 	VN NN 
+Johannes Brahms 	VN NN 
+Annette Stricker 	VN NN 
+Nathaniel Webster 	VN NN 
+Britta Stallmeister 	VN NN 
+Annette Stricker 	VN NN 
+Hans-Jürgen Lazar 	VN NN 
+Nathaniel Webster 	VN NN 
+Silvio Berlusconi 	VN NN 
+Regierungschefs Silvio Berlusconi 	TIT VN NN 
+Frank Elstner 	VN NN 
+Thomas Gruber 	VN NN 
+ARD-Vorsitzender Thomas Gruber 	TIT VN NN 
+Robin Detje 	VN NN 
+Robin Detje 	VN NN 
+Manfred Krupp 	VN NN 
+HR-Fernsehdirektor Manfred Krupp 	TIT VN NN 
+Manfred Krupp 	VN NN 
+Andrew Gardner 	VN NN 
+Ian Herring 	VN NN 
+Paul Sharpe 	VN NN 
+Glen Taylor 	VN NN 
+Thomas Gruber 	VN NN 
+ARD-Vorsitzender Thomas Gruber 	TIT VN NN 
+Günter Struve 	VN NN 
+ARD-Programmchef Günter Struve 	TIT VN NN 
+Fürst Rainier 	TIT NN 
+Jean-Pierre Jeunet 	VN NN 
+George Segal 	VN NN 
+George Segal 	VN NN 
+Robert Morley 	VN NN 
+Jean-Pierre Cassel 	VN NN 
+Philippe Noiret 	VN NN 
+Jean Rochefort 	VN NN 
+Horatio Caine 	VN NN 
+David Hemmings 	VN NN 
+Vanessa Redgrave 	VN NN 
+Jane Birkin 	VN NN 
+Rainer Matheis 	VN NN 
+SWR-Unterhaltungschef Rainer Matheis 	TIT VN NN 
+Bernhard Wabnitz 	VN NN 
+Bernd Bauer 	VN NN 
+Thomas Gruber 	VN NN 
+ARD-Vorsitzender Thomas Gruber 	TIT VN NN 
+Peer Steinbrück 	VN NN 
+NRW-Ministerpräsident Peer Steinbrück 	TIT VN NN 
+Jürgen Rüttgers 	VN NN 
+CDU-Landesvorsitzenden Jürgen Rüttgers 	TIT VN NN 
+Roland Koch 	VN NN 
+CDU-Ministerpräsident Roland Koch 	TIT VN NN 
+Staatspräsident Roh 	TIT NN 
+Dieter Posch 	VN NN 
+Axel Wintermeyer 	VN NN 
+CDU-Abgeordnete Axel Wintermeyer 	TIT VN NN 
+Rolf E . Breuer 	VN MIX PU NN 
+Deutsche-Bank-Chef Rolf E . Breuer 	TIT VN MIX PU NN 
+Manager Breuer 	TIT NN 
+Alexander Antonov 	VN NN 
+Michael Budig 	VN NN 
+VGF-Geschäftsführer Michael Budig 	TIT VN NN 
+Reinhard Ries 	VN NN 
+Feuerwehr-Chef Reinhard Ries 	TIT VN NN 
+Reinhard Ries 	VN NN 
+Peter Pietsch 	VN NN 
+Michael Kröger 	VN NN 
+Clemens Christmann 	VN NN 
+Jürgen Benad 	VN NN 
+Roland Koch 	VN NN 
+CDU-Ministerpräsident Roland Koch 	TIT VN NN 
+Sarah Sorge 	VN NN 
+Grünen-Abgeordnete Sarah Sorge 	TIT VN NN 
+Edelgard Bulmahn 	VN NN 
+Bundesbildungsministerin Edelgard Bulmahn 	TIT VN NN 
+Nicola Beer 	VN NN 
+FDP-Hochschulpolitikerin Nicola Beer 	TIT VN NN 
+Michael Siebel 	VN NN 
+SPD-Abgeordnete Michael Siebel 	TIT VN NN 
+Michael Siebel Koch 	VN NN NN 
+SPD-Abgeordnete Michael Siebel Koch 	TIT VN NN NN 
+Rainer Kling 	VN NN 
+Regierungssprecher Rainer Kling 	TIT VN NN 
+Ministerin Bulmahn 	TIT NN 
+Staatspräsident Roh 	TIT NN 
+Volker Nienhaus 	VN NN 
+Uni-Präsident Volker Nienhaus 	TIT VN NN 
+Prof . Sabah 	TIT PU NN 
+Walter Sommerfeld 	VN NN 
+Ludwig Marquardt 	VN NN 
+Günther Plassmann 	VN NN 
+Architekt Jourdan 	TIT NN 
+Günther Plassmann 	VN NN 
+Lutz Lemhöfer 	VN NN 
+Viktor von Bülow 	VN ZN NN 
+Komikers Viktor von Bülow 	TIT VN ZN NN 
+Anna Spindler 	VN NN 
+Xavier Naidoo 	VN NN 
+Edelgard Börger 	VN NN 
+Frank Haindl 	VN NN 
+Karl-Heinz Fischer 	VN NN 
+Volkmar Kallenbach 	VN NN 
+Volker Bouffier 	VN NN 
+Innenminister Volker Bouffier 	TIT VN NN 
+Günter Rudolph 	VN NN 
+SPD-Landtagsabgeordnete Günter Rudolph 	TIT VN NN 
+Peter Feldmann 	VN NN 
+Roland Koch 	VN NN 
+Ministerpräsidenten Roland Koch 	TIT VN NN 
+Herbert Deiss 	VN NN 
+Bildhauer Herbert Deiss 	TIT VN NN 
+Geschwister Moser 	TIT NN 
+Udo Corts 	VN NN 
+Wissenschaftsminister Udo Corts 	TIT VN NN 
+Volker Bouffier 	VN NN 
+Innenminister Volker Bouffier 	TIT VN NN 
+Karin Wolff 	VN NN 
+Kultusministerin Karin Wolff 	TIT VN NN 
+Wolfgang Lindstaedt 	VN NN 
+Karlheinz Wagner 	VN NN 
+Polizeisprecher Karlheinz Wagner 	TIT VN NN 
+Professor Sabah 	TIT NN 
+Walter Sommerfeld 	VN NN 
+Volker Bouffier 	VN NN 
+Innenminister Volker Bouffier 	TIT VN NN 
+Eckhard Sauer 	VN NN 
+Polizeivizepräsident Eckhard Sauer 	TIT VN NN 
+Innenminister Bouffier 	TIT NN 
+Hasso Haas 	VN NN 
+Barbara Dembowski 	VN NN 
+Peter Benz 	VN NN 
+Oberbürgermeister Peter Benz 	TIT VN NN 
+Axel Burk 	VN NN 
+Finanzamtschef Axel Burk 	TIT VN NN 
+Walter Kreuer 	VN NN 
+Betriebsratsvorsitzender Walter Kreuer 	TIT VN NN 
+Sandra Koehler 	VN NN 
+Sprecherin Sandra Koehler 	TIT VN NN 
+Steven Bergmann 	VN NN 
+Truppführer Steven Bergmann 	TIT VN NN 
+Peter Mensinger 	VN NN 
+Nikolaus Burggraf 	VN NN 
+Technikchef Reichhardt 	TIT NN 
+Heinrich Hausmann 	VN NN 
+Peter Benz 	VN NN 
+Oberbürgermeister Peter Benz 	TIT VN NN 
+Karl Hartmann 	VN NN 
+Bürgermeister Karl Hartmann 	TIT VN NN 
+Sylvia Pfohl 	VN NN 
+Elternbeiratsvorsitzenden Sylvia Pfohl 	TIT VN NN 
+Anke Schnauber 	VN NN 
+Roger Voigtländer 	VN NN 
+Dirk Kuhlmann 	VN NN 
+Landwirt Dirk Kuhlmann 	TIT VN NN 
+Sandra Gockel 	VN NN 
+Rainer Sommer 	VN NN 
+Peter Lerche 	VN NN 
+Kasseler Friedensforum 	TIT NN 
+Hilde Diegel 	VN NN 
+Herta Belz 	VN NN 
+Wilhelmshöher Allee 	TIT NN 
+Andrea Mendez 	VN NN 
+Andrea Mendez Corrales 	VN NN NN 
+Mathias Wagner 	VN NN 
+Grünen-Abgeordnete Mathias Wagner 	TIT VN NN 
+Clemens Christmann 	VN NN 
+Lampertheimer Altrhein 	TIT NN 
+Stefan Heß 	VN NN 
+Post-Sprecher Stefan Heß 	TIT VN NN 
+Thomas Fleischmann 	VN NN 
+Ingo Stadtmüller 	VN NN 
+Wolfgang Amadeus Mozart 	VN VN NN 
+Ulrich Böhme 	VN NN 
+Ulla Hahn 	VN NN 
+Berthold Engel 	VN NN 
+Gitta Laube 	VN NN 
+Gabriele Schumacher 	VN NN 
+Partnerin Gabriele Schumacher 	TIT VN NN 
+Lutz Hachmeister 	VN NN 
+Michael Kloft 	VN NN 
+Hardy Krüger 	VN NN 
+Hardy Krüger 	VN NN 
+Florian Schwarz 	VN NN 
+Joseph Goebbels 	VN NN 
+Lutz Hachmeister 	VN NN 
+Medien-Journalist Lutz Hachmeister 	TIT VN NN 
+David Wark 	VN NN 
+David Wark Griffith 	VN NN NN 
+Julia Lamberts 	VN NN 
+Alison Callaway 	VN NN 
+Joseph Goebbels 	VN NN 
+Udo Samel 	VN NN 
+Lutz Hachmeister 	VN NN 
+Regisseur Lutz Hachmeister 	TIT VN NN 
+Joe Grant 	VN NN 
+Lutz Hachmeister 	VN NN 
+Hardy Krüger 	VN NN 
+Wolfgang Liebeneiner 	VN NN 
+Regisseur Wolfgang Liebeneiner 	TIT VN NN 
+Lino Ventura 	VN NN 
+Catherine Deneuve 	VN NN 
+Erwin Rommel 	VN NN 
+Horst Buchholz 	VN NN 
+Hardy Krüger 	VN NN 
+Dawn Wiener 	VN NN 
+Joseph Goebbels 	VN NN 
+Lutz Hachmeister 	VN NN 
+Medien-Journalist Lutz Hachmeister 	TIT VN NN 
+Udo Samel 	VN NN 
+Schauspieler Udo Samel 	TIT VN NN 
+Michael Meert 	VN NN 
+Max Greger 	VN NN 
+Andreas Scholl 	VN NN 
+Countertenor Andreas Scholl 	TIT VN NN 
+Adam Green 	VN NN 
+Maurice Ravel 	VN NN 
+Maximilian Hornung 	VN NN 
+Miriam Altmann 	VN NN 
+Julia Huber 	VN NN 
+Anja Enderle 	VN NN 
+Anne Katharina Schreiber 	VN VN NN 
+Leslie Feist 	VN NN 
+Leslie Feist 	VN NN 
+Aaron Copland 	VN NN 
+Samuel Barber 	VN NN 
+Hugo Strasser 	VN NN 
+Oliver Gottwald 	VN NN 
+Heinz Sauer 	VN NN 
+Michael Wollny 	VN NN 
+Sabine Fischmann 	VN NN 
+Markus Neumeyer 	VN NN 
+Richard Strauss 	VN NN 
+Werner Fritsch 	VN NN 
+Hans Christian Andersen 	VN VN NN 
+Stefan Haufe 	VN NN 
+Choreografen Stefan Haufe 	TIT VN NN 
+Stefan Haufe 	VN NN 
+Albert Schleicher 	VN NN 
+Rosa Roth 	VN NN 
+Dr . Engel 	TIT PU NN 
+Niki Ankenbrand 	VN NN 
+Heiko Seidel 	VN NN 
+Sabine Fischmann 	VN NN 
+Markus Neumeyer 	VN NN 
+Jörg Zick 	VN NN 
+Astrid Stricker 	VN NN 
+Özcan Kaplan 	VN NN 
+Harald Szeemanns 	VN NN 
+Astrid Stricker 	VN NN 
+Astrid Stricker 	VN NN 
+Joschka Fischer 	VN NN 
+Andrea Schauff 	VN NN 
+Reinhold Messner 	VN NN 
+Extrembergsteiger Reinhold Messner 	TIT VN NN 
+Theodor W . Adorno 	VN MIX PU NN 
+Janina Meyer 	VN NN 
+Jochen Seufert 	VN NN 
+Janina Meyer 	VN NN 
+Rolf Benz 	VN NN 
+Frankfurter Hof 	TIT NN 
+Joschka Fischer 	VN NN 
+Ali Agca 	VN NN 
+Santa Chiara 	TIT NN 
+Santa Chiara 	TIT NN 
+Arnold Schüller 	VN NN 
+Kammer-Vizepräsident Arnold Schüller 	TIT VN NN 
+Heinz-Gerhard Bull 	VN NN 
+Prof . Heinz-Gerhard Bull 	TIT PU VN NN 
+Kammer-Vizepräsident Schüller 	TIT NN 
+Jens Birke 	VN NN 
+Emile Lahud 	VN NN 
+Staatspräsident Emile Lahud 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+US-Außenministerin Rice 	TIT NN 
+Condoleezza Rice 	VN NN 
+US-Außenministerin Condoleezza Rice 	TIT VN NN 
+George Bush 	VN NN 
+US-Präsident George Bush 	TIT VN NN 
+Staatschef Muammar 	TIT NN 
+Donald Rumsfeld 	VN NN 
+US-Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Rick Parry 	VN NN 
+Club-Vorsitzenden Rick Parry 	TIT VN NN 
+Monika Hohlmeier 	VN NN 
+Kultusministerin Monika Hohlmeier 	TIT VN NN 
+Hans Podiuk 	VN NN 
+Oberbürgermeister-Kandidaten Hans Podiuk 	TIT VN NN 
+Ludwig Spaenle 	VN NN 
+Rasso Graber 	VN NN 
+JU-Chef Rasso Graber 	TIT VN NN 
+Christian Baretti 	VN NN 
+Stadtrat Christian Baretti 	TIT VN NN 
+Felix Magath 	VN NN 
+Bayern-Trainer Magath 	TIT NN 
+Co-Trainer Eichkorn 	TIT NN 
+Felix Magath 	VN NN 
+Champions League 	TIT NN 
+Champions League 	TIT NN 
+Uli Hoeneß 	VN NN 
+Manager Uli Hoeneß 	TIT VN NN 
+Robert Kovac 	VN NN 
+Hans-Gert Pöttering 	VN NN 
+Fraktionschef Hans-Gert Pöttering 	TIT VN NN 
+Champions League 	TIT NN 
+Wladimir Ustinow 	VN NN 
+Leonid Kutschma 	VN NN 
+Präsident Leonid Kutschma 	TIT VN NN 
+Bernd Eichinger 	VN NN 
+Markus Merk 	VN NN 
+Schiedsrichter Markus Merk 	TIT VN NN 
+George Baker 	VN NN 
+Anthony Rogers 	VN NN 
+Michael Billington 	VN NN 
+James Bond 	VN NN 
+Sean Connery 	VN NN 
+Roger Moore 	VN NN 
+John Gavin 	VN NN 
+James Brolin 	VN NN 
+Sean Connery 	VN NN 
+Roger Moore 	VN NN 
+Roger Moore 	VN NN 
+Roger Moore 	VN NN 
+Timothy Dalton 	VN NN 
+Sean Connery 	VN NN 
+Timothy Dalton 	VN NN 
+Mr . Bond 	TIT PU NN 
+Michael Caine 	VN NN 
+Timothy Dalton 	VN NN 
+Bond-Darsteller Connery 	TIT NN 
+Robert Redford 	VN NN 
+Richard Burton 	VN NN 
+Clint Eastwood 	VN NN 
+Clint Eastwood 	VN NN 
+Sean Connery 	VN NN 
+Siegfried Tesche 	VN NN 
+James Bond 	VN NN 
+Peter Struck 	VN NN 
+Verteidigungsminister Peter Struck 	TIT VN NN 
+Champions League 	TIT NN 
+Markus Merk 	VN NN 
+Schiedsrichter Markus Merk 	TIT VN NN 
+Champions League 	TIT NN 
+Schiedsrichter Merk 	TIT NN 
+Clarence Seedorf 	VN NN 
+Teamkollege Clarence Seedorf 	TIT VN NN 
+Carlo Ancelotti 	VN NN 
+Champions League 	TIT NN 
+Michael Griffin 	VN NN 
+Nasa-Direktor Michael Griffin 	TIT VN NN 
+June Tabor 	VN NN 
+Junichiro Koizumi 	VN NN 
+Premierminister Junichiro Koizumi 	TIT VN NN 
+Willy Brandt 	VN NN 
+Joschka Fischer 	VN NN 
+Susanne Knaul 	VN NN 
+Hanna Marron 	VN NN 
+Schauspielerin Hanna Marron 	TIT VN NN 
+Gottfried Reinhardt 	VN NN 
+Regisseur Gottfried Reinhardt 	TIT VN NN 
+Steve Case 	VN NN 
+AOL-Gründers Steve Case 	TIT VN NN 
+Jürgen Kaube 	VN NN 
+Mark Siemons 	VN NN 
+Schlagersängerin Gracia 	TIT NN 
+Andrea Dworkin 	VN NN 
+Karen Krüger 	VN NN 
+Henrike Rossbach 	VN NN 
+Andreas Rossmann 	VN NN 
+Thomas Wagner 	VN NN 
+Vanessa Beecroft 	VN NN 
+Künstlerin Vanessa Beecroft 	TIT VN NN 
+Hanns-Georg Rodek 	VN NN 
+Anneli Klostermeier 	VN NN 
+Roy Williams 	VN NN 
+Dramatiker Roy Williams 	TIT VN NN 
+Peter Iden 	VN NN 
+Thomas Urban 	VN NN 
+Petra Steinberger 	VN NN 
+Robin Detje 	VN NN 
+Andrea Dworkin 	VN NN 
+Harry Lachner 	VN NN 
+Gerd Schröder 	VN NN 
+Kultusministerin Hohlmeier 	TIT NN 
+Franz Josef Strauß 	VN VN NN 
+Hans Podiuk 	VN NN 
+Parteichefs Hans Podiuk 	TIT VN NN 
+Ludwig Spaenle 	VN NN 
+Außenminister Fischer 	TIT NN 
+Horst Köhler 	VN NN 
+Bundespräsident Horst Köhler 	TIT VN NN 
+Joschka Fischer 	VN NN 
+Außenminister Joschka Fischer 	TIT VN NN 
+Walter Lindner 	VN NN 
+SPD-Chef Müntefering 	TIT NN 
+Franz Müntefering 	VN NN 
+Kanzler Schröder 	TIT NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Jacques Chirac 	VN NN 
+Präsident Jacques Chirac 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Bundeskanzler Helmut Kohl 	TIT VN NN 
+Joachim Bitterlich 	VN NN 
+Markus Merk 	VN NN 
+Schiedsrichter Markus Merk 	TIT VN NN 
+Champions League 	TIT NN 
+Andrej Schewtschenko 	VN NN 
+Champions League 	TIT NN 
+Rudi Völler 	VN NN 
+Franco Carraro 	VN NN 
+Champions League 	TIT NN 
+Champions League 	TIT NN 
+Claudio Pizarro 	VN NN 
+Paolo Guerrero 	VN NN 
+Mehmet Scholl 	VN NN 
+Felix Magath 	VN NN 
+Bayern-Trainer Felix Magath 	TIT VN NN 
+Oliver Kahn 	VN NN 
+Michael Ballack 	VN NN 
+Robert Huth 	VN NN 
+Petr Cech 	VN NN 
+Gäste-Keeper Petr Cech 	TIT VN NN 
+Mehmet Scholl 	VN NN 
+Damien Duff 	VN NN 
+Robert Kovac 	VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Heide Simonis 	VN NN 
+SPD-Abgeordneter Simonis 	TIT NN 
+George W . Bush 	VN MIX PU NN 
+US-Präsident George W . Bush 	TIT VN MIX PU NN 
+Donald Rumsfeld 	VN NN 
+US-Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Ministerpräsident Ibrahim 	TIT NN 
+Hans Zehetmair 	VN NN 
+Ratsvorsitzende Zehetmair 	TIT NN 
+Finanzminister Eichel 	TIT NN 
+Hans Eichel 	VN NN 
+Michael Glos 	VN NN 
+Landesgruppenchef Michael Glos 	TIT VN NN 
+Edmund Stoiber 	VN NN 
+Parteivorsitzenden Edmund Stoiber 	TIT VN NN 
+Rainer Wend 	VN NN 
+SPD-Wirtschaftsexperte Rainer Wend 	TIT VN NN 
+Kerstin Andreae 	VN NN 
+Jochim Poß 	VN NN 
+Stefan Articus 	VN NN 
+Bernd Schiphorst 	VN NN 
+Hertha-Präsident Bernd Schiphorst 	TIT VN NN 
+David Brandes 	VN NN 
+Musikproduzent David Brandes 	TIT VN NN 
+Karlheinz Kögel 	VN NN 
+Musikproduzent Brandes 	TIT NN 
+David Brandes 	VN NN 
+David Brandes 	VN NN 
+Produzenten David Brandes 	TIT VN NN 
+Karlheinz Kögel 	VN NN 
+David Brandes 	VN NN 
+Außenminister Fischer 	TIT NN 
+Joschka Fischer 	VN NN 
+Doug Steigerwald 	VN NN 
+Edelgard Bulmahn 	VN NN 
+Bundesbildungsministerin Edelgard Bulmahn 	TIT VN NN 
+Roland Koch 	VN NN 
+Roland Koch 	VN NN 
+Außenminister Fischer 	TIT NN 
+Olaf Scholz 	VN NN 
+Joschka Fischer 	VN NN 
+Bundesaußenminister Joschka Fischer 	TIT VN NN 
+Volker Neumann 	VN NN 
+Lex Fischer 	VN NN 
+Torsten Koop 	VN NN 
+Schiedsrichter Torsten Koop 	TIT VN NN 
+Torsten Koop 	VN NN 
+Referee Torsten Koop 	TIT VN NN 
+Peter-Michael Diestel 	VN NN 
+Horst Hilpert 	VN NN 
+Kontrollausschussvorsitzender Horst Hilpert 	TIT VN NN 
+Horst Hilpert 	VN NN 
+Torsten Koop 	VN NN 
+Dominik Marks 	VN NN 
+Volker Roth 	VN NN 
+Dave Clark 	VN NN 
+Peter Moore 	VN NN 
+Rudi Assauer 	VN NN 
+Manager Rudi Assauer 	TIT VN NN 
+Manager Assauer 	TIT NN 
+Manager Assauer 	TIT NN 
+Peter Peters 	VN NN 
+Geschäftsführer Peter Peters 	TIT VN NN 
+Michael Huber 	VN NN 
+Veltins-Geschäftsführer Michael Huber 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Helmut Kohl 	VN NN 
+Angela Merkel 	VN NN 
+CDU-Vorsitzende Angela Merkel 	TIT VN NN 
+Roland Koch 	VN NN 
+Roman Herzog 	VN NN 
+Richard Schröder 	VN NN 
+Wolfgang Schäuble 	VN NN 
+Heiner Geissler 	VN NN 
+Norbert Blüm 	VN NN 
+Hans-Peter Schwarz 	VN NN 
+Historiker Hans-Peter Schwarz 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Spanier Gonzalez 	TIT NN 
+Henry Kissinger 	VN NN 
+US-Außenminister Henry Kissinger 	TIT VN NN 
+George W . Bush 	VN MIX PU NN 
+US-Präsidenten George W . Bush 	TIT VN MIX PU NN 
+Lord George Weidenfeld 	VN VN NN 
+Christoph Keese 	VN NN 
+Gabriele Fischer 	VN NN 
+St . Gallen 	TIT PU NN 
+Kardinal Ratzingers 	TIT NN 
+Kofi Annan 	VN NN 
+Uno-Generalsekretär Kofi Annan 	TIT VN NN 
+Ronald Schmid 	VN NN 
+Claudia Wachowitz 	VN NN 
+Sprecherin Claudia Wachowitz 	TIT VN NN 
+Innenminister Schönbohm 	TIT NN 
+Gerd Gebhardt 	VN NN 
+John Kennedy 	VN NN 
+IFPI-Präsident John Kennedy 	TIT VN NN 
+Michel Friedman 	VN NN 
+Holger Pfahls 	VN NN 
+Otto Schily 	VN NN 
+Innenminister Otto Schily 	TIT VN NN 
+Martin Winterkorn 	VN NN 
+Audi-Chef Martin Winterkorn 	TIT VN NN 
+Joschka Fischer 	VN NN 
+Lex Fischer 	VN NN 
+Michael Glos 	VN NN 
+CSU-Landesgruppenchef Michael Glos 	TIT VN NN 
+Olaf Scholz 	VN NN 
+Champions League 	TIT NN 
+Rick Parry 	VN NN 
+Clubchef Rick Parry 	TIT VN NN 
+Hansjörg Geiger 	VN NN 
+Justizstaatssekretär Hansjörg Geiger 	TIT VN NN 
+Bernhard Uzun 	VN NN 
+Elke Herberger 	VN NN 
+Helmut Kohl 	VN NN 
+Altkanzler Helmut Kohl 	TIT VN NN 
+CDU-Chefin Merkel 	TIT NN 
+US-Außenminister Kissinger 	TIT NN 
+Helmut Kohl 	VN NN 
+Angela Merkel 	VN NN 
+Henry Kissinger 	VN NN 
+George W . Bush 	VN MIX PU NN 
+US-Präsident George W . Bush 	TIT VN MIX PU NN 
+Horst Köhler 	VN NN 
+Bundespräsident Horst Köhler 	TIT VN NN 
+Günter Struve 	VN NN 
+Programmdirektor Günter Struve 	TIT VN NN 
+Markus Brock 	VN NN 
+Moderator Markus Brock 	TIT VN NN 
+Jutta Speidel 	VN NN 
+Günter Struve 	VN NN 
+ARD-Programmdirektor Günter Struve 	TIT VN NN 
+Mick Rocks 	VN NN 
+Mick Rocks 	VN NN 
+Mick Rock 	VN NN 
+Syd Barrett 	VN NN 
+Syd Barrett 	VN NN 
+Syd Barrett 	VN NN 
+Mick Rock 	VN NN 
+Mick Ronson 	VN NN 
+Mick Rock 	VN NN 
+Mick Rocks 	VN NN 
+Mick Rocks Kamera 	VN NN NN 
+Oscar Wilde 	VN NN 
+Mick Rock 	VN NN 
+Tim Curry 	VN NN 
+Mick Rock 	VN NN 
+Mick Jagger 	VN NN 
+Mick Rock 	VN NN 
+Kate Moss 	VN NN 
+Mick Rock 	VN NN 
+Mick Rock 	VN NN 
+George W . Bush 	VN MIX PU NN 
+Joe Levy 	VN NN 
+Gerhard Schröder 	VN NN 
+Kanzler Gerhard Schröder 	TIT VN NN 
+David Chu 	VN NN 
+Andre Miller 	VN NN 
+Baron Davis 	TIT NN 
+Peter Struck 	VN NN 
+Verteidigungsminister Peter Struck 	TIT VN NN 
+Alfred Neven 	VN NN 
+Peter Glotz 	VN NN 
+Konstantin Neven 	VN NN 
+Franz Müntefering 	VN NN 
+SPD-Chef Franz Müntefering 	TIT VN NN 
+Reinhold Robbe 	VN NN 
+Kandidat Reinhold Robbe 	TIT VN NN 
+Reinhold Robbe 	VN NN 
+Günther Nolting 	VN NN 
+Heide Simonis 	VN NN 
+Klaus Uwe Benneter 	VN VN NN 
+Generalsekretär Klaus Uwe Benneter 	TIT VN VN NN 
+Franz Müntefering 	VN NN 
+Fraktionschef Franz Müntefering 	TIT VN NN 
+Champions League 	TIT NN 
+Wolfgang Eichler 	VN NN 
+Hansjürgen Garstka 	VN NN 
+Bernhard Uzun 	VN NN 
+Hansjürgen Garstka 	VN NN 
+Datenschutzbeauftragte Hansjürgen Garstka 	TIT VN NN 
+Gottfried Grünthal 	VN NN 
+Hartmut Graßl 	VN NN 
+Donald Rumsfeld 	VN NN 
+Regierungschef Ibrahim 	TIT NN 
+Hans Jürgen Wendel 	VN VN NN 
+Rainer Westermann 	VN NN 
+Greifswalder Rektor Westermann 	TIT TIT NN 
+Rostocker Rektor Wendel 	TIT TIT NN 
+Vanessa Beecroft 	VN NN 
+Peter Fuchs 	VN NN 
+Peter Fuchs 	VN NN 
+Andreas Breitenstein 	VN NN 
+Angela Schader 	VN NN 
+Jochen Neumeyer 	VN NN 
+Cecil Beaton 	VN NN 
+Fotografen Cecil Beaton 	TIT VN NN 
+Marilyn Monroe 	VN NN 
+Mick Jagger 	VN NN 
+Christian Geyer 	VN NN 
+Heinrich Sahm 	VN NN 
+Oberbürgermeister Heinrich Sahm 	TIT VN NN 
+Robert von Lucius 	VN ZN NN 
+Michael Gassmann 	VN NN 
+Günter Krabbe 	VN NN 
+Michael Hanfeld 	VN NN 
+Nina Rehfeld 	VN NN 
+Andreas Rosenfelder 	VN NN 
+Andreas Rossmann 	VN NN 
+Peter Sellars 	VN NN 
+Oliver G . Hamm 	VN MIX PU NN 
+Jeanne Rubner 	VN NN 
+Claus Heinrich Meyer 	VN VN NN 
+Rudi Altig 	VN NN 
+Achim Achilles 	VN NN 
+Ottfried Fischer 	VN NN 
+Tony Blair 	VN NN 
+Wolfgang Thierse 	VN NN 
+Bundestagspräsident Wolfgang Thierse 	TIT VN NN 
+SPD-Politiker Thierse 	TIT NN 
+Christa Nickels 	VN NN 
+George W . Bush 	VN MIX PU NN 
+US-Präsident George W . Bush 	TIT VN MIX PU NN 
+Ariel Scharon 	VN NN 
+Regierungschef Ariel Scharon 	TIT VN NN 
+Sean Connery 	VN NN 
+James Bond 	VN NN 
+Timothy Dalton 	VN NN 
+Lois Maxwell 	VN NN 
+Samantha Bond 	VN NN 
+John Carpenter 	VN NN 
+Regisseur John Carpenter 	TIT VN NN 
+David Brandes 	VN NN 
+Sängerin Gracia 	TIT NN 
+David Brandes 	VN NN 
+Brian Epstein 	VN NN 
+Jürgen Meier-Beer 	VN NN 
+NDR-Unterhaltungschef Jürgen Meier-Beer 	TIT VN NN 
+Mr . Mexican 	TIT PU NN 
+Roland Koch 	VN NN 
+Ministerpräsident Roland Koch 	TIT VN NN 
+Albert Einstein 	VN NN 
+Pop-Ikone Einstein 	TIT NN 
+Albert Einstein 	VN NN 
+Albert Einstein 	VN NN 
+Albert Einstein 	VN NN 
+Physiker Albert Einstein 	TIT VN NN 
+Alexander Scheer 	VN NN 
+Schauspieler Alexander Scheer 	TIT VN NN 
+Marc Ziegler 	VN NN 
+Sportmediziner Marc Ziegler 	TIT VN NN 
+Sportmediziner Ziegler 	TIT NN 
+Sportmediziner Ziegler 	TIT NN 
+Pierre Dupasquier 	VN NN 
+Michelin-Sportchef Pierre Dupasquier 	TIT VN NN 
+Hiroshi Yasukawa 	VN NN 
+Paul Simons 	VN NN 
+Paul Simons Song 	VN NN NN 
+Andrew Unruh 	VN NN 
+Lutz Hachmeister 	VN NN 
+Oliver Fuchs 	VN NN 
+Steven Patrick Morrissey 	VN VN NN 
+Leander Hausmann 	VN NN 
+Christian Ulmen 	VN NN 
+Nora Tschirner 	VN NN 
+Moderatorin Nora Tschirner 	TIT VN NN 
+Detlef Detjen 	VN NN 
+AGR-Sprecher Detlef Detjen 	TIT VN NN 
+Hans Friedrich Thoben 	VN VN NN 
+Rolf Stange 	VN NN 
+Ronald Schmid 	VN NN 
+Prof . Ronald Schmid 	TIT PU VN NN 
+Eduard Locher 	VN NN 
+Schweizer Ingenieur Eduard Locher 	TIT TIT VN NN 
+Lutz Volmer 	VN NN 
+Volkskundler Lutz Volmer 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Dieter Backhaus 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Katherine Römer 	VN NN 
+Mathias Nagel 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Dieter Backhaus 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Katherine Römer 	VN NN 
+Mathias Nagel 	VN NN 
+Manfred Reuter 	VN NN 
+Amtsleiter Manfred Reuter 	TIT VN NN 
+Hans-Peter Dücker 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Senator Nagel 	TIT NN 
+Wolfgang Sielaff 	VN NN 
+Klaus Püschel 	VN NN 
+Prof . Klaus Püschel 	TIT PU VN NN 
+Jan Philipp Reemtsma 	VN VN NN 
+Kathrin Fechner 	VN NN 
+Wolfgang Rose 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Michael Göring 	VN NN 
+Professor Michael Göring 	TIT VN NN 
+Vorsitzende Richter 	TIT NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Niels Hansen 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Beate Böttcher 	VN NN 
+Beate Böttcher 	VN NN 
+St . Nikolai 	TIT PU NN 
+Rudolf Feige 	VN NN 
+Johannes Westendorf 	VN NN 
+Prof . Johannes Westendorf 	TIT PU VN NN 
+Ralf Kunz 	VN NN 
+Polizeisprecher Ralf Kunz 	TIT VN NN 
+Volker Okun 	VN NN 
+Gerhard Fuchs 	VN NN 
+Bezirksamtsleiter Gerhard Fuchs 	TIT VN NN 
+Frank Schmidt 	VN NN 
+Hildegund Bauer 	VN NN 
+Klaus Peter Hesse 	VN VN NN 
+Verkehrsexperten Klaus Peter Hesse 	TIT VN VN NN 
+Birgit Enke 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Manfred Dankert 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Erich Loose 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Gitta Meyer 	VN NN 
+Gewerkschaftssekretärin Gitta Meyer 	TIT VN NN 
+Elisabeth Zahn 	VN NN 
+Matthias Haak 	VN NN 
+Holger Weißmann 	VN NN 
+Elisabeth Zahn 	VN NN 
+Pastor Haak 	VN NN 
+Tobias Wriedt 	VN NN 
+Pastor Haak 	VN NN 
+Klaus Hempel 	VN NN 
+Prof . Klaus Hempel 	TIT PU VN NN 
+Uli Timm 	VN NN 
+Rainer Winter 	VN NN 
+Karin Wiedemann 	VN NN 
+Uwe Stephenson 	VN NN 
+Uwe Stephenson 	VN NN 
+Uwe Stephenson 	VN NN 
+Brigitte Stein 	VN NN 
+Ulla Thiele 	VN NN 
+Frank Bloch 	VN NN 
+Andrea Nagel 	VN NN 
+Svenja Klotz 	VN NN 
+Janina Horn 	VN NN 
+Laura Hilger 	VN NN 
+Wiebke Ahlers 	VN NN 
+Nadine Niedermeyer 	VN NN 
+Anna Wiebke Schulz 	VN VN NN 
+Rainer Fischer 	VN NN 
+Klaus Gehrmann 	VN NN 
+Trainer Klaus Gehrmann 	TIT VN NN 
+Steffi Fleischmann 	VN NN 
+Grit Lindemann 	VN NN 
+Claudia Burmeister 	VN NN 
+Katrin Niemeier 	VN NN 
+Britta Möller 	VN NN 
+Dörte Möller 	VN NN 
+Melanie Kröger 	VN NN 
+Sven Baumann 	VN NN 
+Philipp Ruge 	VN NN 
+Kai Richter 	VN NN 
+Außenspieler Kai Richter 	TIT VN NN 
+Hans Melzer 	VN NN 
+Bundestrainer Hans Melzer 	TIT VN NN 
+Adrian Haase 	VN NN 
+Arne Linke 	VN NN 
+Stefan Paetz 	VN NN 
+Gunter Armonat 	VN NN 
+Landrat Gunter Armonat 	TIT VN NN 
+Kreis Stade 	VN NN 
+Bernd Bauer 	VN NN 
+Kerstin Hintz 	VN NN 
+Wolf Hartmut Weber 	VN VN NN 
+Kommunalpolitikers Wolf Hartmut Weber 	TIT VN VN NN 
+Wolf Hartmut Weber 	VN VN NN 
+Andreas Schäfer 	VN NN 
+Andreas Schäfer 	VN NN 
+Andreas Göhring 	VN NN 
+Manfred Schulz 	VN NN 
+SPD-Politikers Manfred Schulz 	TIT VN NN 
+Manfred Schulz 	VN NN 
+Bürgermeister Böhme 	TIT NN 
+Bürgermeister Böhme 	TIT NN 
+Bürgermeister Böhme 	TIT NN 
+Volker Okun 	VN NN 
+Bürgerschaftsabgeordneten Volker Okun 	TIT VN NN 
+Ernst Hornung 	VN NN 
+Helga Stöver 	VN NN 
+Enno Stöver 	VN NN 
+Fritz Bultmann 	VN NN 
+Martin Janz 	VN NN 
+Prof . Martin Janz 	TIT PU VN NN 
+Julia Thelen 	VN NN 
+Richterin Julia Thelen 	TIT VN NN 
+Kreis Stade 	VN NN 
+Jan Christoph Amelung 	VN VN NN 
+Jana Veh 	VN NN 
+Udo Krapf 	VN NN 
+Maximilian Herget 	VN NN 
+Maximilian Herget 	VN NN 
+Maximilian Herget 	VN NN 
+Bernd Lehmann 	VN NN 
+Sebastian Beyer 	VN NN 
+Karsten Frommann 	VN NN 
+Stephanie Frommann 	VN NN 
+Kerstin Beyer 	VN NN 
+Inga Lund 	VN NN 
+Corinna Neumann 	VN NN 
+Ina Heitmann 	VN NN 
+Anna Haun 	VN NN 
+Susann Thiele 	VN NN 
+Jenny Hacker 	VN NN 
+Ralf Zumdick 	VN NN 
+Horst Lüders 	VN NN 
+Manager Horst Lüders 	TIT VN NN 
+Andreas Roloff 	VN NN 
+Trainer Andreas Roloff 	TIT VN NN 
+Arne Birkner 	VN NN 
+Trainer Arne Birkner 	TIT VN NN 
+Otto Geise 	VN NN 
+Otto Geise 	VN NN 
+Vanessa Lewin 	VN NN 
+Gunda Wiebusch 	VN NN 
+Gunda Wiebusch 	VN NN 
+Gunda Wiebusch 	VN NN 
+Jürgen Schulz 	VN NN 
+Thomas Bosse 	VN NN 
+Michaela Merten 	VN NN 
+Michaela Merten 	VN NN 
+Michaela Mertens 	VN NN 
+Thomas Bosse 	VN NN 
+Tatjana Kasper 	VN NN 
+Christiane Petersen 	VN NN 
+Ärztin Christiane Petersen 	TIT VN NN 
+Irene Brockmann 	VN NN 
+Tatjana Kasper 	VN NN 
+Tatjana Kasper 	VN NN 
+Sigrid Krüger 	VN NN 
+Uwe Voss 	VN NN 
+Kreisgeschäftsführer Uwe Voss 	TIT VN NN 
+Jens-Peter Timm 	VN NN 
+Karin Stein 	VN NN 
+Hanns Eisler 	VN NN 
+Werner Richard Heymann 	VN VN NN 
+Bernhard Tuchel 	VN NN 
+Günter Meier 	VN NN 
+Eva Stoltenberg 	VN NN 
+Tim Böge 	VN NN 
+Mirko Heyer 	VN NN 
+Susanne Krehl 	VN NN 
+Jan Schmidt 	VN NN 
+Kathy Brüning 	VN NN 
+Leslie Harrington 	VN NN 
+Renate Wölk 	VN NN 
+Renate Wölk 	VN NN 
+Leslie Harrington 	VN NN 
+Janina Gies 	VN NN 
+Michelle Klebe 	VN NN 
+Janina Gies 	VN NN 
+Marco Prey 	VN NN 
+Marco Prey 	VN NN 
+Sarah Gampe 	VN NN 
+Juliane Pohl 	VN NN 
+Inga Fuhrmann 	VN NN 
+Kathrin Weiler 	VN NN 
+Jens Scheunemann 	VN NN 
+Trainer Jens Scheunemann 	TIT VN NN 
+Nadine Wrage 	VN NN 
+Jens Scheunemann 	VN NN 
+Thomas Kahlert 	VN NN 
+Ralf Bohnsack 	VN NN 
+Hartmut Porth 	VN NN 
+Rüdiger Schäfer 	VN NN 
+Vereinschef Rüdiger Schäfer 	TIT VN NN 
+Andreas Schulz 	VN NN 
+Uwe Schmidt 	VN NN 
+Matthias Wermke 	VN NN 
+Hendrik Peters 	VN NN 
+FFC-Trainer Hendrik Peters 	TIT VN NN 
+Simon Speth 	VN NN 
+Matthias Krüger 	VN NN 
+Stefan Pingel 	VN NN 
+Christian Möck 	VN NN 
+Stefan Pingel 	VN NN 
+Maximilian Löw 	VN NN 
+Simon Winter 	VN NN 
+Christine Köhn 	VN NN 
+Jana Liesegang 	VN NN 
+Kristin Borchers 	VN NN 
+Maximilian Löw 	VN NN 
+Lennart Jakobs 	VN NN 
+Felix Thomsen 	VN NN 
+Jan Reimann 	VN NN 
+Hendrik Eisenhut 	VN NN 
+Hendrik Böttcher 	VN NN 
+Oliver Lenz 	VN NN 
+Patrick Lamm 	VN NN 
+Birger Scholz 	VN NN 
+Christoph Schütz 	VN NN 
+Malte Pohlmann 	VN NN 
+Jörg Brück 	VN NN 
+Achim Nawrath 	VN NN 
+Christian Fey 	VN NN 
+Andreas Lund 	VN NN 
+Malte Riehl 	VN NN 
+Jörg Kunz 	VN NN 
+Dietmar Kühl 	VN NN 
+Ines Strehlau 	VN NN 
+Grünen-Fraktionschefin Ines Strehlau 	TIT VN NN 
+Helmuth Jahnke 	VN NN 
+SPD-Fraktionschef Helmuth Jahnke 	TIT VN NN 
+Wolfgang Grimme 	VN NN 
+Landrat Wolfgang Grimme 	TIT VN NN 
+Stadtwerkedirektor Henning 	TIT NN 
+Hans-Helmut Birke 	VN NN 
+Fraktionschef Hans-Helmut Birke 	TIT VN NN 
+Karin Reschke 	VN NN 
+Elternvertreterin Karin Reschke 	TIT VN NN 
+Karin Reschke 	VN NN 
+Karin Reschke 	VN NN 
+Anke Schmelzer 	VN NN 
+Niels Schmidt 	VN NN 
+Bürgermeister Niels Schmidt 	TIT VN NN 
+Fritz Tietgen 	VN NN 
+Johannes Tietgen 	VN NN 
+Johannes Tietgen 	VN NN 
+Firmenchef Johannes Tietgen 	TIT VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Simone Eckert 	VN NN 
+Johann Sebastian Bach 	VN VN NN 
+Arne Weber 	VN NN 
+Bauunternehmer Arne Weber 	TIT VN NN 
+Dr . Schaal 	TIT PU NN 
+Dirk Römmer 	VN NN 
+Don Bosco 	VN NN 
+Markus Schwarz 	VN NN 
+Tobias Kordt 	VN NN 
+Quarterback Tobias Kordt 	TIT VN NN 
+Jan Hellwig 	VN NN 
+Karsten Schümann 	VN NN 
+Ingo Jopp 	VN NN 
+Union-Trainer Ingo Jopp 	TIT VN NN 
+Helge Voth 	VN NN 
+Christian Hink 	VN NN 
+Patrick Steinmüller 	VN NN 
+Torben Lohse 	VN NN 
+Lars Henkel 	VN NN 
+Thomas Rudloff 	VN NN 
+Marc Draeger 	VN NN 
+Torben Berger 	VN NN 
+Clemens Jansen 	VN NN 
+Christian Moormann 	VN NN 
+Christian Carstens 	VN NN 
+Mustafa Yilmaz 	VN NN 
+Christina Jansen 	VN NN 
+Daniel Schmidt 	VN NN 
+Thomas Rohde 	VN NN 
+Jörn Andresen 	VN NN 
+Anja Hauschildt 	VN NN 
+Marie Nissen 	VN NN 
+Georg Pohl 	VN NN 
+Matthias Menzel 	VN NN 
+Jakob Wehmeier 	VN NN 
+Thorsten Müller 	VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Stefan Arlt 	VN NN 
+Heide-Park-Sprecher Stefan Arlt 	TIT VN NN 
+Gerhard Schmid 	VN NN 
+Mobilcom-Chefs Gerhard Schmid 	TIT VN NN 
+Bernhard Uzun 	VN NN 
+Wolfgang Bosbach 	VN NN 
+Konrad Freiberg 	VN NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Michael Knipper 	VN NN 
+Hauptgeschäftsführer Michael Knipper 	TIT VN NN 
+Bernhard Uzun 	VN NN 
+Hansjürgen Garstka 	VN NN 
+Michael Glos 	VN NN 
+Landesgruppenchef Michael Glos 	TIT VN NN 
+Hans Eichel 	VN NN 
+Finanzminister Hans Eichel 	TIT VN NN 
+Olaf Scholz 	VN NN 
+Joschka Fischer 	VN NN 
+Außenminister Joschka Fischer 	TIT VN NN 
+Außenminister Fischer 	TIT NN 
+Lex Fischer 	VN NN 
+Jörg Schönbohm 	VN NN 
+Landesinnenminister Jörg Schönbohm 	TIT VN NN 
+Angela Merkel 	VN NN 
+CDU-Chefin Angela Merkel 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Henry Kissinger 	VN NN 
+Ex-US-Außenminister Henry Kissinger 	TIT VN NN 
+Monika Hohlmeier 	VN NN 
+Kultusministerin Monika Hohlmeier 	TIT VN NN 
+Edmund Stoiber 	VN NN 
+Ministerpräsident Edmund Stoiber 	TIT VN NN 
+Joschka Fischer 	VN NN 
+Außenminister Joschka Fischer 	TIT VN NN 
+Michael Howard 	VN NN 
+Tory-Spitzenkandidat Michael Howard 	TIT VN NN 
+Tony Blair 	VN NN 
+Michael Howard 	VN NN 
+Charles Kennedy 	VN NN 
+Konstantin von Tischendorf 	VN ZN NN 
+Theologieprofessor Konstantin von Tischendorf 	TIT VN ZN NN 
+Ekkehard Henschke 	VN NN 
+Lech Walesa 	VN NN 
+Verteidigungsminister Donald Rumsfeld 	VN VN NN 
+Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Matthias Bellmann 	VN NN 
+Personalvorstand Matthias Bellmann 	TIT VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Walter Hering 	VN NN 
+Walter Hering 	VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Martin Fliedner 	VN NN 
+Harper Petersen 	VN NN 
+Peter Kruse 	VN NN 
+Wendelin Wiedeking 	VN NN 
+Porsche-Chef Wendelin Wiedeking 	TIT VN NN 
+Josef Ackermann 	VN NN 
+Deutsche-Bank-Chef Josef Ackermann 	TIT VN NN 
+Georg Wilhelm Adamowitsch 	VN VN NN 
+Wirtschaftsstaatssekretär Georg Wilhelm Adamowitsch 	TIT VN VN NN 
+Andreas Schweickert 	VN NN 
+Frank Bohmann 	VN NN 
+HBL-Geschäftsführer Frank Bohmann 	TIT VN NN 
+Thorsten Storm 	VN NN 
+Geschäftsführer Thorsten Storm 	TIT VN NN 
+Bernd Rigterink 	VN NN 
+Manager Bernd Rigterink 	TIT VN NN 
+Achim Feifel 	VN NN 
+Gerd Hein 	VN NN 
+HSV-Aufsichtsrat Gerd Hein 	TIT VN NN 
+Hartmut Engel 	VN NN 
+Gerd Hein 	VN NN 
+Anneke Böhmert 	VN NN 
+Melanie Cremer 	VN NN 
+Peter Krueger 	VN NN 
+Joachim Mahn 	VN NN 
+Meistertrainer Joachim Mahn 	TIT VN NN 
+Moritz Falcke 	VN NN 
+Eike Duckwitz 	VN NN 
+Sebastian Biederlack 	VN NN 
+Eike Duckwitz 	VN NN 
+Joachim Mahn 	VN NN 
+Trainer Joachim Mahn 	TIT VN NN 
+Michael Schumacher 	VN NN 
+Dirk Nowitzki 	VN NN 
+Jon Mewes 	VN NN 
+Winfried M . Klimek 	VN MIX PU NN 
+Steffen Karg 	VN NN 
+Jan Benda 	VN NN 
+Steffen Hoffmann 	VN NN 
+Michael Fischer 	VN NN 
+Christian Wriedt 	VN NN 
+Alex Petkovic 	VN NN 
+Cruisergewichtsprofi Alex Petkovic 	TIT VN NN 
+Dagmar Klostermann 	VN NN 
+Ärztin Dagmar Klostermann 	TIT VN NN 
+Birgit Fischer 	VN NN 
+Florian Mayer 	VN NN 
+Tennisprofi Florian Mayer 	TIT VN NN 
+Nicolas Kiefer 	VN NN 
+Dietmar Beiersdorfer 	VN NN 
+Simon Rolfes 	VN NN 
+Thomas Doll 	VN NN 
+Trainer Thomas Doll 	TIT VN NN 
+Thomas Doll 	VN NN 
+Trainer Thomas Doll 	TIT VN NN 
+Fabio Cannavaro 	VN NN 
+Kapitän Fabio Cannavaro 	TIT VN NN 
+Ruth Sachse 	VN NN 
+Ralf Peters 	VN NN 
+Cony Theis 	VN NN 
+Ruth Sachse 	VN NN 
+Elke Dröscher 	VN NN 
+Fred Astaire 	VN NN 
+Ruth Sachse 	VN NN 
+Franz Rompel 	VN NN 
+Hans Zehetmair 	VN NN 
+Renate Schmidt 	VN NN 
+Bundesfamilienministerin Renate Schmidt 	TIT VN NN 
+Ulrike Kriener 	VN NN 
+Schauspielerin Ulrike Kriener 	TIT VN NN 
+Jan Hofer 	VN NN 
+Claus Kleber 	VN NN 
+Marietta Slomka 	VN NN 
+Sarah Kuttner 	VN NN 
+Sarah Kuttner 	VN NN 
+Charlotte Roche 	VN NN 
+Catherine Mühlemann 	VN NN 
+Charlotte Roche 	VN NN 
+Wolfgang Stein 	VN NN 
+Holger Karsten Schmidt 	VN VN NN 
+Stephan Wagner 	VN NN 
+Regisseur Stephan Wagner 	TIT VN NN 
+Wolfgang Stein 	VN NN 
+Volker Erler 	VN NN 
+Matthias Brandt 	VN NN 
+Hannes Jaenicke 	VN NN 
+Johannes Pauls 	VN NN 
+Bundeskanzler Weyer 	TIT NN 
+Klaus J . Behrendt 	VN MIX PU NN 
+Heidi Klum 	VN NN 
+Klaus Töpfer 	VN NN 
+Hans-Jochen Jaschke 	VN NN 
+Weihbischof Dr . Hans-Jochen Jaschke 	TIT TIT PU VN NN 
+Albert Einstein 	VN NN 
+Malte Wichmann 	VN NN 
+Christian Wedekind 	VN NN 
+Inga Schröder 	VN NN 
+Karl Heinz Kögel 	VN VN NN 
+Media-Control-Chef Karl Heinz Kögel 	TIT VN VN NN 
+Jeanette Biedermann 	VN NN 
+Nicole Süßmilch 	VN NN 
+Michael Jackson 	VN NN 
+Jean Michel Jarre 	VN VN NN 
+Joseph Goebbels 	VN NN 
+Lutz Hachmeister 	VN NN 
+Udo Samel 	VN NN 
+Anna Maria Kaufmann 	VN VN NN 
+Matthias Scheuring 	VN NN 
+Michael Weber 	VN NN 
+Else Kindt 	VN NN 
+Else Kindt 	VN NN 
+Else Kindt 	VN NN 
+Ministerin Schmidt 	TIT NN 
+Renate Schmidt 	VN NN 
+Bundesfamilienministerin Renate Schmidt 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Kanzler Gerhard Schröder 	TIT VN NN 
+Renate Schmidt 	VN NN 
+Jörg Stumpf 	VN NN 
+Ernst-Otto Kock 	VN NN 
+Ernst-Otto Kock 	VN NN 
+Beate Stoffers 	VN NN 
+Sprecherin Beate Stoffers 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Dr . Helmut Kohl 	TIT PU VN NN 
+Helmut Kohl 	VN NN 
+Helmut Kohl 	VN NN 
+Henry Kissinger 	VN NN 
+Wolfgang Schäuble 	VN NN 
+Helmut Kohl 	VN NN 
+Wolfgang Schäuble 	VN NN 
+Wolfgang Schäuble 	VN NN 
+Helmut Kohl 	VN NN 
+Manfred Kanther 	VN NN 
+Brigitte Baumeister 	VN NN 
+Waffenhändlers Schreiber 	TIT NN 
+Hans Terlinden 	VN NN 
+Klaus Landowsky 	VN NN 
+Helmut Kohl 	VN NN 
+Angela Merkel 	VN NN 
+Helmut Kohl 	VN NN 
+Helmut Kohl 	VN NN 
+Dr . Kohl 	TIT PU NN 
+Bernhard Vogel 	VN NN 
+Angela Merkel 	VN NN 
+Horst Köhler 	VN NN 
+Karlsruher Richter 	TIT NN 
+Peter Marx 	VN NN 
+OB-Kandidaten Peter Marx 	TIT VN NN 
+Geschäftsführer Marx 	TIT NN 
+Peter Marx 	VN NN 
+Lech Walesa 	VN NN 
+Wolfgang Huber 	VN NN 
+Bischof Wolfgang Huber 	TIT VN NN 
+Joaquin Navarro-Valls 	VN NN 
+Vatikan-Sprecher Joaquin Navarro-Valls 	TIT VN NN 
+Johannes Pauls 	VN NN 
+Jürgen Trittin 	VN NN 
+Karlsruher Richter 	TIT NN 
+Otto Schily 	VN NN 
+Innenminister Otto Schily 	TIT VN NN 
+Hansjürgen Garstka 	VN NN 
+Thilo Weichert 	VN NN 
+Andreas Pinkwart 	VN NN 
+Hansjürgen Garstka 	VN NN 
+Donald Rumsfeld 	VN NN 
+US-Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Ministerpräsidenten Ibrahim 	TIT NN 
+Roland Koch 	VN NN 
+Ministerpräsident Roland Koch 	TIT VN NN 
+Hans-Jürgen Hielscher 	VN NN 
+Wolfgang Hessenauer 	VN NN 
+Sozialdezernent Wolfgang Hessenauer 	TIT VN NN 
+Reinhard Bütikofer 	VN NN 
+Parteichef Reinhard Bütikofer 	TIT VN NN 
+Brigitte Zypries 	VN NN 
+Bundesjustizministerin Brigitte Zypries 	TIT VN NN 
+Otto Schily 	VN NN 
+Parteifreund Otto Schily 	TIT VN NN 
+Hans-Christian Ströble 	VN NN 
+Altlinke Hans-Christian Ströble 	TIT VN NN 
+Jürgen Mlynek 	VN NN 
+Donald Rumsfeld 	VN NN 
+US-Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Ministerpräsident Ibrahim 	TIT NN 
+Jürgen Mlynek 	VN NN 
+HU-Präsident Jürgen Mlynek 	TIT VN NN 
+Heidi Klum 	VN NN 
+Brad Pitt 	VN NN 
+Jennifer Lopez 	VN NN 
+Michael Platt 	VN NN 
+Dr . Platt 	TIT PU NN 
+Laut Platt 	VN NN 
+Jennifer Lopez 	VN NN 
+Lutz Hachmeister 	VN NN 
+Joseph Goebbels 	VN NN 
+Andreas Blum 	VN NN 
+Pressesprecher Andreas Blum 	TIT VN NN 
+Andreas Blum 	VN NN 
+Andreas Blum 	VN NN 
+Andreas Blum 	VN NN 
+Fritz Cremer 	VN NN 
+Hanns Eisler 	VN NN 
+Konstantin Gorny 	VN NN 
+Susanne Linke 	VN NN 
+Susanne Linke 	VN NN 
+Susanne Linke 	VN NN 
+Andrea Dworkin 	VN NN 
+Andrea Dworkin 	VN NN 
+Richard Helmer 	VN NN 
+Jürgen Mlynek 	VN NN 
+Jürgen Mlynek 	VN NN 
+Judith Becker 	VN NN 
+Rudi Dutschke 	VN NN 
+Studentenführer Rudi Dutschke 	TIT VN NN 
+Harald Juhnke 	VN NN 
+Horst Buchholz 	VN NN 
+Glenn Lacey 	VN NN 
+Holger Steinle 	VN NN 
+Claudia Hämmerling 	VN NN 
+Benjamin Schmidt 	VN NN 
+Ralf Baumann 	VN NN 
+Stefanie Welz 	VN NN 
+Vorsitzende Richter 	TIT NN 
+Herbert Weber 	VN NN 
+Bezirksbürgermeister Herbert Weber 	TIT VN NN 
+Kay Heinz Ehrhardt 	VN VN NN 
+Fraktionsvorsitzende Kay Heinz Ehrhardt 	TIT VN VN NN 
+Erich Mende 	VN NN 
+Vizekanzlers Erich Mende 	TIT VN NN 
+Christoph Lang 	VN NN 
+Alexander Scheer 	VN NN 
+Schauspieler Alexander Scheer 	TIT VN NN 
+Burkhard Ahlert 	VN NN 
+Bahnsprecher Burkhard Ahlert 	TIT VN NN 
+Alexander Scheer 	VN NN 
+Daniel Palik 	VN NN 
+Peter Liebsch 	VN NN 
+Prenzlauer Berg 	VN NN 
+St . Hedwigs-Kathedrale 	TIT PU NN 
+Wolfgang Weider 	VN NN 
+Fürst Rainier 	TIT NN 
+Renate Rauch 	VN NN 
+Physiker Einstein 	TIT NN 
+Jörg Schönbohm 	VN NN 
+Innenminister Jörg Schönbohm 	TIT VN NN 
+Bruno Küppers 	VN NN 
+Polizeipräsident Bruno Küppers 	TIT VN NN 
+Sven Petke 	VN NN 
+CDU-Generalsekretär Sven Petke 	TIT VN NN 
+Vorsitzender Petke 	TIT NN 
+Beate Blechinger 	VN NN 
+Justizministerin Beate Blechinger 	TIT VN NN 
+Andreas Müller 	VN NN 
+Christoph Schulze 	VN NN 
+PKK-Chef Christoph Schulze 	TIT VN NN 
+Ministerpräsident Platzeck 	TIT NN 
+Tobias Künzel 	VN NN 
+Christian Berg 	VN NN 
+Christian Berg 	VN NN 
+Jim Knopf 	VN NN 
+Corinna Harfouch 	VN NN 
+Moritz Bleibtreu 	VN NN 
+Corinna Harfouch 	VN NN 
+Vincent Klink 	VN NN 
+Sandra Bullock 	VN NN 
+Christine Eichel 	VN NN 
+Werner Müller 	VN NN 
+RAG-Vorstandschef Werner Müller 	TIT VN NN 
+Matthias Bellmann 	VN NN 
+Personalvorstand Matthias Bellmann 	TIT VN NN 
+Thomas Cook 	VN NN 
+Christoph Achenbach 	VN NN 
+Konzernchef Christoph Achenbach 	TIT VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Wladimir Putin 	VN NN 
+Staatspräsident Wladimir Putin 	TIT VN NN 
+Thomas Isenberg 	VN NN 
+Annette Rogalla 	VN NN 
+Verbandssprecherin Annette Rogalla 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Petra Roth 	VN NN 
+Manfred Stolpe 	VN NN 
+Bundesverkehrsminister Manfred Stolpe 	TIT VN NN 
+Bernd Gottschalk 	VN NN 
+Renate Künast 	VN NN 
+Bundesverbraucherministerin Renate Künast 	TIT VN NN 
+Don Nelson 	VN NN 
+Dirk Nowitzki 	VN NN 
+Dirk Nowitzki 	VN NN 
+Michael Finley 	VN NN 
+Avery Johnson 	VN NN 
+Trainer Johnson 	TIT NN 
+Dieter Frey 	VN NN 
+Sportrecht-Experte Frey 	TIT NN 
+Tom Bender 	VN NN 
+DFL-Sprecher Tom Bender 	TIT VN NN 
+Jonathan Hill 	VN NN 
+Robert Huth 	VN NN 
+Roberto Huth 	VN NN 
+Claudio Pizarro 	VN NN 
+Joe Cole 	VN NN 
+Felix Magath 	VN NN 
+Claudio Pizarro 	VN NN 
+Michael Ballack 	VN NN 
+Uli Hoeneß 	VN NN 
+Manager Uli Hoeneß 	TIT VN NN 
+Robert Kovac 	VN NN 
+Verteidiger Robert Kovac 	TIT VN NN 
+Trainer Magath 	TIT NN 
+Stefan Reuter 	VN NN 
+Teammanager Stefan Reuter 	TIT VN NN 
+Gerd Niebaum 	VN NN 
+Geschäftsführer Gerd Niebaum 	TIT VN NN 
+Lars Ricken 	VN NN 
+Dortmunder Lars Ricken 	TIT VN NN 
+Jan Koller 	VN NN 
+Rudi Assauer 	VN NN 
+Helmut Kraus 	VN NN 
+Eisschnelllauf-Bundestrainer Helmut Kraus 	TIT VN NN 
+Gerhard Zimmermann 	VN NN 
+Bernd Schiphorst 	VN NN 
+Präsident Bernd Schiphorst 	TIT VN NN 
+Horst Hilpert 	VN NN 
+Kontrollausschuss-Vorsitzende Horst Hilpert 	TIT VN NN 
+Torsten Koop 	VN NN 
+Peter-Michael Diestel 	VN NN 
+Anwalt Peter-Michael Diestel 	TIT VN NN 
+Kanzler Schröder 	TIT NN 
+Tony Blair 	VN NN 
+Premier Tony Blair 	TIT VN NN 
+Thilo Weichert 	VN NN 
+Gerd Andres 	VN NN 
+Ursula Engelen-Kefer 	VN NN 
+DGB-Vize Ursula Engelen-Kefer 	TIT VN NN 
+Karl Robl 	VN NN 
+Günther Verheugen 	VN NN 
+EU-Kommissar Günther Verheugen 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Renate Schmidt 	VN NN 
+Familienministerin Renate Schmidt 	TIT VN NN 
+Dieter Hundt 	VN NN 
+Arbeitgeberpräsident Dieter Hundt 	TIT VN NN 
+Maria Böhmer 	VN NN 
+Familienpolitikerin Maria Böhmer 	TIT VN NN 
+Claus Möller 	VN NN 
+SPD-Parteichef Claus Möller 	TIT VN NN 
+Ralf Stegner 	VN NN 
+Finanzminister Ralf Stegner 	TIT VN NN 
+Ute Erdsiek-Rave 	VN NN 
+Bildungsministerin Ute Erdsiek-Rave 	TIT VN NN 
+Gitta Trauernicht 	VN NN 
+Sozialministerin Gitta Trauernicht 	TIT VN NN 
+Peter Harry Carstensen 	VN VN NN 
+Christian von Boetticher 	VN ZN NN 
+Ex-EU-Abgeordnete Christian von Boetticher 	TIT VN ZN NN 
+Klaus Schlie 	VN NN 
+Innenexperte Klaus Schlie 	TIT VN NN 
+Dietrich Austermann 	VN NN 
+Bundestagsabgeordnete Dietrich Austermann 	TIT VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Wilhelm Schmidt 	VN NN 
+Volker Beck 	VN NN 
+Volker Beck 	VN NN 
+Thomas Strobl 	VN NN 
+Brigitte Zypries 	VN NN 
+Bundesjustizministerin Brigitte Zypries 	TIT VN NN 
+Matthias Herdegen 	VN NN 
+Staatsrechtlers Matthias Herdegen 	TIT VN NN 
+Roger Kusch 	VN NN 
+Senator Roger Kusch 	TIT VN NN 
+Ulla Schmidt 	VN NN 
+Gesundheitsministerin Ulla Schmidt 	TIT VN NN 
+Reinhard Kurth 	VN NN 
+Hartmut Nassauer 	VN NN 
+Markus Ferber 	VN NN 
+Daniel Cohn-Bendit 	VN NN 
+Grünen-Abgeordnete Daniel Cohn-Bendit 	TIT VN NN 
+Alexander Graf 	VN NN 
+Hans-Joachim Hacker 	VN NN 
+Hans-Joachim Hacker 	VN NN 
+Laut Hacker 	VN NN 
+Michael Howard 	VN NN 
+Tony Blair 	VN NN 
+Gordon Brown 	VN NN 
+Schatzkanzler Gordon Brown 	TIT VN NN 
+Oppositionsführer Howard 	TIT NN 
+Charles Kennedy 	VN NN 
+Ahmet Necdet 	VN NN 
+Staatspräsident Ahmet Necdet 	TIT VN NN 
+Ahmet Necdet Sezer 	VN NN NN 
+Staatspräsident Ahmet Necdet Sezer 	TIT VN NN NN 
+Wladimir Putin 	VN NN 
+Regierung Prodi 	TIT NN 
+Rivalen Frank Jensen 	VN VN NN 
+Franz Müntefering 	VN NN 
+SPD-Chef Franz Müntefering 	TIT VN NN 
+Dieter Hundt 	VN NN 
+Arbeitnehmer-Präsident Dieter Hundt 	TIT VN NN 
+Olaf Scholz 	VN NN 
+Generalsekretär Olaf Scholz 	TIT VN NN 
+Petra Roth 	VN NN 
+Städtetagspräsidentin Petra Roth 	TIT VN NN 
+Hans Eichel 	VN NN 
+Minister Hans Eichel 	TIT VN NN 
+US-Soldat Blake 	TIT NN 
+Joschka Fischer 	VN NN 
+Außenminister Joschka Fischer 	TIT VN NN 
+Horst Köhler 	VN NN 
+Bundespräsident Horst Köhler 	TIT VN NN 
+Hans-Dietrich Genscher 	VN NN 
+Außenminister Hans-Dietrich Genscher 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Volker Beck 	VN NN 
+Wolfgang Huber 	VN NN 
+Dieter Hundt 	VN NN 
+Arbeitgeberpräsident Dieter Hundt 	TIT VN NN 
+Renate Schmidt 	VN NN 
+Familienministerin Renate Schmidt 	TIT VN NN 
+Arbeitgeberchef Hundt 	TIT NN 
+Ekin Deligöz 	VN NN 
+Familienpolitikerin Ekin Deligöz 	TIT VN NN 
+Ministerin Schmidt 	TIT NN 
+Richard Boucher 	VN NN 
+Außenamtssprecher Richard Boucher 	TIT VN NN 
+Ahmed Kureia 	VN NN 
+Ministerpräsident Ahmed Kureia 	TIT VN NN 
+Evelyne Gebhardt 	VN NN 
+Wolfgang Clement 	VN NN 
+Wirtschaftsminister Wolfgang Clement 	TIT VN NN 
+Harald Schartau 	VN NN 
+Brigitte Weiss 	VN NN 
+Wolfgang Clement 	VN NN 
+Wirtschaftsminister Wolfgang Clement 	TIT VN NN 
+Peer Steinbrück 	VN NN 
+SPD-Ministerpräsident Peer Steinbrück 	TIT VN NN 
+Jürgen Rüttgers 	VN NN 
+Karl-Josef Laumann 	VN NN 
+Wolfgang Clement 	VN NN 
+Vorgänger Wolfgang Clement 	TIT VN NN 
+Minister Schartau 	TIT NN 
+Brigitte Weiss 	VN NN 
+Klaus Hurrelmann 	VN NN 
+Scheich Nasrallah 	VN NN 
+Arbeitgeberchef Hundt 	TIT NN 
+Scheich Nasrallah 	VN NN 
+Ahmed Hussein 	VN NN 
+Pierre Gemayel 	VN NN 
+Abgeordnete Pierre Gemayel 	TIT VN NN 
+Amin Gemayel 	VN NN 
+Staatspräsidenten Amin Gemayel 	TIT VN NN 
+Ulla Schmidt 	VN NN 
+Ulla Schmidt 	VN NN 
+Kreis Samland 	VN NN 
+Rainer Schmidt 	VN NN 
+Landschaftsarchitekt Rainer Schmidt 	TIT VN NN 
+Bernhard Fricke 	VN NN 
+Erika Runge 	VN NN 
+Roland Koch 	VN NN 
+Johanna Tesch 	VN NN 
+Roland Koch 	VN NN 
+Wolfgang Thierse 	VN NN 
+Karl Lauterbach 	VN NN 
+Bischof Huber 	TIT NN 
+Britney Spears 	VN NN 
+Richard Thomson 	VN NN 
+WHO-Sprecher Richard Thomson 	TIT VN NN 
+Harald Ermel 	VN NN 
+Verteidiger Harald Ermel 	TIT VN NN 
+Harald Ermel 	VN NN 
+Meiwes-Anwalt Harald Ermel 	TIT VN NN 
+Stefan Effenberg 	VN NN 
+Thomas Urban 	VN NN 
+DAV-Vorsitzender Thomas Urban 	TIT VN NN 
+Klaus Töpfer 	VN NN 
+Michael Kramer 	VN NN 
+Regierung Kirchner 	TIT NN 
+Wladimir Putin 	VN NN 
+Präsidenten Wladimir Putin 	TIT VN NN 
+Präsident Chirac 	TIT NN 
+Evelyne Gebhardt 	VN NN 
+Jacques Chirac 	VN NN 
+Evelyne Gebhardt 	VN NN 
+Jacques Chirac 	VN NN 
+Staatspräsident Jacques Chirac 	TIT VN NN 
+Jean-Pierre Landau 	VN NN 
+Manuel Barroso 	VN NN 
+EU-Kommissionspräsident Barroso 	TIT NN 
+Heidemarie Wieczorek-Zeul 	VN NN 
+Entwicklungsministerin Heidemarie Wieczorek-Zeul 	TIT VN NN 
+Otto Bock 	VN NN 
+Otto Bock 	VN NN 
+Otto Bock 	VN NN 
+Otto Bock 	VN NN 
+Hans Georg Näder 	VN VN NN 
+Otto Bock 	VN NN 
+Wilbur Ross 	VN NN 
+ISG-Verkäufer Ross 	TIT NN 
+Berkshire Hathaway 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Iris Finnigan 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Dieter Backhaus 	VN NN 
+Michael Eggenschwiler 	VN NN 
+Michael Eggenschwiler 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Margret Löbner 	VN NN 
+Katherine Römer 	VN NN 
+Margret Löbner 	VN NN 
+Mathias Nagel 	VN NN 
+Thomas Kurrer 	VN NN 
+Margret Löbner 	VN NN 
+Manfred Reuter 	VN NN 
+Amtsleiter Manfred Reuter 	TIT VN NN 
+Hans-Peter Dücker 	VN NN 
+Christa Goetsch 	VN NN 
+GAL-Fraktionschefin Christa Goetsch 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Iris Finnigan 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Dieter Backhaus 	VN NN 
+Michael Eggenschwiler 	VN NN 
+Michael Eggenschwiler 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Margret Löbner 	VN NN 
+Katherine Römer 	VN NN 
+Margret Löbner 	VN NN 
+Mathias Nagel 	VN NN 
+Thomas Kurrer 	VN NN 
+Margret Löbner 	VN NN 
+Manfred Reuter 	VN NN 
+Amtsleiter Manfred Reuter 	TIT VN NN 
+Hans-Peter Dücker 	VN NN 
+Christa Goetsch 	VN NN 
+GAL-Fraktionschefin Christa Goetsch 	TIT VN NN 
+Frank Schöndube 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Senator Nagel 	TIT NN 
+Wolfgang Sielaff 	VN NN 
+Klaus Püschel 	VN NN 
+Prof . Klaus Püschel 	TIT PU VN NN 
+Jan Philipp Reemtsma 	VN VN NN 
+Kathrin Fechner 	VN NN 
+Wolfgang Rose 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Michael Göring 	VN NN 
+Professor Michael Göring 	TIT VN NN 
+Detlef Gottschalck 	VN NN 
+Vorsitzende Richter 	TIT NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Shimon Stein 	VN NN 
+Niels Hansen 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Rolf-Peter Rocke 	VN NN 
+Gelber Engel 	VN NN 
+Beate Böttcher 	VN NN 
+Beate Böttcher 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Iris Finnigan 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Iris Finnigan 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Dieter Backhaus 	VN NN 
+Michael Eggenschwiler 	VN NN 
+Michael Eggenschwiler 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Margret Löbner 	VN NN 
+Katherine Römer 	VN NN 
+Margret Löbner 	VN NN 
+Mathias Nagel 	VN NN 
+Thomas Kurrer 	VN NN 
+Margret Löbner 	VN NN 
+Manfred Reuter 	VN NN 
+Amtsleiter Manfred Reuter 	TIT VN NN 
+Hans-Peter Dücker 	VN NN 
+Christa Goetsch 	VN NN 
+GAL-Fraktionschefin Christa Goetsch 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Iris Finnigan 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Dieter Backhaus 	VN NN 
+Michael Eggenschwiler 	VN NN 
+Michael Eggenschwiler 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Margret Löbner 	VN NN 
+Katherine Römer 	VN NN 
+Margret Löbner 	VN NN 
+Mathias Nagel 	VN NN 
+Thomas Kurrer 	VN NN 
+Margret Löbner 	VN NN 
+Manfred Reuter 	VN NN 
+Amtsleiter Manfred Reuter 	TIT VN NN 
+Hans-Peter Dücker 	VN NN 
+Christa Goetsch 	VN NN 
+GAL-Fraktionschefin Christa Goetsch 	TIT VN NN 
+Frank Schöndube 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Senator Nagel 	TIT NN 
+Wolfgang Sielaff 	VN NN 
+Klaus Püschel 	VN NN 
+Prof . Klaus Püschel 	TIT PU VN NN 
+Jan Philipp Reemtsma 	VN VN NN 
+Kathrin Fechner 	VN NN 
+Wolfgang Rose 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Michael Göring 	VN NN 
+Professor Michael Göring 	TIT VN NN 
+Detlef Gottschalck 	VN NN 
+Vorsitzende Richter 	TIT NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Shimon Stein 	VN NN 
+Niels Hansen 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Rolf-Peter Rocke 	VN NN 
+Gelber Engel 	VN NN 
+Beate Böttcher 	VN NN 
+Beate Böttcher 	VN NN 
+St . Nikolai 	TIT PU NN 
+Klaus Barfoth 	VN NN 
+Rudolf Feige 	VN NN 
+Michael Sottmann 	VN NN 
+Johannes Westendorf 	VN NN 
+Prof . Johannes Westendorf 	TIT PU VN NN 
+Rainer Doleschall 	VN NN 
+Marco Börries 	VN NN 
+Software-Spezialist Marco Börries 	TIT VN NN 
+Ralf Kunz 	VN NN 
+Polizeisprecher Ralf Kunz 	TIT VN NN 
+Volker Okun 	VN NN 
+Clemens Nieting 	VN NN 
+Gerhard Fuchs 	VN NN 
+Bezirksamtsleiter Gerhard Fuchs 	TIT VN NN 
+Sabine Kuegler 	VN NN 
+Wolfgang Peiner 	VN NN 
+Finanzsenator Wolfgang Peiner 	TIT VN NN 
+Frank Schmidt 	VN NN 
+Udo Röbel 	VN NN 
+Hildegund Bauer 	VN NN 
+Klaus Peter Hesse 	VN VN NN 
+Verkehrsexperten Klaus Peter Hesse 	TIT VN VN NN 
+Stephan von Hundelshausen 	VN ZN NN 
+Birgit Enke 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Manfred Dankert 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Erich Loose 	VN NN 
+Andreas Konczal 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Harald Ploß 	VN NN 
+Unternehmer Harald Ploß 	TIT VN NN 
+Harald Ploß 	VN NN 
+Harald Ploß 	VN NN 
+Harald Ploß 	VN NN 
+Gitta Meyer 	VN NN 
+Gewerkschaftssekretärin Gitta Meyer 	TIT VN NN 
+Elisabeth Zahn 	VN NN 
+Matthias Haak 	VN NN 
+Holger Weißmann 	VN NN 
+Elisabeth Zahn 	VN NN 
+Pastor Haak 	VN NN 
+Tobias Wriedt 	VN NN 
+Pastor Haak 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Iris Finnigan 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Dieter Backhaus 	VN NN 
+Michael Eggenschwiler 	VN NN 
+Michael Eggenschwiler 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Margret Löbner 	VN NN 
+Katherine Römer 	VN NN 
+Margret Löbner 	VN NN 
+Mathias Nagel 	VN NN 
+Thomas Kurrer 	VN NN 
+Margret Löbner 	VN NN 
+Manfred Reuter 	VN NN 
+Amtsleiter Manfred Reuter 	TIT VN NN 
+Hans-Peter Dücker 	VN NN 
+Christa Goetsch 	VN NN 
+GAL-Fraktionschefin Christa Goetsch 	TIT VN NN 
+Frank Schöndube 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Senator Nagel 	TIT NN 
+Wolfgang Sielaff 	VN NN 
+Klaus Püschel 	VN NN 
+Prof . Klaus Püschel 	TIT PU VN NN 
+Jan Philipp Reemtsma 	VN VN NN 
+Kathrin Fechner 	VN NN 
+Wolfgang Rose 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Michael Göring 	VN NN 
+Professor Michael Göring 	TIT VN NN 
+Detlef Gottschalck 	VN NN 
+Vorsitzende Richter 	TIT NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Shimon Stein 	VN NN 
+Niels Hansen 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Rolf-Peter Rocke 	VN NN 
+Gelber Engel 	VN NN 
+Beate Böttcher 	VN NN 
+Beate Böttcher 	VN NN 
+St . Nikolai 	TIT PU NN 
+Klaus Barfoth 	VN NN 
+Rudolf Feige 	VN NN 
+Michael Sottmann 	VN NN 
+Johannes Westendorf 	VN NN 
+Prof . Johannes Westendorf 	TIT PU VN NN 
+Rainer Doleschall 	VN NN 
+Marco Börries 	VN NN 
+Software-Spezialist Marco Börries 	TIT VN NN 
+Ralf Kunz 	VN NN 
+Polizeisprecher Ralf Kunz 	TIT VN NN 
+Volker Okun 	VN NN 
+Clemens Nieting 	VN NN 
+Gerhard Fuchs 	VN NN 
+Bezirksamtsleiter Gerhard Fuchs 	TIT VN NN 
+Sabine Kuegler 	VN NN 
+Wolfgang Peiner 	VN NN 
+Finanzsenator Wolfgang Peiner 	TIT VN NN 
+Frank Schmidt 	VN NN 
+Udo Röbel 	VN NN 
+Hildegund Bauer 	VN NN 
+Klaus Peter Hesse 	VN VN NN 
+Verkehrsexperten Klaus Peter Hesse 	TIT VN VN NN 
+Stephan von Hundelshausen 	VN ZN NN 
+Birgit Enke 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Manfred Dankert 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Erich Loose 	VN NN 
+Andreas Konczal 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Harald Ploß 	VN NN 
+Unternehmer Harald Ploß 	TIT VN NN 
+Harald Ploß 	VN NN 
+Harald Ploß 	VN NN 
+Harald Ploß 	VN NN 
+Gitta Meyer 	VN NN 
+Gewerkschaftssekretärin Gitta Meyer 	TIT VN NN 
+Elisabeth Zahn 	VN NN 
+Matthias Haak 	VN NN 
+Holger Weißmann 	VN NN 
+Elisabeth Zahn 	VN NN 
+Pastor Haak 	VN NN 
+Tobias Wriedt 	VN NN 
+Pastor Haak 	VN NN 
+Volker Spiedt 	VN NN 
+Polizeisprecher Volker Spiedt 	TIT VN NN 
+Klaus Hempel 	VN NN 
+Prof . Klaus Hempel 	TIT PU VN NN 
+Uli Timm 	VN NN 
+Walter Nussel 	VN NN 
+Bürgermeister Walter Nussel 	TIT VN NN 
+Peter Maibom 	VN NN 
+Rainer Winter 	VN NN 
+Walter Nussel 	VN NN 
+Bürgermeister Walter Nussel 	TIT VN NN 
+Karin Wiedemann 	VN NN 
+Karin Brückert 	VN NN 
+Uwe Stephenson 	VN NN 
+Anita Klahn 	VN NN 
+Uwe Stephenson 	VN NN 
+Uwe Stephenson 	VN NN 
+Brigitte Stein 	VN NN 
+Ulla Thiele 	VN NN 
+Frank Bloch 	VN NN 
+Rolf Jankwitz 	VN NN 
+Michael Jeglinski 	VN NN 
+Hendrike Heitmann 	VN NN 
+Spielführerin Hendrike Heitmann 	TIT VN NN 
+Andrea Nagel 	VN NN 
+Julia Görges 	VN NN 
+Svenja Klotz 	VN NN 
+Hendrike Heitmann 	VN NN 
+Janina Horn 	VN NN 
+Laura Hilger 	VN NN 
+Wiebke Ahlers 	VN NN 
+Nadine Niedermeyer 	VN NN 
+Anna Wiebke Schulz 	VN VN NN 
+Rainer Fischer 	VN NN 
+Claudia Knickmeyer 	VN NN 
+Klaus Gehrmann 	VN NN 
+Trainer Klaus Gehrmann 	TIT VN NN 
+Sabine Gehricke 	VN NN 
+Steffi Fleischmann 	VN NN 
+Marieke Maeder 	VN NN 
+Caro Miesch 	VN NN 
+Grit Lindemann 	VN NN 
+Karsten Bühnemann 	VN NN 
+Trainer Karsten Bühnemann 	TIT VN NN 
+Claudia Wallnig 	VN NN 
+Claudia Burmeister 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Iris Finnigan 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Dieter Backhaus 	VN NN 
+Michael Eggenschwiler 	VN NN 
+Michael Eggenschwiler 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Margret Löbner 	VN NN 
+Katherine Römer 	VN NN 
+Margret Löbner 	VN NN 
+Mathias Nagel 	VN NN 
+Thomas Kurrer 	VN NN 
+Margret Löbner 	VN NN 
+Manfred Reuter 	VN NN 
+Amtsleiter Manfred Reuter 	TIT VN NN 
+Hans-Peter Dücker 	VN NN 
+Christa Goetsch 	VN NN 
+GAL-Fraktionschefin Christa Goetsch 	TIT VN NN 
+Frank Schöndube 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Senator Nagel 	TIT NN 
+Wolfgang Sielaff 	VN NN 
+Klaus Püschel 	VN NN 
+Prof . Klaus Püschel 	TIT PU VN NN 
+Jan Philipp Reemtsma 	VN VN NN 
+Kathrin Fechner 	VN NN 
+Wolfgang Rose 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Michael Göring 	VN NN 
+Professor Michael Göring 	TIT VN NN 
+Detlef Gottschalck 	VN NN 
+Vorsitzende Richter 	TIT NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Shimon Stein 	VN NN 
+Niels Hansen 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Rolf-Peter Rocke 	VN NN 
+Gelber Engel 	VN NN 
+Beate Böttcher 	VN NN 
+Beate Böttcher 	VN NN 
+St . Nikolai 	TIT PU NN 
+Klaus Barfoth 	VN NN 
+Rudolf Feige 	VN NN 
+Michael Sottmann 	VN NN 
+Johannes Westendorf 	VN NN 
+Prof . Johannes Westendorf 	TIT PU VN NN 
+Rainer Doleschall 	VN NN 
+Marco Börries 	VN NN 
+Software-Spezialist Marco Börries 	TIT VN NN 
+Ralf Kunz 	VN NN 
+Polizeisprecher Ralf Kunz 	TIT VN NN 
+Volker Okun 	VN NN 
+Clemens Nieting 	VN NN 
+Gerhard Fuchs 	VN NN 
+Bezirksamtsleiter Gerhard Fuchs 	TIT VN NN 
+Sabine Kuegler 	VN NN 
+Wolfgang Peiner 	VN NN 
+Finanzsenator Wolfgang Peiner 	TIT VN NN 
+Frank Schmidt 	VN NN 
+Udo Röbel 	VN NN 
+Hildegund Bauer 	VN NN 
+Klaus Peter Hesse 	VN VN NN 
+Verkehrsexperten Klaus Peter Hesse 	TIT VN VN NN 
+Stephan von Hundelshausen 	VN ZN NN 
+Birgit Enke 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Manfred Dankert 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Erich Loose 	VN NN 
+Andreas Konczal 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Harald Ploß 	VN NN 
+Unternehmer Harald Ploß 	TIT VN NN 
+Harald Ploß 	VN NN 
+Harald Ploß 	VN NN 
+Harald Ploß 	VN NN 
+Gitta Meyer 	VN NN 
+Gewerkschaftssekretärin Gitta Meyer 	TIT VN NN 
+Elisabeth Zahn 	VN NN 
+Matthias Haak 	VN NN 
+Holger Weißmann 	VN NN 
+Elisabeth Zahn 	VN NN 
+Pastor Haak 	VN NN 
+Tobias Wriedt 	VN NN 
+Pastor Haak 	VN NN 
+Volker Spiedt 	VN NN 
+Polizeisprecher Volker Spiedt 	TIT VN NN 
+Klaus Hempel 	VN NN 
+Prof . Klaus Hempel 	TIT PU VN NN 
+Uli Timm 	VN NN 
+Walter Nussel 	VN NN 
+Bürgermeister Walter Nussel 	TIT VN NN 
+Peter Maibom 	VN NN 
+Rainer Winter 	VN NN 
+Walter Nussel 	VN NN 
+Bürgermeister Walter Nussel 	TIT VN NN 
+Karin Wiedemann 	VN NN 
+Karin Brückert 	VN NN 
+Uwe Stephenson 	VN NN 
+Anita Klahn 	VN NN 
+Uwe Stephenson 	VN NN 
+Uwe Stephenson 	VN NN 
+Brigitte Stein 	VN NN 
+Ulla Thiele 	VN NN 
+Frank Bloch 	VN NN 
+Rolf Jankwitz 	VN NN 
+Michael Jeglinski 	VN NN 
+Hendrike Heitmann 	VN NN 
+Spielführerin Hendrike Heitmann 	TIT VN NN 
+Andrea Nagel 	VN NN 
+Julia Görges 	VN NN 
+Svenja Klotz 	VN NN 
+Hendrike Heitmann 	VN NN 
+Janina Horn 	VN NN 
+Laura Hilger 	VN NN 
+Wiebke Ahlers 	VN NN 
+Nadine Niedermeyer 	VN NN 
+Anna Wiebke Schulz 	VN VN NN 
+Rainer Fischer 	VN NN 
+Claudia Knickmeyer 	VN NN 
+Klaus Gehrmann 	VN NN 
+Trainer Klaus Gehrmann 	TIT VN NN 
+Sabine Gehricke 	VN NN 
+Steffi Fleischmann 	VN NN 
+Marieke Maeder 	VN NN 
+Caro Miesch 	VN NN 
+Grit Lindemann 	VN NN 
+Karsten Bühnemann 	VN NN 
+Trainer Karsten Bühnemann 	TIT VN NN 
+Claudia Wallnig 	VN NN 
+Claudia Burmeister 	VN NN 
+Katrin Niemeier 	VN NN 
+Britta Möller 	VN NN 
+Johanna Harnack 	VN NN 
+Dörte Möller 	VN NN 
+Melanie Kröger 	VN NN 
+Sven Baumann 	VN NN 
+Philipp Ruge 	VN NN 
+Kai Richter 	VN NN 
+Außenspieler Kai Richter 	TIT VN NN 
+Hans Melzer 	VN NN 
+Bundestrainer Hans Melzer 	TIT VN NN 
+Julia Mestern 	VN NN 
+Adrian Haase 	VN NN 
+Arne Linke 	VN NN 
+Josef Muschinski 	VN NN 
+Stefan Paetz 	VN NN 
+Gunter Armonat 	VN NN 
+Landrat Gunter Armonat 	TIT VN NN 
+Michael Roesberg 	VN NN 
+Kreis Stade 	VN NN 
+Michael Roesberg 	VN NN 
+Kreisrat Michael Roesberg 	TIT VN NN 
+Michael Roesberg 	VN NN 
+Eckverbindung Buchholz 	VN NN 
+Bernd Bauer 	VN NN 
+Kerstin Hintz 	VN NN 
+Annette Fahrendorff 	VN NN 
+Wolf Hartmut Weber 	VN VN NN 
+Kommunalpolitikers Wolf Hartmut Weber 	TIT VN VN NN 
+Ludwig Frohnecke 	VN NN 
+Dr . Ludwig Frohnecke 	TIT PU VN NN 
+Wolf Hartmut Weber 	VN VN NN 
+Marc Kühlborn 	VN NN 
+Andreas Schäfer 	VN NN 
+Andreas Schäfer 	VN NN 
+Andreas Göhring 	VN NN 
+Manfred Schulz 	VN NN 
+SPD-Politikers Manfred Schulz 	TIT VN NN 
+Manfred Schulz 	VN NN 
+Bürgermeister Böhme 	TIT NN 
+Bürgermeister Böhme 	TIT NN 
+Bürgermeister Böhme 	TIT NN 
+Ralf-Dieter Fischer 	VN NN 
+Volker Okun 	VN NN 
+Bürgerschaftsabgeordneten Volker Okun 	TIT VN NN 
+Ernst Hornung 	VN NN 
+Helga Stöver 	VN NN 
+Enno Stöver 	VN NN 
+Ulf Kronshage 	VN NN 
+Helga Peppmüller 	VN NN 
+Gothart Stier 	VN NN 
+Fritz Bultmann 	VN NN 
+Matthias Höfs 	VN NN 
+Martin Janz 	VN NN 
+Prof . Martin Janz 	TIT PU VN NN 
+Julia Thelen 	VN NN 
+Richterin Julia Thelen 	TIT VN NN 
+Kreis Stade 	VN NN 
+Jan Christoph Amelung 	VN VN NN 
+Jana Veh 	VN NN 
+Mathias Riechling 	VN NN 
+Udo Krapf 	VN NN 
+Maximilian Herget 	VN NN 
+Maximilian Herget 	VN NN 
+Maximilian Herget 	VN NN 
+Malte Sierwald 	VN NN 
+Bernd Lehmann 	VN NN 
+Sebastian Beyer 	VN NN 
+Karsten Frommann 	VN NN 
+Stephanie Frommann 	VN NN 
+Kerstin Beyer 	VN NN 
+Inga Lund 	VN NN 
+Corinna Neumann 	VN NN 
+Andrea Jagusch 	VN NN 
+Ina Heitmann 	VN NN 
+Anna Haun 	VN NN 
+Susann Thiele 	VN NN 
+Jenny Hacker 	VN NN 
+Ralf Zumdick 	VN NN 
+Hans-Hinrich Duncker 	VN NN 
+Co-Trainer Hans-Hinrich Duncker 	TIT VN NN 
+St . Pauli 	TIT PU NN 
+Horst Lüders 	VN NN 
+Manager Horst Lüders 	TIT VN NN 
+Andreas Roloff 	VN NN 
+Trainer Andreas Roloff 	TIT VN NN 
+Arne Birkner 	VN NN 
+Trainer Arne Birkner 	TIT VN NN 
+Otto Geise 	VN NN 
+Felix Morawski 	VN NN 
+Otto Geise 	VN NN 
+Vanessa Lewin 	VN NN 
+Gunda Wiebusch 	VN NN 
+Gunda Wiebusch 	VN NN 
+Gunda Wiebusch 	VN NN 
+Jürgen Schulz 	VN NN 
+Mark Perseke 	VN NN 
+Nicole Kalliske 	VN NN 
+Kristiane Helmke 	VN NN 
+Claudia Lipski 	VN NN 
+Jana Scharnberg 	VN NN 
+Helga Angelowsky 	VN NN 
+Thomas Bosse 	VN NN 
+Michaela Merten 	VN NN 
+Michaela Merten 	VN NN 
+Michaela Mertens 	VN NN 
+Helga Angelowsky 	VN NN 
+Thomas Bosse 	VN NN 
+Tatjana Kasper 	VN NN 
+Christiane Petersen 	VN NN 
+Ärztin Christiane Petersen 	TIT VN NN 
+Hans von Lessel 	VN ZN NN 
+Irene Brockmann 	VN NN 
+Tatjana Kasper 	VN NN 
+Tatjana Kasper 	VN NN 
+Gero Storjohann 	VN NN 
+CDU-Bundestagsabgeordnete Gero Storjohann 	TIT VN NN 
+Sigrid Krüger 	VN NN 
+Tobias Mährlein 	VN NN 
+Kreis Segeberg 	VN NN 
+Kreis Segeberg 	VN NN 
+Gero Storjohann 	VN NN 
+Uwe Voss 	VN NN 
+Kreisgeschäftsführer Uwe Voss 	TIT VN NN 
+Jens-Peter Timm 	VN NN 
+Waltraut Watty 	VN NN 
+Karin Stein 	VN NN 
+Hanns Eisler 	VN NN 
+Werner Richard Heymann 	VN VN NN 
+Bernhard Tuchel 	VN NN 
+Günter Meier 	VN NN 
+Eva Stoltenberg 	VN NN 
+Frauke Smeja 	VN NN 
+Pastor Tegtmeyer 	VN NN 
+Tim Böge 	VN NN 
+Alexander Czischke 	VN NN 
+Mirko Heyer 	VN NN 
+Susanne Krehl 	VN NN 
+Kathrin Rehders 	VN NN 
+Jan Schmidt 	VN NN 
+Kristin Esins 	VN NN 
+Kathy Brüning 	VN NN 
+Petra Kankowski 	VN NN 
+Silke Hatje 	VN NN 
+Leslie Harrington 	VN NN 
+Renate Wölk 	VN NN 
+Petra Kankowski 	VN NN 
+Renate Wölk 	VN NN 
+Leslie Harrington 	VN NN 
+Silke Hatje 	VN NN 
+Petra Kankowski 	VN NN 
+Janina Gies 	VN NN 
+Michelle Klebe 	VN NN 
+Janina Gies 	VN NN 
+Kathrin Nipken 	VN NN 
+Marco Prey 	VN NN 
+Marco Prey 	VN NN 
+Sarah Gampe 	VN NN 
+Vera Constabel 	VN NN 
+Juliane Pohl 	VN NN 
+Inga Fuhrmann 	VN NN 
+Kathrin Weiler 	VN NN 
+Mareike Tomadich 	VN NN 
+Manuela Zwiener 	VN NN 
+Jens Scheunemann 	VN NN 
+Trainer Jens Scheunemann 	TIT VN NN 
+Wiebke Martsch 	VN NN 
+Nadine Wrage 	VN NN 
+Jens Scheunemann 	VN NN 
+Thomas Kahlert 	VN NN 
+Ralf Bohnsack 	VN NN 
+Christian Michna 	VN NN 
+Hartmut Porth 	VN NN 
+Rüdiger Schäfer 	VN NN 
+Vereinschef Rüdiger Schäfer 	TIT VN NN 
+Tanja Rathmann 	VN NN 
+Tanja Rathmann 	VN NN 
+Sandra Ossarek 	VN NN 
+Andreas Schulz 	VN NN 
+Lars Landschof 	VN NN 
+MTV-Spielertrainer Lars Landschof 	TIT VN NN 
+Rüdiger Vondran 	VN NN 
+SG-Trainer Rüdiger Vondran 	TIT VN NN 
+Uwe Schmidt 	VN NN 
+Matthias Wermke 	VN NN 
+Hendrik Peters 	VN NN 
+FFC-Trainer Hendrik Peters 	TIT VN NN 
+Simon Speth 	VN NN 
+Matthias Krüger 	VN NN 
+Stephan Westedt 	VN NN 
+Arnold Spiwek 	VN NN 
+SG-Trainer Arnold Spiwek 	TIT VN NN 
+Olaf Dettmering 	VN NN 
+Stefan Pingel 	VN NN 
+Christian Möck 	VN NN 
+Stefan Pingel 	VN NN 
+Chrsitian Möck 	VN NN 
+Jan Hasenkamp 	VN NN 
+Mittelfeldspieler Jan Hasenkamp 	TIT VN NN 
+Thimo Brinkmann 	VN NN 
+Manuel Klaaßen 	VN NN 
+Maximilian Löw 	VN NN 
+Simon Winter 	VN NN 
+Till Büsen 	VN NN 
+Christine Köhn 	VN NN 
+Jana Liesegang 	VN NN 
+Nadine Synold 	VN NN 
+Carina Mlitzko 	VN NN 
+Kristin Borchers 	VN NN 
+Isabelle Peltier 	VN NN 
+Maximilian Löw 	VN NN 
+Lennart Jakobs 	VN NN 
+Ken Woitanowski 	VN NN 
+Felix Thomsen 	VN NN 
+Jan Reimann 	VN NN 
+Hendrik Eisenhut 	VN NN 
+Hendrik Böttcher 	VN NN 
+Oliver Lenz 	VN NN 
+Patrick Lamm 	VN NN 
+Birger Scholz 	VN NN 
+Christoph Schütz 	VN NN 
+Malte Pohlmann 	VN NN 
+Jörg Brück 	VN NN 
+Achim Nawrath 	VN NN 
+Christian Fey 	VN NN 
+Andreas Lund 	VN NN 
+Malte Riehl 	VN NN 
+Jörg Kunz 	VN NN 
+Hanno Schmedes 	VN NN 
+Dietmar Kühl 	VN NN 
+Frank Jentze 	VN NN 
+Ines Strehlau 	VN NN 
+Grünen-Fraktionschefin Ines Strehlau 	TIT VN NN 
+Helmuth Jahnke 	VN NN 
+SPD-Fraktionschef Helmuth Jahnke 	TIT VN NN 
+Wolfgang Grimme 	VN NN 
+Landrat Wolfgang Grimme 	TIT VN NN 
+Jan Sürig 	VN NN 
+Richterin Trüller 	TIT NN 
+Stadtwerkedirektor Henning 	TIT NN 
+Arno Nicolaisen 	VN NN 
+Hans-Helmut Birke 	VN NN 
+Fraktionschef Hans-Helmut Birke 	TIT VN NN 
+Karin Reschke 	VN NN 
+Elternvertreterin Karin Reschke 	TIT VN NN 
+Karin Reschke 	VN NN 
+Karin Reschke 	VN NN 
+Anke Schmelzer 	VN NN 
+Klaus Parusel 	VN NN 
+Niels Schmidt 	VN NN 
+Bürgermeister Niels Schmidt 	TIT VN NN 
+Fritz Tietgen 	VN NN 
+Johannes Tietgen 	VN NN 
+Johannes Tietgen 	VN NN 
+Firmenchef Johannes Tietgen 	TIT VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Michael Schmult 	VN NN 
+Andrea Faltin 	VN NN 
+Simone Eckert 	VN NN 
+Johann Sebastian Bach 	VN VN NN 
+Arne Weber 	VN NN 
+Bauunternehmer Arne Weber 	TIT VN NN 
+Dr . Schaal 	TIT PU NN 
+Ursula Ellinghausen 	VN NN 
+Dirk Römmer 	VN NN 
+Alexander Suslin 	VN NN 
+Don Bosco 	VN NN 
+Alexander Jakusch 	VN NN 
+Markus Schwarz 	VN NN 
+Tobias Kordt 	VN NN 
+Quarterback Tobias Kordt 	TIT VN NN 
+Jan Hellwig 	VN NN 
+Red Cocks 	VN NN 
+Andreas Glismann 	VN NN 
+Trainer Andreas Glismann 	TIT VN NN 
+Karsten Schümann 	VN NN 
+Ingo Jopp 	VN NN 
+Union-Trainer Ingo Jopp 	TIT VN NN 
+Benjamin Köhnke 	VN NN 
+Hayri Cirak 	VN NN 
+Torhüter Hayri Cirak 	TIT VN NN 
+Gyula Wetzel 	VN NN 
+Helge Voth 	VN NN 
+Christian Hink 	VN NN 
+Stefan Knodt 	VN NN 
+Matthias Kalkovski 	VN NN 
+Patrick Steinmüller 	VN NN 
+Torben Lohse 	VN NN 
+Lars Henkel 	VN NN 
+Thomas Rudloff 	VN NN 
+Christian Wonnay 	VN NN 
+Michael Friske 	VN NN 
+Marc Draeger 	VN NN 
+Torben Berger 	VN NN 
+Clemens Jansen 	VN NN 
+Ricky Schwärzel 	VN NN 
+Christian Moormann 	VN NN 
+Jan Diercks 	VN NN 
+Torwart Jan Diercks 	TIT VN NN 
+Christian Carstens 	VN NN 
+Mustafa Yilmaz 	VN NN 
+Christina Jansen 	VN NN 
+Daniel Schmidt 	VN NN 
+Anne Labitzky 	VN NN 
+Jan Labitzky 	VN NN 
+Thomas Rohde 	VN NN 
+Christopher Zielske 	VN NN 
+Johanna Tembrockhaus 	VN NN 
+Jörn Andresen 	VN NN 
+Anja Hauschildt 	VN NN 
+Marie Nissen 	VN NN 
+Matthias Wähner 	VN NN 
+Kapitän Matthias Wähner 	TIT VN NN 
+Jörg Hubrich 	VN NN 
+TuS-Spielführer Jörg Hubrich 	TIT VN NN 
+Max Bannicke 	VN NN 
+Georg Pohl 	VN NN 
+Matthias Menzel 	VN NN 
+Tarek Fejry 	VN NN 
+Rouven Kanitz 	VN NN 
+Max Kolleck 	VN NN 
+Henrik Zilinski 	VN NN 
+Jakob Wehmeier 	VN NN 
+Thorsten Müller 	VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Stefan Arlt 	VN NN 
+Heide-Park-Sprecher Stefan Arlt 	TIT VN NN 
+Gerhard Schmid 	VN NN 
+Mobilcom-Chefs Gerhard Schmid 	TIT VN NN 
+Bernhard Uzun 	VN NN 
+Wolfgang Bosbach 	VN NN 
+Konrad Freiberg 	VN NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Hartmut Lubomierski 	VN NN 
+Michael Knipper 	VN NN 
+Hauptgeschäftsführer Michael Knipper 	TIT VN NN 
+Bernhard Uzun 	VN NN 
+Hansjürgen Garstka 	VN NN 
+Hartmut Lubomierski 	VN NN 
+Michael Glos 	VN NN 
+Landesgruppenchef Michael Glos 	TIT VN NN 
+Hans Eichel 	VN NN 
+Finanzminister Hans Eichel 	TIT VN NN 
+Olaf Scholz 	VN NN 
+Joschka Fischer 	VN NN 
+Außenminister Joschka Fischer 	TIT VN NN 
+Außenminister Fischer 	TIT NN 
+Lex Fischer 	VN NN 
+Jörg Schönbohm 	VN NN 
+Landesinnenminister Jörg Schönbohm 	TIT VN NN 
+Angela Merkel 	VN NN 
+CDU-Chefin Angela Merkel 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Henry Kissinger 	VN NN 
+Ex-US-Außenminister Henry Kissinger 	TIT VN NN 
+Monika Hohlmeier 	VN NN 
+Kultusministerin Monika Hohlmeier 	TIT VN NN 
+Edmund Stoiber 	VN NN 
+Ministerpräsident Edmund Stoiber 	TIT VN NN 
+Joschka Fischer 	VN NN 
+Außenminister Joschka Fischer 	TIT VN NN 
+Michael Howard 	VN NN 
+Tory-Spitzenkandidat Michael Howard 	TIT VN NN 
+Tony Blair 	VN NN 
+Michael Howard 	VN NN 
+Charles Kennedy 	VN NN 
+Konstantin von Tischendorf 	VN ZN NN 
+Theologieprofessor Konstantin von Tischendorf 	TIT VN ZN NN 
+Ekkehard Henschke 	VN NN 
+Lech Walesa 	VN NN 
+Silvan Schalom 	VN NN 
+Außenministers Silvan Schalom 	TIT VN NN 
+Verteidigungsminister Donald Rumsfeld 	VN VN NN 
+Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Hilde Frafjord Johnson 	VN VN NN 
+Entwicklungsministerin Hilde Frafjord Johnson 	TIT VN VN NN 
+Harald Pinger 	VN NN 
+Matthias Bellmann 	VN NN 
+Personalvorstand Matthias Bellmann 	TIT VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Walter Hering 	VN NN 
+Walter Morjan 	VN NN 
+Walter Hering 	VN NN 
+Thomas Cook 	VN NN 
+Jürgen Branse 	VN NN 
+Holiday-Jack-Geschäftsführer Jürgen Branse 	TIT VN NN 
+Thomas Cook 	VN NN 
+Martin Fliedner 	VN NN 
+Harper Petersen 	VN NN 
+Peter Kruse 	VN NN 
+Wendelin Wiedeking 	VN NN 
+Porsche-Chef Wendelin Wiedeking 	TIT VN NN 
+Josef Ackermann 	VN NN 
+Deutsche-Bank-Chef Josef Ackermann 	TIT VN NN 
+Georg Wilhelm Adamowitsch 	VN VN NN 
+Wirtschaftsstaatssekretär Georg Wilhelm Adamowitsch 	TIT VN VN NN 
+Joaquin Almunia 	VN NN 
+Währungskommissar Joaquin Almunia 	TIT VN NN 
+Andreas Schweickert 	VN NN 
+Frank Bohmann 	VN NN 
+HBL-Geschäftsführer Frank Bohmann 	TIT VN NN 
+Thorsten Storm 	VN NN 
+Geschäftsführer Thorsten Storm 	TIT VN NN 
+Bernd Rigterink 	VN NN 
+Manager Bernd Rigterink 	TIT VN NN 
+Achim Feifel 	VN NN 
+Gerd Hein 	VN NN 
+HSV-Aufsichtsrat Gerd Hein 	TIT VN NN 
+Hartmut Engel 	VN NN 
+Gerd Hein 	VN NN 
+Christian Fremy 	VN NN 
+Stadionsprecher Christian Fremy 	TIT VN NN 
+Andreas Kuhlage 	VN NN 
+Anneke Böhmert 	VN NN 
+Melanie Cremer 	VN NN 
+Peter Krueger 	VN NN 
+Joachim Mahn 	VN NN 
+Meistertrainer Joachim Mahn 	TIT VN NN 
+Moritz Falcke 	VN NN 
+Eike Duckwitz 	VN NN 
+Stefan Saliger 	VN NN 
+Sebastian Biederlack 	VN NN 
+Eike Duckwitz 	VN NN 
+Joachim Mahn 	VN NN 
+Trainer Joachim Mahn 	TIT VN NN 
+Michael Schumacher 	VN NN 
+Dirk Nowitzki 	VN NN 
+Jon Mewes 	VN NN 
+Winfried M . Klimek 	VN MIX PU NN 
+Steffen Karg 	VN NN 
+Jan Benda 	VN NN 
+Steffen Hoffmann 	VN NN 
+Michael Fischer 	VN NN 
+Ulrich Natusch 	VN NN 
+Trainer Ulrich Natusch 	TIT VN NN 
+Christian Wriedt 	VN NN 
+Ruslan Schagajew 	VN NN 
+Schwergewichtsprofi Ruslan Schagajew 	TIT VN NN 
+Alex Petkovic 	VN NN 
+Cruisergewichtsprofi Alex Petkovic 	TIT VN NN 
+Dagmar Klostermann 	VN NN 
+Ärztin Dagmar Klostermann 	TIT VN NN 
+St . Pauli 	TIT PU NN 
+St . Pauli 	TIT PU NN 
+Birgit Fischer 	VN NN 
+Florian Mayer 	VN NN 
+Tennisprofi Florian Mayer 	TIT VN NN 
+Julien Benneteau 	VN NN 
+Franzosen Julien Benneteau 	TIT VN NN 
+Nicolas Kiefer 	VN NN 
+Dietmar Beiersdorfer 	VN NN 
+Simon Rolfes 	VN NN 
+Thomas Doll 	VN NN 
+Trainer Thomas Doll 	TIT VN NN 
+Thomas Doll 	VN NN 
+Trainer Thomas Doll 	TIT VN NN 
+Igor Simutenkow 	VN NN 
+Fabio Cannavaro 	VN NN 
+Kapitän Fabio Cannavaro 	TIT VN NN 
+Fabio Capello 	VN NN 
+Marcelo Zalayeta 	VN NN 
+Rafael Benitez 	VN NN 
+Teammanager Rafael Benitez 	TIT VN NN 
+Milan Baros 	VN NN 
+Henriette Väth-Hinz 	VN NN 
+Geschäftsführerin Henriette Väth-Hinz 	TIT VN NN 
+Martin Munkacsi 	VN NN 
+Ruth Sachse 	VN NN 
+Ralf Peters 	VN NN 
+Cony Theis 	VN NN 
+Ruth Sachse 	VN NN 
+Elke Dröscher 	VN NN 
+Ursula Schulz-Dornburg 	VN NN 
+Martin Munkacsi 	VN NN 
+Fred Astaire 	VN NN 
+Ruth Sachse 	VN NN 
+Anne Moerchen 	VN NN 
+Martin Munkacsi 	VN NN 
+Franz Rompel 	VN NN 
+Hans Zehetmair 	VN NN 
+Luise Reddemann 	VN NN 
+Luise Reddemann 	VN NN 
+Luise Reddemann 	VN NN 
+Luise Reddemann 	VN NN 
+Renate Schmidt 	VN NN 
+Bundesfamilienministerin Renate Schmidt 	TIT VN NN 
+Marianne Leuzinger-Bohleber 	VN NN 
+Ulrike Kriener 	VN NN 
+Schauspielerin Ulrike Kriener 	TIT VN NN 
+Jan Hofer 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Dieter Backhaus 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Katherine Römer 	VN NN 
+Mathias Nagel 	VN NN 
+Manfred Reuter 	VN NN 
+Amtsleiter Manfred Reuter 	TIT VN NN 
+Hans-Peter Dücker 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Senator Nagel 	TIT NN 
+Wolfgang Sielaff 	VN NN 
+Klaus Püschel 	VN NN 
+Prof . Klaus Püschel 	TIT PU VN NN 
+Jan Philipp Reemtsma 	VN VN NN 
+Kathrin Fechner 	VN NN 
+Wolfgang Rose 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Michael Göring 	VN NN 
+Professor Michael Göring 	TIT VN NN 
+Vorsitzende Richter 	TIT NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Niels Hansen 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Beate Böttcher 	VN NN 
+Beate Böttcher 	VN NN 
+St . Nikolai 	TIT PU NN 
+Rudolf Feige 	VN NN 
+Johannes Westendorf 	VN NN 
+Prof . Johannes Westendorf 	TIT PU VN NN 
+Ralf Kunz 	VN NN 
+Polizeisprecher Ralf Kunz 	TIT VN NN 
+Volker Okun 	VN NN 
+Gerhard Fuchs 	VN NN 
+Bezirksamtsleiter Gerhard Fuchs 	TIT VN NN 
+Frank Schmidt 	VN NN 
+Hildegund Bauer 	VN NN 
+Klaus Peter Hesse 	VN VN NN 
+Verkehrsexperten Klaus Peter Hesse 	TIT VN VN NN 
+Birgit Enke 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Manfred Dankert 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Erich Loose 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Gitta Meyer 	VN NN 
+Gewerkschaftssekretärin Gitta Meyer 	TIT VN NN 
+Elisabeth Zahn 	VN NN 
+Matthias Haak 	VN NN 
+Holger Weißmann 	VN NN 
+Elisabeth Zahn 	VN NN 
+Pastor Haak 	VN NN 
+Tobias Wriedt 	VN NN 
+Pastor Haak 	VN NN 
+Klaus Hempel 	VN NN 
+Prof . Klaus Hempel 	TIT PU VN NN 
+Uli Timm 	VN NN 
+Rainer Winter 	VN NN 
+Karin Wiedemann 	VN NN 
+Uwe Stephenson 	VN NN 
+Uwe Stephenson 	VN NN 
+Uwe Stephenson 	VN NN 
+Brigitte Stein 	VN NN 
+Ulla Thiele 	VN NN 
+Frank Bloch 	VN NN 
+Andrea Nagel 	VN NN 
+Svenja Klotz 	VN NN 
+Janina Horn 	VN NN 
+Laura Hilger 	VN NN 
+Wiebke Ahlers 	VN NN 
+Nadine Niedermeyer 	VN NN 
+Anna Wiebke Schulz 	VN VN NN 
+Rainer Fischer 	VN NN 
+Klaus Gehrmann 	VN NN 
+Trainer Klaus Gehrmann 	TIT VN NN 
+Steffi Fleischmann 	VN NN 
+Grit Lindemann 	VN NN 
+Claudia Burmeister 	VN NN 
+Katrin Niemeier 	VN NN 
+Britta Möller 	VN NN 
+Dörte Möller 	VN NN 
+Melanie Kröger 	VN NN 
+Sven Baumann 	VN NN 
+Philipp Ruge 	VN NN 
+Kai Richter 	VN NN 
+Außenspieler Kai Richter 	TIT VN NN 
+Hans Melzer 	VN NN 
+Bundestrainer Hans Melzer 	TIT VN NN 
+Adrian Haase 	VN NN 
+Arne Linke 	VN NN 
+Stefan Paetz 	VN NN 
+Gunter Armonat 	VN NN 
+Landrat Gunter Armonat 	TIT VN NN 
+Kreis Stade 	VN NN 
+Bernd Bauer 	VN NN 
+Kerstin Hintz 	VN NN 
+Wolf Hartmut Weber 	VN VN NN 
+Kommunalpolitikers Wolf Hartmut Weber 	TIT VN VN NN 
+Wolf Hartmut Weber 	VN VN NN 
+Andreas Schäfer 	VN NN 
+Andreas Schäfer 	VN NN 
+Andreas Göhring 	VN NN 
+Manfred Schulz 	VN NN 
+SPD-Politikers Manfred Schulz 	TIT VN NN 
+Manfred Schulz 	VN NN 
+Bürgermeister Böhme 	TIT NN 
+Bürgermeister Böhme 	TIT NN 
+Bürgermeister Böhme 	TIT NN 
+Volker Okun 	VN NN 
+Bürgerschaftsabgeordneten Volker Okun 	TIT VN NN 
+Ernst Hornung 	VN NN 
+Helga Stöver 	VN NN 
+Enno Stöver 	VN NN 
+Fritz Bultmann 	VN NN 
+Martin Janz 	VN NN 
+Prof . Martin Janz 	TIT PU VN NN 
+Julia Thelen 	VN NN 
+Richterin Julia Thelen 	TIT VN NN 
+Kreis Stade 	VN NN 
+Jan Christoph Amelung 	VN VN NN 
+Jana Veh 	VN NN 
+Udo Krapf 	VN NN 
+Maximilian Herget 	VN NN 
+Maximilian Herget 	VN NN 
+Maximilian Herget 	VN NN 
+Bernd Lehmann 	VN NN 
+Sebastian Beyer 	VN NN 
+Karsten Frommann 	VN NN 
+Stephanie Frommann 	VN NN 
+Kerstin Beyer 	VN NN 
+Inga Lund 	VN NN 
+Corinna Neumann 	VN NN 
+Ina Heitmann 	VN NN 
+Anna Haun 	VN NN 
+Susann Thiele 	VN NN 
+Jenny Hacker 	VN NN 
+Ralf Zumdick 	VN NN 
+Horst Lüders 	VN NN 
+Manager Horst Lüders 	TIT VN NN 
+Andreas Roloff 	VN NN 
+Trainer Andreas Roloff 	TIT VN NN 
+Arne Birkner 	VN NN 
+Trainer Arne Birkner 	TIT VN NN 
+Otto Geise 	VN NN 
+Otto Geise 	VN NN 
+Vanessa Lewin 	VN NN 
+Gunda Wiebusch 	VN NN 
+Gunda Wiebusch 	VN NN 
+Gunda Wiebusch 	VN NN 
+Jürgen Schulz 	VN NN 
+Thomas Bosse 	VN NN 
+Michaela Merten 	VN NN 
+Michaela Merten 	VN NN 
+Michaela Mertens 	VN NN 
+Thomas Bosse 	VN NN 
+Tatjana Kasper 	VN NN 
+Christiane Petersen 	VN NN 
+Ärztin Christiane Petersen 	TIT VN NN 
+Irene Brockmann 	VN NN 
+Tatjana Kasper 	VN NN 
+Tatjana Kasper 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Sigrid Krüger 	VN NN 
+Uwe Voss 	VN NN 
+Kreisgeschäftsführer Uwe Voss 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Jens-Peter Timm 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Karin Stein 	VN NN 
+Christiane Brandt 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Hanns Eisler 	VN NN 
+Werner Richard Heymann 	VN VN NN 
+Bernhard Tuchel 	VN NN 
+Dieter Backhaus 	VN NN 
+Günter Meier 	VN NN 
+Eva Stoltenberg 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Tim Böge 	VN NN 
+Mirko Heyer 	VN NN 
+Susanne Krehl 	VN NN 
+Jan Schmidt 	VN NN 
+Katherine Römer 	VN NN 
+Mathias Nagel 	VN NN 
+Kathy Brüning 	VN NN 
+Manfred Reuter 	VN NN 
+Amtsleiter Manfred Reuter 	TIT VN NN 
+Hans-Peter Dücker 	VN NN 
+Leslie Harrington 	VN NN 
+Renate Wölk 	VN NN 
+Renate Wölk 	VN NN 
+Leslie Harrington 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Senator Nagel 	TIT NN 
+Wolfgang Sielaff 	VN NN 
+Klaus Püschel 	VN NN 
+Prof . Klaus Püschel 	TIT PU VN NN 
+Jan Philipp Reemtsma 	VN VN NN 
+Kathrin Fechner 	VN NN 
+Wolfgang Rose 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Michael Göring 	VN NN 
+Professor Michael Göring 	TIT VN NN 
+Janina Gies 	VN NN 
+Michelle Klebe 	VN NN 
+Janina Gies 	VN NN 
+Marco Prey 	VN NN 
+Marco Prey 	VN NN 
+Vorsitzende Richter 	TIT NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Niels Hansen 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Beate Böttcher 	VN NN 
+Beate Böttcher 	VN NN 
+Sarah Gampe 	VN NN 
+Juliane Pohl 	VN NN 
+Inga Fuhrmann 	VN NN 
+Kathrin Weiler 	VN NN 
+Jens Scheunemann 	VN NN 
+Trainer Jens Scheunemann 	TIT VN NN 
+Nadine Wrage 	VN NN 
+Jens Scheunemann 	VN NN 
+Thomas Kahlert 	VN NN 
+Ralf Bohnsack 	VN NN 
+St . Nikolai 	TIT PU NN 
+Rudolf Feige 	VN NN 
+Johannes Westendorf 	VN NN 
+Prof . Johannes Westendorf 	TIT PU VN NN 
+Hartmut Porth 	VN NN 
+Rüdiger Schäfer 	VN NN 
+Vereinschef Rüdiger Schäfer 	TIT VN NN 
+Ralf Kunz 	VN NN 
+Polizeisprecher Ralf Kunz 	TIT VN NN 
+Volker Okun 	VN NN 
+Gerhard Fuchs 	VN NN 
+Bezirksamtsleiter Gerhard Fuchs 	TIT VN NN 
+Andreas Schulz 	VN NN 
+Frank Schmidt 	VN NN 
+Hildegund Bauer 	VN NN 
+Klaus Peter Hesse 	VN VN NN 
+Verkehrsexperten Klaus Peter Hesse 	TIT VN VN NN 
+Uwe Schmidt 	VN NN 
+Matthias Wermke 	VN NN 
+Birgit Enke 	VN NN 
+Susanne Freese 	VN NN 
+Hendrik Peters 	VN NN 
+FFC-Trainer Hendrik Peters 	TIT VN NN 
+Simon Speth 	VN NN 
+Matthias Krüger 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Manfred Dankert 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Erich Loose 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Stefan Pingel 	VN NN 
+Christian Möck 	VN NN 
+Stefan Pingel 	VN NN 
+Gitta Meyer 	VN NN 
+Gewerkschaftssekretärin Gitta Meyer 	TIT VN NN 
+Elisabeth Zahn 	VN NN 
+Matthias Haak 	VN NN 
+Holger Weißmann 	VN NN 
+Elisabeth Zahn 	VN NN 
+Pastor Haak 	VN NN 
+Tobias Wriedt 	VN NN 
+Pastor Haak 	VN NN 
+Klaus Hempel 	VN NN 
+Prof . Klaus Hempel 	TIT PU VN NN 
+Maximilian Löw 	VN NN 
+Simon Winter 	VN NN 
+Uli Timm 	VN NN 
+Rainer Winter 	VN NN 
+Christine Köhn 	VN NN 
+Jana Liesegang 	VN NN 
+Kristin Borchers 	VN NN 
+Karin Wiedemann 	VN NN 
+Maximilian Löw 	VN NN 
+Lennart Jakobs 	VN NN 
+Felix Thomsen 	VN NN 
+Jan Reimann 	VN NN 
+Hendrik Eisenhut 	VN NN 
+Uwe Stephenson 	VN NN 
+Hendrik Böttcher 	VN NN 
+Oliver Lenz 	VN NN 
+Patrick Lamm 	VN NN 
+Birger Scholz 	VN NN 
+Christoph Schütz 	VN NN 
+Malte Pohlmann 	VN NN 
+Jörg Brück 	VN NN 
+Uwe Stephenson 	VN NN 
+Uwe Stephenson 	VN NN 
+Brigitte Stein 	VN NN 
+Ulla Thiele 	VN NN 
+Frank Bloch 	VN NN 
+Achim Nawrath 	VN NN 
+Christian Fey 	VN NN 
+Andreas Lund 	VN NN 
+Malte Riehl 	VN NN 
+Jörg Kunz 	VN NN 
+Dietmar Kühl 	VN NN 
+Andrea Nagel 	VN NN 
+Svenja Klotz 	VN NN 
+Ines Strehlau 	VN NN 
+Grünen-Fraktionschefin Ines Strehlau 	TIT VN NN 
+Helmuth Jahnke 	VN NN 
+SPD-Fraktionschef Helmuth Jahnke 	TIT VN NN 
+Wolfgang Grimme 	VN NN 
+Landrat Wolfgang Grimme 	TIT VN NN 
+Janina Horn 	VN NN 
+Laura Hilger 	VN NN 
+Wiebke Ahlers 	VN NN 
+Nadine Niedermeyer 	VN NN 
+Anna Wiebke Schulz 	VN VN NN 
+Rainer Fischer 	VN NN 
+Klaus Gehrmann 	VN NN 
+Trainer Klaus Gehrmann 	TIT VN NN 
+Stadtwerkedirektor Henning 	TIT NN 
+Steffi Fleischmann 	VN NN 
+Grit Lindemann 	VN NN 
+Claudia Burmeister 	VN NN 
+Hans-Helmut Birke 	VN NN 
+Fraktionschef Hans-Helmut Birke 	TIT VN NN 
+Karin Reschke 	VN NN 
+Elternvertreterin Karin Reschke 	TIT VN NN 
+Karin Reschke 	VN NN 
+Karin Reschke 	VN NN 
+Anke Schmelzer 	VN NN 
+Niels Schmidt 	VN NN 
+Bürgermeister Niels Schmidt 	TIT VN NN 
+Katrin Niemeier 	VN NN 
+Britta Möller 	VN NN 
+Dörte Möller 	VN NN 
+Melanie Kröger 	VN NN 
+Sven Baumann 	VN NN 
+Philipp Ruge 	VN NN 
+Kai Richter 	VN NN 
+Außenspieler Kai Richter 	TIT VN NN 
+Fritz Tietgen 	VN NN 
+Johannes Tietgen 	VN NN 
+Johannes Tietgen 	VN NN 
+Firmenchef Johannes Tietgen 	TIT VN NN 
+Hans Melzer 	VN NN 
+Bundestrainer Hans Melzer 	TIT VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Adrian Haase 	VN NN 
+Arne Linke 	VN NN 
+Stefan Paetz 	VN NN 
+Simone Eckert 	VN NN 
+Johann Sebastian Bach 	VN VN NN 
+Arne Weber 	VN NN 
+Bauunternehmer Arne Weber 	TIT VN NN 
+Gunter Armonat 	VN NN 
+Landrat Gunter Armonat 	TIT VN NN 
+Dr . Schaal 	TIT PU NN 
+Dirk Römmer 	VN NN 
+Kreis Stade 	VN NN 
+Don Bosco 	VN NN 
+Bernd Bauer 	VN NN 
+Kerstin Hintz 	VN NN 
+Markus Schwarz 	VN NN 
+Tobias Kordt 	VN NN 
+Quarterback Tobias Kordt 	TIT VN NN 
+Jan Hellwig 	VN NN 
+Karsten Schümann 	VN NN 
+Ingo Jopp 	VN NN 
+Union-Trainer Ingo Jopp 	TIT VN NN 
+Wolf Hartmut Weber 	VN VN NN 
+Kommunalpolitikers Wolf Hartmut Weber 	TIT VN VN NN 
+Helge Voth 	VN NN 
+Christian Hink 	VN NN 
+Wolf Hartmut Weber 	VN VN NN 
+Patrick Steinmüller 	VN NN 
+Torben Lohse 	VN NN 
+Lars Henkel 	VN NN 
+Thomas Rudloff 	VN NN 
+Andreas Schäfer 	VN NN 
+Andreas Schäfer 	VN NN 
+Marc Draeger 	VN NN 
+Torben Berger 	VN NN 
+Clemens Jansen 	VN NN 
+Christian Moormann 	VN NN 
+Christian Carstens 	VN NN 
+Mustafa Yilmaz 	VN NN 
+Andreas Göhring 	VN NN 
+Manfred Schulz 	VN NN 
+SPD-Politikers Manfred Schulz 	TIT VN NN 
+Manfred Schulz 	VN NN 
+Bürgermeister Böhme 	TIT NN 
+Bürgermeister Böhme 	TIT NN 
+Bürgermeister Böhme 	TIT NN 
+Volker Okun 	VN NN 
+Bürgerschaftsabgeordneten Volker Okun 	TIT VN NN 
+Ernst Hornung 	VN NN 
+Christina Jansen 	VN NN 
+Daniel Schmidt 	VN NN 
+Helga Stöver 	VN NN 
+Enno Stöver 	VN NN 
+Thomas Rohde 	VN NN 
+Jörn Andresen 	VN NN 
+Anja Hauschildt 	VN NN 
+Marie Nissen 	VN NN 
+Fritz Bultmann 	VN NN 
+Martin Janz 	VN NN 
+Prof . Martin Janz 	TIT PU VN NN 
+Julia Thelen 	VN NN 
+Richterin Julia Thelen 	TIT VN NN 
+Kreis Stade 	VN NN 
+Jan Christoph Amelung 	VN VN NN 
+Jana Veh 	VN NN 
+Georg Pohl 	VN NN 
+Udo Krapf 	VN NN 
+Maximilian Herget 	VN NN 
+Maximilian Herget 	VN NN 
+Maximilian Herget 	VN NN 
+Matthias Menzel 	VN NN 
+Jakob Wehmeier 	VN NN 
+Thorsten Müller 	VN NN 
+Bernd Lehmann 	VN NN 
+Sebastian Beyer 	VN NN 
+Karsten Frommann 	VN NN 
+Stephanie Frommann 	VN NN 
+Kerstin Beyer 	VN NN 
+Inga Lund 	VN NN 
+Corinna Neumann 	VN NN 
+Ina Heitmann 	VN NN 
+Anna Haun 	VN NN 
+Susann Thiele 	VN NN 
+Jenny Hacker 	VN NN 
+Ralf Zumdick 	VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Horst Lüders 	VN NN 
+Manager Horst Lüders 	TIT VN NN 
+Andreas Roloff 	VN NN 
+Trainer Andreas Roloff 	TIT VN NN 
+Arne Birkner 	VN NN 
+Trainer Arne Birkner 	TIT VN NN 
+Otto Geise 	VN NN 
+Otto Geise 	VN NN 
+Vanessa Lewin 	VN NN 
+Gunda Wiebusch 	VN NN 
+Gunda Wiebusch 	VN NN 
+Gunda Wiebusch 	VN NN 
+Jürgen Schulz 	VN NN 
+Stefan Arlt 	VN NN 
+Heide-Park-Sprecher Stefan Arlt 	TIT VN NN 
+Gerhard Schmid 	VN NN 
+Mobilcom-Chefs Gerhard Schmid 	TIT VN NN 
+Bernhard Uzun 	VN NN 
+Wolfgang Bosbach 	VN NN 
+Konrad Freiberg 	VN NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Michael Knipper 	VN NN 
+Hauptgeschäftsführer Michael Knipper 	TIT VN NN 
+Bernhard Uzun 	VN NN 
+Hansjürgen Garstka 	VN NN 
+Thomas Bosse 	VN NN 
+Michaela Merten 	VN NN 
+Michaela Merten 	VN NN 
+Michaela Mertens 	VN NN 
+Thomas Bosse 	VN NN 
+Michael Glos 	VN NN 
+Landesgruppenchef Michael Glos 	TIT VN NN 
+Hans Eichel 	VN NN 
+Finanzminister Hans Eichel 	TIT VN NN 
+Olaf Scholz 	VN NN 
+Joschka Fischer 	VN NN 
+Außenminister Joschka Fischer 	TIT VN NN 
+Außenminister Fischer 	TIT NN 
+Lex Fischer 	VN NN 
+Jörg Schönbohm 	VN NN 
+Landesinnenminister Jörg Schönbohm 	TIT VN NN 
+Angela Merkel 	VN NN 
+CDU-Chefin Angela Merkel 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Henry Kissinger 	VN NN 
+Ex-US-Außenminister Henry Kissinger 	TIT VN NN 
+Monika Hohlmeier 	VN NN 
+Kultusministerin Monika Hohlmeier 	TIT VN NN 
+Edmund Stoiber 	VN NN 
+Ministerpräsident Edmund Stoiber 	TIT VN NN 
+Joschka Fischer 	VN NN 
+Außenminister Joschka Fischer 	TIT VN NN 
+Tatjana Kasper 	VN NN 
+Christiane Petersen 	VN NN 
+Ärztin Christiane Petersen 	TIT VN NN 
+Michael Howard 	VN NN 
+Tory-Spitzenkandidat Michael Howard 	TIT VN NN 
+Irene Brockmann 	VN NN 
+Tony Blair 	VN NN 
+Michael Howard 	VN NN 
+Charles Kennedy 	VN NN 
+Tatjana Kasper 	VN NN 
+Tatjana Kasper 	VN NN 
+Konstantin von Tischendorf 	VN ZN NN 
+Theologieprofessor Konstantin von Tischendorf 	TIT VN ZN NN 
+Sigrid Krüger 	VN NN 
+Ekkehard Henschke 	VN NN 
+Uwe Voss 	VN NN 
+Kreisgeschäftsführer Uwe Voss 	TIT VN NN 
+Lech Walesa 	VN NN 
+Jens-Peter Timm 	VN NN 
+Verteidigungsminister Donald Rumsfeld 	VN VN NN 
+Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Karin Stein 	VN NN 
+Hanns Eisler 	VN NN 
+Werner Richard Heymann 	VN VN NN 
+Bernhard Tuchel 	VN NN 
+Matthias Bellmann 	VN NN 
+Personalvorstand Matthias Bellmann 	TIT VN NN 
+Günter Meier 	VN NN 
+Eva Stoltenberg 	VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Tim Böge 	VN NN 
+Mirko Heyer 	VN NN 
+Susanne Krehl 	VN NN 
+Jan Schmidt 	VN NN 
+Walter Hering 	VN NN 
+Kathy Brüning 	VN NN 
+Leslie Harrington 	VN NN 
+Renate Wölk 	VN NN 
+Walter Hering 	VN NN 
+Renate Wölk 	VN NN 
+Leslie Harrington 	VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Janina Gies 	VN NN 
+Michelle Klebe 	VN NN 
+Janina Gies 	VN NN 
+Martin Fliedner 	VN NN 
+Harper Petersen 	VN NN 
+Peter Kruse 	VN NN 
+Wendelin Wiedeking 	VN NN 
+Porsche-Chef Wendelin Wiedeking 	TIT VN NN 
+Josef Ackermann 	VN NN 
+Deutsche-Bank-Chef Josef Ackermann 	TIT VN NN 
+Georg Wilhelm Adamowitsch 	VN VN NN 
+Wirtschaftsstaatssekretär Georg Wilhelm Adamowitsch 	TIT VN VN NN 
+Marco Prey 	VN NN 
+Andreas Schweickert 	VN NN 
+Marco Prey 	VN NN 
+Thorsten Storm 	VN NN 
+Geschäftsführer Thorsten Storm 	TIT VN NN 
+Bernd Rigterink 	VN NN 
+Manager Bernd Rigterink 	TIT VN NN 
+Achim Feifel 	VN NN 
+Gerd Hein 	VN NN 
+HSV-Aufsichtsrat Gerd Hein 	TIT VN NN 
+Hartmut Engel 	VN NN 
+Sarah Gampe 	VN NN 
+Juliane Pohl 	VN NN 
+Inga Fuhrmann 	VN NN 
+Kathrin Weiler 	VN NN 
+Jens Scheunemann 	VN NN 
+Trainer Jens Scheunemann 	TIT VN NN 
+Nadine Wrage 	VN NN 
+Jens Scheunemann 	VN NN 
+Thomas Kahlert 	VN NN 
+Ralf Bohnsack 	VN NN 
+Gerd Hein 	VN NN 
+Hartmut Porth 	VN NN 
+Rüdiger Schäfer 	VN NN 
+Vereinschef Rüdiger Schäfer 	TIT VN NN 
+Andreas Schulz 	VN NN 
+Melanie Cremer 	VN NN 
+Uwe Schmidt 	VN NN 
+Matthias Wermke 	VN NN 
+Hendrik Peters 	VN NN 
+FFC-Trainer Hendrik Peters 	TIT VN NN 
+Simon Speth 	VN NN 
+Matthias Krüger 	VN NN 
+Peter Krueger 	VN NN 
+Joachim Mahn 	VN NN 
+Meistertrainer Joachim Mahn 	TIT VN NN 
+Stefan Pingel 	VN NN 
+Christian Möck 	VN NN 
+Stefan Pingel 	VN NN 
+Moritz Falcke 	VN NN 
+Eike Duckwitz 	VN NN 
+Sebastian Biederlack 	VN NN 
+Eike Duckwitz 	VN NN 
+Joachim Mahn 	VN NN 
+Trainer Joachim Mahn 	TIT VN NN 
+Maximilian Löw 	VN NN 
+Simon Winter 	VN NN 
+Michael Schumacher 	VN NN 
+Dirk Nowitzki 	VN NN 
+Jon Mewes 	VN NN 
+Christine Köhn 	VN NN 
+Jana Liesegang 	VN NN 
+Kristin Borchers 	VN NN 
+Maximilian Löw 	VN NN 
+Lennart Jakobs 	VN NN 
+Felix Thomsen 	VN NN 
+Jan Reimann 	VN NN 
+Hendrik Eisenhut 	VN NN 
+Winfried M . Klimek 	VN MIX PU NN 
+Steffen Karg 	VN NN 
+Hendrik Böttcher 	VN NN 
+Oliver Lenz 	VN NN 
+Patrick Lamm 	VN NN 
+Birger Scholz 	VN NN 
+Christoph Schütz 	VN NN 
+Malte Pohlmann 	VN NN 
+Jörg Brück 	VN NN 
+Achim Nawrath 	VN NN 
+Christian Fey 	VN NN 
+Andreas Lund 	VN NN 
+Malte Riehl 	VN NN 
+Jörg Kunz 	VN NN 
+Dietmar Kühl 	VN NN 
+Steffen Hoffmann 	VN NN 
+Ines Strehlau 	VN NN 
+Grünen-Fraktionschefin Ines Strehlau 	TIT VN NN 
+Helmuth Jahnke 	VN NN 
+SPD-Fraktionschef Helmuth Jahnke 	TIT VN NN 
+Wolfgang Grimme 	VN NN 
+Landrat Wolfgang Grimme 	TIT VN NN 
+Michael Fischer 	VN NN 
+Stadtwerkedirektor Henning 	TIT NN 
+Christian Wriedt 	VN NN 
+Hans-Helmut Birke 	VN NN 
+Fraktionschef Hans-Helmut Birke 	TIT VN NN 
+Karin Reschke 	VN NN 
+Elternvertreterin Karin Reschke 	TIT VN NN 
+Karin Reschke 	VN NN 
+Karin Reschke 	VN NN 
+Anke Schmelzer 	VN NN 
+Alex Petkovic 	VN NN 
+Cruisergewichtsprofi Alex Petkovic 	TIT VN NN 
+Dagmar Klostermann 	VN NN 
+Ärztin Dagmar Klostermann 	TIT VN NN 
+Birgit Fischer 	VN NN 
+Florian Mayer 	VN NN 
+Tennisprofi Florian Mayer 	TIT VN NN 
+Niels Schmidt 	VN NN 
+Bürgermeister Niels Schmidt 	TIT VN NN 
+Nicolas Kiefer 	VN NN 
+Dietmar Beiersdorfer 	VN NN 
+Fritz Tietgen 	VN NN 
+Johannes Tietgen 	VN NN 
+Johannes Tietgen 	VN NN 
+Firmenchef Johannes Tietgen 	TIT VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Simon Rolfes 	VN NN 
+Simone Eckert 	VN NN 
+Johann Sebastian Bach 	VN VN NN 
+Arne Weber 	VN NN 
+Bauunternehmer Arne Weber 	TIT VN NN 
+Thomas Doll 	VN NN 
+Trainer Thomas Doll 	TIT VN NN 
+Dr . Schaal 	TIT PU NN 
+Dirk Römmer 	VN NN 
+Thomas Doll 	VN NN 
+Trainer Thomas Doll 	TIT VN NN 
+Fabio Cannavaro 	VN NN 
+Kapitän Fabio Cannavaro 	TIT VN NN 
+Don Bosco 	VN NN 
+Markus Schwarz 	VN NN 
+Tobias Kordt 	VN NN 
+Quarterback Tobias Kordt 	TIT VN NN 
+Jan Hellwig 	VN NN 
+Karsten Schümann 	VN NN 
+Ingo Jopp 	VN NN 
+Union-Trainer Ingo Jopp 	TIT VN NN 
+Helge Voth 	VN NN 
+Christian Hink 	VN NN 
+Patrick Steinmüller 	VN NN 
+Torben Lohse 	VN NN 
+Lars Henkel 	VN NN 
+Thomas Rudloff 	VN NN 
+Ruth Sachse 	VN NN 
+Ralf Peters 	VN NN 
+Cony Theis 	VN NN 
+Ruth Sachse 	VN NN 
+Marc Draeger 	VN NN 
+Torben Berger 	VN NN 
+Elke Dröscher 	VN NN 
+Clemens Jansen 	VN NN 
+Christian Moormann 	VN NN 
+Christian Carstens 	VN NN 
+Mustafa Yilmaz 	VN NN 
+Fred Astaire 	VN NN 
+Christina Jansen 	VN NN 
+Daniel Schmidt 	VN NN 
+Ruth Sachse 	VN NN 
+Thomas Rohde 	VN NN 
+Jörn Andresen 	VN NN 
+Anja Hauschildt 	VN NN 
+Marie Nissen 	VN NN 
+Franz Rompel 	VN NN 
+Hans Zehetmair 	VN NN 
+Georg Pohl 	VN NN 
+Matthias Menzel 	VN NN 
+Jakob Wehmeier 	VN NN 
+Thorsten Müller 	VN NN 
+Renate Schmidt 	VN NN 
+Bundesfamilienministerin Renate Schmidt 	TIT VN NN 
+Ulrike Kriener 	VN NN 
+Schauspielerin Ulrike Kriener 	TIT VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Jan Hofer 	VN NN 
+Stefan Arlt 	VN NN 
+Heide-Park-Sprecher Stefan Arlt 	TIT VN NN 
+Gerhard Schmid 	VN NN 
+Mobilcom-Chefs Gerhard Schmid 	TIT VN NN 
+Claus Kleber 	VN NN 
+Marietta Slomka 	VN NN 
+Sarah Kuttner 	VN NN 
+Sarah Kuttner 	VN NN 
+Bernhard Uzun 	VN NN 
+Wolfgang Bosbach 	VN NN 
+Konrad Freiberg 	VN NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Michael Knipper 	VN NN 
+Hauptgeschäftsführer Michael Knipper 	TIT VN NN 
+Bernhard Uzun 	VN NN 
+Hansjürgen Garstka 	VN NN 
+Charlotte Roche 	VN NN 
+Catherine Mühlemann 	VN NN 
+Charlotte Roche 	VN NN 
+Michael Glos 	VN NN 
+Landesgruppenchef Michael Glos 	TIT VN NN 
+Hans Eichel 	VN NN 
+Finanzminister Hans Eichel 	TIT VN NN 
+Olaf Scholz 	VN NN 
+Joschka Fischer 	VN NN 
+Außenminister Joschka Fischer 	TIT VN NN 
+Außenminister Fischer 	TIT NN 
+Lex Fischer 	VN NN 
+Jörg Schönbohm 	VN NN 
+Landesinnenminister Jörg Schönbohm 	TIT VN NN 
+Angela Merkel 	VN NN 
+CDU-Chefin Angela Merkel 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Henry Kissinger 	VN NN 
+Ex-US-Außenminister Henry Kissinger 	TIT VN NN 
+Monika Hohlmeier 	VN NN 
+Kultusministerin Monika Hohlmeier 	TIT VN NN 
+Edmund Stoiber 	VN NN 
+Ministerpräsident Edmund Stoiber 	TIT VN NN 
+Joschka Fischer 	VN NN 
+Außenminister Joschka Fischer 	TIT VN NN 
+Michael Howard 	VN NN 
+Tory-Spitzenkandidat Michael Howard 	TIT VN NN 
+Tony Blair 	VN NN 
+Michael Howard 	VN NN 
+Charles Kennedy 	VN NN 
+Konstantin von Tischendorf 	VN ZN NN 
+Theologieprofessor Konstantin von Tischendorf 	TIT VN ZN NN 
+Ekkehard Henschke 	VN NN 
+Lech Walesa 	VN NN 
+Wolfgang Stein 	VN NN 
+Verteidigungsminister Donald Rumsfeld 	VN VN NN 
+Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Holger Karsten Schmidt 	VN VN NN 
+Stephan Wagner 	VN NN 
+Regisseur Stephan Wagner 	TIT VN NN 
+Wolfgang Stein 	VN NN 
+Volker Erler 	VN NN 
+Matthias Brandt 	VN NN 
+Hannes Jaenicke 	VN NN 
+Matthias Bellmann 	VN NN 
+Personalvorstand Matthias Bellmann 	TIT VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Johannes Pauls 	VN NN 
+Bundeskanzler Weyer 	TIT NN 
+Klaus J . Behrendt 	VN MIX PU NN 
+Heidi Klum 	VN NN 
+Walter Hering 	VN NN 
+Walter Hering 	VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Martin Fliedner 	VN NN 
+Harper Petersen 	VN NN 
+Peter Kruse 	VN NN 
+Wendelin Wiedeking 	VN NN 
+Porsche-Chef Wendelin Wiedeking 	TIT VN NN 
+Josef Ackermann 	VN NN 
+Deutsche-Bank-Chef Josef Ackermann 	TIT VN NN 
+Georg Wilhelm Adamowitsch 	VN VN NN 
+Wirtschaftsstaatssekretär Georg Wilhelm Adamowitsch 	TIT VN VN NN 
+Andreas Schweickert 	VN NN 
+Thorsten Storm 	VN NN 
+Geschäftsführer Thorsten Storm 	TIT VN NN 
+Bernd Rigterink 	VN NN 
+Manager Bernd Rigterink 	TIT VN NN 
+Klaus Töpfer 	VN NN 
+Achim Feifel 	VN NN 
+Gerd Hein 	VN NN 
+HSV-Aufsichtsrat Gerd Hein 	TIT VN NN 
+Hartmut Engel 	VN NN 
+Gerd Hein 	VN NN 
+Hans-Jochen Jaschke 	VN NN 
+Weihbischof Dr . Hans-Jochen Jaschke 	TIT TIT PU VN NN 
+Albert Einstein 	VN NN 
+Melanie Cremer 	VN NN 
+Peter Krueger 	VN NN 
+Joachim Mahn 	VN NN 
+Meistertrainer Joachim Mahn 	TIT VN NN 
+Malte Wichmann 	VN NN 
+Christian Wedekind 	VN NN 
+Inga Schröder 	VN NN 
+Moritz Falcke 	VN NN 
+Eike Duckwitz 	VN NN 
+Sebastian Biederlack 	VN NN 
+Eike Duckwitz 	VN NN 
+Joachim Mahn 	VN NN 
+Trainer Joachim Mahn 	TIT VN NN 
+Michael Schumacher 	VN NN 
+Dirk Nowitzki 	VN NN 
+Jon Mewes 	VN NN 
+Karl Heinz Kögel 	VN VN NN 
+Media-Control-Chef Karl Heinz Kögel 	TIT VN VN NN 
+Winfried M . Klimek 	VN MIX PU NN 
+Steffen Karg 	VN NN 
+Jeanette Biedermann 	VN NN 
+Steffen Hoffmann 	VN NN 
+Nicole Süßmilch 	VN NN 
+Michael Fischer 	VN NN 
+Michael Jackson 	VN NN 
+Christian Wriedt 	VN NN 
+Alex Petkovic 	VN NN 
+Cruisergewichtsprofi Alex Petkovic 	TIT VN NN 
+Dagmar Klostermann 	VN NN 
+Ärztin Dagmar Klostermann 	TIT VN NN 
+Birgit Fischer 	VN NN 
+Florian Mayer 	VN NN 
+Tennisprofi Florian Mayer 	TIT VN NN 
+Nicolas Kiefer 	VN NN 
+Dietmar Beiersdorfer 	VN NN 
+Simon Rolfes 	VN NN 
+Thomas Doll 	VN NN 
+Trainer Thomas Doll 	TIT VN NN 
+Thomas Doll 	VN NN 
+Trainer Thomas Doll 	TIT VN NN 
+Fabio Cannavaro 	VN NN 
+Kapitän Fabio Cannavaro 	TIT VN NN 
+Jean Michel Jarre 	VN VN NN 
+Joseph Goebbels 	VN NN 
+Lutz Hachmeister 	VN NN 
+Udo Samel 	VN NN 
+Ruth Sachse 	VN NN 
+Ralf Peters 	VN NN 
+Cony Theis 	VN NN 
+Ruth Sachse 	VN NN 
+Elke Dröscher 	VN NN 
+Fred Astaire 	VN NN 
+Ruth Sachse 	VN NN 
+Franz Rompel 	VN NN 
+Hans Zehetmair 	VN NN 
+Anna Maria Kaufmann 	VN VN NN 
+Matthias Scheuring 	VN NN 
+Michael Weber 	VN NN 
+Renate Schmidt 	VN NN 
+Bundesfamilienministerin Renate Schmidt 	TIT VN NN 
+Ulrike Kriener 	VN NN 
+Schauspielerin Ulrike Kriener 	TIT VN NN 
+Jan Hofer 	VN NN 
+Claus Kleber 	VN NN 
+Marietta Slomka 	VN NN 
+Sarah Kuttner 	VN NN 
+Sarah Kuttner 	VN NN 
+Else Kindt 	VN NN 
+Else Kindt 	VN NN 
+Else Kindt 	VN NN 
+Ministerin Schmidt 	TIT NN 
+Renate Schmidt 	VN NN 
+Bundesfamilienministerin Renate Schmidt 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Kanzler Gerhard Schröder 	TIT VN NN 
+Renate Schmidt 	VN NN 
+Charlotte Roche 	VN NN 
+Catherine Mühlemann 	VN NN 
+Charlotte Roche 	VN NN 
+Jörg Stumpf 	VN NN 
+Ernst-Otto Kock 	VN NN 
+Ernst-Otto Kock 	VN NN 
+Beate Stoffers 	VN NN 
+Sprecherin Beate Stoffers 	TIT VN NN 
+Wolfgang Stein 	VN NN 
+Holger Karsten Schmidt 	VN VN NN 
+Stephan Wagner 	VN NN 
+Regisseur Stephan Wagner 	TIT VN NN 
+Wolfgang Stein 	VN NN 
+Volker Erler 	VN NN 
+Matthias Brandt 	VN NN 
+Hannes Jaenicke 	VN NN 
+Johannes Pauls 	VN NN 
+Bundeskanzler Weyer 	TIT NN 
+Klaus J . Behrendt 	VN MIX PU NN 
+Heidi Klum 	VN NN 
+Klaus Töpfer 	VN NN 
+Hans-Jochen Jaschke 	VN NN 
+Weihbischof Dr . Hans-Jochen Jaschke 	TIT TIT PU VN NN 
+Helmut Kohl 	VN NN 
+Dr . Helmut Kohl 	TIT PU VN NN 
+Helmut Kohl 	VN NN 
+Helmut Kohl 	VN NN 
+Albert Einstein 	VN NN 
+Henry Kissinger 	VN NN 
+Wolfgang Schäuble 	VN NN 
+Helmut Kohl 	VN NN 
+Wolfgang Schäuble 	VN NN 
+Wolfgang Schäuble 	VN NN 
+Helmut Kohl 	VN NN 
+Manfred Kanther 	VN NN 
+Brigitte Baumeister 	VN NN 
+Waffenhändlers Schreiber 	TIT NN 
+Hans Terlinden 	VN NN 
+Klaus Landowsky 	VN NN 
+Helmut Kohl 	VN NN 
+Angela Merkel 	VN NN 
+Helmut Kohl 	VN NN 
+Helmut Kohl 	VN NN 
+Malte Wichmann 	VN NN 
+Christian Wedekind 	VN NN 
+Inga Schröder 	VN NN 
+Dr . Kohl 	TIT PU NN 
+Bernhard Vogel 	VN NN 
+Angela Merkel 	VN NN 
+Karl Heinz Kögel 	VN VN NN 
+Media-Control-Chef Karl Heinz Kögel 	TIT VN VN NN 
+Horst Köhler 	VN NN 
+Karlsruher Richter 	TIT NN 
+Jeanette Biedermann 	VN NN 
+Nicole Süßmilch 	VN NN 
+Michael Jackson 	VN NN 
+Peter Marx 	VN NN 
+OB-Kandidaten Peter Marx 	TIT VN NN 
+Geschäftsführer Marx 	TIT NN 
+Peter Marx 	VN NN 
+Lech Walesa 	VN NN 
+Wolfgang Huber 	VN NN 
+Bischof Wolfgang Huber 	TIT VN NN 
+Joaquin Navarro-Valls 	VN NN 
+Vatikan-Sprecher Joaquin Navarro-Valls 	TIT VN NN 
+Jean Michel Jarre 	VN VN NN 
+Joseph Goebbels 	VN NN 
+Lutz Hachmeister 	VN NN 
+Udo Samel 	VN NN 
+Johannes Pauls 	VN NN 
+Anna Maria Kaufmann 	VN VN NN 
+Matthias Scheuring 	VN NN 
+Michael Weber 	VN NN 
+Jürgen Trittin 	VN NN 
+Karlsruher Richter 	TIT NN 
+Otto Schily 	VN NN 
+Innenminister Otto Schily 	TIT VN NN 
+Hansjürgen Garstka 	VN NN 
+Else Kindt 	VN NN 
+Else Kindt 	VN NN 
+Else Kindt 	VN NN 
+Thilo Weichert 	VN NN 
+Andreas Pinkwart 	VN NN 
+Ministerin Schmidt 	TIT NN 
+Renate Schmidt 	VN NN 
+Bundesfamilienministerin Renate Schmidt 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Kanzler Gerhard Schröder 	TIT VN NN 
+Renate Schmidt 	VN NN 
+Jörg Stumpf 	VN NN 
+Ernst-Otto Kock 	VN NN 
+Ernst-Otto Kock 	VN NN 
+Beate Stoffers 	VN NN 
+Sprecherin Beate Stoffers 	TIT VN NN 
+Hansjürgen Garstka 	VN NN 
+Donald Rumsfeld 	VN NN 
+US-Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Ministerpräsidenten Ibrahim 	TIT NN 
+Roland Koch 	VN NN 
+Ministerpräsident Roland Koch 	TIT VN NN 
+Hans-Jürgen Hielscher 	VN NN 
+Wolfgang Hessenauer 	VN NN 
+Sozialdezernent Wolfgang Hessenauer 	TIT VN NN 
+Reinhard Bütikofer 	VN NN 
+Parteichef Reinhard Bütikofer 	TIT VN NN 
+Brigitte Zypries 	VN NN 
+Bundesjustizministerin Brigitte Zypries 	TIT VN NN 
+Otto Schily 	VN NN 
+Parteifreund Otto Schily 	TIT VN NN 
+Hans-Christian Ströble 	VN NN 
+Jürgen Mlynek 	VN NN 
+Helmut Kohl 	VN NN 
+Dr . Helmut Kohl 	TIT PU VN NN 
+Helmut Kohl 	VN NN 
+Helmut Kohl 	VN NN 
+Henry Kissinger 	VN NN 
+Wolfgang Schäuble 	VN NN 
+Helmut Kohl 	VN NN 
+Wolfgang Schäuble 	VN NN 
+Donald Rumsfeld 	VN NN 
+US-Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Wolfgang Schäuble 	VN NN 
+Helmut Kohl 	VN NN 
+Manfred Kanther 	VN NN 
+Brigitte Baumeister 	VN NN 
+Waffenhändlers Schreiber 	TIT NN 
+Hans Terlinden 	VN NN 
+Klaus Landowsky 	VN NN 
+Helmut Kohl 	VN NN 
+Angela Merkel 	VN NN 
+Helmut Kohl 	VN NN 
+Ministerpräsident Ibrahim 	TIT NN 
+Helmut Kohl 	VN NN 
+Jürgen Mlynek 	VN NN 
+HU-Präsident Jürgen Mlynek 	TIT VN NN 
+Dr . Kohl 	TIT PU NN 
+Bernhard Vogel 	VN NN 
+Angela Merkel 	VN NN 
+Horst Köhler 	VN NN 
+Karlsruher Richter 	TIT NN 
+Peter Marx 	VN NN 
+OB-Kandidaten Peter Marx 	TIT VN NN 
+Geschäftsführer Marx 	TIT NN 
+Heidi Klum 	VN NN 
+Brad Pitt 	VN NN 
+Jennifer Lopez 	VN NN 
+Peter Marx 	VN NN 
+Lech Walesa 	VN NN 
+Wolfgang Huber 	VN NN 
+Bischof Wolfgang Huber 	TIT VN NN 
+Michael Platt 	VN NN 
+Dr . Platt 	TIT PU NN 
+Laut Platt 	VN NN 
+Jennifer Lopez 	VN NN 
+Lutz Hachmeister 	VN NN 
+Joseph Goebbels 	VN NN 
+Joaquin Navarro-Valls 	VN NN 
+Vatikan-Sprecher Joaquin Navarro-Valls 	TIT VN NN 
+Johannes Pauls 	VN NN 
+Andreas Blum 	VN NN 
+Pressesprecher Andreas Blum 	TIT VN NN 
+Andreas Blum 	VN NN 
+Andreas Blum 	VN NN 
+Andreas Blum 	VN NN 
+Fritz Cremer 	VN NN 
+Hanns Eisler 	VN NN 
+Jürgen Trittin 	VN NN 
+Karlsruher Richter 	TIT NN 
+Otto Schily 	VN NN 
+Innenminister Otto Schily 	TIT VN NN 
+Hansjürgen Garstka 	VN NN 
+Thilo Weichert 	VN NN 
+Andreas Pinkwart 	VN NN 
+Hansjürgen Garstka 	VN NN 
+Donald Rumsfeld 	VN NN 
+US-Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Ministerpräsidenten Ibrahim 	TIT NN 
+Roland Koch 	VN NN 
+Ministerpräsident Roland Koch 	TIT VN NN 
+Hans-Jürgen Hielscher 	VN NN 
+Wolfgang Hessenauer 	VN NN 
+Sozialdezernent Wolfgang Hessenauer 	TIT VN NN 
+Reinhard Bütikofer 	VN NN 
+Parteichef Reinhard Bütikofer 	TIT VN NN 
+Konstantin Gorny 	VN NN 
+Brigitte Zypries 	VN NN 
+Bundesjustizministerin Brigitte Zypries 	TIT VN NN 
+Otto Schily 	VN NN 
+Parteifreund Otto Schily 	TIT VN NN 
+Hans-Christian Ströble 	VN NN 
+Jürgen Mlynek 	VN NN 
+Donald Rumsfeld 	VN NN 
+US-Verteidigungsminister Donald Rumsfeld 	TIT VN NN 
+Susanne Linke 	VN NN 
+Susanne Linke 	VN NN 
+Ministerpräsident Ibrahim 	TIT NN 
+Susanne Linke 	VN NN 
+Andrea Dworkin 	VN NN 
+Jürgen Mlynek 	VN NN 
+HU-Präsident Jürgen Mlynek 	TIT VN NN 
+Andrea Dworkin 	VN NN 
+Richard Helmer 	VN NN 
+Heidi Klum 	VN NN 
+Brad Pitt 	VN NN 
+Jennifer Lopez 	VN NN 
+Jürgen Mlynek 	VN NN 
+Jürgen Mlynek 	VN NN 
+Michael Platt 	VN NN 
+Dr . Platt 	TIT PU NN 
+Judith Becker 	VN NN 
+Laut Platt 	VN NN 
+Jennifer Lopez 	VN NN 
+Lutz Hachmeister 	VN NN 
+Joseph Goebbels 	VN NN 
+Andreas Blum 	VN NN 
+Pressesprecher Andreas Blum 	TIT VN NN 
+Rudi Dutschke 	VN NN 
+Studentenführer Rudi Dutschke 	TIT VN NN 
+Harald Juhnke 	VN NN 
+Horst Buchholz 	VN NN 
+Andreas Blum 	VN NN 
+Glenn Lacey 	VN NN 
+Andreas Blum 	VN NN 
+Andreas Blum 	VN NN 
+Holger Steinle 	VN NN 
+Fritz Cremer 	VN NN 
+Hanns Eisler 	VN NN 
+Claudia Hämmerling 	VN NN 
+Benjamin Schmidt 	VN NN 
+Ralf Baumann 	VN NN 
+Konstantin Gorny 	VN NN 
+Stefanie Welz 	VN NN 
+Vorsitzende Richter 	TIT NN 
+Herbert Weber 	VN NN 
+Bezirksbürgermeister Herbert Weber 	TIT VN NN 
+Kay Heinz Ehrhardt 	VN VN NN 
+Fraktionsvorsitzende Kay Heinz Ehrhardt 	TIT VN VN NN 
+Erich Mende 	VN NN 
+Vizekanzlers Erich Mende 	TIT VN NN 
+Susanne Linke 	VN NN 
+Susanne Linke 	VN NN 
+Susanne Linke 	VN NN 
+Andrea Dworkin 	VN NN 
+Andrea Dworkin 	VN NN 
+Richard Helmer 	VN NN 
+Christoph Lang 	VN NN 
+Alexander Scheer 	VN NN 
+Schauspieler Alexander Scheer 	TIT VN NN 
+Burkhard Ahlert 	VN NN 
+Bahnsprecher Burkhard Ahlert 	TIT VN NN 
+Alexander Scheer 	VN NN 
+Daniel Palik 	VN NN 
+Peter Liebsch 	VN NN 
+Prenzlauer Berg 	VN NN 
+St . Hedwigs-Kathedrale 	TIT PU NN 
+Wolfgang Weider 	VN NN 
+Fürst Rainier 	TIT NN 
+Renate Rauch 	VN NN 
+Jürgen Mlynek 	VN NN 
+Jürgen Mlynek 	VN NN 
+Physiker Einstein 	TIT NN 
+Jörg Schönbohm 	VN NN 
+Innenminister Jörg Schönbohm 	TIT VN NN 
+Bruno Küppers 	VN NN 
+Polizeipräsident Bruno Küppers 	TIT VN NN 
+Judith Becker 	VN NN 
+Sven Petke 	VN NN 
+CDU-Generalsekretär Sven Petke 	TIT VN NN 
+Vorsitzender Petke 	TIT NN 
+Beate Blechinger 	VN NN 
+Justizministerin Beate Blechinger 	TIT VN NN 
+Andreas Müller 	VN NN 
+Rudi Dutschke 	VN NN 
+Studentenführer Rudi Dutschke 	TIT VN NN 
+Harald Juhnke 	VN NN 
+Horst Buchholz 	VN NN 
+Christoph Schulze 	VN NN 
+PKK-Chef Christoph Schulze 	TIT VN NN 
+Glenn Lacey 	VN NN 
+Holger Steinle 	VN NN 
+Ministerpräsident Platzeck 	TIT NN 
+Tobias Künzel 	VN NN 
+Christian Berg 	VN NN 
+Christian Berg 	VN NN 
+Jim Knopf 	VN NN 
+Claudia Hämmerling 	VN NN 
+Benjamin Schmidt 	VN NN 
+Ralf Baumann 	VN NN 
+Corinna Harfouch 	VN NN 
+Moritz Bleibtreu 	VN NN 
+Corinna Harfouch 	VN NN 
+Vincent Klink 	VN NN 
+Stefanie Welz 	VN NN 
+Vorsitzende Richter 	TIT NN 
+Herbert Weber 	VN NN 
+Bezirksbürgermeister Herbert Weber 	TIT VN NN 
+Kay Heinz Ehrhardt 	VN VN NN 
+Fraktionsvorsitzende Kay Heinz Ehrhardt 	TIT VN VN NN 
+Erich Mende 	VN NN 
+Vizekanzlers Erich Mende 	TIT VN NN 
+Sandra Bullock 	VN NN 
+Christine Eichel 	VN NN 
+Werner Müller 	VN NN 
+RAG-Vorstandschef Werner Müller 	TIT VN NN 
+Matthias Bellmann 	VN NN 
+Personalvorstand Matthias Bellmann 	TIT VN NN 
+Thomas Cook 	VN NN 
+Christoph Achenbach 	VN NN 
+Konzernchef Christoph Achenbach 	TIT VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Christoph Lang 	VN NN 
+Alexander Scheer 	VN NN 
+Schauspieler Alexander Scheer 	TIT VN NN 
+Burkhard Ahlert 	VN NN 
+Bahnsprecher Burkhard Ahlert 	TIT VN NN 
+Alexander Scheer 	VN NN 
+Daniel Palik 	VN NN 
+Peter Liebsch 	VN NN 
+Prenzlauer Berg 	VN NN 
+Gerhard Schröder 	VN NN 
+Wladimir Putin 	VN NN 
+Staatspräsident Wladimir Putin 	TIT VN NN 
+St . Hedwigs-Kathedrale 	TIT PU NN 
+Wolfgang Weider 	VN NN 
+Fürst Rainier 	TIT NN 
+Renate Rauch 	VN NN 
+Physiker Einstein 	TIT NN 
+Jörg Schönbohm 	VN NN 
+Innenminister Jörg Schönbohm 	TIT VN NN 
+Bruno Küppers 	VN NN 
+Polizeipräsident Bruno Küppers 	TIT VN NN 
+Thomas Isenberg 	VN NN 
+Annette Rogalla 	VN NN 
+Verbandssprecherin Annette Rogalla 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Petra Roth 	VN NN 
+Manfred Stolpe 	VN NN 
+Bundesverkehrsminister Manfred Stolpe 	TIT VN NN 
+Bernd Gottschalk 	VN NN 
+Renate Künast 	VN NN 
+Bundesverbraucherministerin Renate Künast 	TIT VN NN 
+Sven Petke 	VN NN 
+CDU-Generalsekretär Sven Petke 	TIT VN NN 
+Vorsitzender Petke 	TIT NN 
+Beate Blechinger 	VN NN 
+Justizministerin Beate Blechinger 	TIT VN NN 
+Don Nelson 	VN NN 
+Dirk Nowitzki 	VN NN 
+Dirk Nowitzki 	VN NN 
+Andreas Müller 	VN NN 
+Michael Finley 	VN NN 
+Avery Johnson 	VN NN 
+Trainer Johnson 	TIT NN 
+Dieter Frey 	VN NN 
+Christoph Schulze 	VN NN 
+PKK-Chef Christoph Schulze 	TIT VN NN 
+Sportrecht-Experte Frey 	TIT NN 
+Tom Bender 	VN NN 
+DFL-Sprecher Tom Bender 	TIT VN NN 
+Jonathan Hill 	VN NN 
+Ministerpräsident Platzeck 	TIT NN 
+Tobias Künzel 	VN NN 
+Christian Berg 	VN NN 
+Christian Berg 	VN NN 
+Jim Knopf 	VN NN 
+Corinna Harfouch 	VN NN 
+Moritz Bleibtreu 	VN NN 
+Corinna Harfouch 	VN NN 
+Vincent Klink 	VN NN 
+Robert Huth 	VN NN 
+Roberto Huth 	VN NN 
+Claudio Pizarro 	VN NN 
+Joe Cole 	VN NN 
+Felix Magath 	VN NN 
+Claudio Pizarro 	VN NN 
+Michael Ballack 	VN NN 
+Uli Hoeneß 	VN NN 
+Manager Uli Hoeneß 	TIT VN NN 
+Sandra Bullock 	VN NN 
+Robert Kovac 	VN NN 
+Verteidiger Robert Kovac 	TIT VN NN 
+Trainer Magath 	TIT NN 
+Christine Eichel 	VN NN 
+Stefan Reuter 	VN NN 
+Teammanager Stefan Reuter 	TIT VN NN 
+Gerd Niebaum 	VN NN 
+Geschäftsführer Gerd Niebaum 	TIT VN NN 
+Lars Ricken 	VN NN 
+Dortmunder Lars Ricken 	TIT VN NN 
+Jan Koller 	VN NN 
+Werner Müller 	VN NN 
+RAG-Vorstandschef Werner Müller 	TIT VN NN 
+Matthias Bellmann 	VN NN 
+Personalvorstand Matthias Bellmann 	TIT VN NN 
+Thomas Cook 	VN NN 
+Rudi Assauer 	VN NN 
+Christoph Achenbach 	VN NN 
+Konzernchef Christoph Achenbach 	TIT VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Thomas Cook 	VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Wladimir Putin 	VN NN 
+Staatspräsident Wladimir Putin 	TIT VN NN 
+Thomas Isenberg 	VN NN 
+Annette Rogalla 	VN NN 
+Verbandssprecherin Annette Rogalla 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Petra Roth 	VN NN 
+Manfred Stolpe 	VN NN 
+Bundesverkehrsminister Manfred Stolpe 	TIT VN NN 
+Bernd Gottschalk 	VN NN 
+Helmut Kraus 	VN NN 
+Eisschnelllauf-Bundestrainer Helmut Kraus 	TIT VN NN 
+Gerhard Zimmermann 	VN NN 
+Renate Künast 	VN NN 
+Bundesverbraucherministerin Renate Künast 	TIT VN NN 
+Bernd Schiphorst 	VN NN 
+Präsident Bernd Schiphorst 	TIT VN NN 
+Horst Hilpert 	VN NN 
+Kontrollausschuss-Vorsitzende Horst Hilpert 	TIT VN NN 
+Torsten Koop 	VN NN 
+Peter-Michael Diestel 	VN NN 
+Anwalt Peter-Michael Diestel 	TIT VN NN 
+Don Nelson 	VN NN 
+Dirk Nowitzki 	VN NN 
+Dirk Nowitzki 	VN NN 
+Kanzler Schröder 	TIT NN 
+Tony Blair 	VN NN 
+Premier Tony Blair 	TIT VN NN 
+Michael Finley 	VN NN 
+Avery Johnson 	VN NN 
+Trainer Johnson 	TIT NN 
+Dieter Frey 	VN NN 
+Thilo Weichert 	VN NN 
+Gerd Andres 	VN NN 
+Ursula Engelen-Kefer 	VN NN 
+DGB-Vize Ursula Engelen-Kefer 	TIT VN NN 
+Sportrecht-Experte Frey 	TIT NN 
+Tom Bender 	VN NN 
+DFL-Sprecher Tom Bender 	TIT VN NN 
+Jonathan Hill 	VN NN 
+Karl Robl 	VN NN 
+Günther Verheugen 	VN NN 
+EU-Kommissar Günther Verheugen 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Renate Schmidt 	VN NN 
+Familienministerin Renate Schmidt 	TIT VN NN 
+Dieter Hundt 	VN NN 
+Arbeitgeberpräsident Dieter Hundt 	TIT VN NN 
+Maria Böhmer 	VN NN 
+Familienpolitikerin Maria Böhmer 	TIT VN NN 
+Claus Möller 	VN NN 
+SPD-Parteichef Claus Möller 	TIT VN NN 
+Ralf Stegner 	VN NN 
+Finanzminister Ralf Stegner 	TIT VN NN 
+Ute Erdsiek-Rave 	VN NN 
+Bildungsministerin Ute Erdsiek-Rave 	TIT VN NN 
+Gitta Trauernicht 	VN NN 
+Sozialministerin Gitta Trauernicht 	TIT VN NN 
+Peter Harry Carstensen 	VN VN NN 
+Klaus Schlie 	VN NN 
+Innenexperte Klaus Schlie 	TIT VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Wilhelm Schmidt 	VN NN 
+Volker Beck 	VN NN 
+Volker Beck 	VN NN 
+Thomas Strobl 	VN NN 
+Brigitte Zypries 	VN NN 
+Bundesjustizministerin Brigitte Zypries 	TIT VN NN 
+Matthias Herdegen 	VN NN 
+Staatsrechtlers Matthias Herdegen 	TIT VN NN 
+Roger Kusch 	VN NN 
+Senator Roger Kusch 	TIT VN NN 
+Ulla Schmidt 	VN NN 
+Gesundheitsministerin Ulla Schmidt 	TIT VN NN 
+Reinhard Kurth 	VN NN 
+Hartmut Nassauer 	VN NN 
+Markus Ferber 	VN NN 
+Daniel Cohn-Bendit 	VN NN 
+Grünen-Abgeordnete Daniel Cohn-Bendit 	TIT VN NN 
+Alexander Graf 	VN NN 
+Hans-Joachim Hacker 	VN NN 
+Hans-Joachim Hacker 	VN NN 
+Laut Hacker 	VN NN 
+Michael Howard 	VN NN 
+Tony Blair 	VN NN 
+Gordon Brown 	VN NN 
+Schatzkanzler Gordon Brown 	TIT VN NN 
+Oppositionsführer Howard 	TIT NN 
+Charles Kennedy 	VN NN 
+Ahmet Necdet 	VN NN 
+Staatspräsident Ahmet Necdet 	TIT VN NN 
+Ahmet Necdet Sezer 	VN NN NN 
+Staatspräsident Ahmet Necdet Sezer 	TIT VN NN NN 
+Wladimir Putin 	VN NN 
+Regierung Prodi 	TIT NN 
+Rivalen Frank Jensen 	VN VN NN 
+Franz Müntefering 	VN NN 
+SPD-Chef Franz Müntefering 	TIT VN NN 
+Dieter Hundt 	VN NN 
+Arbeitnehmer-Präsident Dieter Hundt 	TIT VN NN 
+Olaf Scholz 	VN NN 
+Generalsekretär Olaf Scholz 	TIT VN NN 
+Petra Roth 	VN NN 
+Städtetagspräsidentin Petra Roth 	TIT VN NN 
+Hans Eichel 	VN NN 
+Minister Hans Eichel 	TIT VN NN 
+US-Soldat Blake 	TIT NN 
+Joschka Fischer 	VN NN 
+Außenminister Joschka Fischer 	TIT VN NN 
+Horst Köhler 	VN NN 
+Bundespräsident Horst Köhler 	TIT VN NN 
+Hans-Dietrich Genscher 	VN NN 
+Außenminister Hans-Dietrich Genscher 	TIT VN NN 
+Gerhard Schröder 	VN NN 
+Bundeskanzler Gerhard Schröder 	TIT VN NN 
+Volker Beck 	VN NN 
+Wolfgang Huber 	VN NN 
+Dieter Hundt 	VN NN 
+Arbeitgeberpräsident Dieter Hundt 	TIT VN NN 
+Renate Schmidt 	VN NN 
+Familienministerin Renate Schmidt 	TIT VN NN 
+Arbeitgeberchef Hundt 	TIT NN 
+Ekin Deligöz 	VN NN 
+Familienpolitikerin Ekin Deligöz 	TIT VN NN 
+Ministerin Schmidt 	TIT NN 
+Richard Boucher 	VN NN 
+Außenamtssprecher Richard Boucher 	TIT VN NN 
+Ahmed Kureia 	VN NN 
+Ministerpräsident Ahmed Kureia 	TIT VN NN 
+Evelyne Gebhardt 	VN NN 
+Wolfgang Clement 	VN NN 
+Wirtschaftsminister Wolfgang Clement 	TIT VN NN 
+Harald Schartau 	VN NN 
+Brigitte Weiss 	VN NN 
+Wolfgang Clement 	VN NN 
+Wirtschaftsminister Wolfgang Clement 	TIT VN NN 
+Peer Steinbrück 	VN NN 
+SPD-Ministerpräsident Peer Steinbrück 	TIT VN NN 
+Jürgen Rüttgers 	VN NN 
+Karl-Josef Laumann 	VN NN 
+Wolfgang Clement 	VN NN 
+Vorgänger Wolfgang Clement 	TIT VN NN 
+Minister Schartau 	TIT NN 
+Brigitte Weiss 	VN NN 
+Klaus Hurrelmann 	VN NN 
+Scheich Nasrallah 	VN NN 
+Arbeitgeberchef Hundt 	TIT NN 
+Scheich Nasrallah 	VN NN 
+Ahmed Hussein 	VN NN 
+Pierre Gemayel 	VN NN 
+Abgeordnete Pierre Gemayel 	TIT VN NN 
+Amin Gemayel 	VN NN 
+Staatspräsidenten Amin Gemayel 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Dieter Backhaus 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Katherine Römer 	VN NN 
+Mathias Nagel 	VN NN 
+Manfred Reuter 	VN NN 
+Amtsleiter Manfred Reuter 	TIT VN NN 
+Hans-Peter Dücker 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Senator Nagel 	TIT NN 
+Wolfgang Sielaff 	VN NN 
+Klaus Püschel 	VN NN 
+Prof . Klaus Püschel 	TIT PU VN NN 
+Jan Philipp Reemtsma 	VN VN NN 
+Kathrin Fechner 	VN NN 
+Wolfgang Rose 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Michael Göring 	VN NN 
+Professor Michael Göring 	TIT VN NN 
+Vorsitzende Richter 	TIT NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Niels Hansen 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Beate Böttcher 	VN NN 
+Beate Böttcher 	VN NN 
+St . Nikolai 	TIT PU NN 
+Rudolf Feige 	VN NN 
+Johannes Westendorf 	VN NN 
+Prof . Johannes Westendorf 	TIT PU VN NN 
+Ralf Kunz 	VN NN 
+Polizeisprecher Ralf Kunz 	TIT VN NN 
+Volker Okun 	VN NN 
+Gerhard Fuchs 	VN NN 
+Bezirksamtsleiter Gerhard Fuchs 	TIT VN NN 
+Frank Schmidt 	VN NN 
+Hildegund Bauer 	VN NN 
+Klaus Peter Hesse 	VN VN NN 
+Verkehrsexperten Klaus Peter Hesse 	TIT VN VN NN 
+Birgit Enke 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Manfred Dankert 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Erich Loose 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Gitta Meyer 	VN NN 
+Gewerkschaftssekretärin Gitta Meyer 	TIT VN NN 
+Elisabeth Zahn 	VN NN 
+Matthias Haak 	VN NN 
+Holger Weißmann 	VN NN 
+Elisabeth Zahn 	VN NN 
+Pastor Haak 	VN NN 
+Tobias Wriedt 	VN NN 
+Pastor Haak 	VN NN 
+Klaus Hempel 	VN NN 
+Prof . Klaus Hempel 	TIT PU VN NN 
+Uli Timm 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Dieter Backhaus 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Katherine Römer 	VN NN 
+Mathias Nagel 	VN NN 
+Manfred Reuter 	VN NN 
+Amtsleiter Manfred Reuter 	TIT VN NN 
+Hans-Peter Dücker 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Senator Nagel 	TIT NN 
+Wolfgang Sielaff 	VN NN 
+Klaus Püschel 	VN NN 
+Prof . Klaus Püschel 	TIT PU VN NN 
+Jan Philipp Reemtsma 	VN VN NN 
+Kathrin Fechner 	VN NN 
+Wolfgang Rose 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Michael Göring 	VN NN 
+Professor Michael Göring 	TIT VN NN 
+Vorsitzende Richter 	TIT NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Niels Hansen 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Beate Böttcher 	VN NN 
+Beate Böttcher 	VN NN 
+St . Nikolai 	TIT PU NN 
+Rudolf Feige 	VN NN 
+Johannes Westendorf 	VN NN 
+Prof . Johannes Westendorf 	TIT PU VN NN 
+Ralf Kunz 	VN NN 
+Polizeisprecher Ralf Kunz 	TIT VN NN 
+Volker Okun 	VN NN 
+Gerhard Fuchs 	VN NN 
+Bezirksamtsleiter Gerhard Fuchs 	TIT VN NN 
+Frank Schmidt 	VN NN 
+Hildegund Bauer 	VN NN 
+Klaus Peter Hesse 	VN VN NN 
+Verkehrsexperten Klaus Peter Hesse 	TIT VN VN NN 
+Birgit Enke 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Manfred Dankert 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Erich Loose 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Gitta Meyer 	VN NN 
+Gewerkschaftssekretärin Gitta Meyer 	TIT VN NN 
+Elisabeth Zahn 	VN NN 
+Matthias Haak 	VN NN 
+Holger Weißmann 	VN NN 
+Elisabeth Zahn 	VN NN 
+Pastor Haak 	VN NN 
+Tobias Wriedt 	VN NN 
+Pastor Haak 	VN NN 
+Klaus Hempel 	VN NN 
+Prof . Klaus Hempel 	TIT PU VN NN 
+Uli Timm 	VN NN 
+Rainer Winter 	VN NN 
+Karin Wiedemann 	VN NN 
+Uwe Stephenson 	VN NN 
+Uwe Stephenson 	VN NN 
+Uwe Stephenson 	VN NN 
+Brigitte Stein 	VN NN 
+Ulla Thiele 	VN NN 
+Frank Bloch 	VN NN 
+Andrea Nagel 	VN NN 
+Svenja Klotz 	VN NN 
+Janina Horn 	VN NN 
+Laura Hilger 	VN NN 
+Wiebke Ahlers 	VN NN 
+Nadine Niedermeyer 	VN NN 
+Anna Wiebke Schulz 	VN VN NN 
+Rainer Fischer 	VN NN 
+Klaus Gehrmann 	VN NN 
+Trainer Klaus Gehrmann 	TIT VN NN 
+Steffi Fleischmann 	VN NN 
+Grit Lindemann 	VN NN 
+Claudia Burmeister 	VN NN 
+Katrin Niemeier 	VN NN 
+Britta Möller 	VN NN 
+Dörte Möller 	VN NN 
+Melanie Kröger 	VN NN 
+Sven Baumann 	VN NN 
+Philipp Ruge 	VN NN 
+Kai Richter 	VN NN 
+Außenspieler Kai Richter 	TIT VN NN 
+Hans Melzer 	VN NN 
+Bundestrainer Hans Melzer 	TIT VN NN 
+Adrian Haase 	VN NN 
+Arne Linke 	VN NN 
+Stefan Paetz 	VN NN 
+Gunter Armonat 	VN NN 
+Landrat Gunter Armonat 	TIT VN NN 
+Kreis Stade 	VN NN 
+Bernd Bauer 	VN NN 
+Kerstin Hintz 	VN NN 
+Wolf Hartmut Weber 	VN VN NN 
+Kommunalpolitikers Wolf Hartmut Weber 	TIT VN VN NN 
+Wolf Hartmut Weber 	VN VN NN 
+Andreas Schäfer 	VN NN 
+Andreas Schäfer 	VN NN 
+Andreas Göhring 	VN NN 
+Manfred Schulz 	VN NN 
+SPD-Politikers Manfred Schulz 	TIT VN NN 
+Manfred Schulz 	VN NN 
+Bürgermeister Böhme 	TIT NN 
+Bürgermeister Böhme 	TIT NN 
+Bürgermeister Böhme 	TIT NN 
+Volker Okun 	VN NN 
+Bürgerschaftsabgeordneten Volker Okun 	TIT VN NN 
+Ernst Hornung 	VN NN 
+Helga Stöver 	VN NN 
+Enno Stöver 	VN NN 
+Fritz Bultmann 	VN NN 
+Martin Janz 	VN NN 
+Prof . Martin Janz 	TIT PU VN NN 
+Julia Thelen 	VN NN 
+Richterin Julia Thelen 	TIT VN NN 
+Kreis Stade 	VN NN 
+Jan Christoph Amelung 	VN VN NN 
+Jana Veh 	VN NN 
+Udo Krapf 	VN NN 
+Maximilian Herget 	VN NN 
+Maximilian Herget 	VN NN 
+Maximilian Herget 	VN NN 
+Bernd Lehmann 	VN NN 
+Sebastian Beyer 	VN NN 
+Karsten Frommann 	VN NN 
+Stephanie Frommann 	VN NN 
+Kerstin Beyer 	VN NN 
+Inga Lund 	VN NN 
+Corinna Neumann 	VN NN 
+Ina Heitmann 	VN NN 
+Anna Haun 	VN NN 
+Susann Thiele 	VN NN 
+Jenny Hacker 	VN NN 
+Ralf Zumdick 	VN NN 
+Horst Lüders 	VN NN 
+Manager Horst Lüders 	TIT VN NN 
+Andreas Roloff 	VN NN 
+Trainer Andreas Roloff 	TIT VN NN 
+Arne Birkner 	VN NN 
+Trainer Arne Birkner 	TIT VN NN 
+Otto Geise 	VN NN 
+Otto Geise 	VN NN 
+Vanessa Lewin 	VN NN 
+Gunda Wiebusch 	VN NN 
+Gunda Wiebusch 	VN NN 
+Gunda Wiebusch 	VN NN 
+Jürgen Schulz 	VN NN 
+Thomas Bosse 	VN NN 
+Michaela Merten 	VN NN 
+Michaela Merten 	VN NN 
+Michaela Mertens 	VN NN 
+Thomas Bosse 	VN NN 
+Tatjana Kasper 	VN NN 
+Christiane Petersen 	VN NN 
+Ärztin Christiane Petersen 	TIT VN NN 
+Irene Brockmann 	VN NN 
+Tatjana Kasper 	VN NN 
+Tatjana Kasper 	VN NN 
+Sigrid Krüger 	VN NN 
+Uwe Voss 	VN NN 
+Kreisgeschäftsführer Uwe Voss 	TIT VN NN 
+Jens-Peter Timm 	VN NN 
+Karin Stein 	VN NN 
+Hanns Eisler 	VN NN 
+Werner Richard Heymann 	VN VN NN 
+Bernhard Tuchel 	VN NN 
+Günter Meier 	VN NN 
+Eva Stoltenberg 	VN NN 
+Tim Böge 	VN NN 
+Mirko Heyer 	VN NN 
+Susanne Krehl 	VN NN 
+Jan Schmidt 	VN NN 
+Kathy Brüning 	VN NN 
+Leslie Harrington 	VN NN 
+Renate Wölk 	VN NN 
+Renate Wölk 	VN NN 
+Leslie Harrington 	VN NN 
+Janina Gies 	VN NN 
+Michelle Klebe 	VN NN 
+Janina Gies 	VN NN 
+Marco Prey 	VN NN 
+Marco Prey 	VN NN 
+Sarah Gampe 	VN NN 
+Juliane Pohl 	VN NN 
+Inga Fuhrmann 	VN NN 
+Kathrin Weiler 	VN NN 
+Jens Scheunemann 	VN NN 
+Trainer Jens Scheunemann 	TIT VN NN 
+Nadine Wrage 	VN NN 
+Jens Scheunemann 	VN NN 
+Thomas Kahlert 	VN NN 
+Ralf Bohnsack 	VN NN 
+Hartmut Porth 	VN NN 
+Rüdiger Schäfer 	VN NN 
+Vereinschef Rüdiger Schäfer 	TIT VN NN 
+Andreas Schulz 	VN NN 
+Uwe Schmidt 	VN NN 
+Matthias Wermke 	VN NN 
+Hendrik Peters 	VN NN 
+FFC-Trainer Hendrik Peters 	TIT VN NN 
+Simon Speth 	VN NN 
+Matthias Krüger 	VN NN 
+Stefan Pingel 	VN NN 
+Christian Möck 	VN NN 
+Stefan Pingel 	VN NN 
+Maximilian Löw 	VN NN 
+Simon Winter 	VN NN 
+Christine Köhn 	VN NN 
+Jana Liesegang 	VN NN 
+Kristin Borchers 	VN NN 
+Maximilian Löw 	VN NN 
+Lennart Jakobs 	VN NN 
+Felix Thomsen 	VN NN 
+Jan Reimann 	VN NN 
+Hendrik Eisenhut 	VN NN 
+Hendrik Böttcher 	VN NN 
+Oliver Lenz 	VN NN 
+Patrick Lamm 	VN NN 
+Birger Scholz 	VN NN 
+Christoph Schütz 	VN NN 
+Malte Pohlmann 	VN NN 
+Jörg Brück 	VN NN 
+Achim Nawrath 	VN NN 
+Christian Fey 	VN NN 
+Andreas Lund 	VN NN 
+Malte Riehl 	VN NN 
+Jörg Kunz 	VN NN 
+Dietmar Kühl 	VN NN 
+Ines Strehlau 	VN NN 
+Grünen-Fraktionschefin Ines Strehlau 	TIT VN NN 
+Helmuth Jahnke 	VN NN 
+SPD-Fraktionschef Helmuth Jahnke 	TIT VN NN 
+Wolfgang Grimme 	VN NN 
+Landrat Wolfgang Grimme 	TIT VN NN 
+Stadtwerkedirektor Henning 	TIT NN 
+Hans-Helmut Birke 	VN NN 
+Fraktionschef Hans-Helmut Birke 	TIT VN NN 
+Karin Reschke 	VN NN 
+Elternvertreterin Karin Reschke 	TIT VN NN 
+Karin Reschke 	VN NN 
+Karin Reschke 	VN NN 
+Anke Schmelzer 	VN NN 
+Niels Schmidt 	VN NN 
+Bürgermeister Niels Schmidt 	TIT VN NN 
+Fritz Tietgen 	VN NN 
+Johannes Tietgen 	VN NN 
+Johannes Tietgen 	VN NN 
+Firmenchef Johannes Tietgen 	TIT VN NN 
+Heide Simonis 	VN NN 
+Ministerpräsidentin Heide Simonis 	TIT VN NN 
+Simone Eckert 	VN NN 
+Johann Sebastian Bach 	VN VN NN 
+Arne Weber 	VN NN 
+Bauunternehmer Arne Weber 	TIT VN NN 
+Dr . Schaal 	TIT PU NN 
+Dirk Römmer 	VN NN 
+Don Bosco 	VN NN 
+Markus Schwarz 	VN NN 
+Tobias Kordt 	VN NN 
+Quarterback Tobias Kordt 	TIT VN NN 
+Jan Hellwig 	VN NN 
+Karsten Schümann 	VN NN 
+Ingo Jopp 	VN NN 
+Union-Trainer Ingo Jopp 	TIT VN NN 
+Helge Voth 	VN NN 
+Christian Hink 	VN NN 
+Patrick Steinmüller 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Christian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Christiane Brandt 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Christian(?VN) Maaß(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Abgeordnete(?VN) Christian(VN) Maaß(NN) 	(class=VN,length=3,goalPos:0,pattern= TIT VN NN ,hits=0,misses=0,rating:0.0 )
+Jörg(?VN) Dräger(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Gesundheitssenator(?VN) Jörg(VN) Dräger(NN) 	(class=VN,length=3,goalPos:0,pattern= TIT VN NN ,hits=0,misses=0,rating:0.0 )
+Helmut(?VN) Kohl(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Heide(?VN) Simonis(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Rolf(?VN) Kruse(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Bundeskanzler(?VN) Kohl(NN) 	(class=VN,length=2,goalPos:0,pattern= TIT NN ,hits=0,misses=0,rating:0.0 )
+Christiane(?VN) Brandt(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Wolfgang(?VN) Poggendorf(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Dieter(?VN) Backhaus(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Katherine(?VN) Römer(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Angestellte(?VN) Katherine(VN) Römer(NN) 	(class=VN,length=3,goalPos:0,pattern= TIT VN NN ,hits=0,misses=0,rating:0.0 )
+Mathias(?VN) Nagel(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Betriebsrat(?VN) Mathias(VN) Nagel(NN) 	(class=VN,length=3,goalPos:0,pattern= TIT VN NN ,hits=0,misses=0,rating:0.0 )
+Katherine(?VN) Römer(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Mathias(?VN) Nagel(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Manfred(?VN) Reuter(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Amtsleiter(?VN) Manfred(VN) Reuter(NN) 	(class=VN,length=3,goalPos:0,pattern= TIT VN NN ,hits=0,misses=0,rating:0.0 )
+Hans-Peter(?VN) Dücker(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Udo(?VN) Nagel(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Innensenator(?VN) Udo(VN) Nagel(NN) 	(class=VN,length=3,goalPos:0,pattern= TIT VN NN ,hits=0,misses=0,rating:0.0 )
+Senator(?VN) Nagel(NN) 	(class=VN,length=2,goalPos:0,pattern= TIT NN ,hits=0,misses=0,rating:0.0 )
+Wolfgang(?VN) Sielaff(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Klaus(?VN) Püschel(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Prof(?VN) .(PU) Klaus(VN) Püschel(NN) 	(class=VN,length=4,goalPos:0,pattern= TIT PU VN NN ,hits=0,misses=0,rating:0.0 )
+Jan(?VN) Philipp(VN) Reemtsma(NN) 	(class=VN,length=3,goalPos:0,pattern= VN VN NN ,hits=0,misses=0,rating:0.0 )
+Kathrin(?VN) Fechner(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Wolfgang(?VN) Rose(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Maria(?VN) Mazza(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Maria(?VN) Mazza(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Maria(?VN) Mazza(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Maria(?VN) Mazza(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Maria(?VN) Mazza(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Maria(?VN) Mazza(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Michael(?VN) Göring(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Professor(?VN) Michael(VN) Göring(NN) 	(class=VN,length=3,goalPos:0,pattern= TIT VN NN ,hits=0,misses=0,rating:0.0 )
+Vorsitzende(?VN) Richter(NN) 	(class=VN,length=2,goalPos:0,pattern= TIT NN ,hits=0,misses=0,rating:0.0 )
+Otto(?VN) Schily(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Bundesinnenminister(?VN) Otto(VN) Schily(NN) 	(class=VN,length=3,goalPos:0,pattern= TIT VN NN ,hits=0,misses=0,rating:0.0 )
+Niels(?VN) Hansen(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Udo(?VN) Nagel(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Innensenator(?VN) Udo(VN) Nagel(NN) 	(class=VN,length=3,goalPos:0,pattern= TIT VN NN ,hits=0,misses=0,rating:0.0 )
+Beate(?VN) Böttcher(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Beate(?VN) Böttcher(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+St(?VN) .(PU) Nikolai(NN) 	(class=VN,length=3,goalPos:0,pattern= TIT PU NN ,hits=0,misses=0,rating:0.0 )
+Rudolf(?VN) Feige(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Johannes(?VN) Westendorf(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Prof(?VN) .(PU) Johannes(VN) Westendorf(NN) 	(class=VN,length=4,goalPos:0,pattern= TIT PU VN NN ,hits=0,misses=0,rating:0.0 )
+Ralf(?VN) Kunz(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Polizeisprecher(?VN) Ralf(VN) Kunz(NN) 	(class=VN,length=3,goalPos:0,pattern= TIT VN NN ,hits=0,misses=0,rating:0.0 )
+Volker(?VN) Okun(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Gerhard(?VN) Fuchs(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Bezirksamtsleiter(?VN) Gerhard(VN) Fuchs(NN) 	(class=VN,length=3,goalPos:0,pattern= TIT VN NN ,hits=0,misses=0,rating:0.0 )
+Frank(?VN) Schmidt(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Hildegund(?VN) Bauer(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Klaus(?VN) Peter(VN) Hesse(NN) 	(class=VN,length=3,goalPos:0,pattern= VN VN NN ,hits=0,misses=0,rating:0.0 )
+Verkehrsexperten(?VN) Klaus(VN) Peter(VN) Hesse(NN) 	(class=VN,length=4,goalPos:0,pattern= TIT VN VN NN ,hits=0,misses=0,rating:0.0 )
+Birgit(?VN) Enke(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Susanne(?VN) Freese(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Susanne(?VN) Freese(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Susanne(?VN) Freese(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Susanne(?VN) Freese(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Susanne(?VN) Freese(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Susanne(?VN) Freese(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Susanne(?VN) Freese(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Susanne(?VN) Freese(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Manfred(?VN) Dankert(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Manfred(?VN) Dankert(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Erich(?VN) Loose(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Erich(?VN) Loose(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Manfred(?VN) Dankert(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Erich(?VN) Loose(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Gitta(?VN) Meyer(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Gewerkschaftssekretärin(?VN) Gitta(VN) Meyer(NN) 	(class=VN,length=3,goalPos:0,pattern= TIT VN NN ,hits=0,misses=0,rating:0.0 )
+Elisabeth(?VN) Zahn(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Matthias(?VN) Haak(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Holger(?VN) Weißmann(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Elisabeth(?VN) Zahn(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
+Pastor(?VN) Haak(NN) 	(class=VN,length=2,goalP
