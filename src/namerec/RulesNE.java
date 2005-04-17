@@ -64,8 +64,8 @@ public class RulesNE {
 		
 		dummy=tokens.nextToken();
 		goalClass=dummy.substring(8,dummy.length());
-		length=new Integer(tokens.nextToken().substring(7,9)).intValue();
-		goalPos=new Integer(tokens.nextToken().substring(8,9)).intValue();
+		length=new Integer(tokens.nextToken().substring(7)).intValue();
+		goalPos=new Integer(tokens.nextToken().substring(8)).intValue();
 		String pats[]=new String[length];
 		dummy=tokens.nextToken(); // nun sowas wie: pattern= VN KL VN GR 
 	       

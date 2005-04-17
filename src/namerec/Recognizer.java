@@ -158,8 +158,8 @@ public class Recognizer {
 	    System.out.println("Treiber-init...");
 	    Class.forName(dbTreiber);
 	    System.out.println("Verbindung-init...");
-	    Verbindung_ws=DriverManager.getConnection("jdbc:mysql://lipsia/wortschatz?user=biemann&password=kasmat");
-	    Verbindung_akt=DriverManager.getConnection("jdbc:mysql://woclu4/wdtaktuell?user=cbiemann&password=italienisch");
+	    Verbindung_ws=DriverManager.getConnection("jdbc:mysql://localhost/de?user=toolbox&password=booltox");
+	    Verbindung_akt=DriverManager.getConnection("jdbc:mysql://localhost/wdt_test?user=toolbox&password=booltox");
 
 
 	}
