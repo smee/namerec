@@ -1,6 +1,11 @@
 package namerec;
-import java.util.*;
-import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.StringTokenizer;
+import java.util.Vector;
 
 public class MatcherNam {
 
@@ -59,8 +64,7 @@ public class MatcherNam {
 		    pats[i]=ptokens.nextToken();
 		} // rof i
 
-		Pattern inputpat=new Pattern();
-		inputpat.init(goalClass,length,goalPos,pats);
+		Pattern inputpat=new Pattern(goalClass,length,goalPos,pats);
 	        if (d) System.out.println("Newpat: "+inputpat.toString());
 		retvec.addElement(inputpat);
 	       } // fi -1
@@ -82,7 +86,6 @@ public class MatcherNam {
 
 	// Rek. Ende
 	if (start>end) { // Pattern gefunden
-	    Pattern p=new Pattern();
 	    String[] pat=new String[size];
 	    String newpat=new String();
 	    int po=0;
@@ -90,7 +93,7 @@ public class MatcherNam {
 		pat[po]=(String)pa.nextElement();
 		po++;
 	    } // rof
-	    p.init(goalString,size,size-goalpos-1,pat);
+	    Pattern p=new Pattern(goalString,size,size-goalpos-1,pat);
 	    newpat=p.toString();
 	    if (StringPatterns.contains(newpat)==false) { // nur wenn noch nicht drin
 		StringPatterns.addElement(newpat);
@@ -178,7 +181,7 @@ public class MatcherNam {
     public static Vector testLiability(Vector patterns,Vector classVec, Vector wordVec, NameTable klassKeys,double threshold,double minRule) {
 
 	Vector rpats= new Vector();
-	Pattern actPat=new Pattern();
+	Pattern actPat;
 	int index=0;
 	int bpos=0;
 	int[] buffer = new int[width];
@@ -260,7 +263,7 @@ public class MatcherNam {
 
 	//berechne ratings, wenn positiv, dann lasse drin
 
-	Pattern actRPat=new Pattern();
+	Pattern actRPat;
 
 
 	for(Enumeration rpat=patterns.elements();rpat.hasMoreElements();) {
@@ -293,7 +296,7 @@ public class MatcherNam {
 
       
 	NameTable cands= new NameTable();
-	Pattern actPat=new Pattern();
+	Pattern actPat;
 	int index=0;
 	int bpos=0;
 	int[] buffer = new int[width];
@@ -380,7 +383,7 @@ public class MatcherNam {
 				
 				for (int pos=0;pos<namedEntity.length();pos++) {
 				    outChar=namedEntity.charAt(pos);
-				    cfile.write((int)outChar);                      
+				    cfile.write(outChar);                      
 				} //rof
 			    } catch (IOException e){System.out.println("Can't write "+gaFile);} 			    
 	    	 	   
@@ -427,7 +430,7 @@ public class MatcherNam {
 				
 				for (int pos=0;pos<namedEntity.length();pos++) {
 				    outChar=namedEntity.charAt(pos);
-				    gfile.write((int)outChar);                      
+				    gfile.write(outChar);                      
 				} //rof
 			    } catch (IOException e){System.out.println("Can.t write "+gaFile);} 			    
 			} // esle fi buffer
@@ -470,7 +473,7 @@ public class MatcherNam {
 
 
 	Vector classifications= new Vector();
-	Pattern actPat=new Pattern();
+	Pattern actPat;
 	int index=0;
 	int bpos=0;
 	int[] buffer = new int[width];
@@ -526,7 +529,7 @@ public class MatcherNam {
 		} // rof Enum pats
 
 		// neue Klassifikation in classVec einfügen
-		String intStr=new String().valueOf(buffer[0]);
+		String intStr=String.valueOf(buffer[0]);
 		classVec.setElementAt(intStr,bpos-longest);
 		
 		// eins weiter im buffer
@@ -545,7 +548,7 @@ public class MatcherNam {
 
 	// restbuffer in classVec einfügen
 	for (int r=bpos-longest;r<bpos;r++) {
-	    String intString=new String().valueOf(buffer[r-bpos+longest]);
+	    String intString=String.valueOf(buffer[r-bpos+longest]);
 	    		classVec.setElementAt(intString,r);
 	} // rof r
 

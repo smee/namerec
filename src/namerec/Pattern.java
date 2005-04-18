@@ -1,9 +1,12 @@
 package namerec;
+
+import java.util.Arrays;
+
 public class Pattern {
 
-    public String goalClass;
-    public int length;
-    public int goalPos;
+    public final String goalClass;
+    public final int length;
+    public final int goalPos;
     public int dot;
     public String[] pattern;
     public String[] word;
@@ -12,7 +15,7 @@ public class Pattern {
     public double rating;
 
 
-    public void init(String gC,int l,int gP, String[] p) {
+    public Pattern(String gC,int l,int gP, String[] p) {
 	this.goalClass=gC;
 	this.length=l;
 	this.goalPos=gP;
@@ -29,17 +32,31 @@ public class Pattern {
     }// end init
 
 
-    
+    public boolean equals(Object other) {
+        if(other instanceof Pattern) {
+            Pattern o=(Pattern)other;
+            return goalClass.equals(o.goalClass) &&
+                   length==o.length &&
+                   goalPos==o.goalPos &&
+                   hits==o.hits &&
+                   misses == o.misses &&
+                   rating == o.rating && 
+                   dot == o.dot &&
+                   Arrays.equals(pattern, o.pattern) &&
+                   Arrays.equals(word, o.word);
+        }else
+            return false;
+    }
     public String toString() {
-	String retStr=new String();
-
-	retStr="(class="+goalClass+",length="+length+",goalPos:"+goalPos+",pattern= ";
-	for(int i=0;i<length;i++) {retStr+=pattern[i]+" ";}
-	retStr+=",hits="+hits+",misses="+misses+",rating:"+rating;
-	retStr+=" )";
-
-	return retStr;
-
+        String retStr=new String();
+        
+        retStr="(class="+goalClass+",length="+length+",goalPos:"+goalPos+",pattern= ";
+        for(int i=0;i<length;i++) {retStr+=pattern[i]+" ";}
+        retStr+=",hits="+hits+",misses="+misses+",rating:"+rating;
+        retStr+=" )";
+        
+        return retStr;
+        
     } // end toString()
 
     

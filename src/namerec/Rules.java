@@ -1,9 +1,12 @@
 package namerec;
-import java.*;
-import java.lang.*;
-import java.util.*;
-import java.io.*;
-import gnu.regexp.*;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.StringTokenizer;
+import java.util.Vector;
 
 /* Rules verwaltet die Patterns und verschiebt den Dot. usw
 
@@ -19,14 +22,9 @@ Prozeduren:
 public class Rules {
 
     static boolean d=true; //debugging aus
-    static Vector patterns;  // Vektor der Regeln
-    static String matchFile="matchfile.txt"; // default, besser setzen
-    
-
-    public void initPatterns(Vector inpats, String fileContexts) {
-	this.patterns=inpats;
-	this.matchFile=fileContexts;
-    } // end initPatterns
+    Vector patterns;  // Vektor der Regeln
+    String matchFile="matchfile.txt"; // default, besser setzen
+	protected BufferedWriter br;
 
 
     public void loadPatterns(String patfile, String fileContexts) throws IOException, FileNotFoundException {
@@ -72,8 +70,7 @@ public class Rules {
 		    pats[i]=ptokens.nextToken();
 		} // rof i
 
-		Pattern inputpat=new Pattern();
-		inputpat.init(goalClass,length,goalPos,pats);
+		Pattern inputpat=new Pattern(goalClass,length,goalPos,pats);
 	        if (d) System.out.println("Newpat: "+inputpat.toString());
 		retvec.addElement(inputpat);
 	       } // fi -1
@@ -85,7 +82,7 @@ public class Rules {
 	this.patterns=retvec;
     } // end loadPatterns
 
-    public static void resetRules() {
+    public void resetRules() {
 	for(Enumeration r=patterns.elements();r.hasMoreElements();) { // Für alle pattern
 	    Pattern actPat=(Pattern)r.nextElement();
 	    actPat.dot=0;
@@ -96,34 +93,33 @@ public class Rules {
 
 
 
-    private static void output(String filename,Pattern pat) throws IOException, FileNotFoundException {
-	
-
-	FileWriter file=new FileWriter(filename,true); // true für append
-	String outstr=new String();
-	char outChar;
-	
-	for(int i=0;i<pat.length;i++) {
-	    outstr+=pat.word[i]+"(";
-		if (i==pat.goalPos) {outstr+="?"+pat.goalClass+") ";}
-	        else { outstr+=pat.pattern[i]+") ";}
-	}
-	outstr+="\t"+pat.toString()+"\n";
-
-	System.out.print("R: "+outstr);
-	try {
-	    for (int pos=0;pos<outstr.length();pos++) {
-		outChar=outstr.charAt(pos);		 
-		file.write((int)outChar);                                                  } //rof
-	} catch (IOException e){System.out.println("Can't write "+filename);} 
-	finally {file.close();}
-
-
+    protected void output(Pattern pat) throws IOException, FileNotFoundException {
+    	if(br==null){
+    		br=new BufferedWriter(new FileWriter(matchFile,true));//wird geschlossen, sobald das Programm beendet wird.
+    	}
+    	
+    	StringBuffer outstr=new StringBuffer();
+    	char outChar;
+    	
+    	for(int i=0;i<pat.length;i++) {
+    		outstr.append(pat.word[i]).append("(");
+    		if (i==pat.goalPos) {
+    			outstr.append("?").append(pat.goalClass).append(") ");
+    		}else {
+    			outstr.append(pat.pattern[i]).append(") ");
+    		}
+    	}
+    	outstr.append("\t").append(pat.toString()).append("\n");
+    	
+    	System.out.print("R: "+outstr);
+    	br.write(outstr.toString());                                               
+    	
+    	
     } // end private void output
 
 
 
-    public static NameTable candidates(int classWord, String plainWord, NameTable klassKeys) throws IOException, FileNotFoundException {
+    public NameTable candidates(int classWord, String plainWord, NameTable klassKeys) throws IOException, FileNotFoundException {
 
 	NameTable retItems = new NameTable();
 	Pattern actPat;  // aktuelles Pattern in Schleife
@@ -142,7 +138,7 @@ public class Rules {
 	    
 	    if (actPat.dot==actPat.length) { // Falls Länge erreicht, also Regel komplett matcht
 		retItems.put(actPat.word[actPat.goalPos],actPat.goalClass); // neuer Kandidat in Nametable
-		output(matchFile,actPat); // Schreibe match raus
+		output(actPat); // Schreibe match raus
 		actPat.dot=0; // Resette dot
 	    } // fi dot=length
 

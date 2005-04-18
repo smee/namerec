@@ -1,13 +1,17 @@
 package namerec;
-import java.util.*;
-import gnu.regexp.*;
+import java.util.Enumeration;
+import java.util.StringTokenizer;
+import java.util.Vector;
+import java.util.regex.Pattern;
 
 public class Annotate {
 
     static boolean d=false;  //debugging
-    static gnu.regexp.RE exp;
-
-    public Vector tokenize(String input) {
+    /**
+     * Private constructor, because here are only static helpermethods.
+     */
+    private Annotate() {}
+    public static Vector tokenize(String input) {
 
 	Vector retvec=new Vector();
 
@@ -15,11 +19,11 @@ public class Annotate {
 	// Satzzeichen mit trennenden Leerzeichen versehen
 	//  \n und \t in Leerzeichen umwandeln
 
-	String newstr="";
+	StringBuffer newstr=new StringBuffer();
 	int posInt;
 
 	for(int pos=0;pos<input.length();pos++) {
-	    posInt=(int)input.charAt(pos);
+	    posInt=input.charAt(pos);
 	    
 	    // Erlaubte Zeichen
 	    if ((posInt==32)||  // Leerzeichen
@@ -31,14 +35,14 @@ public class Annotate {
 		((posInt==223)||(posInt==45 ))|| // "-ß"
 		((posInt>=48)&&(posInt<=57 )) // 0-9
 		) {
-		newstr+=(char)posInt;
+		newstr.append(posInt);
 	    } //fi posInt
 	    
 	    
 	    // Zeichen, die in Leerzeichen konvertiert werden 
   	    if ((posInt==10)||(posInt==9) )  // newline
 		{
-		    newstr+=" ";
+		    newstr.append(" ");
 		} // fi posInt
 	    
 	    
@@ -47,12 +51,12 @@ public class Annotate {
 		// komma, stop, slash, !, ?, (,),[,], ", &, %, =, ', + usw. 
 		
 		{
-		    newstr+=" "+(char)posInt+" ";
+		    newstr.append(" ").append(posInt).append(" ");
 		} // fi posInt	    
 	} // rof pos
 
 
-	StringTokenizer tokens=new StringTokenizer(newstr);
+	StringTokenizer tokens=new StringTokenizer(new String(newstr));
 
 	while(tokens.hasMoreTokens()) {
 	    retvec.addElement(tokens.nextToken());
@@ -67,11 +71,10 @@ public class Annotate {
     } // end public vector tokenize
 
 
-    public Vector annotate(Vector input, NameTable regexp, NameTable classif,NameTable classKeys) throws gnu.regexp.REException {
+    public static Vector annotate(Vector input, NameTable regexp, NameTable classif,NameTable classKeys){
 
 	Vector retvec=new Vector();
 	String actWord=new String();
-	String actExp=new String();
 	String classification=new String();
 	int actClass=0;
 	int addClass=0;
@@ -85,13 +88,10 @@ public class Annotate {
 
 	    // matche mit Regexps
 	    for(Enumeration reg=regexp.keys();reg.hasMoreElements();) {
-		actExp=reg.nextElement().toString();
+		Pattern actExp=(Pattern) reg.nextElement();
 
 
-		try {
-		    exp = new gnu.regexp.RE(actExp);
-		    match=exp.isMatch(actWord);
-		} catch (REException e) {System.out.println(e.getMessage());}
+		match=actExp.matcher(actWord).matches();
 		
 		if (match) {
 		    if (d) System.out.println("Match mit '"+actExp+"'");
@@ -113,7 +113,7 @@ public class Annotate {
 
 	    // einfgen in Return-vector
 
-	    String inputString=new String().valueOf(actClass);
+	    String inputString=String.valueOf(actClass);
 	    retvec.addElement(inputString);
 
 	} // rof Enumeration e

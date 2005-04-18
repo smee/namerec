@@ -1,7 +1,9 @@
 package namerec;
-import java.*;
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.StringTokenizer;
 
 /* Class NameTable
 Author: Christian Biemann, 01/002
@@ -45,7 +47,7 @@ public class NameTable extends java.util.Hashtable {
 		 if (outChar==',') {file.write(13);file.write(10);continue;} // Neue Zeile
 		 if (outChar=='=') {file.write(9);continue;} // Tabulator
 		 
-		 file.write((int)outChar);                                                                       
+		 file.write(outChar);                                                                       
 	     } //rof
 	     file.write(13);file.write(10);  //Endet mit CR&LF
 	} catch (IOException e){System.out.println("Can.t write "+filename);} 
@@ -61,7 +63,18 @@ public class NameTable extends java.util.Hashtable {
 	try{this.writeFile(filename,false);}  catch (IOException e){System.out.println("Can.t write "+filename);}
     }
 
-
+    public static NameTable loadFromFile(String filename) throws IOException {
+        NameTable table=new NameTable();
+        BufferedReader br = new BufferedReader(new FileReader(filename));
+        String line = null;
+        while((line=br.readLine())!=null) {
+            StringTokenizer st=new StringTokenizer(line,"\t");
+            //System.out.println(line);
+            if(st.countTokens()>=2)
+                table.put(st.nextToken(),st.nextToken());
+        }
+        return table;
+    }
     public NameTable loadFile(String filename) throws IOException {
 	
 	FileReader file=new FileReader(filename); 
@@ -93,17 +106,6 @@ public class NameTable extends java.util.Hashtable {
     } // end loadFile
 
 
-    public void insert(NameTable toInsert) {
-	String item;
-
-	for (Enumeration e=toInsert.keys();e.hasMoreElements();) {
-	    item=(String)e.nextElement();
-	    this.put(item,toInsert.get(item));
-	} // rof Enumeration toInsert
-
-
-
-    } // end insert
     
 
 } //end NameTable
