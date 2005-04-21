@@ -35,7 +35,7 @@ public class Annotate {
 		((posInt==223)||(posInt==45 ))|| // "-ß"
 		((posInt>=48)&&(posInt<=57 )) // 0-9
 		) {
-		newstr.append(posInt);
+		newstr.append((char)posInt);
 	    } //fi posInt
 	    
 	    
@@ -51,7 +51,7 @@ public class Annotate {
 		// komma, stop, slash, !, ?, (,),[,], ", &, %, =, ', + usw. 
 		
 		{
-		    newstr.append(" ").append(posInt).append(" ");
+		    newstr.append(" ").append((char)posInt).append(" ");
 		} // fi posInt	    
 	} // rof pos
 

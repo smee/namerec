@@ -54,7 +54,7 @@ public class DBaccess implements SatzDatasource {
         }
     }
     
-    public static boolean d=false; // debugging aus
+    public static boolean d=true; // debugging aus
     
     Connection Verbindung_ws; // Verbindung zu WORTSCHATZ
     Connection Verbindung_akt; // Verbindung zu WDTaktuell
@@ -114,7 +114,7 @@ public class DBaccess implements SatzDatasource {
         return new String(new StringBuffer(getNof(name,anz,Verbindung_ws)).append(getNof(name,anz,Verbindung_akt)));
     }
     private String getNof(String name, int anz, Connection Verbindung) throws SQLException{
-        int anzahl;
+        int anzahl=0;
         ResultSet Ergebnis=null;
         StringBuffer ergString=new StringBuffer();
         //this.Verbindung=Verbindung;
@@ -129,9 +129,14 @@ public class DBaccess implements SatzDatasource {
             System.out.println("Datenbankfehler!"+e.getMessage());
         }
                 try {
-            Ergebnis.next();
-            anzahl=Ergebnis.getInt(1);
-        } catch (SQLException e) {anzahl=0;}
+            boolean correct=Ergebnis.next();
+            if(correct)
+                anzahl=Ergebnis.getInt(1);
+            else
+                anzahl=0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         if (d) {System.out.println("Wort '"+name+"' hat Nr.  "+anzahl);}
         
         if (anzahl>0) {  // nur, wenn wort auch in DB
