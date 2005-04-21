@@ -19,25 +19,34 @@ public class NewItemRecognizer implements Runnable{
     private double schwelle;
     private Vector rules;
     private BlockingQueue toTest;
+    Thread testthread;
     
     public NewItemRecognizer(Vector rules,  double schwelle) {
         this.schwelle=schwelle;
         this.rules=rules;
         toTest=new BlockingQueue(Integer.MAX_VALUE);
-        Thread testthread=new Thread(this);
+        testthread=new Thread(this);
         testthread.setDaemon(true);
         testthread.setName("Checker");
         testthread.start();
     }
     public void run() {
         while(true) {
+            if(testthread.isInterrupted())
+                break;
             NameTable kandidaten=(NameTable) toTest.dequeue();
-            Recognizer.addWissen(Recognizer.checkCandidates(kandidaten,schwelle,rules));
+            if(Recognizer.stopEverything==true)
+                return;
+            if(kandidaten.size() > 0)
+                Recognizer.addWissen(Recognizer.checkCandidates(kandidaten,schwelle,rules));
         }
     }
     
     public void addTask(NameTable kandidaten) {
         toTest.enqueue(kandidaten);
+    }
+    public void stop() {
+        testthread.interrupt();
     }
     
 }

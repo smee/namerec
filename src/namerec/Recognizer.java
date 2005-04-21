@@ -1,7 +1,6 @@
 package namerec;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.Vector;
@@ -65,9 +64,10 @@ public class Recognizer {
     
     // Andere Klassen
     private static Rules rules=new Rules();
-    private static RulesNE rules_NE=new RulesNE();
     private static TextProcessor textProc=new TextProcessor();
     private static DBaccess db;
+    private static String verbaktString="jdbc:mysql://localhost/wdt_test?user=toolbox&password=booltox";
+    private static String verbwsString="jdbc:mysql://localhost/de?user=toolbox&password=booltox";
     
     public static void processArguments(String mainargs[]) {
         // Verarbeitet Kommandozeilenparameter
@@ -79,17 +79,19 @@ public class Recognizer {
                 if ((i+1)==mainargs.length||mainargs[i+1].substring(0,1).equals("-")) {errorflag=true;} else {
                     if (mainargs[i].equals("-ic")) {fileKlass=mainargs[i+1];switch_ic=true;} else
                         if (mainargs[i].equals("-ik")) {fileGrundstock=mainargs[i+1];switch_ik=true;} else
-                            if (mainargs[i].equals("-ir")) {fileRegexp=mainargs[i+1];switch_ir=true;} else
-                                if (mainargs[i].equals("-rl")) {patFile=mainargs[i+1];switch_rl=true;} else
-                                    if (mainargs[i].equals("-rp")) {patFile_NE=mainargs[i+1];switch_rp=true;} else
-                                        if (mainargs[i].equals("-pk")) {n_cands=new Integer(mainargs[i+1]).intValue();switch_pk=true;} else
-                                            if (mainargs[i].equals("-pt")) {acceptItem=new Double(mainargs[i+1]).doubleValue();switch_pt=true;} else
-                                                if (mainargs[i].equals("-ss")) {startNr=new Integer(mainargs[i+1]).intValue();switch_ss=true;} else
-                                                    if (mainargs[i].equals("-oi")) {itemFile=mainargs[i+1];switch_oi=true;} else
-                                                        if (mainargs[i].equals("-om")) {maybeFile=mainargs[i+1];switch_om=true;} else
-                                                            if (mainargs[i].equals("-or")) {fileContexts=mainargs[i+1];switch_or=true;} else
-                                                                if (mainargs[i].equals("-og")) {fileGarantie=mainargs[i+1];switch_og=true;} else
-                                                                {errorflag=true;}
+                            if (mainargs[i].equals("-verb_ws")) {verbwsString=mainargs[i+1];} else
+                                if (mainargs[i].equals("-verb_akt")) {verbaktString=mainargs[i+1];} else
+                                    if (mainargs[i].equals("-ir")) {fileRegexp=mainargs[i+1];switch_ir=true;} else
+                                        if (mainargs[i].equals("-rl")) {patFile=mainargs[i+1];switch_rl=true;} else
+                                            if (mainargs[i].equals("-rp")) {patFile_NE=mainargs[i+1];switch_rp=true;} else
+                                                if (mainargs[i].equals("-pk")) {n_cands=new Integer(mainargs[i+1]).intValue();switch_pk=true;} else
+                                                    if (mainargs[i].equals("-pt")) {acceptItem=new Double(mainargs[i+1]).doubleValue();switch_pt=true;} else
+                                                        if (mainargs[i].equals("-ss")) {startNr=new Integer(mainargs[i+1]).intValue();switch_ss=true;} else
+                                                            if (mainargs[i].equals("-oi")) {itemFile=mainargs[i+1];switch_oi=true;} else
+                                                                if (mainargs[i].equals("-om")) {maybeFile=mainargs[i+1];switch_om=true;} else
+                                                                    if (mainargs[i].equals("-or")) {fileContexts=mainargs[i+1];switch_or=true;} else
+                                                                        if (mainargs[i].equals("-og")) {fileGarantie=mainargs[i+1];switch_og=true;} else
+                                                                        {errorflag=true;}
                 } //esle fi
             } // fi mainargs.substr (Schalter)
         } // rof i
@@ -147,7 +149,23 @@ public class Recognizer {
     private static MatcherNam matcher=new MatcherNam();
     // Matcher
     
-    
+    private static int nlength(String item) {
+        // Errechnedt Länge des Namens, Bei NAmen mit Bindestrichen: länsgter Teilname
+
+        int l=0;
+        int lmax=0;
+
+        for(int pos=0;pos<item.length();pos++) {
+            if (item.charAt(pos)=='-') {
+                if (l>lmax) {lmax=l;}
+                l=0;
+            } else{ l++;}
+        } // rof int pos
+        if (l>lmax) lmax=l;
+        
+        return lmax;
+
+       } // end nlength
     
     public static NameTable checkCandidates(NameTable toCheck,double schwelle,Vector pattern){
         // Ueberprueft, ob Kandidaten  in Beispielsätzen, in denen sie vorkommen, auch als "forWhat" klassifiziert werden. Falls der Anteil hoeher als "schwelle" ist, besteht Kandidat Prüfung.
@@ -174,7 +192,9 @@ public class Recognizer {
             actClassInt=new Integer(klassKeys.get(actClass).toString()).intValue();
             // nehme nächsten Kandidaten
             
-            
+//          SPEZIAL für VN: VNs mit Länge groesser 10 sind TITEL!
+
+            if (actClass.equals("VN")&&nlength(actItem)>10) {actClass="TIT";}
             
             System.out.println("Ueberpruefe Kandidat "+actItem+"?="+actClass);
             
@@ -241,8 +261,9 @@ public class Recognizer {
     
     
     private BlockingQueue candPipe;
+    protected static boolean stopEverything=false;
     
-    public static void main(String args[]) throws IOException, InterruptedException, FileNotFoundException, SQLException, ClassNotFoundException, Exception {
+    public static void main(String args[]) throws Exception {
         
         
         String text;
@@ -256,19 +277,21 @@ public class Recognizer {
         init(fileGrundstock,fileRegexp);
         
         db=new DBaccess("org.gjt.mm.mysql.Driver",
-                        "jdbc:mysql://localhost/de?user=toolbox&password=booltox",
-                        "jdbc:mysql://localhost/wdt_test?user=toolbox&password=booltox",
+                        verbwsString,
+                        verbaktString,
                         bspnr);
         
         rules.loadPatterns(patFile,fileContexts); // Regeln init
         rules.resetRules();
         System.out.println("Anzahl Regeln: "+rules.patterns.size());
+        RulesNE rules_NE=new RulesNE(db);
+        
         rules_NE.loadPatterns(patFile_NE,fileGarantie); // Regeln init
         rules_NE.resetRules();
         System.out.println("Regeln: rec="+rules.patterns.size()+" NE="+rules_NE.patterns.size());
         
         
-        text="Müller, Huber, Seifert, Bodden, Abel, Schnoor und ich.";
+        text="\"Müller, Huber, Seifert, Bodden, Abel, Schnoor und ich.\" sagte Ramuel Müller und seufzte.";
         
         SatzDatasource src=getSatzDatasource();
         NewItemRecognizer itemrec=new NewItemRecognizer(canrules,acceptItem);
@@ -281,16 +304,16 @@ public class Recognizer {
             Kandidaten=textProc.getCandidatesOfText(text, alleRegexp, allesWissen,klassKeys,rules);
             
             System.out.println(Kandidaten.toString());
-            //allesWissen.putAll(checkCandidates(Kandidaten,acceptItem,canrules));
             itemrec.addTask(Kandidaten);
-            //rules_NE.resetRules();
-            //textProc.getNEsOfText(text, alleRegexp, allesWissen, klassKeys, rules_NE,db);  // Extrahieren der NEs und speichern in DB
+            rules_NE.resetRules();
+            textProc.getCandidatesOfText(text, alleRegexp, allesWissen, klassKeys, rules_NE);  // Extrahieren der NEs und speichern in DB
             bspnr++;
             text=src.getNextSentence();
         } // elihw
         
-        
-        
+        stopEverything=true;
+        itemrec.stop();
+        db.close();
     } // end main
 
 

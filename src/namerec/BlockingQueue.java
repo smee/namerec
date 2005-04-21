@@ -45,12 +45,14 @@ public class BlockingQueue
 	
 	public synchronized Object enqueue (Object element)
 	{
-        while(items.size()>= maxsize)
+        while(items.size()>= maxsize && Recognizer.stopEverything==false)
             try {
                 wait();
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                //e.printStackTrace();
             }
+        if(Recognizer.stopEverything==true)
+            return element;
 		items.add (element);
         notifyAll();
 		return element;
@@ -64,12 +66,14 @@ public class BlockingQueue
 
 	public synchronized Object dequeue () 
 	{
-		while (items.isEmpty())
+		while (items.isEmpty() && Recognizer.stopEverything==false)
             try {
                 wait();
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                //e.printStackTrace();
             }
+            if(Recognizer.stopEverything==true)
+                return null;
         Object obj=items.removeFirst();
         notifyAll();
 		return obj;
@@ -117,6 +121,7 @@ public class BlockingQueue
 	public synchronized void clear ()
 	{
 		items.clear();
+        notifyAll();
 	}    
 
 }

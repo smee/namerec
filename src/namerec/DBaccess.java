@@ -19,7 +19,7 @@ public class DBaccess implements SatzDatasource {
         
         public void run() {
             while(true) {
-                if(retrieveNextSentences() == false)
+                if(retrieveNextSentences() == false || Recognizer.stopEverything==true)
                     break;//sind mit der DB durch
             }
         }
@@ -41,6 +41,8 @@ public class DBaccess implements SatzDatasource {
             try {
                 while (Ergebnis.next()) {
                     sentences.enqueue(Ergebnis.getString(1));
+                    if(fetcherThread.isInterrupted() || Recognizer.stopEverything == true)
+                        return false;
                     pos++;
                 }// elihw
             } catch (SQLException e) {
@@ -84,6 +86,9 @@ public class DBaccess implements SatzDatasource {
             System.out.println("Treiber-init...");
             Class.forName(dbTreiber);
             System.out.println("Verbindung-init...");
+            System.out.println("using the following dbStrings: ");
+            System.out.println("VerbindungWS: "+ws);
+            System.out.println("Verbindung_akt: "+akt);
 
 //     HIER DATENBANKVERBINDUNGEN EINTRAGEN!!!!
 
@@ -96,8 +101,8 @@ public class DBaccess implements SatzDatasource {
             e.printStackTrace();
         }
         sentences=new BlockingQueue(500);
-        Thread sentenceFetcher=new Thread(new SentenceFetcher(Verbindung_akt,startnr));
-        sentenceFetcher.start();
+        fetcherThread=new Thread(new SentenceFetcher(Verbindung_akt,startnr));
+        fetcherThread.start();
     }
 
     public String getNextSentence() {
@@ -204,6 +209,10 @@ public class DBaccess implements SatzDatasource {
 
 	
     } // end SQLstatement
+
+    public void close() {
+        fetcherThread.interrupt();
+    }
 } // end DBaccess
 
 

@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import java.util.Enumeration;
 import java.util.StringTokenizer;
 import java.util.Vector;
-import java.util.regex.Pattern;
 
 public class TextProcessor {
     
@@ -68,65 +67,8 @@ public class TextProcessor {
     } // end public vector tokenize
     
     
-    public NameTable getCandidatesOfText(String text, NameTable regexp, NameTable classif,NameTable klassKeys, Rules rules) throws IOException, FileNotFoundException {
-        
-        NameTable retvec=new NameTable();
-        NameTable newCands=new NameTable();
-        String actWord=new String();
-        String classification=new String();
-        int actClass=0;
-        int addClass=0;
-        boolean match=false;
-        Vector input=tokenize(text);
-        
-        for (Enumeration en=input.elements();en.hasMoreElements();) { // fuer alle woerter
-            actWord=en.nextElement().toString();
-            actClass=0;
-            
-            if (d) System.out.println("Behandle Wort '"+actWord+"'");
-            
-            // matche mit Regexps
-            for(Enumeration reg=regexp.keys();reg.hasMoreElements();) {
-                Pattern actExp=(Pattern) reg.nextElement();
-                
-                
-                match=actExp.matcher(actWord).matches();
-                
-                if (match) {
-                    if (d) System.out.println("Match mit '"+actExp.pattern()+"'");
-                    classification=regexp.get(actExp).toString();
-                    if (d) System.out.println(" Klassifiziert als: '"+classification+"'");
-                    addClass= new Integer(klassKeys.get(classification).toString()).intValue();
-                    actClass = actClass | addClass;
-                } // fi match
-                
-            } // rof Enumeration reg
-            
-            // matche mit Grundwissen
-            if (classif.containsKey(actWord)) {//TODO muessen die regex vorher sein? wenn ich hier zuerst gucke, reicht das nicht?
-                classification=classif.get(actWord).toString();
-                if (d) System.out.println(" Klassifiziert als: '"+classification+"'");
-                addClass= new Integer(klassKeys.get(classification).toString()).intValue();
-                actClass = actClass | addClass;
-            } // fi classif.contains
-            
-            // einfügen in Return-vector
-            
-            try {
-                newCands=rules.candidates(actClass, actWord,klassKeys);
-            } catch (Exception e) {
-                System.out.println("Something wrong!");
-                e.printStackTrace();
-             }
-            retvec.putAll(newCands);
-            
-        } // rof Enumeration e
-        System.out.println("Im Satz:"+retvec.toString());
-        return retvec;
-        
-    } // end public Vector getCandidatesOF
     
-    public void getNEsOfText(String text, NameTable regexp, NameTable classif,NameTable klassKeys, RulesNE rules,DBaccess db) throws SQLException, IOException, FileNotFoundException {
+    public NameTable getCandidatesOfText(String text, NameTable regexp, NameTable classif,NameTable klassKeys, Rules rules) throws SQLException, IOException, FileNotFoundException {
         
         NameTable retvec=new NameTable();
         NameTable newCands=new NameTable();
@@ -170,7 +112,7 @@ public class TextProcessor {
             // einfügen in Return-vector
             
             try {
-                newCands=rules.matchAndUpdateDB(actClass, actWord,klassKeys,db);
+                newCands=rules.candidates(actClass, actWord,klassKeys);
             } catch (Exception e) {
                 System.out.println("Something wrong!");
                 e.printStackTrace();
@@ -179,7 +121,7 @@ public class TextProcessor {
             
         } // rof Enumeration e
         System.out.println("Im Satz:"+retvec.toString());
-        
+        return retvec;
         
     } // end public Vector getNEsOF
     

@@ -18,7 +18,20 @@ Prozeduren:
 public class RulesNE extends Rules{
     
     static boolean d=true; //debugging aus
+    private DBaccess db;
     
+    
+    public NameTable candidates(int classWord, String plainWord,
+            NameTable klassKeys) throws IOException, FileNotFoundException {
+        try {
+            return matchAndUpdateDB(classWord,plainWord,klassKeys);
+        } catch (SQLException e) {
+            throw new IOException(e.getMessage());
+        }
+    }
+    public RulesNE(DBaccess db) {
+        this.db=db;
+    }
     
     private void dbInsertPerson(Pattern pat,DBaccess db) {
         
@@ -27,10 +40,21 @@ public class RulesNE extends Rules{
         String vns="";
         String znnns="";
         String titpus="";
+        String first_vn="";
+        String first_zn="";
+        String first_nn="";
+        String normalform="";
+        String kat="4"; // Kategorie "sonstige Person"
         //
         
         int mix=0;
         int tit=0;
+        
+        int f_vn=0;
+        int f_zn=0;
+        int f_nn=0;
+        
+        
         for(int i=0;i<pat.length;i++) {
             //vns
             if (pat.pattern[i].equals("VN")) {vns+=" "+pat.word[i];mix=0;tit=0;}
@@ -44,34 +68,45 @@ public class RulesNE extends Rules{
             //titpus
             if (pat.pattern[i].equals("TIT")) {titpus+=" "+pat.word[i];mix=0;tit=1;}
             if ((tit==1)&&pat.pattern[i].equals("PU")) {titpus+=".";mix=0;tit=0;}
+            
+            //firstones für normalform
+            if ((f_vn==0)&&pat.pattern[i].equals("VN")) {first_vn=pat.word[i]; f_vn=1;}
+            if ((f_zn==0)&&pat.pattern[i].equals("ZN")) {first_zn=pat.word[i]; f_zn=1;}
+            if ((f_nn==0)&&pat.pattern[i].equals("NN")) {first_nn=pat.word[i]; f_nn=1;}
         } // for int i
+        
+        if (f_zn==0) {normalform=first_vn+" "+first_nn; }
+        else {normalform=first_vn+" "+first_zn+" "+first_nn; }
         
         // entferne führendes " "
         if (!vns.equals("")) vns=vns.substring(1,vns.length());
         if (!znnns.equals("")) znnns=znnns.substring(1,znnns.length());
         if (!titpus.equals("")) titpus=titpus.substring(1,titpus.length());
-                if (!vns.equals("")) { // no fun without a vornamen
-            String statement="INSERT INTO person (wort_bin, wort_lex,beruf,quelle) values ";
-            if (titpus.equals("")) {  //Fall: keine titel
-                statement+="('"+vns+" "+znnns+"','"+znnns+" "+vns+"','','NameRec')";
-            } else {  //Fall: wohl Titel
-                statement+="('"+vns+" "+znnns+"','"+znnns+" "+vns+" "+titpus+"','"+titpus+"','NameRec')";
-                
-            } // esle
+//      if (!vns.equals("")) { // no fun without a vornamen
+//      change 4.12.2002: it is fun with vornamen!
+        String statement="INSERT INTO person (wort_bin,wort_lex,wort_alt,beruf,kat_nr,quelle) values ";
+        if (titpus.equals("")) {  //Fall: keine titel
+            statement+="('"+vns+" "+znnns+"','"+znnns+" "+vns+"','"+normalform +"','',4,'NameRec 1.1')";
+        } else {  //Fall: wohl Titel
+            statement+="('"+titpus+" "+vns+" "+znnns+"','"+znnns+" "+vns+" "+titpus+"','"+normalform+"','"+titpus+"',4,'NameRec 1.1')";
             
-            if (db.nrOfLex(znnns+" "+vns+" "+titpus)<1) { // nur, wenn noch nicht drin
-                try {  
-                    db.SQLstatement(statement);
-                } catch (SQLException e) {System.out.println("Datenbankfehler! "+e.getMessage());}
-            } // fi dbNrOfLex
-            
-                    } // fi !vns.empty
+        } // esle
+        
+        if (db.nrOfLex(znnns+" "+vns+" "+titpus)<1) { // nur, wenn noch nicht drin
+            try {  
+                db.SQLstatement(statement);
+            } catch (SQLException e) {System.out.println("Datenbankfehler! "+e.getMessage());}
+        } // fi dbNrOfLex
+        
+        else {System.out.println("Schon vorhanden!");}
+        
+//      } // fi !vns.empty
         
     } // end dbInsertPerson
     
     
     
-    public NameTable matchAndUpdateDB(int classWord, String plainWord, NameTable klassKeys,DBaccess db) throws IOException, FileNotFoundException, SQLException {
+    public NameTable matchAndUpdateDB(int classWord, String plainWord, NameTable klassKeys) throws IOException, FileNotFoundException, SQLException {
         
         NameTable retItems = new NameTable();
         Pattern actPat;  // aktuelles Pattern in Schleife
@@ -91,7 +126,7 @@ public class RulesNE extends Rules{
             if (actPat.dot==actPat.length) { // Falls Länge erreicht, also Regel komplett matcht
                 retItems.put(actPat.word[actPat.goalPos],actPat.goalClass); // neuer Kandidat in Nametable
                 output(actPat); // Schreibe match raus
-                //dbInsertPerson(actPat,db);//soll waehrend des testens nicht verwendet werden!
+                dbInsertPerson(actPat,db);//soll waehrend des testens nicht verwendet werden!
                 actPat.dot=0; // Resette dot
             } // fi dot=length
             

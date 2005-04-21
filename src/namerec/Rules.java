@@ -113,7 +113,7 @@ public class Rules {
     	
     	System.out.print("R: "+outstr);
     	br.write(outstr.toString());                                               
-    	
+    	br.flush();
     	
     } // end private void output
 
