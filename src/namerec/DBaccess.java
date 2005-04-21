@@ -54,7 +54,7 @@ public class DBaccess implements SatzDatasource {
         }
     }
     
-    public static boolean d=true; // debugging aus
+    public static boolean d=false; // debugging aus
     
     Connection Verbindung_ws; // Verbindung zu WORTSCHATZ
     Connection Verbindung_akt; // Verbindung zu WDTaktuell

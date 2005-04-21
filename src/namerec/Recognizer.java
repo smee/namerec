@@ -309,6 +309,8 @@ public class Recognizer {
             textProc.getCandidatesOfText(text, alleRegexp, allesWissen, klassKeys, rules_NE);  // Extrahieren der NEs und speichern in DB
             bspnr++;
             text=src.getNextSentence();
+//            if(bspnr == 200)
+//                break;
         } // elihw
         
         stopEverything=true;

@@ -1,5 +1,7 @@
 package namerec;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Enumeration;
@@ -134,5 +136,28 @@ public class RulesNE extends Rules{
         return retItems;
     } // end candidates
     
-    
+    protected void output(Pattern pat) throws IOException, FileNotFoundException {
+        if(br==null){
+            br=new BufferedWriter(new FileWriter(matchFile,true));//wird geschlossen, sobald das Programm beendet wird.
+        }
+        StringBuffer outstr=new StringBuffer();
+        char outChar;
+        
+        for(int i=0;i<pat.length;i++) {
+            outstr.append(pat.word[i]).append(" ");
+        }
+        outstr.append("\t");
+        for(int i=0;i<pat.length;i++) {
+                outstr.append(pat.pattern[i]).append(" ");
+        }
+
+
+        outstr.append("\n");
+
+        System.out.print("Z: "+outstr+"\t"+pat.toString());
+        br.write(outstr.toString());                                               
+        br.flush();
+
+
+        } // end private void output
 } // end Class Rules

@@ -51,8 +51,10 @@ public class BlockingQueue
             } catch (InterruptedException e) {
                 //e.printStackTrace();
             }
-        if(Recognizer.stopEverything==true)
-            return element;
+        if(Recognizer.stopEverything==true) {
+            notifyAll();
+            return null;
+        }
 		items.add (element);
         notifyAll();
 		return element;
@@ -72,8 +74,10 @@ public class BlockingQueue
             } catch (InterruptedException e) {
                 //e.printStackTrace();
             }
-            if(Recognizer.stopEverything==true)
-                return null;
+        if(items.isEmpty()) {
+            notifyAll();
+            return null;//sind fertig hier.
+        }
         Object obj=items.removeFirst();
         notifyAll();
 		return obj;

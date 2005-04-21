@@ -26,17 +26,21 @@ public class NewItemRecognizer implements Runnable{
         this.rules=rules;
         toTest=new BlockingQueue(Integer.MAX_VALUE);
         testthread=new Thread(this);
-        testthread.setDaemon(true);
+        //testthread.setDaemon(true);
         testthread.setName("Checker");
         testthread.start();
     }
     public void run() {
         while(true) {
-            if(testthread.isInterrupted())
+            if(Recognizer.stopEverything && toTest.empty()) {
+                System.out.println("Verfier-thread ends...");
                 break;
+            }
             NameTable kandidaten=(NameTable) toTest.dequeue();
-            if(Recognizer.stopEverything==true)
-                return;
+            if(kandidaten==null) {
+                System.out.println("Verfier-thread ends...");
+                return;//fertig
+            }
             if(kandidaten.size() > 0)
                 Recognizer.addWissen(Recognizer.checkCandidates(kandidaten,schwelle,rules));
         }
