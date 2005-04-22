@@ -128,7 +128,7 @@ public class RulesNE extends Rules{
             if (actPat.dot==actPat.length) { // Falls Länge erreicht, also Regel komplett matcht
                 retItems.put(actPat.word[actPat.goalPos],actPat.goalClass); // neuer Kandidat in Nametable
                 output(actPat); // Schreibe match raus
-                dbInsertPerson(actPat,db);//soll waehrend des testens nicht verwendet werden!
+                //dbInsertPerson(actPat,db);//soll waehrend des testens nicht verwendet werden!
                 actPat.dot=0; // Resette dot
             } // fi dot=length
             

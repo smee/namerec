@@ -7,60 +7,19 @@ import java.sql.Statement;
 
 
 
-public class DBaccess implements SatzDatasource {
-    private class SentenceFetcher implements Runnable{
-        private int pos;
-        private Connection Verbindung;
-
-        public SentenceFetcher(Connection Verbindung, int startnr) {
-            this.Verbindung=Verbindung;
-            this.pos=startnr;
-        }
-        
-        public void run() {
-            while(true) {
-                if(retrieveNextSentences() == false || Recognizer.stopEverything==true)
-                    break;//sind mit der DB durch
-            }
-        }
-
-        private boolean retrieveNextSentences() {
-            String Anfrage= "Select beispiel from saetze where bsp_nr>="+pos+" and bsp_nr <"+(pos+1000);   
-            ResultSet Ergebnis=null;
-            try{
-                
-                if (d) {System.out.println("Verbindung-init...fuer ["+pos+","+(pos+1000)+")");}
-                
-                Statement SQLAbfrage = Verbindung.createStatement();
-                Ergebnis = SQLAbfrage.executeQuery(Anfrage);
-                
-            }
-            catch (SQLException e) {System.out.println("Datenbankfehler!"+e.getMessage());}
-            
-            // Nun Umwandlen ResultSet in String
-            try {
-                while (Ergebnis.next()) {
-                    sentences.enqueue(Ergebnis.getString(1));
-                    if(fetcherThread.isInterrupted() || Recognizer.stopEverything == true)
-                        return false;
-                    pos++;
-                }// elihw
-            } catch (SQLException e) {
-                System.out.println("Fehler beim Empfangen von Satz Nr. "+pos);
-                sentences.enqueue("END");
-                return false;
-            }
-            return true;
-        }
-    }
-    
+public class DBaccess implements Cloneable{
     public static boolean d=false; // debugging aus
     
     Connection Verbindung_ws; // Verbindung zu WORTSCHATZ
     Connection Verbindung_akt; // Verbindung zu WDTaktuell
 
-    BlockingQueue sentences;
-    Thread fetcherThread;
+    private String akt;
+
+    private String ws;
+
+    private String dbTreiber;
+
+
     
     public DBaccess() {
         this("org.gjt.mm.mysql.Driver");
@@ -82,6 +41,18 @@ public class DBaccess implements SatzDatasource {
      */
     public DBaccess(String dbTreiber, String ws, String akt, int startnr) {
         // init DB
+        this.ws=ws;
+        this.akt=akt;
+        this.dbTreiber=dbTreiber;
+        initConnections();
+    }
+
+    /**
+     * @param dbTreiber
+     * @param ws
+     * @param akt
+     */
+    private void initConnections() {
         try {
             System.out.println("Treiber-init...");
             Class.forName(dbTreiber);
@@ -100,14 +71,9 @@ public class DBaccess implements SatzDatasource {
         }catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        sentences=new BlockingQueue(500);
-        fetcherThread=new Thread(new SentenceFetcher(Verbindung_akt,startnr));
-        fetcherThread.start();
     }
 
-    public String getNextSentence() {
-        return (String) sentences.dequeue();
-    }
+
 
 
     public String getNof(String name, int anz)  throws SQLException{
@@ -215,9 +181,47 @@ public class DBaccess implements SatzDatasource {
 	
     } // end SQLstatement
 
-    public void close() {
-        fetcherThread.interrupt();
+    boolean retrieveNextSentences(SentenceFetcher fetcher, int from, int to) {
+        System.out.println("SentenceFetcher: fetching ["+from+","+to+")...");
+        String Anfrage= "Select beispiel from saetze where bsp_nr>="+from+" and bsp_nr <"+to;   
+        ResultSet Ergebnis=null;
+        try{
+            
+            if (DBaccess.d) {System.out.println("Verbindung-init...fuer ["+from+","+to+")");}
+            
+            Statement SQLAbfrage = Verbindung_ws.createStatement();
+            Ergebnis = SQLAbfrage.executeQuery(Anfrage);
+            
+        }
+        catch (SQLException e) {System.out.println("Datenbankfehler!"+e.getMessage());}
+        
+        // Nun Umwandlen ResultSet in String
+        try {
+            while (Ergebnis.next()) {
+                fetcher.sentences.enqueue(Ergebnis.getString(1));
+            }// elihw
+        } catch (SQLException e) {
+            System.out.println("Fehler beim Empfangen von Satz Nr. ["+from+","+to+")");
+            fetcher.sentences.enqueue("END");
+            return false;
+        }
+        return true;
     }
+
+    public Object clone() {
+        DBaccess clone=null;
+        try {
+            clone = (DBaccess) super.clone();
+            clone.initConnections();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+        
+        
+        return clone;
+    }
+
 } // end DBaccess
 
 

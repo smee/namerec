@@ -68,6 +68,8 @@ public class Recognizer {
     private static DBaccess db;
     private static String verbaktString="jdbc:mysql://localhost/wdt_test?user=toolbox&password=booltox";
     private static String verbwsString="jdbc:mysql://localhost/de?user=toolbox&password=booltox";
+    private static boolean switch_se;
+    private static int endNr=Integer.MAX_VALUE;
     
     public static void processArguments(String mainargs[]) {
         // Verarbeitet Kommandozeilenparameter
@@ -76,22 +78,24 @@ public class Recognizer {
         
         for(int i=0;i<mainargs.length;i++) {
             if (mainargs[i].substring(0,1).equals("-")) { //Schalter
-                if ((i+1)==mainargs.length||mainargs[i+1].substring(0,1).equals("-")) {errorflag=true;} else {
-                    if (mainargs[i].equals("-ic")) {fileKlass=mainargs[i+1];switch_ic=true;} else
-                        if (mainargs[i].equals("-ik")) {fileGrundstock=mainargs[i+1];switch_ik=true;} else
-                            if (mainargs[i].equals("-verb_ws")) {verbwsString=mainargs[i+1];} else
-                                if (mainargs[i].equals("-verb_akt")) {verbaktString=mainargs[i+1];} else
-                                    if (mainargs[i].equals("-ir")) {fileRegexp=mainargs[i+1];switch_ir=true;} else
-                                        if (mainargs[i].equals("-rl")) {patFile=mainargs[i+1];switch_rl=true;} else
-                                            if (mainargs[i].equals("-rp")) {patFile_NE=mainargs[i+1];switch_rp=true;} else
-                                                if (mainargs[i].equals("-pk")) {n_cands=new Integer(mainargs[i+1]).intValue();switch_pk=true;} else
-                                                    if (mainargs[i].equals("-pt")) {acceptItem=new Double(mainargs[i+1]).doubleValue();switch_pt=true;} else
-                                                        if (mainargs[i].equals("-ss")) {startNr=new Integer(mainargs[i+1]).intValue();switch_ss=true;} else
-                                                            if (mainargs[i].equals("-oi")) {itemFile=mainargs[i+1];switch_oi=true;} else
-                                                                if (mainargs[i].equals("-om")) {maybeFile=mainargs[i+1];switch_om=true;} else
-                                                                    if (mainargs[i].equals("-or")) {fileContexts=mainargs[i+1];switch_or=true;} else
-                                                                        if (mainargs[i].equals("-og")) {fileGarantie=mainargs[i+1];switch_og=true;} else
-                                                                        {errorflag=true;}
+            if ((i+1)==mainargs.length||mainargs[i+1].substring(0,1).equals("-")) {errorflag=true;} else {
+            if (mainargs[i].equals("-numofthreads")) {numofthreads=Integer.parseInt(mainargs[i+1]);} else
+            if (mainargs[i].equals("-ic")) {fileKlass=mainargs[i+1];switch_ic=true;} else
+            if (mainargs[i].equals("-ik")) {fileGrundstock=mainargs[i+1];switch_ik=true;} else
+            if (mainargs[i].equals("-verb_ws")) {verbwsString=mainargs[i+1];} else
+            if (mainargs[i].equals("-verb_akt")) {verbaktString=mainargs[i+1];} else
+            if (mainargs[i].equals("-ir")) {fileRegexp=mainargs[i+1];switch_ir=true;} else
+            if (mainargs[i].equals("-rl")) {patFile=mainargs[i+1];switch_rl=true;} else
+            if (mainargs[i].equals("-rp")) {patFile_NE=mainargs[i+1];switch_rp=true;} else
+            if (mainargs[i].equals("-pk")) {n_cands=new Integer(mainargs[i+1]).intValue();switch_pk=true;} else
+            if (mainargs[i].equals("-pt")) {acceptItem=new Double(mainargs[i+1]).doubleValue();switch_pt=true;} else
+            if (mainargs[i].equals("-ss")) {startNr=new Integer(mainargs[i+1]).intValue();switch_ss=true;} else
+            if (mainargs[i].equals("-se")) {endNr=new Integer(mainargs[i+1]).intValue();switch_se=true;} else
+            if (mainargs[i].equals("-oi")) {itemFile=mainargs[i+1];switch_oi=true;} else
+            if (mainargs[i].equals("-om")) {maybeFile=mainargs[i+1];switch_om=true;} else
+            if (mainargs[i].equals("-or")) {fileContexts=mainargs[i+1];switch_or=true;} else
+            if (mainargs[i].equals("-og")) {fileGarantie=mainargs[i+1];switch_og=true;} else
+            {errorflag=true;}
                 } //esle fi
             } // fi mainargs.substr (Schalter)
         } // rof i
@@ -108,10 +112,12 @@ public class Recognizer {
             if (switch_pk)  System.out.print("\n Anzahl Sätze zur Kandidatenüberprüfung "+n_cands);
             if (switch_pt)  System.out.print("\n Threshhold Anerkennung Item "+acceptItem);
             if (switch_ss)  System.out.print("\n Beginne bei Satz: "+startNr);
+            if (switch_se)  System.out.print("\n Ende bei Satz: "+endNr);
             if (switch_oi)  System.out.print("\n Datei für neue Items: "+itemFile);
             if (switch_om)  System.out.print("\n Datei für eventuelle Items: "+maybeFile);
             if (switch_or)  System.out.print("\n Datei für Kontexte, wenn Regeln irgendwie zuschlagen: "+fileContexts+"\n");
             if (switch_og)  System.out.print("\n Datei für komplett bekannte Namen: "+fileGarantie+"\n");
+            System.out.println(" Anzahl der Verifikationsthreads: "+numofthreads);
             System.out.println();
         } //esle (params ok)
         
@@ -167,7 +173,7 @@ public class Recognizer {
 
        } // end nlength
     
-    public static NameTable checkCandidates(NameTable toCheck,double schwelle,Vector pattern){
+    public static NameTable checkCandidates(NameTable toCheck,double schwelle,Vector pattern, DBaccess db){
         // Ueberprueft, ob Kandidaten  in Beispielsätzen, in denen sie vorkommen, auch als "forWhat" klassifiziert werden. Falls der Anteil hoeher als "schwelle" ist, besteht Kandidat Prüfung.
         
         // Es wird WORTSCHATZ und WDTAKTUELL abgefragt
@@ -262,6 +268,7 @@ public class Recognizer {
     
     private BlockingQueue candPipe;
     protected static boolean stopEverything=false;
+    private static int numofthreads=10;
     
     public static void main(String args[]) throws Exception {
         
@@ -294,9 +301,9 @@ public class Recognizer {
         text="\"Müller, Huber, Seifert, Bodden, Abel, Schnoor und ich.\" sagte Ramuel Müller und seufzte.";
         
         SatzDatasource src=getSatzDatasource();
-        NewItemRecognizer itemrec=new NewItemRecognizer(canrules,acceptItem);
+        NewItemRecognizer itemrec=new NewItemRecognizer(canrules,acceptItem,numofthreads, db);
         
-        while(!(text.equals("END")||text.equals(""))) {
+        while(!(text.equals("END"))) {
             System.out.println(bspnr+": "+text);
             rules.resetRules(); 
             Kandidaten_alt=Kandidaten;
@@ -309,13 +316,11 @@ public class Recognizer {
             textProc.getCandidatesOfText(text, alleRegexp, allesWissen, klassKeys, rules_NE);  // Extrahieren der NEs und speichern in DB
             bspnr++;
             text=src.getNextSentence();
-//            if(bspnr == 200)
+//            if(bspnr > 20000)
 //                break;
         } // elihw
-        
-        stopEverything=true;
-        itemrec.stop();
-        db.close();
+        itemrec.waitTillJobsDone();
+        System.out.println("verification done!");
     } // end main
 
 
@@ -327,7 +332,7 @@ public class Recognizer {
      */
     private static SatzDatasource getSatzDatasource() throws Exception {
         //return new FileDataSource("sentences.txt");
-        return db;//TODO add real source from somewhere
+        return new SentenceFetcher(db,startNr,endNr);//TODO add real source from somewhere
     }
 
 
