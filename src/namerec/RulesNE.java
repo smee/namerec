@@ -88,9 +88,9 @@ public class RulesNE extends Rules{
 //      change 4.12.2002: it is fun with vornamen!
         String statement="INSERT INTO person (wort_bin,wort_lex,wort_alt,beruf,kat_nr,quelle) values ";
         if (titpus.equals("")) {  //Fall: keine titel
-            statement+="('"+vns+" "+znnns+"','"+znnns+" "+vns+"','"+normalform +"','',4,'NameRec 1.1')";
+            statement+="('"+vns+" "+znnns+"','"+znnns+" "+vns+"','"+normalform +"','',4,'NameRec 2.0')";
         } else {  //Fall: wohl Titel
-            statement+="('"+titpus+" "+vns+" "+znnns+"','"+znnns+" "+vns+" "+titpus+"','"+normalform+"','"+titpus+"',4,'NameRec 1.1')";
+            statement+="('"+titpus+" "+vns+" "+znnns+"','"+znnns+" "+vns+" "+titpus+"','"+normalform+"','"+titpus+"',4,'NameRec 2.0')";
             
         } // esle
         
@@ -128,7 +128,7 @@ public class RulesNE extends Rules{
             if (actPat.dot==actPat.length) { // Falls Länge erreicht, also Regel komplett matcht
                 retItems.put(actPat.word[actPat.goalPos],actPat.goalClass); // neuer Kandidat in Nametable
                 output(actPat); // Schreibe match raus
-                //dbInsertPerson(actPat,db);//soll waehrend des testens nicht verwendet werden!
+                dbInsertPerson(actPat,db);//soll waehrend des testens nicht verwendet werden!
                 actPat.dot=0; // Resette dot
             } // fi dot=length
             
