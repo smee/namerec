@@ -93,14 +93,12 @@ public class Rules {
 
 
 
-    protected void output(Pattern pat) throws IOException, FileNotFoundException {
+    protected synchronized void output(Pattern pat) throws IOException, FileNotFoundException {
     	if(br==null){
     		br=new BufferedWriter(new FileWriter(matchFile,true));//wird geschlossen, sobald das Programm beendet wird.
     	}
     	
     	StringBuffer outstr=new StringBuffer();
-    	char outChar;
-    	
     	for(int i=0;i<pat.length;i++) {
     		outstr.append(pat.word[i]).append("(");
     		if (i==pat.goalPos) {

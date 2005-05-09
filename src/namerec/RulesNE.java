@@ -46,8 +46,6 @@ public class RulesNE extends Rules{
         String first_zn="";
         String first_nn="";
         String normalform="";
-        String kat="4"; // Kategorie "sonstige Person"
-        //
         
         int mix=0;
         int tit=0;
@@ -136,12 +134,11 @@ public class RulesNE extends Rules{
         return retItems;
     } // end candidates
     
-    protected void output(Pattern pat) throws IOException, FileNotFoundException {
+    protected synchronized void output(Pattern pat) throws IOException, FileNotFoundException {
         if(br==null){
             br=new BufferedWriter(new FileWriter(matchFile,true));//wird geschlossen, sobald das Programm beendet wird.
         }
         StringBuffer outstr=new StringBuffer();
-        char outChar;
         
         for(int i=0;i<pat.length;i++) {
             outstr.append(pat.word[i]).append(" ");

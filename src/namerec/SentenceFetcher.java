@@ -11,24 +11,26 @@ class SentenceFetcher extends Thread implements SatzDatasource{
     private int pos;
 
     private int endNr;
-
-    public SentenceFetcher(DBaccess baccess, int startnr, int endNr) {
+    private final int NUM;
+    
+    public SentenceFetcher(DBaccess baccess, int startnr, int endNr, int num) {
         this.baccess = baccess;
         this.pos=startnr;
         this.endNr=endNr;
-        sentences=new BlockingQueue(1500);
+        this.NUM=num;
+        sentences=new BlockingQueue(10000);
         setDaemon(true);
         start();
     }
     
     public void run() {
         while(true) {
-            if(baccess.retrieveNextSentences(this, pos, Math.min(pos+1000,endNr)) == false) {
+            if(baccess.retrieveNextSentences(this, pos, Math.min(pos+NUM,endNr)) == false) {
                 System.out.println("enqueuing END");
                 sentences.enqueue("END");
                 break;//sind mit der DB durch
             }
-            pos+=1000;            
+            pos+=NUM;            
             if(Math.min(pos,endNr) >= endNr) {
                 System.out.println("enqueuing END");
                 sentences.enqueue("END");

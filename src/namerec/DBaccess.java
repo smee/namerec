@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 
 public class DBaccess implements Cloneable{
-    public static boolean d=false; // debugging aus
+    public static boolean d=true; // debugging aus
     
     Connection Verbindung_ws; // Verbindung zu WORTSCHATZ
     Connection Verbindung_akt; // Verbindung zu WDTaktuell
@@ -68,6 +68,7 @@ public class DBaccess implements Cloneable{
         }
         catch (SQLException e) {
             System.out.println("Datenbankfehler!"+e.getMessage());
+            e.printStackTrace();
         }catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -77,43 +78,30 @@ public class DBaccess implements Cloneable{
 
 
     public String getNof(String name, int anz)  throws SQLException{
-        return new String(new StringBuffer(getNof(name,anz,Verbindung_ws)).append(getNof(name,anz,Verbindung_akt)));
+    	int wortnr = getWortNr(name);
+        return new String(new StringBuffer(getNof(name,anz,wortnr,Verbindung_ws)).append(getNof(name,anz,wortnr,Verbindung_akt)));
     }
-    private String getNof(String name, int anz, Connection Verbindung) throws SQLException{
-        int anzahl=0;
+    private String getNof(String name, int limit, int wortnr, Connection Verbindung) throws SQLException{
         ResultSet Ergebnis=null;
         StringBuffer ergString=new StringBuffer();
         //this.Verbindung=Verbindung;
         // Finde NR des Wortes in DB
                 //System.out.println(name+" "+anz+" ");
-        String Anfrage= "SELECT wort_nr FROM wortliste WHERE wort_bin='"+name+"'";
-        try{	    
-            Statement SQLAbfrage = Verbindung.createStatement();
-            Ergebnis = SQLAbfrage.executeQuery(Anfrage);
-        }
-        catch (SQLException e) {
-            System.out.println("Datenbankfehler!"+e.getMessage());
-        }
-                try {
-            boolean correct=Ergebnis.next();
-            if(correct)
-                anzahl=Ergebnis.getInt(1);
-            else
-                anzahl=0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        if (d) {System.out.println("Wort '"+name+"' hat Nr.  "+anzahl);}
+
+        if (d) {System.out.println("Wort '"+name+"' hat Nr.  "+wortnr);}
         
-        if (anzahl>0) {  // nur, wenn wort auch in DB
-            Anfrage= "Select beispiel from saetze s, inv_liste i where i.wort_nr="+anzahl+" and i.bsp_nr=s.bsp_nr limit "+anz;   
+        if (wortnr>0) {  // nur, wenn wort auch in DB
+            String Anfrage= "Select beispiel from saetze s, inv_liste i where i.wort_nr="+wortnr+" and i.bsp_nr=s.bsp_nr limit "+limit;   
             try{
                 if (d) System.out.println("Verbindung-init...fuer "+name);
                 
-                Statement SQLAbfrage = Verbindung_ws.createStatement();
+                Statement SQLAbfrage = Verbindung.createStatement();
                 Ergebnis = SQLAbfrage.executeQuery(Anfrage);
             }
-            catch (SQLException e) {System.out.println("Datenbankfehler!"+e.getMessage());}
+            catch (SQLException e) {
+            	System.out.println("Datenbankfehler!"+e.getMessage());
+            	e.printStackTrace();	
+            }
             
             // Nun Umwandlen ResultSet in String
             
@@ -139,7 +127,37 @@ public class DBaccess implements Cloneable{
     } // end getNof
 
 
-    public int nrOfLex(String lex) {
+    /**
+	 * @param name
+	 * @param Verbindung
+	 * @param anzahl
+	 * @return
+	 */
+	private int getWortNr(String name) {
+		ResultSet Ergebnis=null;
+		int anzahl=0;
+		String Anfrage= "SELECT wort_nr FROM wortliste WHERE wort_bin='"+name+"'";
+        try{	    
+            Statement SQLAbfrage = Verbindung_akt.createStatement();
+            Ergebnis = SQLAbfrage.executeQuery(Anfrage);
+        }
+        catch (SQLException e) {
+            System.out.println("Datenbankfehler!"+e.getMessage());
+            e.printStackTrace();
+        }
+                try {
+            boolean correct=Ergebnis.next();
+            if(correct)
+                anzahl=Ergebnis.getInt(1);
+            else
+                anzahl=0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+		return anzahl;
+	}
+
+	public int nrOfLex(String lex) {
         ResultSet Ergebnis=null;
         String Anfrage="Select count(*) from person where wort_lex='"+lex+"'";
         int retInt=0; 
@@ -150,7 +168,10 @@ public class DBaccess implements Cloneable{
             Ergebnis = SQLAbfrage.executeQuery(Anfrage);
             
         }
-        catch (SQLException e) {System.out.println("Datenbankfehler!"+e.getMessage());}
+        catch (SQLException e) {
+        	System.out.println("Datenbankfehler!"+e.getMessage());
+        	e.printStackTrace();
+        }
         if(Ergebnis==null)
             return -1;
         try {
@@ -193,7 +214,10 @@ public class DBaccess implements Cloneable{
             Ergebnis = SQLAbfrage.executeQuery(Anfrage);
             
         }
-        catch (SQLException e) {System.out.println("Datenbankfehler!"+e.getMessage());}
+        catch (SQLException e) {
+        	System.out.println("Datenbankfehler!");
+        	e.printStackTrace();
+        }
         
         // Nun Umwandlen ResultSet in String
         try {

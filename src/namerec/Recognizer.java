@@ -1,5 +1,7 @@
 package namerec;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Iterator;
@@ -266,7 +268,6 @@ public class Recognizer {
     
     
     
-    private BlockingQueue candPipe;
     protected static boolean stopEverything=false;
     private static int numofthreads=10;
     
@@ -275,7 +276,6 @@ public class Recognizer {
         
         String text;
         NameTable Kandidaten=new NameTable();
-        NameTable Kandidaten_alt=new NameTable();
         
         
         processArguments(args);
@@ -303,14 +303,14 @@ public class Recognizer {
         SatzDatasource src=getSatzDatasource();
         NewItemRecognizer itemrec=new NewItemRecognizer(canrules,acceptItem,numofthreads, db);
         
+        
         while(!(text.equals("END"))) {
             System.out.println(bspnr+": "+text);
             rules.resetRules(); 
-            Kandidaten_alt=Kandidaten;
             
             Kandidaten=textProc.getCandidatesOfText(text, alleRegexp, allesWissen,klassKeys,rules);
-            
             System.out.println(Kandidaten.toString());
+            
             itemrec.addTask(Kandidaten);
             rules_NE.resetRules();
             textProc.getCandidatesOfText(text, alleRegexp, allesWissen, klassKeys, rules_NE);  // Extrahieren der NEs und speichern in DB
@@ -332,7 +332,7 @@ public class Recognizer {
      */
     private static SatzDatasource getSatzDatasource() throws Exception {
         //return new FileDataSource("sentences.txt");
-        return new SentenceFetcher(db,startNr,endNr);//TODO add real source from somewhere
+        return new SentenceFetcher(db,startNr,endNr,1000);//TODO add real source from somewhere
     }
 
 
