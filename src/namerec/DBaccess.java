@@ -19,6 +19,8 @@ public class DBaccess implements Cloneable{
 
     private String dbTreiber;
 
+    private final String version;
+
 
     
     public DBaccess() {
@@ -29,21 +31,27 @@ public class DBaccess implements Cloneable{
         this(dbTreiber,
                 "jdbc:mysql://localhost/de?user=toolbox&password=booltox",
                 "jdbc:mysql://localhost/wdt_test?user=toolbox&password=booltox",
-                0);
+                "NameRec 1.1neu");
     }
-
-
+    public DBaccess(Config cfg) {
+        this(cfg.getString("DB.DBCLASS","org.gjt.mm.mysql.Driver"),
+             cfg.getJDBCStringWS("jdbc:mysql://localhost/de?user=toolbox&password=booltox"),
+             cfg.getJDBCStringAKT("jdbc:mysql://localhost/wdt_test?user=toolbox&password=booltox"),
+             cfg.getString("OPTION.VERSION","NameRec 1.1neu"));
+        
+    }
     /**
      * @param string
      * @param string2
      * @param string3
      * @param bspnr
      */
-    public DBaccess(String dbTreiber, String ws, String akt, int startnr) {
+    public DBaccess(String dbTreiber, String ws, String akt, String version) {
         // init DB
         this.ws=ws;
         this.akt=akt;
         this.dbTreiber=dbTreiber;
+        this.version=version;
         initConnections();
     }
 
@@ -84,9 +92,6 @@ public class DBaccess implements Cloneable{
     private String getNof(String name, int limit, int wortnr, Connection Verbindung) throws SQLException{
         ResultSet Ergebnis=null;
         StringBuffer ergString=new StringBuffer();
-        //this.Verbindung=Verbindung;
-        // Finde NR des Wortes in DB
-                //System.out.println(name+" "+anz+" ");
 
         if (d) {System.out.println("Wort '"+name+"' hat Nr.  "+wortnr);}
         
@@ -159,7 +164,7 @@ public class DBaccess implements Cloneable{
 
 	public int nrOfLex(String lex) {
         ResultSet Ergebnis=null;
-        String Anfrage="Select count(*) from person where wort_lex='"+lex+"'";
+        String Anfrage="Select count(*) from person where wort_lex='"+lex+"' and quelle='"+version+"'";
         int retInt=0; 
         
         try{

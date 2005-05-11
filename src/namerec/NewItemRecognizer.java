@@ -7,6 +7,7 @@
 package namerec;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.Vector;
 
@@ -23,18 +24,23 @@ public class NewItemRecognizer{
     private BlockingQueue toTest;
     
     Set threads=new HashSet();
-    private DBaccess db;
+    ThreadGroup workers;
     
-    public NewItemRecognizer(Vector rules,  double schwelle, int threadnum, DBaccess db) {
+    private Recognizer rec;
+    
+    public NewItemRecognizer(Recognizer rec, Vector rules,  double schwelle, int threadnum, DBaccess db) {
         this.schwelle=schwelle;
         this.rules=rules;
+        this.rec=rec;
         toTest=new BlockingQueue(Integer.MAX_VALUE);
+        
         if(threadnum <=0)
             threadnum=1;
         if(threadnum > 200)
             threadnum=200;
+        workers = new ThreadGroup("verifiergroup");
         for(int i=0; i < threadnum;i++) {
-            Thread testthread=new Verifier((DBaccess) db.clone());
+            Thread testthread=new Verifier((DBaccess) db.clone(), workers,"worker_"+i);
             testthread.setName("Checker"+i);
             testthread.setDaemon(true);
             testthread.start();
@@ -43,21 +49,38 @@ public class NewItemRecognizer{
     }
     private class Verifier extends Thread{
         private DBaccess db;
-        public Verifier(DBaccess db) {
+        private RulesNE rules_ne;
+        public Verifier(DBaccess db, ThreadGroup workers, String name) {
+            super(workers,name);
+            rules_ne=rec.createRulesNE(db);
             this.db=db;
         }
     public void run() {
         while(true) {
-            NameTable kandidaten=(NameTable) toTest.dequeue();
-            if(kandidaten.size() > 0)
-                Recognizer.addWissen(Recognizer.checkCandidates(kandidaten,schwelle,rules,db));
+            Object o = toTest.dequeue();
+            if(o instanceof NameTable) {
+                NameTable kandidaten=(NameTable) o;
+                if(kandidaten.size() > 0)
+                    rec.addWissen(rec.checkCandidates(kandidaten,schwelle,rules,db));
+            }else {//List von String tokens, also NE-erkennung
+                String text =(String)o;
+                rec.findNEs(text, rules_ne);
+            }
         }
     }
     }
     public void addTask(NameTable kandidaten) {
         toTest.enqueue(kandidaten);
     }
+
     public void waitTillJobsDone() {
         toTest.waitTillEmpty();
+    }
+
+    /**
+     * @param list
+     */
+    public void addTask(List tokens) {
+        toTest.enqueue(tokens);
     }
 }

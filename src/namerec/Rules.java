@@ -27,7 +27,7 @@ public class Rules {
 	protected BufferedWriter br;
 
 
-    public void loadPatterns(String patfile, String fileContexts) throws IOException, FileNotFoundException {
+    public Rules(String patfile, String fileContexts) throws IOException, FileNotFoundException {
 	FileReader file=new FileReader(patfile); 
 	String inLine="";
 	int inInt;
@@ -38,7 +38,7 @@ public class Rules {
 	int goalPos;
 	String dummy;
 	this.matchFile=fileContexts;	
-
+    br=new BufferedWriter(new FileWriter(matchFile,true));//wird geschlossen, sobald das Programm beendet wird.
 	try{
 	    inLine="\n";
 	    while ((inInt=file.read())!=-1) { //lese bis EOF
@@ -93,11 +93,7 @@ public class Rules {
 
 
 
-    protected synchronized void output(Pattern pat) throws IOException, FileNotFoundException {
-    	if(br==null){
-    		br=new BufferedWriter(new FileWriter(matchFile,true));//wird geschlossen, sobald das Programm beendet wird.
-    	}
-    	
+    protected synchronized void output(Pattern pat) {
     	StringBuffer outstr=new StringBuffer();
     	for(int i=0;i<pat.length;i++) {
     		outstr.append(pat.word[i]).append("(");
@@ -110,14 +106,18 @@ public class Rules {
     	outstr.append("\t").append(pat.toString()).append("\n");
     	
     	System.out.print("R: "+outstr);
-    	br.write(outstr.toString());                                               
-    	br.flush();
+    	try {
+            br.write(outstr.toString());
+            br.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }                                               
     	
     } // end private void output
 
 
 
-    public NameTable candidates(int classWord, String plainWord, NameTable klassKeys) throws IOException, FileNotFoundException {
+    public NameTable candidates(int classWord, String plainWord, NameTable klassKeys) {
 
 	NameTable retItems = new NameTable();
 	Pattern actPat;  // aktuelles Pattern in Schleife

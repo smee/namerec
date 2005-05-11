@@ -1,8 +1,7 @@
 package namerec;
-import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.Vector;
@@ -22,140 +21,80 @@ import java.util.Vector;
 public class Recognizer {
     
     static boolean d=true; //debugging an
-    static final String dbTreiber = "org.gjt.mm.mysql.Driver";  // Treiber für Datenbankanbindung
-    
-    private static String fileRegexp="regexps.txt"; // enthält Reguläre Ausdrücke mit Klassifikationen, z.B. "[A-Z][a-z]+ \t GR" für grossgeschriebene Wörter
-    private static String fileGrundstock="wissenAkt.txt";// Enthält das Grundwissen 
-    
-    private static String itemFile="itemsFound.txt";
-    private static String patFile="pats2.txt";
-    private static String patFile_NE="patPers.txt";
-    private static String fileKlass="klassNamen.txt";   
-    private static String maybeFile="maybes.txt";   
-    private static String fileContexts="contexts.txt";   
-    private static String fileGarantie="NEs.txt";
-    private static int startNr=0;
-    
-    //switches für Kommandozeilenparameter - zu viele, da von Pendel adaptiert.
-    private static boolean switch_ic=false, switch_ik=false, switch_ir=false;
-    private static boolean switch_rl=false, switch_rf=false, switch_rt=false, switch_rp=false;
-    private static boolean switch_pk=false,  switch_pt=false;
-    private static boolean switch_ss=false; // start sentence nr
-    private static boolean switch_oi=false, switch_om=false, switch_og=false, switch_or=false;
-    
-    
-    
-    // Default-Werte für Kommandozeilenparameter
-    private static int n_cands=30;
-    // switch pk
-    private static double acceptItem=0.1;
-    // switch pt
-    
-    // Vectoren fuer Regellernen und Laden
-    
+   
     // Nametables fuer Wissen aller Art	
-    private static NameTable alleRegexp=new NameTable();
+    private NameTable alleRegexp;
     // Regexps
-    private static NameTable allesWissen=new NameTable();
+    private NameTable allesWissen;
     // Alle bekannten items
-    private static NameTable klassKeys=new NameTable();
+    private NameTable klassKeys;
     // Bitzuordnung zu Klassen
     // Patchy: Candidatecheck rules    
-    private static Vector canrules= new Vector();
-    // Regeln
+    private Vector canrules= new Vector();
+    private String itemFile;    
+    private String maybeFile;
+    private Rules rules;
+    private TextProcessor textProc;
+    private DBaccess db;
+    private int n_cands;
+    private int numofthreads;
+    private int startNr;
+    private int endNr;
+    private double acceptItem;
     
-    // Andere Klassen
-    private static Rules rules=new Rules();
-    private static TextProcessor textProc=new TextProcessor();
-    private static DBaccess db;
-    private static String verbaktString="jdbc:mysql://localhost/wdt_test?user=toolbox&password=booltox";
-    private static String verbwsString="jdbc:mysql://localhost/de?user=toolbox&password=booltox";
-    private static boolean switch_se;
-    private static int endNr=Integer.MAX_VALUE;
+    private MatcherNam matcher;
+    private NewItemRecognizer itemrec;
+
+    private Config cfg;
+
+    private Annotate anno;
     
-    public static void processArguments(String mainargs[]) {
-        // Verarbeitet Kommandozeilenparameter
-        
-        boolean errorflag=false;
-        
-        for(int i=0;i<mainargs.length;i++) {
-            if (mainargs[i].substring(0,1).equals("-")) { //Schalter
-            if ((i+1)==mainargs.length||mainargs[i+1].substring(0,1).equals("-")) {errorflag=true;} else {
-            if (mainargs[i].equals("-numofthreads")) {numofthreads=Integer.parseInt(mainargs[i+1]);} else
-            if (mainargs[i].equals("-ic")) {fileKlass=mainargs[i+1];switch_ic=true;} else
-            if (mainargs[i].equals("-ik")) {fileGrundstock=mainargs[i+1];switch_ik=true;} else
-            if (mainargs[i].equals("-verb_ws")) {verbwsString=mainargs[i+1];} else
-            if (mainargs[i].equals("-verb_akt")) {verbaktString=mainargs[i+1];} else
-            if (mainargs[i].equals("-ir")) {fileRegexp=mainargs[i+1];switch_ir=true;} else
-            if (mainargs[i].equals("-rl")) {patFile=mainargs[i+1];switch_rl=true;} else
-            if (mainargs[i].equals("-rp")) {patFile_NE=mainargs[i+1];switch_rp=true;} else
-            if (mainargs[i].equals("-pk")) {n_cands=new Integer(mainargs[i+1]).intValue();switch_pk=true;} else
-            if (mainargs[i].equals("-pt")) {acceptItem=new Double(mainargs[i+1]).doubleValue();switch_pt=true;} else
-            if (mainargs[i].equals("-ss")) {startNr=new Integer(mainargs[i+1]).intValue();switch_ss=true;} else
-            if (mainargs[i].equals("-se")) {endNr=new Integer(mainargs[i+1]).intValue();switch_se=true;} else
-            if (mainargs[i].equals("-oi")) {itemFile=mainargs[i+1];switch_oi=true;} else
-            if (mainargs[i].equals("-om")) {maybeFile=mainargs[i+1];switch_om=true;} else
-            if (mainargs[i].equals("-or")) {fileContexts=mainargs[i+1];switch_or=true;} else
-            if (mainargs[i].equals("-og")) {fileGarantie=mainargs[i+1];switch_og=true;} else
-            {errorflag=true;}
-                } //esle fi
-            } // fi mainargs.substr (Schalter)
-        } // rof i
-        if (errorflag) {
-            System.out.println("Was falsch mit den Parametern!");
-            System.exit(1);}
-        else {
-            System.out.println("Einstellungen:\n-------------");
-            if (switch_ic)  System.out.print("\n Klassen: "+fileKlass);
-            if (switch_ik)  System.out.print("\n Wissen Items: "+fileGrundstock);
-            if (switch_ir)  System.out.print("\n Wissen Regexp: "+fileRegexp);
-            if (switch_rl)  System.out.print("\n Wissen Regeln: "+patFile);
-            if (switch_rp)  System.out.print("\n Regeln für NEs "+patFile_NE);
-            if (switch_pk)  System.out.print("\n Anzahl Sätze zur Kandidatenüberprüfung "+n_cands);
-            if (switch_pt)  System.out.print("\n Threshhold Anerkennung Item "+acceptItem);
-            if (switch_ss)  System.out.print("\n Beginne bei Satz: "+startNr);
-            if (switch_se)  System.out.print("\n Ende bei Satz: "+endNr);
-            if (switch_oi)  System.out.print("\n Datei für neue Items: "+itemFile);
-            if (switch_om)  System.out.print("\n Datei für eventuelle Items: "+maybeFile);
-            if (switch_or)  System.out.print("\n Datei für Kontexte, wenn Regeln irgendwie zuschlagen: "+fileContexts+"\n");
-            if (switch_og)  System.out.print("\n Datei für komplett bekannte Namen: "+fileGarantie+"\n");
-            System.out.println(" Anzahl der Verifikationsthreads: "+numofthreads);
-            System.out.println();
-        } //esle (params ok)
-        
-        
-        
-        if (!(switch_rl||switch_rf||switch_rt)) {
-            
-            
-            //System.out.println("Fehler! [rl|rf|rt] obligatorisch!");
-            //System.exit(1);
-            
-        } // fi !switches
-        
-    } // end processArguments
+    public Recognizer(Config cfg) throws IOException {
+        this.cfg=cfg;
+        n_cands=cfg.getInteger("OPTION.CANDIDATESNO",30);
+        numofthreads=cfg.getInteger("OPTION.NUMOFTHREADS",10);
+        startNr=cfg.getInteger("OPTION.STARTNO",0);
+        endNr=cfg.getInteger("OPTION.ENDNO",Integer.MAX_VALUE);
+        acceptItem=cfg.getDouble("OPTION.ACCEPTITEM",0.1);
+        itemFile=cfg.getString("OUT.ITEMSFOUND","itemsFound.txt");
+        maybeFile = cfg.getString("OUT.MAYBE","maybe.txt");
+        db=new DBaccess(cfg);
+        init(cfg);        
+    }
     
-    
-    
-    
-    private static void init(String fileGrundstock, String fileRegexp) throws IOException, FileNotFoundException, ClassNotFoundException  {
-        //initialisiere die Tabellen und verbinde mit DBs
+    private void init( Config cfg ) throws IOException  {
+        String fileRegexp=cfg.getString("IN.REGEXP","regexps.txt");
         NameTable temp=NameTable.loadFromFile(fileRegexp);
         alleRegexp=new NameTable();
         for (Iterator it = temp.keySet().iterator(); it.hasNext();) {
             String regexp = (String) it.next();
             alleRegexp.put(java.util.regex.Pattern.compile(regexp), temp.get(regexp));//nicht mehr Strings als keys sondern Instanzen von java.util.regex.Pattern
         }
+        String fileGrundstock=cfg.getString("IN.KNOWLEDGE","wissenAkt.txt");
         allesWissen=NameTable.loadFromFile(fileGrundstock);
+        
+        String fileKlass=cfg.getString("IN.CLASSNAMES","klassNamen.txt");
         klassKeys=NameTable.loadFromFile(fileKlass);
+        for (Iterator it = klassKeys.keySet().iterator(); it.hasNext();) {
+            String key = (String) it.next();
+            klassKeys.put(key, new Integer(Integer.parseInt((String) klassKeys.get(key),2)));//sind ja binaerwerte, brauchen aber Integers
+        }
+        anno=new Annotate(alleRegexp,allesWissen,klassKeys, cfg.getString("IN.TAGGERDIR","taggerfiles/"));
+        textProc=new TextProcessor(anno);
+        matcher=new MatcherNam(anno);
+        String patFile=cfg.getString("IN.PATFILE","pats2.txt");
+        canrules = matcher.loadPatterns(patFile);
+        itemrec = new NewItemRecognizer(this,canrules,acceptItem,numofthreads, db);
+
+        
+        String fileContexts=cfg.getString("OUT.CONTEXT","contexts.txt");
+        rules=new Rules(patFile,fileContexts); // Regeln init
+        rules.resetRules();
+        System.out.println("Anzahl Regeln: "+rules.patterns.size());
         
         
     } //end init
     
-    
-    // Andere Klassen fuer checkCandidates
-    private static MatcherNam matcher=new MatcherNam();
-    // Matcher
     
     private static int nlength(String item) {
         // Errechnedt Länge des Namens, Bei NAmen mit Bindestrichen: länsgter Teilname
@@ -175,7 +114,7 @@ public class Recognizer {
 
        } // end nlength
     
-    public static NameTable checkCandidates(NameTable toCheck,double schwelle,Vector pattern, DBaccess db){
+    public NameTable checkCandidates(NameTable toCheck,double schwelle,Vector pattern, DBaccess db){
         // Ueberprueft, ob Kandidaten  in Beispielsätzen, in denen sie vorkommen, auch als "forWhat" klassifiziert werden. Falls der Anteil hoeher als "schwelle" ist, besteht Kandidat Prüfung.
         
         // Es wird WORTSCHATZ und WDTAKTUELL abgefragt
@@ -184,8 +123,6 @@ public class Recognizer {
         String actClass;
         int actClassInt=0;
         String itemText;
-        Vector wordVec;
-        Vector classVec;
         int ergClass=0;
         
         Vector ergTest;
@@ -197,12 +134,14 @@ public class Recognizer {
         for (Enumeration checkItems=toCheck.keys();checkItems.hasMoreElements();) {
             actItem=(String)checkItems.nextElement();
             actClass=(String)toCheck.get(actItem);
-            actClassInt=new Integer(klassKeys.get(actClass).toString()).intValue();
+            actClassInt=((Integer)klassKeys.get(actClass)).intValue();
             // nehme nächsten Kandidaten
             
 //          SPEZIAL für VN: VNs mit Länge groesser 10 sind TITEL!
 
-            if (actClass.equals("VN")&&nlength(actItem)>10) {actClass="TIT";}
+            if (actClass.equals("VN") && nlength(actItem)>10) {
+                actClass="TIT";
+            }
             
             System.out.println("Ueberpruefe Kandidat "+actItem+"?="+actClass);
             
@@ -212,9 +151,8 @@ public class Recognizer {
             } // fi allesWissen
             else { // nur, wenn noch nicht im Wissen
                 itemText=db.getNof(actItem,n_cands);    // finde Sätze, die Kandidaten enthalten
-                wordVec=Annotate.tokenize(itemText);
-                classVec=Annotate.annotate(wordVec,alleRegexp,allesWissen,klassKeys);
-                ergTest=matcher.getClassificationsOf(actItem,wordVec,classVec,klassKeys,pattern);     //extrahiere Liste, wie aktName klassifiziert wurde
+
+                ergTest=matcher.getClassificationsOf(actItem,itemText,klassKeys,pattern);     //extrahiere Liste, wie aktName klassifiziert wurde
                 anzOk=0; anzTot=0;
                 for (Enumeration e=ergTest.elements();e.hasMoreElements();) {
                     ergClass=new Integer(e.nextElement().toString()).intValue();
@@ -245,8 +183,6 @@ public class Recognizer {
                             checked.put(actItem, actClass);
                             maybes.put(actItem, actClass);
                             maybes.appendFile(maybeFile);
-                            
-                            
                         } // esle
                     }
                 } // fi anzTot
@@ -268,59 +204,48 @@ public class Recognizer {
     
     
     
-    protected static boolean stopEverything=false;
-    private static int numofthreads=10;
-    
-    public static void main(String args[]) throws Exception {
-        
-        
-        String text;
-        NameTable Kandidaten=new NameTable();
-        
-        
-        processArguments(args);
-        int bspnr=startNr;
-        canrules = matcher.loadPatterns(patFile);
-        init(fileGrundstock,fileRegexp);
-        
-        db=new DBaccess("org.gjt.mm.mysql.Driver",
-                        verbwsString,
-                        verbaktString,
-                        bspnr);
-        
-        rules.loadPatterns(patFile,fileContexts); // Regeln init
-        rules.resetRules();
-        System.out.println("Anzahl Regeln: "+rules.patterns.size());
-        RulesNE rules_NE=new RulesNE(db);
-        
-        rules_NE.loadPatterns(patFile_NE,fileGarantie); // Regeln init
-        rules_NE.resetRules();
-        System.out.println("Regeln: rec="+rules.patterns.size()+" NE="+rules_NE.patterns.size());
-        
-        
-        text="\"Müller, Huber, Seifert, Bodden, Abel, Schnoor und ich.\" sagte Ramuel Müller und seufzte.";
+    public void doTheRecogBoogie() throws Exception {
         
         SatzDatasource src=getSatzDatasource();
-        NewItemRecognizer itemrec=new NewItemRecognizer(canrules,acceptItem,numofthreads, db);
-        
+        int bspnr=startNr-1;
+        String text = "nix zu tun.";
         
         while(!(text.equals("END"))) {
+            bspnr++;
+            text=src.getNextSentence();
             System.out.println(bspnr+": "+text);
             rules.resetRules(); 
             
-            Kandidaten=textProc.getCandidatesOfText(text, alleRegexp, allesWissen,klassKeys,rules);
+            NameTable Kandidaten=textProc.getCandidatesOfText(text,rules);
             System.out.println(Kandidaten.toString());
             
             itemrec.addTask(Kandidaten);
-            rules_NE.resetRules();
-            textProc.getCandidatesOfText(text, alleRegexp, allesWissen, klassKeys, rules_NE);  // Extrahieren der NEs und speichern in DB
-            bspnr++;
-            text=src.getNextSentence();
-//            if(bspnr > 20000)
-//                break;
-        } // elihw
+        } 
         itemrec.waitTillJobsDone();
         System.out.println("verification done!");
+        System.out.println("reviewing sentences for NEs....");
+        src=getSatzDatasource();
+        text=src.getNextSentence();
+        bspnr=startNr-1;
+        while(!(text.equals("END"))) {
+            itemrec.addTask(TextProcessor.tokenize(text));
+            text=src.getNextSentence();            
+        }
+        itemrec.waitTillJobsDone();
+        System.out.println("NE recognition done!");
+    }
+    
+    public static void main(String args[]) throws Exception {
+        if(args.length != 1) {
+            System.out.println("Usage:\n-------\n\n");
+            System.out.println("java -cp namerec2.jar:sqllib.jar namerec.Recognizer configfile");
+            return;
+        }
+        Config cfg=new Config(args[0]);
+        System.out.println("Using the following settings from "+args[0]);
+        System.out.println(cfg);
+        Recognizer rec=new Recognizer(cfg);
+        rec.doTheRecogBoogie();
     } // end main
 
 
@@ -330,9 +255,9 @@ public class Recognizer {
      * @return
      * @throws Exception
      */
-    private static SatzDatasource getSatzDatasource() throws Exception {
+    private SatzDatasource getSatzDatasource() throws Exception {
         //return new FileDataSource("sentences.txt");
-        return new SentenceFetcher(db,startNr,endNr,1000);//TODO add real source from somewhere
+        return new SentenceFetcher(db,startNr,endNr,1000);
     }
 
 
@@ -341,8 +266,37 @@ public class Recognizer {
     /**
      * @param table
      */
-    public static void addWissen(NameTable table) {
+    public void addWissen(NameTable table) {
         allesWissen.putAll(table);
+    }
+
+    /**
+     * @param tokens@param rules_ne2
+     */
+    public void findNEs(String text, RulesNE rules_ne) {
+        rules_ne.resetRules();
+        try {
+            textProc.getCandidatesOfText(text,  rules_ne);  // Extrahieren der NEs und speichern in DB
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    /**
+     * @param db2
+     * @return
+     */
+    public RulesNE createRulesNE(DBaccess db) {
+        try {
+            return new RulesNE(db,cfg.getString("IN.PATFILENE","patPers.txt"),cfg.getString("OUT.COMPLEXNAMES","NEs.txt"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
     
     

@@ -1,7 +1,5 @@
 package namerec;
-import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Enumeration;
@@ -23,15 +21,16 @@ public class RulesNE extends Rules{
     private DBaccess db;
     
     
-    public NameTable candidates(int classWord, String plainWord,
-            NameTable klassKeys) throws IOException, FileNotFoundException {
+    public NameTable candidates(int classWord, String plainWord,NameTable klassKeys){
         try {
             return matchAndUpdateDB(classWord,plainWord,klassKeys);
         } catch (SQLException e) {
-            throw new IOException(e.getMessage());
+            e.printStackTrace();
+            return null;
         }
     }
-    public RulesNE(DBaccess db) {
+    public RulesNE(DBaccess db, String patfile, String fileContexts) throws FileNotFoundException, IOException {
+        super(patfile,fileContexts);
         this.db=db;
     }
     
@@ -86,12 +85,12 @@ public class RulesNE extends Rules{
 //      change 4.12.2002: it is fun with vornamen!
         String statement="INSERT INTO person (wort_bin,wort_lex,wort_alt,beruf,kat_nr,quelle) values ";
         if (titpus.equals("")) {  //Fall: keine titel
-            statement+="('"+vns+" "+znnns+"','"+znnns+" "+vns+"','"+normalform +"','',4,'NameRec 2.0')";
+            statement+="('"+vns+" "+znnns+"','"+znnns+" "+vns+"','"+normalform +"','',4,'NameRec 1.1neu')";
         } else {  //Fall: wohl Titel
-            statement+="('"+titpus+" "+vns+" "+znnns+"','"+znnns+" "+vns+" "+titpus+"','"+normalform+"','"+titpus+"',4,'NameRec 2.0')";
+            statement+="('"+titpus+" "+vns+" "+znnns+"','"+znnns+" "+vns+" "+titpus+"','"+normalform+"','"+titpus+"',4,'NameRec 1.1neu')";
             
         } // esle
-        
+        if(d) System.out.println("\nInserting NE: "+statement);
         if (db.nrOfLex(znnns+" "+vns+" "+titpus)<1) { // nur, wenn noch nicht drin
             try {  
                 db.SQLstatement(statement);
@@ -106,7 +105,7 @@ public class RulesNE extends Rules{
     
     
     
-    public NameTable matchAndUpdateDB(int classWord, String plainWord, NameTable klassKeys) throws IOException, FileNotFoundException, SQLException {
+    public NameTable matchAndUpdateDB(int classWord, String plainWord, NameTable klassKeys)throws SQLException {
         
         NameTable retItems = new NameTable();
         Pattern actPat;  // aktuelles Pattern in Schleife
@@ -134,10 +133,7 @@ public class RulesNE extends Rules{
         return retItems;
     } // end candidates
     
-    protected synchronized void output(Pattern pat) throws IOException, FileNotFoundException {
-        if(br==null){
-            br=new BufferedWriter(new FileWriter(matchFile,true));//wird geschlossen, sobald das Programm beendet wird.
-        }
+    protected synchronized void output(Pattern pat)  {
         StringBuffer outstr=new StringBuffer();
         
         for(int i=0;i<pat.length;i++) {
@@ -152,8 +148,12 @@ public class RulesNE extends Rules{
         outstr.append("\n");
 
         System.out.print("Z: "+outstr+"\t"+pat.toString());
-        br.write(outstr.toString());                                               
-        br.flush();
+        try {
+            br.write(outstr.toString());
+            br.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }                                               
 
 
         } // end private void output

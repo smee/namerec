@@ -7,15 +7,17 @@ package namerec;
 class SentenceFetcher extends Thread implements SatzDatasource{
     BlockingQueue sentences;
     
-    private final DBaccess baccess;
+    private final DBaccess dbaccess;
     private int pos;
 
-    private int endNr;
+    private final int endNr;
     private final int NUM;
     
-    public SentenceFetcher(DBaccess baccess, int startnr, int endNr, int num) {
-        this.baccess = baccess;
+    public SentenceFetcher(DBaccess dbaccess, int startnr, int endNr, int num) {
+        this.dbaccess = dbaccess;
         this.pos=startnr;
+        if(endNr < 0)
+            endNr=Integer.MAX_VALUE;
         this.endNr=endNr;
         this.NUM=num;
         sentences=new BlockingQueue(10000);
@@ -25,7 +27,7 @@ class SentenceFetcher extends Thread implements SatzDatasource{
     
     public void run() {
         while(true) {
-            if(baccess.retrieveNextSentences(this, pos, Math.min(pos+NUM,endNr)) == false) {
+            if(dbaccess.retrieveNextSentences(this, pos, Math.min(pos+NUM,endNr)) == false) {
                 System.out.println("enqueuing END");
                 sentences.enqueue("END");
                 break;//sind mit der DB durch

@@ -69,41 +69,11 @@ public class NameTable extends java.util.Hashtable {
         String line = null;
         while((line=br.readLine())!=null) {
             StringTokenizer st=new StringTokenizer(line,"\t");
-            //System.out.println(line);
             if(st.countTokens()>=2)
                 table.put(st.nextToken(),st.nextToken());
         }
         return table;
     }
-    public NameTable loadFile(String filename) throws IOException {
-	
-	FileReader file=new FileReader(filename); 
-	int inInt;
-	String inkey="",inval="";  //Strings für Key und Value
-
-
-	try{
-	    while ((inInt=file.read())!=-1) { //lese bis EOF
-		inkey="";
-		inval="";
-		while(inInt!=9&&inInt!=-1) {           // Lese KEY
-		    inkey+=(char)inInt;
-		    inInt=file.read();
-		} //elihw inInt<>9    
-		inInt=file.read(); //Lese nächstes (Überspringe TAB)
-		while(inInt!=10&&inInt!=13&&inInt!=-1) {          // Lese Value
-		    inval+=(char)inInt;
-		    inInt=file.read();
-		} //elihw inInt<>13
-		if (inInt==13) {inInt=file.read();} // Überspringe LR
-		this.put(inkey,inval);  // Füge in NameTable ein
-
-		//System.out.println("Inputting: "+inkey+"\t"+inval);	     
-	    } // elihw EOF
-
-	} catch (IOException e) {System.out.println("Can't find file "+filename+"\n");}
-	return this;
-    } // end loadFile
 
 
     

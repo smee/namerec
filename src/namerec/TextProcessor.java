@@ -1,24 +1,28 @@
 package namerec;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Enumeration;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.StringTokenizer;
-import java.util.Vector;
 
 public class TextProcessor {
     
     static final boolean d=false;  //debugging
+    private NameTable klassKeys;
+    private Annotate anno;
     
-    public Vector tokenize(String input) {
+    public TextProcessor(Annotate anno) {
+        this.anno=anno;
+    }
+    
+    public static List tokenize(String input) {
         
-        Vector retvec=new Vector();
         
         // VORARBEIT:
         // Satzzeichen mit trennenden Leerzeichen versehen
         //  \n und \t in Leerzeichen umwandeln
         
-        String newstr="";
+        StringBuffer newstr=new StringBuffer("");
         int posInt;
         
         for(int pos=0;pos<input.length();pos++) {
@@ -35,14 +39,14 @@ public class TextProcessor {
                     ((posInt>=48)&&(posInt<=57 ))|| // 0-9
                     ((posInt>=192)&&(posInt<=255 )) // akzentzeug
             ) {
-                newstr+=(char)posInt;
+                newstr.append((char)posInt);
             } //fi posInt
             
             
             // Zeichen, die in Leerzeichen konvertiert werden 
             if ((posInt==10)||(posInt==9) )  // newline
             {
-                newstr+=" ";
+                newstr.append(" ");
             } // fi posInt
             
             
@@ -51,15 +55,15 @@ public class TextProcessor {
                 // komma, punkt, slash, !, ?, (,),[,], ", &, %, =, ', + usw. 
                 
             {
-                newstr+=" "+(char)posInt+" ";
+                newstr.append(" ").append((char)posInt).append(" ");
             } // fi posInt	    
         } // rof pos
         
         
-        StringTokenizer tokens=new StringTokenizer(newstr);
-        
+        StringTokenizer tokens=new StringTokenizer(newstr.toString());
+        List retvec=new ArrayList(tokens.countTokens());
         while(tokens.hasMoreTokens()) {
-            retvec.addElement(tokens.nextToken());
+            retvec.add(tokens.nextToken());
         } //elihw
         
         return retvec;
@@ -68,49 +72,19 @@ public class TextProcessor {
     
     
     
-    public NameTable getCandidatesOfText(String text, NameTable regexp, NameTable classif,NameTable klassKeys, Rules rules) throws SQLException, IOException, FileNotFoundException {
-        
+    public NameTable getCandidatesOfText(String text,Rules rules) throws SQLException{ 
+        List tokens=TextProcessor.tokenize(text);
+        int[] classes=anno.annotate(tokens);
         NameTable retvec=new NameTable();
         NameTable newCands=new NameTable();
-        String actWord=new String();
-        String classification=new String();
+        String actWord;
         int actClass=0;
-        int addClass=0;
-        boolean match=false;
-        Vector input=tokenize(text);
-        
-        for (Enumeration en=input.elements();en.hasMoreElements();) { // fuer alle woerter
-            actWord=en.nextElement().toString();
-            actClass=0;
+        int idx=0;
+        for (Iterator it=tokens.iterator();it.hasNext();idx++) { // fuer alle woerter
+            actWord=it.next().toString();
+            actClass=classes[idx];
             
-            if (d) System.out.println("Behandle Wort '"+actWord+"'");
-            
-            // matche mit Regexps
-            for(Enumeration reg=regexp.keys();reg.hasMoreElements();) {
-                java.util.regex.Pattern actExp=(java.util.regex.Pattern) reg.nextElement();
-                
-                
-                match=actExp.matcher(actWord).matches();
-                if (match) {
-                    if (d) System.out.println("Match mit '"+actExp.pattern()+"'");
-                    classification=regexp.get(actExp).toString();
-                    if (d) System.out.println(" Klassifiziert als: '"+classification+"'");
-                    addClass= new Integer(klassKeys.get(classification).toString()).intValue();
-                    actClass = actClass | addClass;
-                } // fi match
-                
-            } // rof Enumeration reg
-            
-            // matche mit Grundwissen
-            if (classif.containsKey(actWord)) {
-                classification=classif.get(actWord).toString();
-                if (d) System.out.println(" Klassifiziert als: '"+classification+"'");
-                addClass= new Integer(klassKeys.get(classification).toString()).intValue();
-                actClass = actClass | addClass;
-            } // fi classif.contains
-            
-            // einfügen in Return-vector
-            
+          
             try {
                 newCands=rules.candidates(actClass, actWord,klassKeys);
             } catch (Exception e) {
