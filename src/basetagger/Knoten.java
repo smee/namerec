@@ -4,16 +4,17 @@ package basetagger;
 // Bemerkung: viele Funktionen sind in Pretree implementiert, um Knoten so klein wie möglich zu halten
 
 import java.io.Serializable;
-import java.util.Vector;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Knoten implements Serializable {
 
-    public Vector classes;
+    public List classes;
     public String inhalt=new String();      // Knoteninhalt
-    public Vector kinder=new Vector();
+    public List kinder=new ArrayList();
 
     Knoten() {
-	this.classes=new Vector();
+	this.classes=new ArrayList();
     }
 
     Knoten(String neuinhalt) {  // Constructor mit Inhalt
@@ -21,12 +22,12 @@ public class Knoten implements Serializable {
     } // end Constructor
 
 
-    void setClasses(Vector neuclasses) {
+    void setClasses(List neuclasses) {
 	this.classes=neuclasses;
     }
 
 
-    Vector getClasses() {
+    List getClasses() {
 	return this.classes;
     }
 

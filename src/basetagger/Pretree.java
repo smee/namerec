@@ -6,8 +6,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.Enumeration;
+import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.List;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
@@ -63,7 +65,7 @@ public class Pretree implements Serializable {
     public Pretree() {
     
 	wurzel=new Knoten("");
-	wurzel.classes=new Vector();
+	wurzel.classes=new ArrayList();
     }
 
     public void setThresh(double d) {
@@ -79,13 +81,13 @@ public class Pretree implements Serializable {
     }
 
     // Voted ermittelt in Abh. von thresh die Entscheidung ---------------------------------------------------
-    public String voted(Vector classes) {
+    public String voted(List classes) {
 	int sum=0;
 	int maxval=0, actval;
 	String maxclass="undecided";
 	String actclass;
-	for(Enumeration e=classes.elements();e.hasMoreElements();) {
-	    StringTokenizer st=new StringTokenizer((String)e.nextElement(),"=");
+	for(Iterator e=classes.iterator();e.hasNext();) {
+	    StringTokenizer st=new StringTokenizer((String)e.next(),"=");
 	    actclass=st.nextToken();
 	    actval= new Integer(st.nextToken()).intValue();
 	    sum+=actval;
@@ -100,23 +102,23 @@ public class Pretree implements Serializable {
     } // end voted
 
     // vecAdd addiert die Klassen von 2 Vectors -------------------------------------------------------------
-    static Vector vecAdd(Vector een, Vector twee) {
+    static Vector vecAdd(List een, List twee) {
 	Vector terug = new Vector();
 	hash= new Hashtable();
 	String clas,snr;
 	int nr,nr2;
 	String van;
 	String cont;
-	for(Enumeration e=een.elements();e.hasMoreElements();) {
-	    van=(String)e.nextElement();
+	for(Iterator e=een.iterator();e.hasNext();) {
+	    van=(String)e.next();
 	    StringTokenizer st= new StringTokenizer(van, "=");
 	    clas=st.nextToken();
 	    snr=st.nextToken();
 	    //	    nr=new Integer(snr).intValue();
 	    hash.put(clas, snr);
 	}
-	for(Enumeration f=twee.elements();f.hasMoreElements();) {
-	    van=(String)f.nextElement();
+	for(Iterator f=twee.iterator();f.hasNext();) {
+	    van=(String)f.next();
 	    StringTokenizer st= new StringTokenizer(van, "=");
 	    clas=st.nextToken();
 	    snr=st.nextToken();
@@ -131,8 +133,8 @@ public class Pretree implements Serializable {
 	    hash.put(clas,snr);
 	}
 
-	for (Enumeration g=hash.keys();g.hasMoreElements();) {
-	    String c=(String)g.nextElement();
+	for (Iterator g=hash.keySet().iterator();g.hasNext();) {
+	    String c=(String)g.next();
 	    String instr=c+"="+hash.get(c);
 	    terug.addElement(instr);
 	}
@@ -172,10 +174,10 @@ public class Pretree implements Serializable {
 	    k2.inhalt=w2;
 	    Knoten goalpos=getChild(k1,w2);
 	    if (goalpos==null) {
-		k1.kinder.addElement(k2);
+		k1.kinder.add(k2);
 	    } else {
-		k1.kinder.removeElement(goalpos);
-		k1.kinder.addElement(einf(goalpos,k2));
+		k1.kinder.remove(goalpos);
+		k1.kinder.add(einf(goalpos,k2));
 	    }
 	    k1.setClasses(vecAdd(k1.getClasses(),k2.getClasses()));
 	    return k1;
@@ -183,9 +185,9 @@ public class Pretree implements Serializable {
 	else  {                              //Fall 3:  k1 und k2 haben gleiches Präfix p, Suffixe s bzw. r 
 	    Knoten h=new Knoten(w0);
 	    k2.inhalt=w2;
-	    h.kinder.addElement(k2);
+	    h.kinder.add(k2);
 	    k1.inhalt=w1;
-	    h.kinder.addElement(k1);
+	    h.kinder.add(k1);
 	    h.setClasses(vecAdd(k1.getClasses(),k2.getClasses()));
 	    return h;
 	} // end else Fall 3
@@ -195,8 +197,8 @@ public class Pretree implements Serializable {
     // getChild liefert kind von Knoten k zurück, in dem w gefunden werden kann
     Knoten getChild(Knoten k, String w) {
 	Knoten kind;
-	for(Enumeration e=k.kinder.elements();e.hasMoreElements();) {
-	    kind=(Knoten)e.nextElement();
+	for(Iterator e=k.kinder.iterator();e.hasNext();) {
+	    kind=(Knoten)e.next();
 	    if (d) {
 		// System.out.println("Kind: "+kind.inhalt+" vgl mit "+w);
 	  
@@ -245,10 +247,10 @@ public class Pretree implements Serializable {
 
     void anzeig(Knoten aktknoten,int n) {            // Zeigt Knotenstruktur auf Textstandardausgabe.
 	int tiefe=n+1; // für "-" Anzeige
-	for(Enumeration e=aktknoten.kinder.elements();e.hasMoreElements();) {
-	    Knoten akk=(Knoten)e.nextElement();
+	for(Iterator e=aktknoten.kinder.iterator();e.hasNext();) {
+	    Knoten akk=(Knoten)e.next();
 	    for(int j=1;j<=tiefe;j++) System.out.print("-");
-	    Vector v=akk.getClasses();
+	    List v=akk.getClasses();
 	    if (v!=null) {
 	      System.out.println(akk.inhalt+" "+akk.getClasses().toString());} else 
 		  {System.out.println(akk.inhalt+" nix");}
@@ -272,16 +274,16 @@ public class Pretree implements Serializable {
  	// Eindeutige Klasse: Abschneiden des unterbaumes
 	else if (aktKnoten.classes.size()==1) {
 	    aktKnoten.inhalt=aktKnoten.inhalt.substring(0,1);
-	    aktKnoten.kinder.removeAllElements();
+	    aktKnoten.kinder.clear();
 	}  
  	// innerer Knoten: rekursiv absteigen und default löschen
 	else {	  
 	    vklass=voted(aktKnoten.classes);
 	    temp=new Vector();	   
-  	    for(Enumeration e=aktKnoten.kinder.elements();e.hasMoreElements();) {
- 	   	akk=(Knoten)e.nextElement();
+  	    for(Iterator e=aktKnoten.kinder.iterator();e.hasNext();) {
+ 	   	akk=(Knoten)e.next();
 		if (akk.classes.size()==1) { // falls Eindeutig
-		  aklass=(String)akk.classes.elementAt(0);
+		  aklass=(String)akk.classes.get(0);
 		  st=new StringTokenizer(aklass,"=");
 		  aklass=st.nextToken();
 		  //System.out.println("Class "+aklass);
@@ -314,17 +316,17 @@ public class Pretree implements Serializable {
 	int j=0;
 	char delimit=(char)(160-ebene);
 	returnstring+="|";         // "(" Ebene tiefer 
-	for (Enumeration e=aktknoten.kinder.elements();e.hasMoreElements();) {
+	for (Iterator e=aktknoten.kinder.iterator();e.hasNext();) {
 	    j++;
 	    if (j!=1) returnstring+=delimit;	       // "," selbe Ebene
-	    akk=(Knoten)e.nextElement();
+	    akk=(Knoten)e.next();
 	    returnstring+=akk.inhalt;
 	    returnstring+="[";
 	    k=0;
-	    for (Enumeration f=akk.classes.elements();f.hasMoreElements();) {
+	    for (Iterator f=akk.classes.iterator();f.hasNext();) {
 		k++;
 		if (k!=1) returnstring+=";";
-		classElement=(String)f.nextElement();
+		classElement=(String)f.next();
 		returnstring+=classElement;
 	    }
 	    returnstring+="]";
@@ -396,7 +398,7 @@ public class Pretree implements Serializable {
 	    
 	
 
-	aktknoten.kinder.addElement(neuknoten);
+	aktknoten.kinder.add(neuknoten);
 	return aktknoten;
 
 
@@ -450,7 +452,7 @@ public class Pretree implements Serializable {
 		    if (d) System.out.println(klassv.toString());
 		    neuKnoten.setClasses(klassv);
 		    
-		    aktknoten.kinder.addElement(neuKnoten);} //war atom
+		    aktknoten.kinder.add(neuKnoten);} //war atom
 		else { // kein atom
 			    
 		    pretoken=token.substring(0,klampos);                   // Anfang abspalten
@@ -480,7 +482,7 @@ public class Pretree implements Serializable {
 			if (d) System.out.println("jetzt");
 			string2tree_alt(neuKnoten,resttoken);
 		    }
-		     aktknoten.kinder.addElement(neuKnoten);
+		     aktknoten.kinder.add(neuKnoten);
 		} // end else
 
 		naatom=false;         //
@@ -504,7 +506,7 @@ public class Pretree implements Serializable {
 	if (ignorecase) word=word.toLowerCase();
 	Knoten k=new Knoten(word+"<");
 	k.classes=new Vector();
-	k.classes.addElement(cla+"=1");
+	k.classes.add(cla+"=1");
 	insert(k);
     }
 
@@ -523,10 +525,10 @@ public class Pretree implements Serializable {
 	Knoten gpos=getChild(wurzel,k.inhalt);
 	if (gpos==null) {
 	    gpos=k; 
-	    wurzel.kinder.addElement(gpos);
+	    wurzel.kinder.add(gpos);
 	} else {
-	    wurzel.kinder.removeElement(gpos);
-	    wurzel.kinder.addElement(einf(gpos,k));
+	    wurzel.kinder.remove(gpos);
+	    wurzel.kinder.add(einf(gpos,k));
 	}
     }
 
@@ -558,10 +560,10 @@ public class Pretree implements Serializable {
 	 outstr+="[";
 	 int k=0;
 	 
-	 for (Enumeration f=wurzel.classes.elements();f.hasMoreElements();) {
+	 for (Iterator f=wurzel.classes.iterator();f.hasNext();) {
 	     k++;
 	     if (k!=1) outstr+=";";
-	     classElement=(String)f.nextElement();
+	     classElement=(String)f.next();
 	     outstr+=classElement;
 	 }	
 	 outstr+="]";
@@ -608,7 +610,7 @@ public class Pretree implements Serializable {
 	String wclasses=st.nextToken();
 	wclasses=wclasses.substring(1,wclasses.length());
 	instr=instr.substring(wclasses.length()+2,instr.length());
-	if (d) System.out.println(instr);
+	if (d) System.out.println(instr.length()+" chars in read string");
 	if (d) System.out.println("Now inserting");
 	
 	st = new StringTokenizer(wclasses,";");
