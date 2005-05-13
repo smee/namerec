@@ -77,8 +77,11 @@ public class DBaccess implements Cloneable{
         catch (SQLException e) {
             System.out.println("Datenbankfehler!"+e.getMessage());
             e.printStackTrace();
+            System.exit(1);
         }catch (ClassNotFoundException e) {
+            System.err.println("Unknown classname for jdbcdriver!");
             e.printStackTrace();
+            System.exit(1);
         }
     }
 
@@ -147,7 +150,7 @@ public class DBaccess implements Cloneable{
             Ergebnis = SQLAbfrage.executeQuery(Anfrage);
         }
         catch (SQLException e) {
-            System.out.println("Datenbankfehler!"+e.getMessage());
+            System.out.println("Datenbankfehler bei SQL-Statement: "+Anfrage);
             e.printStackTrace();
         }
                 try {

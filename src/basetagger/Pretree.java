@@ -346,7 +346,7 @@ public class Pretree implements Serializable {
 
 
 	String akttoken;
-	char delimit=(char)(160-ebene);
+	final char delimit=(char)(160-ebene);
 	String delString="";
 	delString+=delimit;
 	StringTokenizer st=new StringTokenizer(s, delString);
@@ -356,14 +356,16 @@ public class Pretree implements Serializable {
 	String klasse;
 	Vector klassv;
 	String ganztoken;
-	String resttoken="";
+	String resttoken;
 
 	ganztoken=s;
 	if (d) System.out.println("Ebene "+ebene+":\t"+ganztoken);
 
 	st2=new StringTokenizer(ganztoken,"|");
 	token=st2.nextToken();
-	if (st2.hasMoreTokens()) {resttoken=ganztoken.substring(token.length()+1,ganztoken.length()); } else resttoken="";
+	if (st2.hasMoreTokens()) {
+        resttoken=ganztoken.substring(token.length()+1,ganztoken.length());
+   } else resttoken="";
 
 
 	if (d) System.out.println("Zerlegt in :"+token+" resttoken: "+resttoken);
@@ -387,7 +389,8 @@ public class Pretree implements Serializable {
 
 
 	st = new StringTokenizer(resttoken, delString);
-	if (token!=ganztoken) while(st.hasMoreTokens()) {
+	if (token!=ganztoken) 
+        while(st.hasMoreTokens()) {
 	    akttoken=st.nextToken();
 	    if (d) System.out.println("Kind :"+akttoken);
 	    if (d) System.out.println("jetzt");
@@ -591,43 +594,43 @@ public class Pretree implements Serializable {
 
 
 
-       public void lade(String filename) throws FileNotFoundException {
-
-	String instr=new String();
-
-	try{
-              ObjectInputStream ois= new ObjectInputStream(new FileInputStream(filename));
-             instr=(String)ois.readObject();
-              ois.close();
-
-
-       } catch (IOException ex) {System.out.println(ex.getMessage());}
-         catch (ClassNotFoundException cnfe) { /* readObject() can throw this */ }
-	
-
-	if (d) System.out.println("File read");
-	StringTokenizer st=new StringTokenizer(instr,"]");
-	String wclasses=st.nextToken();
-	wclasses=wclasses.substring(1,wclasses.length());
-	instr=instr.substring(wclasses.length()+2,instr.length());
-	if (d) System.out.println(instr.length()+" chars in read string");
-	if (d) System.out.println("Now inserting");
-	
-	st = new StringTokenizer(wclasses,";");
-      	Vector klassv=new Vector();
-	while(st.hasMoreTokens()) {
-	    String ak=st.nextToken();
-	    klassv.addElement(ak);
-	}
-	wurzel.setClasses(klassv);
-	String char160="";
-	char160+=(char)(160);
-
-	StringTokenizer eb1=new StringTokenizer(instr, char160);
-	while (eb1.hasMoreTokens()) {
-	    String nextTok=eb1.nextToken();
-	    string2tree(wurzel,nextTok,1);
-	} 
+    public void lade(String filename) throws FileNotFoundException {
+        
+        String instr=new String();
+        
+        try{
+            ObjectInputStream ois= new ObjectInputStream(new FileInputStream(filename));
+            instr=(String)ois.readObject();
+            ois.close();
+            
+            
+        } catch (IOException ex) {System.out.println(ex.getMessage());}
+        catch (ClassNotFoundException cnfe) { /* readObject() can throw this */ }
+        
+        
+        if (d) System.out.println("File read");
+        StringTokenizer st=new StringTokenizer(instr,"]");
+        String wclasses=st.nextToken();
+        wclasses=wclasses.substring(1,wclasses.length());
+        instr=instr.substring(wclasses.length()+2,instr.length());
+        if (d) System.out.println(instr.length()+" chars in read string");
+        if (d) System.out.println("Now inserting");
+        
+        st = new StringTokenizer(wclasses,";");
+        Vector klassv=new Vector();
+        while(st.hasMoreTokens()) {
+            String ak=st.nextToken();
+            klassv.addElement(ak);
+        }
+        wurzel.setClasses(klassv);
+        String char160="";
+        char160+=(char)(160);
+        
+        StringTokenizer eb1=new StringTokenizer(instr, char160);
+        while (eb1.hasMoreTokens()) {
+            String nextTok=eb1.nextToken();
+            string2tree(wurzel,nextTok,1);
+        } 
     } // end public void lade
 
     

@@ -11,8 +11,9 @@ public class TextProcessor {
     private NameTable klassKeys;
     private Annotate anno;
     
-    public TextProcessor(Annotate anno) {
+    public TextProcessor(Annotate anno, NameTable klasskeys) {
         this.anno=anno;
+        this.klassKeys=klasskeys;
     }
     
     public static List tokenize(String input) {
@@ -94,7 +95,8 @@ public class TextProcessor {
             retvec.putAll(newCands);
             
         } // rof Enumeration e
-        System.out.println("Im Satz:"+retvec.toString());
+        if(retvec.size()>0)
+            System.out.println("Im Satz:"+retvec.toString());
         return retvec;
         
     } // end public Vector getNEsOF

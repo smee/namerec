@@ -80,7 +80,7 @@ public class NewItemRecognizer{
     /**
      * @param list
      */
-    public void addTask(List tokens) {
-        toTest.enqueue(tokens);
+    public void addTask(String text) {
+        toTest.enqueue(text);
     }
 }

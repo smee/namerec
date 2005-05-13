@@ -36,10 +36,12 @@ public class BaseTaggerTagger {
     public BaseTaggerTagger(String filename_treeVV, String filename_treeVH) {
     try {
         baumVV=new Pretree();
+        System.out.println("BaseTagger: loading tree from "+filename_treeVV);
         baumVV.lade(filename_treeVV);
         baumVV.setIgnoreCase(false);
         baumVV.setThresh(0.46);
         baumVH=new Pretree();
+        System.out.println("BaseTagger: loading tree from "+filename_treeVH);
         baumVH.lade(filename_treeVH);
         baumVH.setIgnoreCase(false);
         baumVH.setThresh(0.46);

@@ -74,13 +74,18 @@ public class Recognizer {
         allesWissen=NameTable.loadFromFile(fileGrundstock);
         
         String fileKlass=cfg.getString("IN.CLASSNAMES","klassNamen.txt");
-        klassKeys=NameTable.loadFromFile(fileKlass);
-        for (Iterator it = klassKeys.keySet().iterator(); it.hasNext();) {
+        NameTable temptable=NameTable.loadFromFile(fileKlass);
+        klassKeys=new NameTable();
+        for (Iterator it = temptable.keySet().iterator(); it.hasNext();) {
             String key = (String) it.next();
-            klassKeys.put(key, new Integer(Integer.parseInt((String) klassKeys.get(key),2)));//sind ja binaerwerte, brauchen aber Integers
+            klassKeys.put(key, new Integer(Integer.parseInt((String) temptable.get(key),2)));//sind ja binaerwerte, brauchen aber Integers
         }
-        anno=new Annotate(alleRegexp,allesWissen,klassKeys, cfg.getString("IN.TAGGERDIR","taggerfiles/"));
-        textProc=new TextProcessor(anno);
+        anno=new Annotate(alleRegexp,
+                allesWissen,
+                klassKeys, 
+                cfg.getString("IN.TAGGERDIR","taggerfiles/"),
+                Boolean.valueOf(cfg.getString("OPTION.USETAGGER","false")).booleanValue());
+        textProc=new TextProcessor(anno,klassKeys);
         matcher=new MatcherNam(anno);
         String patFile=cfg.getString("IN.PATFILE","pats2.txt");
         canrules = matcher.loadPatterns(patFile);
@@ -207,34 +212,41 @@ public class Recognizer {
     public void doTheRecogBoogie() throws Exception {
         
         SatzDatasource src=getSatzDatasource();
-        int bspnr=startNr-1;
-        String text = "nix zu tun.";
+        int bspnr=startNr;
+        String text = "Müller, Huber, Seifert, Bodden, Abel, Schnoor und ich.";
         
         while(!(text.equals("END"))) {
-            bspnr++;
-            text=src.getNextSentence();
-            System.out.println(bspnr+": "+text);
             rules.resetRules(); 
             
             NameTable Kandidaten=textProc.getCandidatesOfText(text,rules);
-            System.out.println(Kandidaten.toString());
-            
-            itemrec.addTask(Kandidaten);
+            if(Kandidaten.size() > 0) {
+                System.out.println(bspnr+": "+text);
+                System.out.println(Kandidaten.toString());
+                itemrec.addTask(Kandidaten);
+            }            
+            bspnr++;
+            text=src.getNextSentence();
         } 
         itemrec.waitTillJobsDone();
         System.out.println("verification done!");
+    }
+    
+    /**
+     * @throws Exception
+     */
+    public void runNERecognition() throws Exception {
+        SatzDatasource src=getSatzDatasource();
+        String text=src.getNextSentence();
         System.out.println("reviewing sentences for NEs....");
-        src=getSatzDatasource();
-        text=src.getNextSentence();
-        bspnr=startNr-1;
+        
         while(!(text.equals("END"))) {
-            itemrec.addTask(TextProcessor.tokenize(text));
+            itemrec.addTask(text);
             text=src.getNextSentence();            
         }
         itemrec.waitTillJobsDone();
         System.out.println("NE recognition done!");
     }
-    
+
     public static void main(String args[]) throws Exception {
         if(args.length != 1) {
             System.out.println("Usage:\n-------\n\n");
@@ -246,6 +258,8 @@ public class Recognizer {
         System.out.println(cfg);
         Recognizer rec=new Recognizer(cfg);
         rec.doTheRecogBoogie();
+        if(Boolean.valueOf(cfg.getString("OPTION.NERECOG","false")).booleanValue()==true)
+            rec.runNERecognition();
     } // end main
 
 

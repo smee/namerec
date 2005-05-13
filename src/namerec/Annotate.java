@@ -14,16 +14,19 @@ public class Annotate {
     private NameTable regexp;
     private NameTable classif;
     private NameTable classKeys;
-    private BaseWorder basetagger; 
+    private BaseWorder basetagger;
+    private boolean useTagger; 
     /**
      * Private constructor, because here are only static helpermethods.
      */
-    public  Annotate(NameTable regexp, NameTable classif,NameTable classKeys, String treedir) {
+    public  Annotate(NameTable regexp, NameTable classif,NameTable classKeys, String treedir, boolean useTagger) {
         this.regexp=regexp;
         this.classif=classif;
         this.classKeys=classKeys;
         System.out.println("Initializing basetagger...");
-        this.basetagger=new BaseWorder("de",treedir);
+        this.useTagger=useTagger;
+        if(useTagger)
+            this.basetagger=new BaseWorder("de",treedir);
     }
     public static List tokenize(String input) {
 
@@ -125,9 +128,11 @@ public class Annotate {
                 actClass = actClass | addClass;
             } // fi classif.contains
             //benutze basetagger
-            String postag=basetagger.getTag(actWord);
-            addClass= ((Integer)classKeys.get(postag)).intValue();
-            actClass = actClass | addClass;
+            if(useTagger) {
+                String postag=basetagger.getTag(actWord);
+                addClass= ((Integer)classKeys.get(postag)).intValue();
+                actClass = actClass | addClass;
+            }
             ret[idx]=actClass;
         } // rof Enumeration e
         
