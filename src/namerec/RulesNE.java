@@ -2,7 +2,6 @@ package namerec;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Enumeration;
 
 /* Rules verwaltet die Patterns und verschiebt den Dot. usw
 
@@ -17,7 +16,7 @@ Prozeduren:
 
 public class RulesNE extends Rules{
     
-    static boolean d=true; //debugging aus
+    static boolean d=false; //debugging aus
     private DBaccess db;
     
     

@@ -16,9 +16,6 @@ package namerec;
  *  such damages.
  */
  
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.LinkedList;
 
 public class BlockingQueue 
@@ -122,20 +119,24 @@ public class BlockingQueue
         notifyAll();
 	}
 
+    private int oldsize=-1, oldmod=-1;
+    
     public synchronized void waitTillEmpty(int samples) {
         ProcessEstimator est=null;
-        int oldsize=-1;
         while( !empty() ) {
             int aktsize=size();
             if(est==null) {
+                System.out.println("using timestimator for "+aktsize+" units, outputting time every "+samples+" samples");
                 est=new ProcessEstimator(aktsize,samples);
                 est.start();
                 oldsize=aktsize;
+                oldmod=aktsize/samples;
             }
             est.unitsCompleted(oldsize-aktsize);
-            if(oldsize-aktsize>samples) {
-                oldsize=aktsize;
+            oldsize=aktsize;
+            if(oldmod > aktsize/samples) {
                 System.out.println("Estimated time till verification completed: "+getTimeString(est.projectedTimeRemaining()/1000));
+                oldmod=aktsize/samples;
             }
             try {
                 wait(3000);
@@ -154,7 +155,7 @@ public class BlockingQueue
         long hours=timesec/3600;
         long mins=(timesec-(hours*3600))/60;
         long secs=(timesec-(hours*3600)-(mins*60));
-        sb.append(hours).append(":").append(mins).append(":").append(secs);
+        sb.append(timesec).append("s -> ").append(hours).append(":").append(mins).append(":").append(secs);
         return sb.toString();
     }    
 

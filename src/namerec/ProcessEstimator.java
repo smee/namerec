@@ -12,9 +12,9 @@ import org.apache.commons.math.stat.regression.SimpleRegression;
 public class ProcessEstimator { 
     private SimpleRegression regression = new SimpleRegression( ); 
     private StopWatch stopWatch = new StopWatch( ); // Total number of units 
-    private int units = 0; // Number of units completed 
+    private final int units; // Number of units completed 
     private int completed = 0; // Sample rate for regression 
-    private int sampleRate = 1; 
+    private final int sampleRate ; 
     
     public ProcessEstimator( int numUnits, int sampleRate ) { 
         this.units = numUnits; 
