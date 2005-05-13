@@ -118,9 +118,14 @@ public class MatcherNam {
                     matchflag=true;
                     for(int pos=0;pos<actPat.length;pos++) { // für alle Musterteile im Pattern
                         if (matchflag) { // nur, wenn noch matcht
-                            int actpatternpos=((Integer)klassKeys.get(actPat.pattern[pos])).intValue();
-                            if ((buffer[pos] & actpatternpos)!= actpatternpos) 
-                                matchflag=false; // wenn nicht matched, dann falsch
+                            if(klassKeys.containsKey(actPat.pattern[pos])) {
+                                int actpatternpos=((Integer)klassKeys.get(actPat.pattern[pos])).intValue();
+                                if ((buffer[pos] & actpatternpos)!= actpatternpos) 
+                                    matchflag=false; // wenn nicht matched, dann falsch
+                            }else {
+                                if(!actPat.pattern[pos].equals(wordVec.get(pos))) 
+                                    matchflag=false;
+                            }
                         } // fi matchflag
                     } // rof  pos
                     
@@ -129,8 +134,7 @@ public class MatcherNam {
                         int goalClassInt=((Integer)klassKeys.get(actPat.goalClass)).intValue();
                         buffer[actPat.goalPos]=(buffer[actPat.goalPos] | goalClassInt); // im Buffer Klassifikation hinzufügen
                         
-                        if (d) { System.out.print("HIT:");
-                        
+                        if (d) { System.out.print("HIT:");                        
                             // bei debugging:
                             // Ausgabe pattern und bsp
                             System.out.print("PN> ");

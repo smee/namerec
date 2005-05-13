@@ -27,10 +27,13 @@ public class ProcessEstimator {
         stopWatch.stop( ); 
     } 
     public void unitCompleted( ) { 
-        completed++; 
-        if( completed % sampleRate == 0 ) { 
+         unitsCompleted(1);
+    }
+    public void unitsCompleted(int num) {
+        completed+=num; 
+        if( completed % sampleRate == 0 || num >=sampleRate) { 
             regression.addData( units - completed, stopWatch.getTime( )); 
-        } 
+        }
     }
     public long projectedFinish( ) {
         return (long) regression.getIntercept( );
@@ -47,5 +50,5 @@ public class ProcessEstimator {
     } 
     public int getCompleted( ) { 
         return completed; 
-    } 
+    }
 }

@@ -29,7 +29,6 @@ public class Recognizer {
     // Alle bekannten items
     private NameTable klassKeys;
     // Bitzuordnung zu Klassen
-    // Patchy: Candidatecheck rules    
     private Vector canrules= new Vector();
     private String itemFile;    
     private String maybeFile;
@@ -44,10 +43,9 @@ public class Recognizer {
     
     private MatcherNam matcher;
     private NewItemRecognizer itemrec;
+    private Annotate anno;
 
     private Config cfg;
-
-    private Annotate anno;
     
     public Recognizer(Config cfg) throws IOException {
         this.cfg=cfg;
@@ -228,7 +226,8 @@ public class Recognizer {
             bspnr++;
             text=src.getNextSentence();
         } 
-        itemrec.waitTillJobsDone();
+        int samples=cfg.getInteger("OPTION.SAMPLES",100);
+        itemrec.waitTillJobsDone(samples);
         System.out.println("verification done!");
     }
     
@@ -244,7 +243,8 @@ public class Recognizer {
             itemrec.addTask(text);
             text=src.getNextSentence();            
         }
-        itemrec.waitTillJobsDone();
+        int samples=cfg.getInteger("OPTION.SAMPLES",100);
+        itemrec.waitTillJobsDone(samples);
         System.out.println("NE recognition done!");
     }
 

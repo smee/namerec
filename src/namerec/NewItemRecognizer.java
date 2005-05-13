@@ -73,8 +73,8 @@ public class NewItemRecognizer{
         toTest.enqueue(kandidaten);
     }
 
-    public void waitTillJobsDone() {
-        toTest.waitTillEmpty();
+    public void waitTillJobsDone(int samples) {
+        toTest.waitTillEmpty(samples);
     }
 
     /**
