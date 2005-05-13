@@ -64,4 +64,12 @@ public class Pattern {
 	if ((hits+misses)>0) {rating=(1+(double)(hits-misses)/(double)(hits+misses))/2;} else {rating=0;}
     } // end calcRating
 
+
+    /**
+     * 
+     */
+    public void reset() {
+        this.dot=0;        
+    }
+
 } // end class Pattern

@@ -213,7 +213,8 @@ public class Recognizer {
         
         SatzDatasource src=getSatzDatasource();
         int bspnr=startNr;
-        String text = "Müller, Huber, Seifert, Bodden, Abel, Schnoor und ich.";
+        //String text = "Müller, Huber, Seifert, Bodden, Abel, Schnoor und ich.";
+        String text = "Prof. Dr. Dr. Georg Freiherr von Salis Soglio ist ein ziemlich langer Name.";
         
         while(!(text.equals("END"))) {
             rules.resetRules(); 

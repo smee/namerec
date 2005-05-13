@@ -24,3 +24,5 @@
 (class=ZN,length=3,goalPos:1,pattern= VN KL NN ,hits=0,misses=0,rating=0.0)
 (class=NN,length=3,goalPos:2,pattern= VN ZN GR ,hits=0,misses=0,rating=0.0)
 (class=NN,length=4,goalPos:3,pattern= GR ZN NN GR ,hits=0,misses=0,rating=0.0)
+(class=NN,length=4,goalPos:2,pattern= Freiherr von GR GR ,hits=0,misses=0,rating=0.0)
+(class=NN,length=4,goalPos:3,pattern= Freiherr von GR GR ,hits=0,misses=0,rating=0.0)

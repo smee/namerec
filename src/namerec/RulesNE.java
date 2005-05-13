@@ -21,21 +21,12 @@ public class RulesNE extends Rules{
     private DBaccess db;
     
     
-    public NameTable candidates(int classWord, String plainWord,NameTable klassKeys){
-        try {
-            return matchAndUpdateDB(classWord,plainWord,klassKeys);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
     public RulesNE(DBaccess db, String patfile, String fileContexts) throws FileNotFoundException, IOException {
         super(patfile,fileContexts);
         this.db=db;
     }
     
-    private void dbInsertPerson(Pattern pat,DBaccess db) {
-        
+    private void dbInsertPerson(Pattern pat) {
         // Generiere insert-statement für person(wort_bin="VN ZN NN ,TIT",wort_lex="ZN NN VN TIT", beruf="TIT", quelle"NameRec")
         
         String vns="";
@@ -105,35 +96,9 @@ public class RulesNE extends Rules{
     
     
     
-    public NameTable matchAndUpdateDB(int classWord, String plainWord, NameTable klassKeys)throws SQLException {
-        
-        NameTable retItems = new NameTable();
-        Pattern actPat;  // aktuelles Pattern in Schleife
-        int patMatch; // nächste Klasse in Pattern
-        
-        for(Enumeration r=patterns.elements();r.hasMoreElements();) { // Für alle pattern
-            actPat=(Pattern)r.nextElement();
-            patMatch=new Integer(klassKeys.get(actPat.pattern[actPat.dot]).toString()).intValue();
-            
-            if ((patMatch&classWord)==patMatch) { // Falls aktuelles Wort matcht
-                actPat.word[actPat.dot]=plainWord; // Wort in Pattern merken
-                actPat.dot++;  // Dot eins weiter
-            } else { // Falls nicht, resette dot
-                actPat.dot=0;
-            } // eslefi patMatch&classWord
-            
-            if (actPat.dot==actPat.length) { // Falls Länge erreicht, also Regel komplett matcht
-                retItems.put(actPat.word[actPat.goalPos],actPat.goalClass); // neuer Kandidat in Nametable
-                output(actPat); // Schreibe match raus
-                dbInsertPerson(actPat,db);//soll waehrend des testens nicht verwendet werden!
-                actPat.dot=0; // Resette dot
-            } // fi dot=length
-            
-        } // rof Enum r
-        return retItems;
-    } // end candidates
     
     protected synchronized void output(Pattern pat)  {
+        dbInsertPerson(pat);//soll waehrend des testens nicht verwendet werden!
         StringBuffer outstr=new StringBuffer();
         
         for(int i=0;i<pat.length;i++) {
