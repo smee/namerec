@@ -364,7 +364,7 @@ public class Pretree implements Serializable {
 	st2=new StringTokenizer(ganztoken,"|");
 	token=st2.nextToken();
 	if (st2.hasMoreTokens()) {
-        resttoken=ganztoken.substring(token.length()+1,ganztoken.length());
+        resttoken=ganztoken.substring(token.length()+1);
    } else resttoken="";
 
 
@@ -387,16 +387,19 @@ public class Pretree implements Serializable {
 	Knoten neuknoten=new Knoten(inhalt);
 	neuknoten.setClasses(klassv);
 
-
+	s=null;
+	st2=null;
+	inhalt=null;
+	klasse=null;
 	st = new StringTokenizer(resttoken, delString);
 	if (token!=ganztoken) 
-        while(st.hasMoreTokens()) {
-	    akttoken=st.nextToken();
-	    if (d) System.out.println("Kind :"+akttoken);
-	    if (d) System.out.println("jetzt");
-	    string2tree(neuknoten,akttoken,ebene+1);
-	    //aktknoten.kinder.addElement(neuKnoten);
-	}
+		while(st.hasMoreTokens()) {
+			akttoken=st.nextToken();
+			if (d) System.out.println("Kind :"+akttoken);
+			if (d) System.out.println("jetzt");
+			string2tree(neuknoten,akttoken,ebene+1);
+			//aktknoten.kinder.addElement(neuKnoten);
+		}
 
 	    
 	

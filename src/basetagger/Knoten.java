@@ -6,6 +6,7 @@ package basetagger;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 public class Knoten implements Serializable {
 
@@ -14,7 +15,7 @@ public class Knoten implements Serializable {
     public List kinder=new ArrayList();
 
     Knoten() {
-	this.classes=new ArrayList();
+	this.classes=new Vector();
     }
 
     Knoten(String neuinhalt) {  // Constructor mit Inhalt

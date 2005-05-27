@@ -58,10 +58,10 @@ public class Config {
         if(!prop.containsKey("DB.USERNAMEWS"))
             return deflt;
         sb.append(prop.getProperty("DB.USERNAMEWS"));
-        sb.append("&password=");
-        if(!prop.containsKey("DB.PASSWORDWS"))
-            return deflt;
-        sb.append(prop.getProperty("DB.PASSWORDWS"));
+        if(prop.containsKey("DB.PASSWORDWS")){
+	        sb.append("&password=");
+        	sb.append(prop.getProperty("DB.PASSWORDWS"));
+    	}
         return sb.toString();        
     }
     public String getJDBCStringAKT(String deflt) {
@@ -77,10 +77,10 @@ public class Config {
         if(!prop.containsKey("DB.USERNAMEAKT"))
             return deflt;
         sb.append(prop.getProperty("DB.USERNAMEAKT"));
-        sb.append("&password=");
-        if(!prop.containsKey("DB.PASSWORDAKT"))
-            return deflt;
-        sb.append(prop.getProperty("DB.PASSWORDAKT"));
+        if(prop.containsKey("DB.PASSWORDAKT")){
+	        sb.append("&password=");
+	        sb.append(prop.getProperty("DB.PASSWORDAKT"));
+        }
         return sb.toString();        
     }
     public String toString() {
