@@ -1,4 +1,4 @@
-package namerec;
+package namerec.util;
 /**
  * Queue class represents a queue of objects in which elements are removed in the same 
  * order they were entered.This is often referred to as first-in-first-out (FIFO).
@@ -17,6 +17,7 @@ package namerec;
  */
  
 import java.util.LinkedList;
+
 
 public class BlockingQueue 
 {

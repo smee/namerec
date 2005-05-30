@@ -339,77 +339,74 @@ public class Pretree implements Serializable {
 	return returnstring;
     } // end tree2string
 
-    Knoten string2tree(Knoten aktknoten, String s, int ebene) {
-
-	// 1.  Zerhacke aufgrund ebeneninfo
-	// 2. Wenn atom, füge ein, sonst zerhacke weiter
-
-
-	String akttoken;
-	final char delimit=(char)(160-ebene);
-	String delString="";
-	delString+=delimit;
-	StringTokenizer st=new StringTokenizer(s, delString);
-	StringTokenizer st2;
-	String token;
-	String inhalt;
-	String klasse;
-	Vector klassv;
-	String ganztoken;
-	String resttoken;
-
-	ganztoken=s;
-	if (d) System.out.println("Ebene "+ebene+":\t"+ganztoken);
-
-	st2=new StringTokenizer(ganztoken,"|");
-	token=st2.nextToken();
-	if (st2.hasMoreTokens()) {
-        resttoken=ganztoken.substring(token.length()+1);
-   } else resttoken="";
-
-
-	if (d) System.out.println("Zerlegt in :"+token+" resttoken: "+resttoken);
-
-	st2 = new StringTokenizer(token, "[");
-	inhalt=st2.nextToken();
-	klasse=st2.nextToken();
-	klasse=klasse.substring(0,klasse.length()-1);
-	if (d) System.out.println("Inh: "+inhalt+" Klassen: "+klasse);
-	st2 = new StringTokenizer(klasse,";");
-	klassv=new Vector();
-	while(st2.hasMoreTokens()) {
-	    String ak=st2.nextToken();
-	    if (d) System.out.print("T: "+ak);
-	    klassv.addElement(ak);
-	}
-	if (d) System.out.println(klassv.toString());
-
-	Knoten neuknoten=new Knoten(inhalt);
-	neuknoten.setClasses(klassv);
-
-	s=null;
-	st2=null;
-	inhalt=null;
-	klasse=null;
-	st = new StringTokenizer(resttoken, delString);
-	if (token!=ganztoken) 
-		while(st.hasMoreTokens()) {
-			akttoken=st.nextToken();
-			if (d) System.out.println("Kind :"+akttoken);
-			if (d) System.out.println("jetzt");
-			string2tree(neuknoten,akttoken,ebene+1);
-			//aktknoten.kinder.addElement(neuKnoten);
-		}
-
-	    
-	
-
-	aktknoten.kinder.add(neuknoten);
-	return aktknoten;
-
-
-
-    } // end string2tree
+     Knoten string2tree(Knoten aktknoten, String s, int ebene) {
+         
+         // 1.  Zerhacke aufgrund ebeneninfo
+         // 2. Wenn atom, füge ein, sonst zerhacke weiter
+         
+         
+         String akttoken;
+         final char delimit=(char)(160-ebene);
+         String delString="";
+         delString+=delimit;
+         StringTokenizer st=new StringTokenizer(s, delString);
+         StringTokenizer st2;
+         String token;
+         String inhalt;
+         String klasse;
+         Vector klassv;
+         String ganztoken;
+         String resttoken;
+         
+         ganztoken=s;
+         if (d) System.out.println("Ebene "+ebene+":\t"+ganztoken);
+         
+         st2=new StringTokenizer(ganztoken,"|");
+         token=st2.nextToken();
+         if (st2.hasMoreTokens()) {
+             resttoken=ganztoken.substring(token.length()+1,ganztoken.length());
+         } else resttoken="";
+         
+         
+         if (d) System.out.println("Zerlegt in :"+token+" resttoken: "+resttoken);
+         
+         st2 = new StringTokenizer(token, "[");
+         inhalt=st2.nextToken();
+         klasse=st2.nextToken();
+         klasse=klasse.substring(0,klasse.length()-1);
+         if (d) System.out.println("Inh: "+inhalt+" Klassen: "+klasse);
+         st2 = new StringTokenizer(klasse,";");
+         klassv=new Vector();
+         while(st2.hasMoreTokens()) {
+             String ak=st2.nextToken();
+             if (d) System.out.print("T: "+ak);
+             klassv.addElement(ak);
+         }
+         if (d) System.out.println(klassv.toString());
+         
+         Knoten neuknoten=new Knoten(inhalt);
+         neuknoten.setClasses(klassv);
+         
+         
+         st = new StringTokenizer(resttoken, delString);
+         if (token!=ganztoken) 
+             while(st.hasMoreTokens()) {
+                 akttoken=st.nextToken();
+                 if (d) System.out.println("Kind :"+akttoken);
+                 if (d) System.out.println("jetzt");
+                 string2tree(neuknoten,akttoken,ebene+1);
+                 //aktknoten.kinder.addElement(neuKnoten);
+             }
+         
+         
+         
+         
+         aktknoten.kinder.add(neuknoten);
+         return aktknoten;
+         
+         
+         
+     } // end string2tree
 
 
 

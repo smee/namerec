@@ -10,6 +10,8 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Vector;
 
+import namerec.util.BlockingQueue;
+
 /**
  * @author sdienst
  *
@@ -31,7 +33,7 @@ public class NewItemRecognizer{
         this.schwelle=schwelle;
         this.rules=rules;
         this.rec=rec;
-        toTest=new BlockingQueue(Integer.MAX_VALUE);
+        toTest=new BlockingQueue(100000);
         
         if(threadnum <=0)
             threadnum=1;

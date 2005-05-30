@@ -4,7 +4,7 @@
  * TODO To change the template for this generated file go to
  * Window - Preferences - Java - Code Style - Code Templates
  */
-package namerec;
+package namerec.util;
 
 import org.apache.commons.lang.time.StopWatch;
 import org.apache.commons.math.stat.regression.SimpleRegression;

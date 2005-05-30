@@ -6,6 +6,8 @@ import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.Vector;
 
+import namerec.util.Config;
+
 /* Recognizer
  Findet Namen in der Wortschatz-Datenbank WDTAKTUELL,
  neue Namen werde in der WORTSCHATZ-DB überprüft.
@@ -46,7 +48,7 @@ public class Recognizer {
     private Annotate anno;
 
     private Config cfg;
-    
+
     public Recognizer(Config cfg) throws IOException {
         this.cfg=cfg;
         n_cands=cfg.getInteger("OPTION.CANDIDATESNO",30);
@@ -208,7 +210,6 @@ public class Recognizer {
     
     
     public void doTheRecogBoogie() throws Exception {
-        
         SatzDatasource src=getSatzDatasource();
         int bspnr=startNr;
         //String text = "Müller, Huber, Seifert, Bodden, Abel, Schnoor und ich.";

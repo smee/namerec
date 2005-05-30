@@ -4,10 +4,12 @@
  * TODO To change the template for this generated file go to
  * Window - Preferences - Java - Code Style - Code Templates
  */
-package namerec;
+package namerec.util;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -21,10 +23,15 @@ public class Config {
     private Properties prop;
     
     public Config(String filename) throws FileNotFoundException, IOException {
-        prop=new Properties();
-        prop.load(new FileInputStream(filename));
+        this(new File(filename));
     }
-    
+    public Config(File f) throws FileNotFoundException, IOException {
+        this();
+        prop.load(new FileInputStream(f));
+    }
+    public Config() {
+        prop=new Properties();
+    }
     public String getString(String key, String deflt) {
         if(!prop.containsKey(key))
             return deflt;
@@ -40,7 +47,9 @@ public class Config {
             return deflt;
         return Double.parseDouble(prop.getProperty(key));
     }
-
+    public void set(String key, String prop) {
+        this.prop.setProperty(key,prop);
+    }
     /**
      * @param string
      * @return
@@ -58,10 +67,10 @@ public class Config {
         if(!prop.containsKey("DB.USERNAMEWS"))
             return deflt;
         sb.append(prop.getProperty("DB.USERNAMEWS"));
-        if(prop.containsKey("DB.PASSWORDWS")){
-	        sb.append("&password=");
-        	sb.append(prop.getProperty("DB.PASSWORDWS"));
-    	}
+        sb.append("&password=");
+        if(!prop.containsKey("DB.PASSWORDWS"))
+            return deflt;
+        sb.append(prop.getProperty("DB.PASSWORDWS"));
         return sb.toString();        
     }
     public String getJDBCStringAKT(String deflt) {
@@ -77,10 +86,10 @@ public class Config {
         if(!prop.containsKey("DB.USERNAMEAKT"))
             return deflt;
         sb.append(prop.getProperty("DB.USERNAMEAKT"));
-        if(prop.containsKey("DB.PASSWORDAKT")){
-	        sb.append("&password=");
-	        sb.append(prop.getProperty("DB.PASSWORDAKT"));
-        }
+        sb.append("&password=");
+        if(!prop.containsKey("DB.PASSWORDAKT"))
+            return deflt;
+        sb.append(prop.getProperty("DB.PASSWORDAKT"));
         return sb.toString();        
     }
     public String toString() {
@@ -102,5 +111,13 @@ public class Config {
         sb.append("\n Anzahl der Verifikationsthreads: "+prop.getProperty("OPTION.NUMOFTHREADS"));
         
         return sb.toString();
+    }
+    public void saveToFile(File f) throws FileNotFoundException, IOException {
+        prop.store(new FileOutputStream(f),null);
+    }
+    public boolean getBoolean(String key, boolean deflt) {
+        if(!prop.containsKey(key))
+            return deflt;
+        return Boolean.valueOf(prop.getProperty(key)).booleanValue();    
     }
 }

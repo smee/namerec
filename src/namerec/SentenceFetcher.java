@@ -3,6 +3,8 @@
  */
 package namerec;
 
+import namerec.util.BlockingQueue;
+
 
 class SentenceFetcher extends Thread implements SatzDatasource{
     BlockingQueue sentences;

@@ -5,6 +5,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import namerec.util.Config;
+
 
 
 public class DBaccess implements Cloneable{
@@ -252,6 +254,27 @@ public class DBaccess implements Cloneable{
         
         
         return clone;
+    }
+
+    public int getMaxSentenceNo() {
+        String Anfrage= "Select max(bsp_nr) from saetze";   
+        ResultSet Ergebnis=null;
+        try{
+            Statement SQLAbfrage = Verbindung_ws.createStatement();
+            Ergebnis = SQLAbfrage.executeQuery(Anfrage);
+        }
+        catch (SQLException e) {
+            System.out.println("Datenbankfehler!");
+            e.printStackTrace();
+        }
+        
+        // Nun Umwandlen ResultSet in String
+        try {
+            return Ergebnis.getInt(1);
+        } catch (SQLException e) {
+            System.out.println("Fehler beim Empfangen der groessten Satxnummer!");
+            return Integer.MAX_VALUE;
+        }
     }
 
 } // end DBaccess
