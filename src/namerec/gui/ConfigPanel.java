@@ -112,8 +112,8 @@ public class ConfigPanel extends JPanel {
 		GridBagConstraints gridBagConstraints16 = new GridBagConstraints();
 		GridBagConstraints gridBagConstraints17 = new GridBagConstraints();
 		this.setLayout(new GridBagLayout());
-		this.setSize(800, 600);
-		this.setPreferredSize(new java.awt.Dimension(800,600));
+		//this.setSize(800, 600);
+		//this.setPreferredSize(new java.awt.Dimension(800,600));
 		gridBagConstraints1.gridx = 0;
 		gridBagConstraints1.gridy = 0;
 		gridBagConstraints1.insets = new java.awt.Insets(10,10,10,10);

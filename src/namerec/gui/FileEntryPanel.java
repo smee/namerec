@@ -57,14 +57,14 @@ public class FileEntryPanel extends JPanel {
 		gridBagConstraints26.gridy = 0;
 		gridBagConstraints26.weightx = 1.0;
 		gridBagConstraints26.fill = java.awt.GridBagConstraints.HORIZONTAL;
-		gridBagConstraints26.insets = new java.awt.Insets(10,10,10,10);
+		gridBagConstraints26.insets = new java.awt.Insets(0,10,0,10);
 		gridBagConstraints26.anchor = java.awt.GridBagConstraints.WEST;
 		gridBagConstraints27.gridx = 2;
 		gridBagConstraints27.gridy = 0;
-		gridBagConstraints27.insets = new java.awt.Insets(10,10,10,10);
+		gridBagConstraints27.insets = new java.awt.Insets(0,10,0,10);
 		gridBagConstraints28.gridx = 0;
 		gridBagConstraints28.gridy = 0;
-		gridBagConstraints28.insets = new java.awt.Insets(10,10,10,10);
+		gridBagConstraints28.insets = new java.awt.Insets(0,10,0,10);
 		gridBagConstraints28.anchor = java.awt.GridBagConstraints.WEST;
 		jLabel.setText("Filename:");
 		this.add(getJTextField(), gridBagConstraints26);

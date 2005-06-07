@@ -124,7 +124,7 @@ public class FileConfigPanel extends JPanel {
 	private FileEntryPanel getItemsfoundTf() {
 		if (itemsfoundTf == null) {
 			itemsfoundTf = new FileEntryPanel();
-			itemsfoundTf.setName("Found names:");
+			itemsfoundTf.setName("OUT - Found names:");
 		}
 		return itemsfoundTf;
 	}
@@ -136,7 +136,7 @@ public class FileConfigPanel extends JPanel {
 	private FileEntryPanel getContextTf() {
 		if (contextTf == null) {
 			contextTf = new FileEntryPanel();
-			contextTf.setName("Contexts:");
+			contextTf.setName("OUT - Contexts:");
 		}
 		return contextTf;
 	}
@@ -148,12 +148,12 @@ public class FileConfigPanel extends JPanel {
 	private FileEntryPanel getMaybeTf() {
 		if (maybeTf == null) {
 			maybeTf = new FileEntryPanel();
-			maybeTf.setName("Possibly new names:");
+			maybeTf.setName("OUT - Possibly new names:");
 		}
 		return maybeTf;
 	}
     public void loadFromConfig(Config cfg) {
-        getWissenTf().setText(cfg.getString("IN.KNOWLEDGE","pats2.txt"));
+        getWissenTf().setText(cfg.getString("IN.KNOWLEDGE","wissenAkt.txt"));
         getSimplepatternTf().setText(cfg.getString("IN.PATFILE","patPers.txt"));
         getNepatternTf().setText(cfg.getString("IN.PATFILENE","pats2.txt"));
         getRegexpTf().setText(cfg.getString("IN.REGEXP","regexps.txt"));
