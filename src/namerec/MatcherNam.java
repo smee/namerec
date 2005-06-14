@@ -1,6 +1,7 @@
 package namerec;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Iterator;
@@ -8,8 +9,9 @@ import java.util.List;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
-public class MatcherNam {
 
+public class MatcherNam {
+    
     private boolean d=false; // Debugging
     
     public int width=9;
@@ -18,77 +20,77 @@ public class MatcherNam {
     public int longest=5;
     public Vector StringPatterns=new Vector(); // für Doublettencheck
     public Vector patterns=new Vector();
-
+    
     private Annotate anno;
-
+    
     public MatcherNam(Annotate anno) {
         this.anno=anno;
     }
     public Vector loadPatterns(String patfile) throws IOException, FileNotFoundException {
-	FileReader file=new FileReader(patfile); 
-	String inLine="";
-	int inInt;
-	Vector retvec=new Vector();
-       
-
-	String goalClass;
-	int length;
-	int goalPos;
-	String dummy;
-	
-
-	try{
-	    inLine="\n";
-	    while ((inInt=file.read())!=-1) { //lese bis EOF
-	    
-	       while(inInt!=-1&&inInt!=41) {           // Lese bis ")" 
-		    inLine+=(char)inInt;
-		    inInt=file.read();
-	       } //elihw inInt<>LF/CR    
-	       if (inInt!=-1) {
-		inLine+=(char)inInt;
-
-		if (d) System.out.print("Line: "+inLine);
-
-		StringTokenizer tokens = new StringTokenizer(inLine,",");
-		if (d) System.out.print("Tokens:\n");
-		
-		// extract pattern information
-		
-		dummy=tokens.nextToken();
-		goalClass=dummy.substring(8,dummy.length());
-		length=new Integer(tokens.nextToken().substring(7,8)).intValue();
-		goalPos=new Integer(tokens.nextToken().substring(8,9)).intValue();
-		String pats[]=new String[length];
-		dummy=tokens.nextToken(); // nun sowas wie: pattern= VN KL VN GR 
-	       
-		StringTokenizer ptokens= new StringTokenizer(dummy," ");
-		ptokens.nextToken(); // omit "pattern="
-		for(int i=0;i<length;i++) {
-		    pats[i]=ptokens.nextToken();
-		} // rof i
-
-		Pattern inputpat=new Pattern(goalClass,length,goalPos,pats);
-	        if (d) System.out.println("Newpat: "+inputpat.toString());
-		retvec.addElement(inputpat);
-	       } // fi -1
-	       inLine="";
-	    } // elihw EOF
-
-	} catch (IOException e) {System.out.println("Can't find file "+patfile+"\n");}
-	
-	return retvec;
+        FileReader file=new FileReader(patfile); 
+        String inLine="";
+        int inInt;
+        Vector retvec=new Vector();
+        
+        
+        String goalClass;
+        int length;
+        int goalPos;
+        String dummy;
+        
+        
+        try{
+            inLine="\n";
+            while ((inInt=file.read())!=-1) { //lese bis EOF
+                
+                while(inInt!=-1&&inInt!=41) {           // Lese bis ")" 
+                    inLine+=(char)inInt;
+                    inInt=file.read();
+                } //elihw inInt<>LF/CR    
+                if (inInt!=-1) {
+                    inLine+=(char)inInt;
+                    
+                    if (d) System.out.print("Line: "+inLine);
+                    
+                    StringTokenizer tokens = new StringTokenizer(inLine,",");
+                    if (d) System.out.print("Tokens:\n");
+                    
+                    // extract pattern information
+                    
+                    dummy=tokens.nextToken();
+                    goalClass=dummy.substring(8,dummy.length());
+                    length=new Integer(tokens.nextToken().substring(7,8)).intValue();
+                    goalPos=new Integer(tokens.nextToken().substring(8,9)).intValue();
+                    String pats[]=new String[length];
+                    dummy=tokens.nextToken(); // nun sowas wie: pattern= VN KL VN GR 
+                    
+                    StringTokenizer ptokens= new StringTokenizer(dummy," ");
+                    ptokens.nextToken(); // omit "pattern="
+                    for(int i=0;i<length;i++) {
+                        pats[i]=ptokens.nextToken();
+                    } // rof i
+                    
+                    Pattern inputpat=new Pattern(goalClass,length,goalPos,pats);
+                    if (d) System.out.println("Newpat: "+inputpat.toString());
+                    retvec.addElement(inputpat);
+                } // fi -1
+                inLine="";
+            } // elihw EOF
+            
+        } catch (IOException e) {System.out.println("Can't find file "+patfile+"\n");}
+        
+        return retvec;
     } // end loadPatterns
-  
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public Vector getClassificationsOf(String item, String text, NameTable klassKeys, Vector patterns) {
         // liefert (numerische) Liste, als was "item" so alles klassifiziert wurde
         
@@ -135,15 +137,15 @@ public class MatcherNam {
                         buffer[actPat.goalPos]=(buffer[actPat.goalPos] | goalClassInt); // im Buffer Klassifikation hinzufügen
                         
                         if (d) { System.out.print("HIT:");                        
-                            // bei debugging:
-                            // Ausgabe pattern und bsp
-                            System.out.print("PN> ");
-                            for( int k=0;k<actPat.length;k++) {
-                                System.out.print(wordVec.get(bpos-longest+k)+" ("+classVec[bpos-longest+k]+") ");
-                            } // rof k
-                            System.out.print("Pattern: "+actPat.toString()+" Text: ");
-                            
-                            System.out.println();
+                        // bei debugging:
+                        // Ausgabe pattern und bsp
+                        System.out.print("PN> ");
+                        for( int k=0;k<actPat.length;k++) {
+                            System.out.print(wordVec.get(bpos-longest+k)+" ("+classVec[bpos-longest+k]+") ");
+                        } // rof k
+                        System.out.print("Pattern: "+actPat.toString()+" Text: ");
+                        
+                        System.out.println();
                         } // fi (d)
                     } // fi d match
                     
@@ -192,7 +194,31 @@ public class MatcherNam {
         return classifications;
         
     } // end getClassificationsOF
-
-
+    
+    public void saveFile(String filename) throws IOException{
+        FileWriter file=new FileWriter(filename,false);
+        String outstr=new String();
+        Pattern actPat;
+        char outChar;
+        
+        outstr="";
+        for (Enumeration e=patterns.elements();e.hasMoreElements();) {
+            actPat=(Pattern)e.nextElement();
+            outstr+=actPat.toString()+"\n";
+        } //rof
+        
+        
+        
+        try {
+            for (int pos=0;pos<outstr.length();pos++) {
+                outChar=outstr.charAt(pos);
+                
+                file.write((int)outChar);
+            } //rof
+            
+        } catch (IOException e){System.out.println("Can.t write "+filename);}
+        finally {file.close();}
+        
+    } // end saveFile
 } // end class matcher
 
