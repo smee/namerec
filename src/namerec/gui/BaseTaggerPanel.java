@@ -123,4 +123,8 @@ public class BaseTaggerPanel extends JPanel {
         cfg.set("OPTION.USETAGGER", Boolean.toString(getBasetaggerCb().isSelected()));
         cfg.set("IN.TAGGERDIR",getTaggerfilesTf().getText());        
     }
+    public void loadFromConfig(Config cfg){
+    	getBasetaggerCb().setSelected(cfg.getBoolean("OPTION.USETAGGER",false));
+    	getTaggerfilesTf().setText(cfg.getString("IN.TAGGERDIR","taggerfiles/"));
+    }
   }

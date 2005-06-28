@@ -6080,4 +6080,367 @@ Elisabeth(?VN) Zahn(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,mis
 Matthias(?VN) Haak(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
 Holger(?VN) Weißmann(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
 Elisabeth(?VN) Zahn(NN) 	(class=VN,length=2,goalPos:0,pattern= VN NN ,hits=0,misses=0,rating:0.0 )
-Pastor(?VN) Haak(NN) 	(class=VN,length=2,goalP
+Pastor(?VN) Haak(NN) 	(class=VN,length=2,goalPChristian Maaß 	VN NN 
+Abgeordnete Christian Maaß 	TIT VN NN 
+Jörg Dräger 	VN NN 
+Gesundheitssenator Jörg Dräger 	TIT VN NN 
+Rauswurfs von Schill 	VN ZN NN 
+Helmut Kohl 	VN NN 
+Heide Simonis 	VN NN 
+Rolf Kruse 	VN NN 
+Bundeskanzler Kohl 	TIT NN 
+Pitbull Sugar 	VN NN 
+Christiane Brandt 	VN NN 
+Veronica Martinez 	VN NN 
+Iris Finnigan 	VN NN 
+Wolfgang Poggendorf 	VN NN 
+Besitzer Sugar 	TIT NN 
+Manuela Waalkes 	VN NN 
+Otto Waalkes 	VN NN 
+Dieter Backhaus 	VN NN 
+Mathias Nagel 	VN NN 
+Betriebsrat Mathias Nagel 	TIT VN NN 
+Katherine Römer 	VN NN 
+Katherine Römer 	VN NN 
+Angestellte Katherine Römer 	TIT VN NN 
+Mathias Nagel 	VN NN 
+Gunnar Uldall 	VN NN 
+Wirtschaftssenator Gunnar Uldall 	TIT VN NN 
+Manfred Reuter 	VN NN 
+Amtsleiter Manfred Reuter 	TIT VN NN 
+Hans-Peter Dücker 	VN NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Senator Nagel 	TIT NN 
+Wolfgang Sielaff 	VN NN 
+Maria Mazza 	VN NN 
+Klaus Püschel 	VN NN 
+Wolfgang Rose 	VN NN 
+Kathrin Fechner 	VN NN 
+Maria Mazza 	VN NN 
+Prof . Klaus Püschel 	TIT PU VN NN 
+Jan Philipp Reemtsma 	VN VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Maria Mazza 	VN NN 
+Michael Göring 	VN NN 
+Professor Michael Göring 	TIT VN NN 
+Vorsitzende Richter 	TIT NN 
+Udo Nagel 	VN NN 
+Innensenator Udo Nagel 	TIT VN NN 
+Otto Schily 	VN NN 
+Bundesinnenminister Otto Schily 	TIT VN NN 
+Beate Böttcher 	VN NN 
+Beate Böttcher 	VN NN 
+Gelber Engel 	VN NN 
+Niels Hansen 	VN NN 
+Jan Davidoff 	VN NN 
+Rudolf Feige 	VN NN 
+Johannes Westendorf 	VN NN 
+Prof . Johannes Westendorf 	TIT PU VN NN 
+Michael Sottmann 	VN NN 
+St . Nikolai 	TIT PU NN 
+Gerd Wohlert 	VN NN 
+Klaus Barfoth 	VN NN 
+Ralf Kunz 	VN NN 
+Polizeisprecher Ralf Kunz 	TIT VN NN 
+Volker Okun 	VN NN 
+Gerhard Fuchs 	VN NN 
+Bezirksamtsleiter Gerhard Fuchs 	TIT VN NN 
+Hildegund Bauer 	VN NN 
+Moderatorin Hildegund Bauer 	TIT VN NN 
+Frank Schmidt 	VN NN 
+Stephan von Hundelshausen 	VN ZN NN 
+Klaus Peter Hesse 	VN VN NN 
+Birgit Enke 	VN NN 
+Verkehrsexperten Klaus Peter Hesse 	TIT VN VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Susanne Freese 	VN NN 
+Manfred Dankert 	VN NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Erich Loose 	VN NN 
+Andreas Konczal 	VN NN 
+Schachtmeister Loose 	TIT NN 
+Manfred Dankert 	VN NN 
+Erich Loose 	VN NN 
+Gitta Meyer 	VN NN 
+Gewerkschaftssekretärin Gitta Meyer 	TIT VN NN 
+Elisabeth Zahn 	VN NN 
+Elisabeth Zahn 	VN NN 
+Pastor Haak 	VN NN 
+Matthias Haak 	VN NN 
+Pastor Haak 	VN NN 
+Holger Weißmann 	VN NN 
+Tobias Wriedt 	VN NN 
+Klaus Hempel 	VN NN 
+Prof . Klaus Hempel 	TIT PU VN NN 
+Lisa Kallendonk 	VN NN 
+Uli Timm 	VN NN 
+Rainer Winter 	VN NN 
+Christdemokraten Fakten 	TIT NN 
+Karin Wiedemann 	VN NN 
+Uwe Stephenson 	VN NN 
+Uwe Stephenson 	VN NN 
+Uwe Stephenson 	VN NN 
+Brigitte Stein 	VN NN 
+Frauke Reich 	VN NN 
+Ulla Thiele 	VN NN 
+Frank Bloch 	VN NN 
+Rolf Jankwitz 	VN NN 
+Svenja Klotz 	VN NN 
+Rikke Faurfeld 	VN NN 
+Andrea Nagel 	VN NN 
+Dänin Rikke Faurfeld 	TIT VN NN 
+Oberschiedsrichterin Andrea Nagel 	TIT VN NN 
+Julienne Reinhardt 	VN NN 
+Janina Horn 	VN NN 
+Wiebke Ahlers 	VN NN 
+Rainer Fischer 	VN NN 
+Nadine Niedermeyer 	VN NN 
+Laura Hilger 	VN NN 
+Claudia Knickmeyer 	VN NN 
+Anna Wiebke Schulz 	VN VN NN 
+Klaus Gehrmann 	VN NN 
+Trainer Klaus Gehrmann 	TIT VN NN 
+Steffi Fleischmann 	VN NN 
+Caro Miesch 	VN NN 
+Grit Lindemann 	VN NN 
+Claudia Burmeister 	VN NN 
+Sven Baumann 	VN NN 
+Katrin Niemeier 	VN NN 
+Philipp Ruge 	VN NN 
+Britta Möller 	VN NN 
+Dörte Möller 	VN NN 
+Melanie Kröger 	VN NN 
+Kai Richter 	VN NN 
+Hans Melzer 	VN NN 
+Jana Eschbacher 	VN NN 
+Außenspieler Kai Richter 	TIT VN NN 
+Bundestrainer Hans Melzer 	TIT VN NN 
+Adrian Haase 	VN NN 
+Arne Linke 	VN NN 
+Stefan Paetz 	VN NN 
+Landkreises Stade 	TIT NN 
+Gunter Armonat 	VN NN 
+Landrat Gunter Armonat 	TIT VN NN 
+Landkreises Stade 	TIT NN 
+Landkreises Stade 	TIT NN 
+Kreis Stade 	VN NN 
+Eckverbindung Buchholz 	TIT NN 
+Landschaftsarchitekten Theis 	TIT NN 
+Rektor Bernd Bauer 	VN VN NN 
+Kerstin Hintz 	VN NN 
+Annette Fahrendorff 	VN NN 
+Rektor Bauer 	VN NN 
+Quentin Weber 	VN NN 
+Ortskern von Hanstedt 	VN ZN NN 
+Juniorchef Quentin Weber 	TIT VN NN 
+Quentin Weber 	VN NN 
+Quentin Weber 	VN NN 
+Quentin Weber 	VN NN 
+Wolf Hartmut Weber 	VN VN NN 
+Kommunalpolitikers Wolf Hartmut Weber 	TIT VN VN NN 
+Ludwig Frohnecke 	VN NN 
+Quentin Weber 	VN NN 
+Dr . Ludwig Frohnecke 	TIT PU VN NN 
+Quentin Weber 	VN NN 
+Wolf Hartmut Weber 	VN VN NN 
+Quentin Weber 	VN NN 
+Andreas Schäfer 	VN NN 
+Andreas Schäfer 	VN NN 
+Frank Horch 	VN NN 
+Frank Horch 	VN NN 
+Andreas Göhring 	VN NN 
+Frank Horch 	VN NN 
+Frank Horch 	VN NN 
+Manfred Schulz 	VN NN 
+Manfred Schulz 	VN NN 
+SPD-Politikers Manfred Schulz 	TIT VN NN 
+Bürgermeister Böhme 	TIT NN 
+Bürgermeister Böhme 	TIT NN 
+Bürgermeister Böhme 	TIT NN 
+Volker Okun 	VN NN 
+Ernst Hornung 	VN NN 
+Bürgerschaftsabgeordneten Volker Okun 	TIT VN NN 
+Helga Stöver 	VN NN 
+Enno Stöver 	VN NN 
+Ulf Kronshage 	VN NN 
+Kirchenkreis Stade 	TIT NN 
+Fritz Bultmann 	VN NN 
+Julia Thelen 	VN NN 
+Martin Janz 	VN NN 
+Richterin Julia Thelen 	TIT VN NN 
+Prof . Martin Janz 	TIT PU VN NN 
+Lüneburger Landschaftsverband 	TIT NN 
+Kreis Stade 	VN NN 
+Jan Christoph Amelung 	VN VN NN 
+Elisabeth Lembke-Pahrmann 	VN NN 
+Mathias Riechling 	VN NN 
+Jana Veh 	VN NN 
+Maximilian Herget 	VN NN 
+Maximilian Herget 	VN NN 
+Udo Krapf 	VN NN 
+Nikias Arndt 	VN NN 
+Sebastian Beyer 	VN NN 
+Maximilian Herget 	VN NN 
+Bernd Lehmann 	VN NN 
+Stephanie Frommann 	VN NN 
+Kerstin Beyer 	VN NN 
+Karsten Frommann 	VN NN 
+Ina Heitmann 	VN NN 
+Inga Lund 	VN NN 
+Anna Haun 	VN NN 
+Corinna Neumann 	VN NN 
+Susann Thiele 	VN NN 
+Ralf Zumdick 	VN NN 
+Jenny Hacker 	VN NN 
+Anke Fries 	VN NN 
+Per Fax 	VN NN 
+Horst Lüders 	VN NN 
+Ligabüro-Mitarbeiterin Anke Fries 	TIT VN NN 
+Manager Horst Lüders 	TIT VN NN 
+Otto Geise 	VN NN 
+Andreas Roloff 	VN NN 
+Vanessa Lewin 	VN NN 
+Trainer Andreas Roloff 	TIT VN NN 
+Otto Geise 	VN NN 
+Felix Morawski 	VN NN 
+Arne Birkner 	VN NN 
+Trainer Arne Birkner 	TIT VN NN 
+Gunda Wiebusch 	VN NN 
+Gunda Wiebusch 	VN NN 
+Mona Pfaffenbach 	VN NN 
+Gunda Wiebusch 	VN NN 
+Jürgen Schulz 	VN NN 
+Mark Perseke 	VN NN 
+Nicole Kalliske 	VN NN 
+Kristiane Helmke 	VN NN 
+Helga Angelowsky 	VN NN 
+Claudia Lipski 	VN NN 
+Thomas Bosse 	VN NN 
+Jana Scharnberg 	VN NN 
+Michaela Merten 	VN NN 
+Michaela Merten 	VN NN 
+Michaela Mertens 	VN NN 
+Helga Angelowsky 	VN NN 
+Thomas Bosse 	VN NN 
+Holger Kurz 	VN NN 
+Holger Kurz 	VN NN 
+Holger Kurz 	VN NN 
+Holger Kurz 	VN NN 
+Tatjana Kasper 	VN NN 
+Irene Brockmann 	VN NN 
+Christiane Petersen 	VN NN 
+Ärztin Christiane Petersen 	TIT VN NN 
+Tatjana Kasper 	VN NN 
+Tatjana Kasper 	VN NN 
+Sigrid Krüger 	VN NN 
+Uwe Voss 	VN NN 
+Kreisgeschäftsführer Uwe Voss 	TIT VN NN 
+Reiterhof Timm 	VN NN 
+Jens-Peter Timm 	VN NN 
+Wolfgang Selig 	VN NN 
+Bernhard Tuchel 	VN NN 
+Waltraut Watty 	VN NN 
+Hanns Eisler 	VN NN 
+Marianne Harms-Metzger 	VN NN 
+Rudolf Neslon 	VN NN 
+Karin Stein 	VN NN 
+Werner Richard Heymann 	VN VN NN 
+Günter Meier 	VN NN 
+Eva Stoltenberg 	VN NN 
+Frauke Smeja 	VN NN 
+Tim Böge 	VN NN 
+Kathy Brüning 	VN NN 
+Leslie Harrington 	VN NN 
+Alexander Czischke 	VN NN 
+Renate Wölk 	VN NN 
+Mirko Heyer 	VN NN 
+Susanne Krehl 	VN NN 
+Leslie Harrington 	VN NN 
+Kathrin Rehders 	VN NN 
+Renate Wölk 	VN NN 
+Jan Schmidt 	VN NN 
+Janina Gies 	VN NN 
+Kathrin Nipken 	VN NN 
+Janina Gies 	VN NN 
+Marco Prey 	VN NN 
+Lisa Dworzanin 	VN NN 
+Michelle Klebe 	VN NN 
+Lisa-Marie Semler 	VN NN 
+Marco Prey 	VN NN 
+Thomas Kahlert 	VN NN 
+ 
+Hartmut Porth 	VN NN 
+Rüdiger Schäfer 	VN NN 
+Trainer Jens Scheunemann 	TIT VN NN 
+Mannschaftsführer Hanno Sislian 	TIT VN NN 
+Juliane Pohl 	VN NN 
+Vereinschef Rüdiger Schäfer 	TIT VN NN 
+Inga Fuhrmann 	VN NN 
+Kathrin Weiler 	VN NN 
+Teamchef Sislian 	TIT NN 
+Mareike Tomadich 	VN NN 
+Detlef Meyer-Rogmann 	VN NN 
+Tanja Rathmann 	VN NN 
+Tanja Rathmann 	VN NN 
+Sandra Ossanach 	VN NN 
+Andreas Schulz 	VN NN 
+Rüdiger Vondran 	VN NN 
+Hendrik Peters 	VN NN 
+SG-Trainer Rüdiger Vondran 	TIT VN NN 
+Uwe Schmidt 	VN NN 
+FFC-Trainer Hendrik Peters 	TIT VN NN 
+Simon Speth 	VN NN 
+Matthias Krüger 	VN NN 
+Matthias Wermke 	VN NN 
+Stefan Pingel 	VN NN 
+Stefan Pingel 	VN NN 
+Christian Möck 	VN NN 
+Chrsitian Möck 	VN NN 
+Maximilian Löw 	VN NN 
+Maximilian Löw 	VN NN 
+Simon Winter 	VN NN 
+Christine Köhn 	VN NN 
+Lennart Jakobs 	VN NN 
+Hendrik Böttcher 	VN NN 
+Markus Troja 	VN NN 
+Felix Thomsen 	VN NN 
+Stella Krieger 	VN NN 
+Oliver Lenz 	VN NN 
+Achim Nawrath 	VN NN 
+Jan Reimann 	VN NN 
+Patrick Lamm 	VN NN 
+Jana Liesegang 	VN NN 
+Hendrik Eisenhut 	VN NN 
+Christian Fey 	VN NN 
+Birger Scholz 	VN NN 
+Carina Mlitzko 	VN NN 
+Andreas Lund 	VN NN 
+Christoph Schütz 	VN NN 
+Kristin Borchers 	VN NN 
+Malte Riehl 	VN NN 
+Malte Pohlmann 	VN NN 
+Jörg Brück 	VN NN 
+Jörg Kunz 	VN NN 
+Dietmar Kühl 	VN NN 
+Helmuth Jahnke 	VN NN 
+Frank Jentze 	VN NN 
+Ines Strehlau 	VN NN 
+SPD-Fraktionschef Helmuth Jahnke 	TIT VN NN 
+Wolfgang Grimme 	VN NN 
+Grünen-Fraktionschefin Ines Strehlau 	TIT VN NN 
+Landrat Wolfgang Grimme 	TIT VN NN 
+Stadtwerkedirektor Henning 	TIT NN 
+Hans-Helmut Birke 	VN NN 
+Fraktionschef Hans-Helmut Birke 	TIT VN NN 
+Karin Reschke 	VN NN 
+Karin Reschke 	VN NN 

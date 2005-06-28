@@ -8,6 +8,7 @@ package namerec.gui;
 
 import javax.swing.JPanel;
 
+import java.awt.Dimension;
 import java.awt.GridBagLayout;
 import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
@@ -84,6 +85,7 @@ public class ConfigPanel extends JPanel {
 	 * @return void
 	 */
 	private  void initialize() {
+		GridBagConstraints gridBagConstraints12 = new GridBagConstraints();
 		jLabel8 = new JLabel();
 		GridBagConstraints gridBagConstraints24 = new GridBagConstraints();
 		GridBagConstraints gridBagConstraints25 = new GridBagConstraints();
@@ -105,7 +107,6 @@ public class ConfigPanel extends JPanel {
 		GridBagConstraints gridBagConstraints4 = new GridBagConstraints();
 		GridBagConstraints gridBagConstraints5 = new GridBagConstraints();
 		GridBagConstraints gridBagConstraints6 = new GridBagConstraints();
-		GridBagConstraints gridBagConstraints7 = new GridBagConstraints();
 		GridBagConstraints gridBagConstraints8 = new GridBagConstraints();
 		GridBagConstraints gridBagConstraints10 = new GridBagConstraints();
 		GridBagConstraints gridBagConstraints11 = new GridBagConstraints();
@@ -119,14 +120,14 @@ public class ConfigPanel extends JPanel {
 		gridBagConstraints1.insets = new java.awt.Insets(10,10,10,10);
 		gridBagConstraints1.anchor = java.awt.GridBagConstraints.WEST;
 		jLabel.setText("No. of verification threads:");
-		gridBagConstraints2.gridx = 0;
-		gridBagConstraints2.gridy = 2;
-		gridBagConstraints2.insets = new java.awt.Insets(0,10,10,10);
+		gridBagConstraints2.gridx = 2;
+		gridBagConstraints2.gridy = 0;
+		gridBagConstraints2.insets = new java.awt.Insets(10,10,10,10);
 		gridBagConstraints2.anchor = java.awt.GridBagConstraints.WEST;
 		jLabel1.setText("No. of first sentence:");
-		gridBagConstraints3.gridx = 0;
-		gridBagConstraints3.gridy = 3;
-		gridBagConstraints3.insets = new java.awt.Insets(0,10,10,10);
+		gridBagConstraints3.gridx = 2;
+		gridBagConstraints3.gridy = 1;
+		gridBagConstraints3.insets = new java.awt.Insets(10,10,10,10);
 		gridBagConstraints3.anchor = java.awt.GridBagConstraints.WEST;
 		jLabel2.setText("No. of last sentence (-1 means \"all\"):");
 		gridBagConstraints4.gridx = 0;
@@ -144,12 +145,9 @@ public class ConfigPanel extends JPanel {
 		gridBagConstraints6.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		gridBagConstraints6.insets = new java.awt.Insets(10,10,10,10);
 		gridBagConstraints6.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints7.gridx = 1;
-		gridBagConstraints7.gridy = 2;
-		gridBagConstraints7.insets = new java.awt.Insets(10,10,10,10);
-		gridBagConstraints7.anchor = java.awt.GridBagConstraints.WEST;
-		gridBagConstraints8.gridx = 1;
-		gridBagConstraints8.gridy = 3;
+		gridBagConstraints6.gridwidth = 3;
+		gridBagConstraints8.gridx = 3;
+		gridBagConstraints8.gridy = 1;
 		gridBagConstraints8.insets = new java.awt.Insets(10,10,10,10);
 		gridBagConstraints8.anchor = java.awt.GridBagConstraints.WEST;
 		gridBagConstraints10.gridx = 0;
@@ -171,6 +169,7 @@ public class ConfigPanel extends JPanel {
 		gridBagConstraints17.fill = java.awt.GridBagConstraints.HORIZONTAL;
 		gridBagConstraints17.insets = new java.awt.Insets(0,10,10,10);
 		gridBagConstraints17.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints17.gridwidth = 3;
 		gridBagConstraints18.gridx = 0;
 		gridBagConstraints18.gridy = 6;
 		gridBagConstraints18.anchor = java.awt.GridBagConstraints.WEST;
@@ -200,13 +199,18 @@ public class ConfigPanel extends JPanel {
 		gridBagConstraints25.fill = java.awt.GridBagConstraints.NONE;
 		gridBagConstraints25.anchor = java.awt.GridBagConstraints.WEST;
 		gridBagConstraints25.insets = new java.awt.Insets(10,10,10,10);
+		gridBagConstraints12.gridx = 3;
+		gridBagConstraints12.gridy = 0;
+		gridBagConstraints12.anchor = java.awt.GridBagConstraints.WEST;
+		gridBagConstraints12.insets = new java.awt.Insets(10,10,10,10);
+		this.setPreferredSize(new java.awt.Dimension(800,550));
+		this.setSize(806, 378);
 		this.add(jLabel, gridBagConstraints1);
 		this.add(jLabel1, gridBagConstraints2);
 		this.add(jLabel2, gridBagConstraints3);
 		this.add(jLabel3, gridBagConstraints4);
 		this.add(getThreadnumSpinner(), gridBagConstraints5);
 		this.add(getJSlider(), gridBagConstraints6);
-		this.add(getStartnoSpinner(), gridBagConstraints7);
 		this.add(getEndnoSpinner(), gridBagConstraints8);
 		this.add(jLabel4, gridBagConstraints10);
 		this.add(getCandnoSpinner(), gridBagConstraints11);
@@ -218,6 +222,7 @@ public class ConfigPanel extends JPanel {
 		this.add(getTimeSpinner(), gridBagConstraints21);
 		this.add(jLabel8, gridBagConstraints24);
 		this.add(getVersionTf(), gridBagConstraints25);
+		this.add(getStartnoSpinner(), gridBagConstraints12);
 	}
 	/**
 	 * This method initializes jSpinner	
@@ -243,7 +248,7 @@ public class ConfigPanel extends JPanel {
 	 */    
 	private JSlider getJSlider() {
 		if (jSlider == null) {
-			jSlider = new JSlider();
+            jSlider = new JSlider();
 			jSlider.setMaximum(100);
 			jSlider.setMajorTickSpacing(25);
 			jSlider.setMinorTickSpacing(5);
@@ -374,4 +379,5 @@ public class ConfigPanel extends JPanel {
 		return jTextField;
 	}
 
-          }  //  @jve:decl-index=0:visual-constraint="10,10"
+
+          }  //  @jve:decl-index=0:visual-constraint="10,64"

@@ -59,8 +59,8 @@ public class MatcherNam {
                     
                     dummy=tokens.nextToken();
                     goalClass=dummy.substring(8,dummy.length());
-                    length=new Integer(tokens.nextToken().substring(7,8)).intValue();
-                    goalPos=new Integer(tokens.nextToken().substring(8,9)).intValue();
+                    length=new Integer(tokens.nextToken().substring(7).trim()).intValue();
+                    goalPos=new Integer(tokens.nextToken().substring(8).trim()).intValue();
                     String pats[]=new String[length];
                     dummy=tokens.nextToken(); // nun sowas wie: pattern= VN KL VN GR 
                     
