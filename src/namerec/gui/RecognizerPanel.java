@@ -42,6 +42,7 @@ import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
 import javax.swing.filechooser.FileFilter;
+import javax.swing.table.DefaultTableModel;
 
 import namerec.MatcherNam;
 import namerec.NameTable;
@@ -51,6 +52,7 @@ import namerec.util.FileSelector;
 
 import com.biemann.pendel.Pendel;
 import com.biemann.pendel.Watcher;
+import com.bordag.klf.util.StringUtils;
 
 import de.wortschatz.WortschatzModul;
 import de.wortschatz.WortschatzTool;
@@ -669,7 +671,7 @@ public class RecognizerPanel extends WortschatzModul {
         tagCodeLoadPane.setFont(new java.awt.Font("Serif", 0, 10));
         tagCodeLoadPane.setBounds(new java.awt.Rectangle(80,80,145,25));
 
-        tagEncodeScrollPane.setBounds(new java.awt.Rectangle(10,140,216,250));
+        tagEncodeScrollPane.setBounds(new java.awt.Rectangle(10,140,356,250));
         tagEncodeAddButton.setFont(new java.awt.Font("Dialog", 0, 10));
         tagEncodeAddButton.setMargin(new Insets(0, 0, 0, 0));
         tagEncodeAddButton.setText("Add");
@@ -770,12 +772,12 @@ public class RecognizerPanel extends WortschatzModul {
         tagRegexpLoadPane.setText("filename here");
         tagRegexpLoadPane.setFont(new java.awt.Font("Serif", 0, 10));
         tagRegexpLoadPane.setBounds(new Rectangle(515, 80, 70, 25));
-        tagRegexpScrollPane.setBounds(new Rectangle(400, 120, 330, 270));
+        tagRegexpScrollPane.setBounds(new Rectangle(400, 120, 400, 270));
 
         tagRegexpAddButton.setFont(new java.awt.Font("Dialog", 0, 10));
         tagRegexpAddButton.setMargin(new Insets(0, 0, 0, 0));
         tagRegexpAddButton.setText("Add");
-        tagRegexpAddButton.setBounds(new Rectangle(400, 430, 50, 25));
+        tagRegexpAddButton.setBounds(new Rectangle(400, 330, 50, 25));
         tagRegexpAddButton.addActionListener(new java.awt.event.ActionListener() {
           public void actionPerformed(ActionEvent e) {
            try {
@@ -975,6 +977,7 @@ public class RecognizerPanel extends WortschatzModul {
     private void loadKlassnamesFrom(String filename) throws IOException {
         NameTable loader=NameTable.loadFromFile(filename);
         klassKeysNameTable.putAll(loader);
+        tagCodeLoadPane.setText(filename);
         tagEncodeTable=nameTable2jTable(klassKeysNameTable);
         tagEncodeScrollPane.getViewport().add(tagEncodeTable, null);
         this.setVisible(true);
@@ -1023,10 +1026,10 @@ public class RecognizerPanel extends WortschatzModul {
         }
 
         // now put the 2^i
-        long code=1;
+        int code=1;
         for (Enumeration en=autoTable.keys();en.hasMoreElements();) {
             String inElem=(String)en.nextElement();
-            String codeString=""+code;
+            String codeString=""+org.apache.commons.lang.StringUtils.leftPad(Integer.toBinaryString(code),32,'0');
             autoTable.put(inElem,codeString);
             code=code*2;
         }
@@ -1092,7 +1095,8 @@ public class RecognizerPanel extends WortschatzModul {
      * @throws IOException
      */
     private void loadRegexpFrom(String filename) throws IOException {
-        NameTable loader=NameTable.loadFromFile(filename);
+        tagRegexpLoadPane.setText(filename);
+    	NameTable loader=NameTable.loadFromFile(filename);
         regexpNameTable.putAll(loader);
         tagRegexpTable=nameTable2jTable(regexpNameTable);
         tagRegexpScrollPane.getViewport().add(tagRegexpTable, null);
@@ -1166,11 +1170,6 @@ public class RecognizerPanel extends WortschatzModul {
     private static JTable rules2jTable(Vector patterns) {
         Pattern actRule;
         String[] actPattern;
-        String actGoalClass;
-        int actGoalPos;
-        int hits;
-        int misses;
-        double rating;
         
         String columns[]={"Pattern","Goal Class","Hits","Misses","Rating"};
         String rows[][]=new String[patterns.size()][5];
@@ -1189,9 +1188,9 @@ public class RecognizerPanel extends WortschatzModul {
             
             rows[i][0]=patString;
             rows[i][1]=actRule.goalClass;
-            rows[i][2]=new String().valueOf(actRule.hits);
-            rows[i][3]=new String().valueOf(actRule.misses);
-            rows[i][4]=new String().valueOf(actRule.rating);
+            rows[i][2]=String.valueOf(actRule.hits);
+            rows[i][3]=String.valueOf(actRule.misses);
+            rows[i][4]=String.valueOf(actRule.rating);
             
             i++;
         } // rof Enum e
@@ -1205,25 +1204,16 @@ public class RecognizerPanel extends WortschatzModul {
     private static JTable pats2jTable(Vector patterns) {
         Pattern actRule;
         String[] actPattern;
-        String actGoalClass;
-        int actGoalPos;
-        int hits;
-        int misses;
-        double rating;
         
-        String columns[]={"Pattern","Hits"};
-        String rows[][]=new String[patterns.size()][5];
+        String columns[]={"Pattern","Classification string"};
+        String rows[][]=new String[patterns.size()][2];
         int i=0;
         for (Enumeration e=patterns.elements();e.hasMoreElements();) {
             actRule=(Pattern)e.nextElement();
             actPattern=actRule.pattern;
             String patString="";
             for (int j=0;j<actRule.length;j++) { // Zielpos markieren
-                if (j==actRule.goalPos){
-                    patString+=actPattern[j]+"* ";
-                }else {
-                    patString+=actPattern[j]+" ";  
-                }
+                patString+=actPattern[j]+" ";  
             } // rof
             System.out.println(patString);
             if(patString.length() > 0)
@@ -1231,9 +1221,6 @@ public class RecognizerPanel extends WortschatzModul {
             
             rows[i][0]=patString;
             rows[i][1]=actRule.goalClass;
-            rows[i][2]=new String().valueOf(actRule.hits);
-            rows[i][3]=new String().valueOf(actRule.misses);
-            rows[i][4]=new String().valueOf(actRule.rating);
             
             i++;
         } // rof Enum e
@@ -1247,7 +1234,6 @@ public class RecognizerPanel extends WortschatzModul {
     
     
     private static JTable nameTable2jTable(NameTable source) {
-        
         
         String actItem;
         String actClass;
@@ -1263,9 +1249,11 @@ public class RecognizerPanel extends WortschatzModul {
             rows[i][1]=actClass;
             i++;
         } // rof enum e
-        
-        JTable returnTable= new JTable(rows,columns);
-        
+        DefaultTableModel model = new DefaultTableModel(rows,columns);
+        TableSorter sorter=new TableSorter(model);
+        JTable returnTable= new JTable(sorter);
+        sorter.setTableHeader(returnTable.getTableHeader());
+        returnTable.getColumnModel().getColumn(0).setMaxWidth(50);
         return returnTable;
     }
     
@@ -1395,7 +1383,6 @@ public class RecognizerPanel extends WortschatzModul {
         File f=FileSelector.getUserSelectedFile(RecognizerPanel.this,"Find pattern file...", null,FileSelector.OPEN_DIALOG);
         if(f != null) {
             String filename=f.getAbsolutePath();
-            classRulesFileNamePane.setText(filename);
             loadPatternFrom(filename);
         }
     }
@@ -1405,6 +1392,7 @@ public class RecognizerPanel extends WortschatzModul {
 	 * @throws FileNotFoundException
 	 */
 	private void loadPatternFrom(String filename) throws IOException, FileNotFoundException {
+		classRulesFileNamePane.setText(filename);
 		MatcherNam loader=new MatcherNam(null);
 		Vector newClassRules=loader.loadPatterns(filename);
 		classRules=vecUnite(classRules,newClassRules);
