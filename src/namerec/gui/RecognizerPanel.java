@@ -8,6 +8,8 @@
 package namerec.gui;
 
 import java.awt.Color;
+import java.awt.Component;
+import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Insets;
 import java.awt.Rectangle;
@@ -24,6 +26,7 @@ import java.util.Enumeration;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
+import javax.swing.AbstractButton;
 import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.JButton;
@@ -173,9 +176,23 @@ public class RecognizerPanel extends WortschatzModul {
     private JLabel jLabel2 = null;
     private JSpinner startNoSpiner = null;
     private JSpinner endnoSpinner = null;
-    
-    
-    
+    private JPanel tagSystemPanel;
+    private JLabel tagLabel=new JLabel(),tagEncodeLabel=new JLabel(),tagRegexpLabel=new JLabel(),
+    tagEncodeCodeLable=new JLabel(),tagEncodeClassLabel=new JLabel(),
+    tagRegexpAddClassLabel=new JLabel(),tagRegexpAddRegexpLabel=new JLabel();
+    private JCheckBox tntCheckBox=new JCheckBox();
+    private JButton tagLoadCodeButton=new JButton(),tagEncodeAddButton=new JButton(),tagEncodeDeleteButton=new JButton(),
+    tagCodeSaveButton=new JButton(),tagEncodeClearButton=new JButton(),tagRegexpLoadButton=new JButton(),
+    tagRegexpSaveButton=new JButton(),tagRegexpAddButton=new JButton(),tagRegexpClearButton=new JButton(),
+    tagRegexpDeleteButton=new JButton();
+    private JTextField tagCodeLoadPane=new JTextField(),
+    tagEncodeAddClassField=new JTextField(),tagEncodeAddCodeField=new JTextField(),
+    tagRegexpLoadPane=new JTextField(),
+    tagRegexpAddRegexpField=new JTextField(),tagRegexpAddClassField=new JTextField();
+    private JScrollPane tagEncodeScrollPane=new JScrollPane(),tagRegexpScrollPane=new JScrollPane();
+    private JTable tagEncodeTable=new JTable(),tagRegexpTable=new JTable();
+    private JLabel jLabel3 = null;
+    private JSpinner samplesSpinner = null;
     //Frame konstruieren
     public RecognizerPanel(WortschatzTool wTool)
     {
@@ -193,6 +210,9 @@ public class RecognizerPanel extends WortschatzModul {
     
     //Initialisierung der Komponente
     private void jbInit() throws Exception, IOException  {
+        jLabel3 = new JLabel();
+        jLabel3.setBounds(1, 191, 185, 15);
+        jLabel3.setText("Sentences between time est.");
         jLabel2 = new JLabel();
         jLabel2.setBounds(299, 143, 175, 26);
         jLabel2.setText("<html>No. of last sentence <br>(-1 means all)</html>");
@@ -627,6 +647,173 @@ public class RecognizerPanel extends WortschatzModul {
         
         inItemTable.setName("");
         
+//      TagsPanel
+        tagSystemPanel=new JPanel();
+        tagSystemPanel.setLayout(null);
+        tagLabel.setFont(new java.awt.Font("Dialog", 1, 12));
+        tagLabel.setText("Tag System Settings");
+        tagLabel.setBounds(new Rectangle(5, 10, 150, 20));
+        tagEncodeLabel.setText("Tags Encoding");
+        tagEncodeLabel.setBounds(new Rectangle(10, 50, 120, 20));
+        tagRegexpLabel.setText("Regexp Tagging");
+        tagRegexpLabel.setBounds(new Rectangle(400, 50, 150, 20));
+        tagLoadCodeButton.setFont(new java.awt.Font("Dialog", 0, 10));
+        tagLoadCodeButton.setMargin(new Insets(0, 0, 0, 0));
+        tagLoadCodeButton.setText("Load");
+        tagLoadCodeButton.setBounds(new Rectangle(10, 80, 50, 25));
+        tagCodeSaveButton.setFont(new java.awt.Font("Dialog", 0, 10));
+        tagCodeSaveButton.setMargin(new Insets(0, 0, 0, 0));
+        tagCodeSaveButton.setText("Save");
+        tagCodeSaveButton.setBounds(new Rectangle(10, 110, 50, 25));
+        tagCodeLoadPane.setText("filename here");
+        tagCodeLoadPane.setFont(new java.awt.Font("Serif", 0, 10));
+        tagCodeLoadPane.setBounds(new java.awt.Rectangle(80,80,145,25));
+
+        tagEncodeScrollPane.setBounds(new java.awt.Rectangle(10,140,216,250));
+        tagEncodeAddButton.setFont(new java.awt.Font("Dialog", 0, 10));
+        tagEncodeAddButton.setMargin(new Insets(0, 0, 0, 0));
+        tagEncodeAddButton.setText("Add");
+        tagEncodeAddButton.setBounds(new Rectangle(10, 430, 40, 25));
+        tagEncodeDeleteButton.setFont(new java.awt.Font("Dialog", 0, 10));
+        tagEncodeDeleteButton.setMargin(new Insets(0, 0, 0, 0));
+        tagEncodeDeleteButton.setText("Delete selected");
+        tagEncodeDeleteButton.setBounds(new Rectangle(10, 460, 70, 25));
+        tagEncodeAutoButton.setFont(new java.awt.Font("Dialog", 0, 10));
+        tagEncodeAutoButton.setMargin(new Insets(0, 0, 0, 0));
+        tagEncodeAutoButton.setBackground(Color.green);
+        tagEncodeAutoButton.setText("Auto Fill");
+        tagEncodeAutoButton.setBounds(new Rectangle(80, 460, 70, 25));
+
+        tagEncodeAddClassField.setBounds(new Rectangle(55, 430, 40, 25));
+        tagEncodeAddCodeField.setBounds(new Rectangle(100, 430, 50, 25));
+        tagEncodeClassLabel.setFont(new java.awt.Font("Dialog", 0, 10));
+        tagEncodeClassLabel.setBorder(titledBorder1);
+        tagEncodeClassLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        tagEncodeClassLabel.setHorizontalTextPosition(SwingConstants.CENTER);
+        tagEncodeClassLabel.setText("Class");
+        tagEncodeClassLabel.setBounds(new Rectangle(55, 400, 40, 20));
+        tagEncodeCodeLable.setFont(new java.awt.Font("Dialog", 0, 10));
+        tagEncodeCodeLable.setBorder(titledBorder1);
+        tagEncodeCodeLable.setHorizontalAlignment(SwingConstants.CENTER);
+        tagEncodeCodeLable.setHorizontalTextPosition(SwingConstants.CENTER);
+        tagEncodeCodeLable.setText("Code");
+        tagEncodeCodeLable.setBounds(new Rectangle(100, 400, 50, 20));
+
+        tagEncodeAutoButton.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+          try {
+            tagEncodeAutoButton_actionPerformed(e);
+           } catch (IOException f) {System.out.println(f.getMessage());}
+
+          }
+        });
+        tagEncodeClearButton = new JButton();
+        tagEncodeClearButton.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+           tagEncodeClearButton_actionPerformed(e);
+          }
+        });
+        tagEncodeAddButton.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+           try {
+            tagEncodeAddButton_actionPerformed(e);
+            } catch (IOException f) {System.out.println(f.getMessage());}
+          }
+        });
+        tagCodeSaveButton.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+           try {
+            tagEncodesSaveFileButton_actionPerformed(e);
+           } catch (IOException f) {System.out.println(f.getMessage());}
+          }
+        });
+        tagLoadCodeButton.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+           try {
+            tagEncodeLoadButton_actionPerformed(e);
+           } catch (IOException f) {System.out.println(f.getMessage());}
+          }
+        });
+        tagEncodeDeleteButton.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+           try {
+            tagEncodeDeleteButton_actionPerformed(e);
+           } catch (IOException f) {System.out.println(f.getMessage());}
+          }
+        });
+
+
+
+
+        tagRegexpLoadButton.setFont(new java.awt.Font("Dialog", 0, 10));
+        tagRegexpLoadButton.setMargin(new Insets(0, 0, 0, 0));
+        tagRegexpLoadButton.setText("Load");
+        tagRegexpLoadButton.setBounds(new Rectangle(460, 80, 50, 25));
+        tagRegexpLoadButton.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+            try {
+              tagRegexpLoadButton_actionPerformed(e);
+            } catch (IOException f) {System.out.println(f.getMessage());}
+          }
+        });
+        tagRegexpSaveButton.setFont(new java.awt.Font("Dialog", 0, 10));
+        tagRegexpSaveButton.setMargin(new Insets(0, 0, 0, 0));
+        tagRegexpSaveButton.setText("Save");
+        tagRegexpSaveButton.setBounds(new Rectangle(600, 80, 50, 25));
+        tagRegexpSaveButton.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+           try {
+            tagRegexpSaveButton_actionPerformed(e);
+           } catch (IOException f) {System.out.println(f.getMessage());}
+          }
+        });
+        tagRegexpLoadPane.setText("filename here");
+        tagRegexpLoadPane.setFont(new java.awt.Font("Serif", 0, 10));
+        tagRegexpLoadPane.setBounds(new Rectangle(515, 80, 70, 25));
+        tagRegexpScrollPane.setBounds(new Rectangle(400, 120, 330, 270));
+
+        tagRegexpAddButton.setFont(new java.awt.Font("Dialog", 0, 10));
+        tagRegexpAddButton.setMargin(new Insets(0, 0, 0, 0));
+        tagRegexpAddButton.setText("Add");
+        tagRegexpAddButton.setBounds(new Rectangle(400, 430, 50, 25));
+        tagRegexpAddButton.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+           try {
+            tagRegexpAddButton_actionPerformed(e);
+           } catch (IOException f) {System.out.println(f.getMessage());}
+          }
+        });
+        tagRegexpClearButton.setBackground(Color.red);
+        tagRegexpClearButton.setFont(new java.awt.Font("Dialog", 0, 10));
+        tagRegexpClearButton.setMargin(new Insets(0, 0, 0, 0));
+        tagRegexpClearButton.setText("Clear");
+        tagRegexpClearButton.setBounds(new Rectangle(400, 80, 50, 25));
+        tagRegexpClearButton.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+           tagRegexpClearButton_actionPerformed(e);
+          }
+        });
+        tagRegexpAddClassField.setBounds(new Rectangle(635, 430, 80, 25));
+        tagRegexpAddRegexpField.setBounds(new Rectangle(460, 430, 170, 25));
+        tagRegexpAddRegexpLabel.setBorder(titledBorder3);
+        tagRegexpAddRegexpLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        tagRegexpAddRegexpLabel.setHorizontalTextPosition(SwingConstants.CENTER);
+        tagRegexpAddRegexpLabel.setText("Regular Expression");
+        tagRegexpAddRegexpLabel.setBounds(new Rectangle(460, 400, 170, 20));
+        tagRegexpAddClassLabel.setBorder(titledBorder4);
+        tagRegexpAddClassLabel.setText("Class");
+        tagRegexpAddClassLabel.setBounds(new Rectangle(635, 400, 80, 20));
+        tagRegexpDeleteButton.setFont(new java.awt.Font("Dialog", 0, 10));
+        tagRegexpDeleteButton.setMargin(new Insets(0, 0, 0, 0));
+        tagRegexpDeleteButton.setText("Delete selected");
+        tagRegexpDeleteButton.setBounds(new Rectangle(400, 460, 120, 25));
+        tagRegexpDeleteButton.addActionListener(new java.awt.event.ActionListener() {
+          public void actionPerformed(ActionEvent e) {
+           try {
+            tagRegexpDeleteButton_actionPerformed(e);
+           } catch (IOException f) {System.out.println(f.getMessage());}
+          }
+        });
         
         // Hier ADDs
         
@@ -666,6 +853,36 @@ public class RecognizerPanel extends WortschatzModul {
         parametersPanel.add(getDBConfigPanelAkt(), null);
         parametersPanel.add(getDBConfigPanelWs(), null);
         parametersPanel.add(paraVerNrField, null);
+        PendelTabbedPane.add(tagSystemPanel, "Tag System");
+        tagSystemPanel.add(tagLabel, null);
+        tagSystemPanel.add(tagEncodeLabel, null);
+        tagSystemPanel.add(tagRegexpLabel, null);
+        tagSystemPanel.add(tagLoadCodeButton, null);
+        tagSystemPanel.add(tntCheckBox, null);
+        tagSystemPanel.add(tagCodeSaveButton, null);
+        tagSystemPanel.add(tagCodeLoadPane, null);
+        tagSystemPanel.add(tagRegexpScrollPane, null);
+        tagSystemPanel.add(tagRegexpSaveButton, null);
+        tagSystemPanel.add(tagRegexpLoadPane, null);
+        tagSystemPanel.add(tagRegexpLoadButton, null);
+        tagSystemPanel.add(tagRegexpClearButton, null);
+        tagSystemPanel.add(tagRegexpAddRegexpField, null);
+        tagSystemPanel.add(tagRegexpAddClassField, null);
+        tagSystemPanel.add(tagRegexpAddRegexpLabel, null);
+        tagSystemPanel.add(tagRegexpAddClassLabel, null);
+        tagSystemPanel.add(tagRegexpAddButton, null);
+        tagSystemPanel.add(tagRegexpDeleteButton, null);
+        tagSystemPanel.add(tagEncodeScrollPane, null);
+        tagSystemPanel.add(tagEncodeAddButton, null);
+        tagSystemPanel.add(tagEncodeDeleteButton, null);
+        tagSystemPanel.add(tagEncodeAutoButton, null);
+        tagSystemPanel.add(tagEncodeAddCodeField, null);
+        tagSystemPanel.add(tagEncodeAddClassField, null);
+        tagSystemPanel.add(tagEncodeClassLabel, null);
+        tagSystemPanel.add(tagEncodeCodeLable, null);
+        tagSystemPanel.add(tagEncodeClearButton, null);
+        tagEncodeScrollPane.getViewport().add(tagEncodeTable, null);
+        tagRegexpScrollPane.getViewport().add(tagRegexpTable, null);
         PendelTabbedPane.add(inputFeaturesPanel, "Rules and Patterns");
         inputFeaturesPanel.add(classRulesPanel, null);
         classRulesPanel.add(classRulesLabel, null);
@@ -723,6 +940,8 @@ public class RecognizerPanel extends WortschatzModul {
         outputItemsPanel.add(outItemsPauseButton, null);
         outputItemsPanel.add(outItemsDeleteUnusedButton, null);
         outputItemsPanel.add(outItemsDeleteAllButton, null);
+        parametersPanel.add(jLabel3, null);
+        parametersPanel.add(getSamplesSpinner(), null);
         outItemsAllScrollPane.getViewport().add(outItemsAllTable, null);
         outItemsUnusedScrollPane.getViewport().add(outItemsUnusedTable, null);
         
@@ -731,7 +950,191 @@ public class RecognizerPanel extends WortschatzModul {
         
         
     }
-    
+//  tagEncode Buttons
+
+    void tagEncodeClearButton_actionPerformed(ActionEvent e) {
+       System.out.println("Clear KlassKeys");
+        klassKeysNameTable=new NameTable();
+        tagEncodeTable=nameTable2jTable(klassKeysNameTable);
+        tagEncodeScrollPane.getViewport().add(tagEncodeTable, null);
+        this.setVisible(true);
+        this.repaint();
+   }
+
+    void tagEncodeLoadButton_actionPerformed(ActionEvent e) throws IOException {
+        File f=FileSelector.getUserSelectedFile(RecognizerPanel.this,"Find regexp file...", null,FileSelector.OPEN_DIALOG);
+        if(f != null) {
+            String filename=f.getAbsolutePath();
+            loadKlassnamesFrom(filename);
+        }
+    }
+    /**
+     * @param filename
+     * @throws IOException
+     */
+    private void loadKlassnamesFrom(String filename) throws IOException {
+        NameTable loader=NameTable.loadFromFile(filename);
+        klassKeysNameTable.putAll(loader);
+        tagEncodeTable=nameTable2jTable(klassKeysNameTable);
+        tagEncodeScrollPane.getViewport().add(tagEncodeTable, null);
+        this.setVisible(true);
+    }
+    void tagEncodeAddButton_actionPerformed(ActionEvent e) throws IOException {
+        String newItem=tagEncodeAddClassField.getText();
+        String newClass=tagEncodeAddCodeField.getText();
+        NameTable adder=new NameTable();
+        adder.put(newItem, newClass);
+        klassKeysNameTable.putAll(adder);
+        tagEncodeTable=nameTable2jTable(klassKeysNameTable);
+        tagEncodeScrollPane.getViewport().add(tagEncodeTable, null);
+        this.setVisible(true);
+   }
+   void tagEncodeAutoButton_actionPerformed(ActionEvent e) throws IOException {
+        NameTable autoTable=new NameTable();
+
+        for (Enumeration en=inItemsNameTable.elements();en.hasMoreElements();) {
+            String inElem=(String)en.nextElement();
+            autoTable.put(inElem,"temp");
+        }
+        for (Enumeration en=inItemsBackNameTable.elements();en.hasMoreElements();) {
+            String inElem=(String)en.nextElement();
+            autoTable.put(inElem,"temp");
+        }
+        for (Enumeration en=regexpNameTable.elements();en.hasMoreElements();) {
+            String inElem=(String)en.nextElement();
+            autoTable.put(inElem,"temp");
+        }
+        for (Enumeration en=classRules.elements();en.hasMoreElements();) {
+            Pattern inPattern=(Pattern)en.nextElement();
+            String inElem=inPattern.goalClass;
+            autoTable.put(inElem,"temp");
+            for (int j=0;j<inPattern.length;j++) {
+               inElem=inPattern.pattern[j];
+               autoTable.put(inElem,"temp");
+            }
+        }
+
+         for (Enumeration en=extrPats.elements();en.hasMoreElements();) {
+            Pattern inPattern=(Pattern)en.nextElement();
+            for (int j=0;j<inPattern.length;j++) {
+               String inElem=inPattern.pattern[j];
+               autoTable.put(inElem,"temp");
+            }
+        }
+
+        // now put the 2^i
+        long code=1;
+        for (Enumeration en=autoTable.keys();en.hasMoreElements();) {
+            String inElem=(String)en.nextElement();
+            String codeString=""+code;
+            autoTable.put(inElem,codeString);
+            code=code*2;
+        }
+
+        System.out.println(autoTable.toString());
+        klassKeysNameTable = new NameTable();
+        klassKeysNameTable.putAll(autoTable);
+        tagEncodeTable=nameTable2jTable(klassKeysNameTable);
+        tagEncodeScrollPane.getViewport().add(tagEncodeTable, null);
+        this.setVisible(true);
+        this.repaint();
+
+   }
+
+    void tagEncodeDeleteButton_actionPerformed(ActionEvent e) throws IOException {
+        String delItem="";
+          int rowCount=tagEncodeTable.getSelectedRowCount();
+          int[] selectedRows=tagEncodeTable.getSelectedRows();
+          for (int i=0;i<rowCount;i++) {
+                delItem=(String)tagEncodeTable.getValueAt(selectedRows[i],0);
+                System.out.println("deletion of: "+delItem);
+                klassKeysNameTable.remove(delItem);
+          } //rof
+
+
+        tagEncodeTable=nameTable2jTable(klassKeysNameTable);
+        tagEncodeScrollPane.getViewport().add(tagEncodeTable, null);
+        this.setVisible(true);
+        this.repaint();
+   }
+
+
+    void tagEncodesSaveFileButton_actionPerformed(ActionEvent e) throws IOException {
+        File f=FileSelector.getUserSelectedFile(RecognizerPanel.this,"Save patterns to...", null,FileSelector.SAVE_DIALOG);
+        if(f != null) {
+            String filename=f.getAbsolutePath();
+            klassKeysNameTable.writeFile(filename,false);
+            System.out.println("File saved: "+filename);
+        }
+    }
+
+
+   //tagRegexpButtons
+
+    void tagRegexpClearButton_actionPerformed(ActionEvent e) {
+       System.out.println("Clear Regexps");
+        regexpNameTable=new NameTable();
+        tagRegexpTable=nameTable2jTable(regexpNameTable);
+        tagRegexpScrollPane.getViewport().add(tagRegexpTable, null);
+        this.setVisible(true);
+        this.repaint();
+   }
+
+    void tagRegexpLoadButton_actionPerformed(ActionEvent e) throws IOException {
+        File f=FileSelector.getUserSelectedFile(RecognizerPanel.this,"Find regexp file...", null,FileSelector.OPEN_DIALOG);
+        if(f != null) {
+            String filename=f.getAbsolutePath();
+            loadRegexpFrom(filename);
+        }
+    }
+    /**
+     * @param filename
+     * @throws IOException
+     */
+    private void loadRegexpFrom(String filename) throws IOException {
+        NameTable loader=NameTable.loadFromFile(filename);
+        regexpNameTable.putAll(loader);
+        tagRegexpTable=nameTable2jTable(regexpNameTable);
+        tagRegexpScrollPane.getViewport().add(tagRegexpTable, null);
+        this.setVisible(true);
+    }
+   void tagRegexpSaveButton_actionPerformed(ActionEvent e) throws IOException {
+       File f=FileSelector.getUserSelectedFile(RecognizerPanel.this,"Save regexps to...", null,FileSelector.SAVE_DIALOG);
+       if(f != null) {
+           String filename=f.getAbsolutePath();
+           regexpNameTable.writeFile(filename,false);
+           System.out.println("Regexp File saved: "+filename);
+       }}
+
+      void tagRegexpAddButton_actionPerformed(ActionEvent e) throws IOException {
+        String newRegexp=tagRegexpAddRegexpField.getText();
+        String newClass=tagRegexpAddClassField.getText();
+        NameTable adder=new NameTable();
+        adder.put( newRegexp, newClass);
+        regexpNameTable.putAll(adder);
+        tagRegexpTable=nameTable2jTable(regexpNameTable);
+        tagRegexpScrollPane.getViewport().add(tagRegexpTable, null);
+        this.setVisible(true);
+   }
+
+      void tagRegexpDeleteButton_actionPerformed(ActionEvent e) throws IOException {
+
+
+        String delItem="";
+          int rowCount=tagRegexpTable.getSelectedRowCount();
+          int[] selectedRows=tagRegexpTable.getSelectedRows();
+          for (int i=0;i<rowCount;i++) {
+                delItem=(String)tagRegexpTable.getValueAt(selectedRows[i],0);
+                System.out.println("deletion of: "+delItem);
+                regexpNameTable.remove(delItem);
+          } //rof
+
+        tagRegexpTable=nameTable2jTable(regexpNameTable);
+        tagRegexpScrollPane.getViewport().add(tagRegexpTable, null);
+        this.setVisible(true);
+        this.repaint();
+   }
+
     private static Vector vecUnite(Vector een, Vector twee) {
         Vector stringRules = new Vector(); // Für Doublettencheck
         Pattern actPat;
@@ -1168,12 +1571,13 @@ public class RecognizerPanel extends WortschatzModul {
     	c.set("IN.KNOWLEDGE",inItemsBackLoadField.getText());
     	c.set("IN.PATFILENE",extrPatsFileNamePane.getText());
     	c.set("IN.PATFILE",classRulesFileNamePane.getText());
-    	//TODO regexp
+    	c.set("IN.REGEXP",tagRegexpLoadPane.getText());
+    	c.set("IN.CLASSNAMES",tagCodeLoadPane.getText());
     	c.set("OUT.ITEMSFOUND",fileOutNewItemsPane.getText());
     	c.set("OUT.CONTEXT",fileOutRuleContextPane.getText());
     	c.set("OUT.MAYBE",fileOutMaybeItemsPane.getText());
     	c.set("OUT.COMPLEXNAMES",fileOutExtrPatsPane.getText());
-    	// TODO c.set("OUT.LOGFILE",getLogFileTf().getText());
+    	c.set("OUT.LOGFILE",fileOutLogPane.getText());
     }
     
     void fileConfLoadButton_actionPerformed(ActionEvent e) throws IOException {
@@ -1188,7 +1592,7 @@ public class RecognizerPanel extends WortschatzModul {
     		paraVerNrField.setText(cfg.getString("OPTION.CANDIDATESNO","30"));
     		getVersionTf().setText(cfg.getString("OPTION.VERSION","NameRec 1.1neu"));
     		//TODO NERecogCB fuer NE erkennung!
-    		//TODO samples!
+    		samplesSpinner.setValue(new Integer(cfg.getInteger("OPTION.SAMPLES",100)));
     		
     		getBaseTaggerPanel().loadFromConfig(cfg);
     		getDBConfigPanelAkt().loadFromConfig(cfg,"AKT");
@@ -1196,7 +1600,8 @@ public class RecognizerPanel extends WortschatzModul {
     		loadNamesFrom(cfg.getString("IN.KNOWLEDGE","wissenAkt.txt"));
     		loadNEsFrom(cfg.getString("IN.PATFILENE","patPers.txt"));
     		loadPatternFrom(cfg.getString("IN.PATFILE","pats2.txt"));
-    		//TODO regexp!
+    		loadRegexpFrom(cfg.getString("IN.REGEXP","regexps.txt"));
+    		loadKlassnamesFrom(cfg.getString("IN.CLASSNAMES","klassNames.txt"));
     		
     		String itemsFound = cfg.getString("OUT.ITEMSFOUND","itemsFound.txt");
     		fileOutNewItemsPane.setText(itemsFound);
@@ -1211,7 +1616,8 @@ public class RecognizerPanel extends WortschatzModul {
     		fileOutExtrPatsPane.setText(nes);
     		fileOutExtrPatsCheckbox.setSelected(true);
     		String logfile = cfg.getString("OUT.LOGFILE","log.txt");
-    		//TODO logfile!
+            fileOutLogPane.setText(logfile);
+            fileOutLogCheckbox.setSelected(true);
     	}
     }
     
@@ -1490,6 +1896,18 @@ public class RecognizerPanel extends WortschatzModul {
     		endnoSpinner.setValue(new Integer(-1));
     	}
     	return endnoSpinner;
+    }
+    /**
+     * This method initializes samplesSpinner	
+     * 	
+     * @return javax.swing.JSpinner	
+     */    
+    private JSpinner getSamplesSpinner() {
+    	if (samplesSpinner == null) {
+    		samplesSpinner = new JSpinner();
+    		samplesSpinner.setBounds(202, 191, 55, 25);
+    	}
+    	return samplesSpinner;
     }
     
     
