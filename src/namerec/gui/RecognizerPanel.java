@@ -10,18 +10,25 @@ package namerec.gui;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Container;
+import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.Insets;
 import java.awt.Rectangle;
+import java.awt.ScrollPane;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.PrintStream;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.StringTokenizer;
 import java.util.Vector;
@@ -47,8 +54,11 @@ import javax.swing.table.DefaultTableModel;
 import namerec.MatcherNam;
 import namerec.NameTable;
 import namerec.Pattern;
+import namerec.Recognizer;
+import namerec.SatzDatasource;
 import namerec.util.Config;
 import namerec.util.FileSelector;
+import namerec.util.SwingWorker;
 
 import com.biemann.pendel.Pendel;
 import com.biemann.pendel.Watcher;
@@ -57,6 +67,7 @@ import com.bordag.klf.util.StringUtils;
 import de.wortschatz.WortschatzModul;
 import de.wortschatz.WortschatzTool;
 import javax.swing.JSpinner;
+import javax.swing.JTextArea;
 
 
 public class RecognizerPanel extends WortschatzModul {
@@ -183,6 +194,13 @@ public class RecognizerPanel extends WortschatzModul {
     private JTable tagEncodeTable=new JTable(),tagRegexpTable=new JTable();
     private JLabel jLabel3 = null;
     private JSpinner samplesSpinner = null;
+    private JPanel runnerPanel = null;
+    private JTextArea textArea = null;
+    private JButton startButton = null;
+    private JLabel jLabel4 = null;
+    private JTextField sentenceTf = null;
+    private JButton singleSentenceButton = null;
+    private JScrollPane scrollPane;
     //Frame konstruieren
     public RecognizerPanel(WortschatzTool wTool)
     {
@@ -831,6 +849,7 @@ public class RecognizerPanel extends WortschatzModul {
         extrPatternsPanel.add(extrPatsClassLabel, null);
         extrPatsScrollPane.getViewport().add(extrPatsTable, null);
         PendelTabbedPane.add(inputItemsPanel, "Known names");
+        PendelTabbedPane.addTab("Run", null, getRunnerPanel(), null);
         inputItemsPanel.add(inItemBackLabel, null);
         inputItemsPanel.add(inItemsBackLoadField, null);
         inputItemsPanel.add(inItemBackScrollPane, null);
@@ -1155,7 +1174,7 @@ public class RecognizerPanel extends WortschatzModul {
         TableSorter sorter=new TableSorter(model);
         JTable returnTable= new JTable(sorter);
         sorter.setTableHeader(returnTable.getTableHeader());
-        returnTable.getColumnModel().getColumn(0).setMaxWidth(50);
+        returnTable.getColumnModel().getColumn(0).setWidth(50);
         return returnTable;
     }
     
@@ -1632,6 +1651,167 @@ public class RecognizerPanel extends WortschatzModul {
     		samplesSpinner.setBounds(202, 191, 55, 25);
     	}
     	return samplesSpinner;
+    }
+    /**
+     * This method initializes runnerPanel	
+     * 	
+     * @return javax.swing.JPanel	
+     */    
+    private JPanel getRunnerPanel() {
+    	if (runnerPanel == null) {
+    		jLabel4 = new JLabel();
+    		jLabel4.setBounds(22, 444, 105, 24);
+    		jLabel4.setText("Use sentence:");
+    		runnerPanel = new JPanel();
+    		runnerPanel.setLayout(null);
+    		runnerPanel.add(getScrollPane(), null);
+    		runnerPanel.add(getStartButton(), null);
+    		runnerPanel.add(jLabel4, null);
+    		runnerPanel.add(getSentenceTf(), null);
+    		runnerPanel.add(getSingleSentenceButton(), null);
+    	}
+    	return runnerPanel;
+    }
+    private JScrollPane getScrollPane() {
+        if(scrollPane == null) {
+            scrollPane=new JScrollPane(getTextArea(), JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);            
+            scrollPane.setBounds(17, 5, 625, 400);
+        }
+        return scrollPane;
+    }
+    /**
+     * This method initializes textArea	
+     * 	
+     * @return javax.swing.JTextArea	
+     */    
+    private JTextArea getTextArea() {
+    	if (textArea == null) {
+    		textArea = new JTextArea();
+            textArea.setEditable(false);
+    		//textArea.setPreferredSize(new java.awt.Dimension(500,400));
+    		textArea.setBounds(17, 5, 625, 400);
+            textArea.setDocument(new CyclicDocument(1000000));
+    	}
+    	return textArea;
+    }
+    /**
+     * This method initializes startButton	
+     * 	
+     * @return javax.swing.JButton	
+     */    
+    private JButton getStartButton() {
+    	if (startButton == null) {
+    		startButton = new JButton();
+    		startButton.setBounds(689, 120, 71, 33);
+    		startButton.setText("Run");
+            startButton.addActionListener(new java.awt.event.ActionListener() { 
+                public void actionPerformed(java.awt.event.ActionEvent e) {    
+                    Config cfg=getConfigFromGui();
+                    try {
+                        redirectSysOut();
+                    } catch (IOException e2) {
+                        e2.printStackTrace();
+                    }
+                    doTheCalculation(cfg, null);
+                }
+            });
+    	}
+    	return startButton;
+    }
+    /**
+     * This method initializes sentenceTf	
+     * 	
+     * @return javax.swing.JTextField	
+     */    
+    private JTextField getSentenceTf() {
+    	if (sentenceTf == null) {
+    		sentenceTf = new JTextField();
+    		sentenceTf.setBounds(141, 443, 494, 29);
+    	}
+    	return sentenceTf;
+    }
+    /**
+     * This method initializes singleSentenceButton	
+     * 	
+     * @return javax.swing.JButton	
+     */    
+    private JButton getSingleSentenceButton() {
+    	if (singleSentenceButton == null) {
+    		singleSentenceButton = new JButton();
+    		singleSentenceButton.setBounds(641, 442, 136, 31);
+    		singleSentenceButton.addActionListener(new java.awt.event.ActionListener() { 
+    			public void actionPerformed(java.awt.event.ActionEvent e) {    
+    			    Config cfg=getConfigFromGui();
+                    try {
+                        redirectSysOut();
+                    } catch (IOException e2) {
+                        e2.printStackTrace();
+                    }
+    			    cfg.set("OPTION.NUMOFTHREADS","1");
+                    SatzDatasource ds=new SatzDatasource() {
+                        boolean isDone=false;
+                        public String getNextSentence() {
+                            if(!isDone) {
+                                isDone=true;
+                                return sentenceTf.getText();
+                            }
+                            return "END";
+                        }                        
+                    };
+                    Recognizer rec;
+                    doTheCalculation(cfg, ds);
+                }
+    		});
+    		singleSentenceButton.setText("Run sentence");
+    	}
+    	return singleSentenceButton;
+    }
+    private void doTheCalculation(final Config cfg, final SatzDatasource ds) {
+        RecognizerPanel.this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+        
+        SwingWorker sw=new SwingWorker() {
+            public Object construct() {
+                Recognizer rec=null;
+                try {
+                    rec = new Recognizer(cfg,ds);
+                    rec.doTheRecogBoogie();
+                    rec.runNERecognition();
+                } catch (Exception e1) {
+                    e1.printStackTrace();
+                }
+                return rec;
+            }
+            public void finished() {
+                RecognizerPanel.this.setCursor(Cursor.getDefaultCursor());
+            }
+        };
+        sw.start();
+    }
+    protected void redirectSysOut() throws IOException {
+        final BufferedWriter bw=new BufferedWriter(new FileWriter(fileOutLogPane.getText(),true));
+        bw.write("########### new start: "+new Date());
+        PrintStream ps =  new PrintStream(System.out) {
+            public void println(String x) {
+                getTextArea().append(x);
+                getTextArea().append("\n");
+                try {
+                    bw.write(x);
+                    bw.write("\n");
+                } catch (IOException e) {
+                }
+                getTextArea().setCaretPosition(getTextArea().getText().length() - 1);
+            }
+            public void print(String x) {
+                getTextArea().append(x);
+                try {
+                    bw.write(x);
+                } catch (IOException e) {
+                }
+                getTextArea().setCaretPosition(getTextArea().getText().length() - 1);
+            }
+        };
+        System.setOut(ps);
+        System.setErr(ps);
     }
     
     

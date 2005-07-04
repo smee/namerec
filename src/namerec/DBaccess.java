@@ -79,11 +79,11 @@ public class DBaccess implements Cloneable{
         catch (SQLException e) {
             System.out.println("Datenbankfehler!"+e.getMessage());
             e.printStackTrace();
-            System.exit(1);
+            return;
         }catch (ClassNotFoundException e) {
             System.err.println("Unknown classname for jdbcdriver!");
             e.printStackTrace();
-            System.exit(1);
+            return;
         }
     }
 

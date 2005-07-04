@@ -49,7 +49,9 @@ public class Recognizer {
 
     private Config cfg;
 
-    public Recognizer(Config cfg) throws IOException {
+    private SatzDatasource ds;
+
+    public Recognizer(Config cfg, SatzDatasource ds) throws IOException {
         this.cfg=cfg;
         n_cands=cfg.getInteger("OPTION.CANDIDATESNO",30);
         numofthreads=cfg.getInteger("OPTION.NUMOFTHREADS",10);
@@ -59,6 +61,7 @@ public class Recognizer {
         itemFile=cfg.getString("OUT.ITEMSFOUND","itemsFound.txt");
         maybeFile = cfg.getString("OUT.MAYBE","maybe.txt");
         db=new DBaccess(cfg);
+        this.ds=ds;
         init(cfg);        
     }
     
@@ -201,7 +204,7 @@ public class Recognizer {
         }catch (Exception e) {
             System.err.println("Error on checking candidates: "+toCheck);
             e.printStackTrace();
-            System.exit(1);
+            return null;
         }
         return checked;
     } // end checkCandidates
@@ -258,7 +261,7 @@ public class Recognizer {
         Config cfg=new Config(args[0]);
         System.out.println("Using the following settings from "+args[0]);
         System.out.println(cfg);
-        Recognizer rec=new Recognizer(cfg);
+        Recognizer rec=new Recognizer(cfg,null);
         rec.doTheRecogBoogie();
         if(Boolean.valueOf(cfg.getString("OPTION.NERECOG","false")).booleanValue()==true)
             rec.runNERecognition();
@@ -272,8 +275,9 @@ public class Recognizer {
      * @throws Exception
      */
     private SatzDatasource getSatzDatasource() throws Exception {
-        //return new FileDataSource("sentences.txt");
-        return new SentenceFetcher(db,startNr,endNr,1000);
+        if(ds==null)
+            return new SentenceFetcher(db,startNr,endNr,1000);
+        return ds;
     }
 
 
