@@ -81,7 +81,6 @@ public class RecognizerPanel extends WortschatzModul {
     JPanel pendelFramePanel = new JPanel();  // Main Panel
     JTabbedPane PendelTabbedPane = new JTabbedPane();
     JPanel inputItemsPanel = new JPanel();
-    JPanel outputItemsPanel = new JPanel();
     JPanel filePanel = new JPanel();
     JButton classRulesDeleteutton = new JButton();
     JButton classRulesClearButton= new JButton();
@@ -92,13 +91,8 @@ public class RecognizerPanel extends WortschatzModul {
     JButton classRulesAddFileButton = new JButton();
     JButton tagEncodeAutoButton = new JButton();
     JTextField classRulesFileNamePane = new JTextField();
-    JLabel outItemsUnusedlLabel = new JLabel();
-    JScrollPane outItemsUnusedScrollPane = new JScrollPane();
-    JLabel outItemsAllItemsLabel = new JLabel();
     JLabel paraSearchLabel = new JLabel();
     JPanel parametersPanel = new JPanel();
-    JScrollPane outItemsAllScrollPane = new JScrollPane();
-    JTable outItemsAllTable = new JTable();
     JButton paraDefaultButton = new JButton();
     JLabel paraVerLabel = new JLabel();
     JLabel paraThreshLabel = new JLabel();
@@ -107,7 +101,6 @@ public class RecognizerPanel extends WortschatzModul {
     JTable outRulesUseTable = new JTable();
     JPanel fileOutPanel = new JPanel();
     JLabel fileOutLabel = new JLabel();
-    JTable outItemsUnusedTable = new JTable();
     JCheckBox fileOutNewItemCheckbox = new JCheckBox();
     JTextField fileOutNewItemsPane = new JTextField();
     JCheckBox fileOutMaybeItemCheckbox = new JCheckBox();
@@ -138,8 +131,6 @@ public class RecognizerPanel extends WortschatzModul {
     JTable extrPatsTable = new JTable();
     JTable inItemTable = new JTable();
     JLabel paraLabel = new JLabel();
-    JButton outItemsStartButton = new JButton();
-    JButton outItemsStopButton = new JButton();
     TitledBorder titledBorder1;
     TitledBorder titledBorder2;
     TitledBorder titledBorder3;
@@ -166,9 +157,6 @@ public class RecognizerPanel extends WortschatzModul {
     JLabel inItemBackClassLabel = new JLabel();
     JTextField inItemBackAddItemField = new JTextField();
     JTextField inItemBackAddClassField = new JTextField();
-    JButton outItemsPauseButton = new JButton();
-    JButton outItemsDeleteUnusedButton = new JButton();
-    JButton outItemsDeleteAllButton = new JButton();
     private JLabel jLabel = null;
     private JTextField versionTf = null;
     private BaseTaggerPanel baseTaggerPanel = null;
@@ -515,79 +503,7 @@ public class RecognizerPanel extends WortschatzModul {
         
         
         
-        //OurputItemsPanel
-        outputItemsPanel.setLayout(null);
-        outItemsUnusedlLabel.setFont(new java.awt.Font("Dialog", 1, 12));
-        outItemsUnusedlLabel.setText("Unused Items");
-        outItemsUnusedlLabel.setBounds(new Rectangle(5, 10, 200, 20));
-        outItemsUnusedScrollPane.setBounds(new Rectangle(10, 50, 490, 180));
-        outItemsAllItemsLabel.setFont(new java.awt.Font("Dialog", 1, 12));
-        outItemsAllItemsLabel.setText("All Items");
-        outItemsAllItemsLabel.setBounds(new Rectangle(5, 250, 200, 20));
-        outItemsAllScrollPane.setBounds(new Rectangle(10, 280, 490, 180));
-        outItemsStartButton.setBackground(Color.green);
-        outItemsStartButton.setText("Start");
-        outItemsStartButton.setBounds(new Rectangle(540, 60, 100, 100));
-        outItemsStartButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    pendelStart_actionPerformed(e);
-                } catch (IOException f) {System.out.println(f.getMessage());}
-            }
-        });
-        
-        
-        outItemsStopButton.setBackground(Color.red);
-        outItemsStopButton.setText("Stop");
-        outItemsStopButton.setBounds(new Rectangle(540, 340, 100, 100));
-        outItemsStopButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                pendelStop_actionPerformed(e);
-            }
-        });
-        
-        outItemsUnusedTable.setBounds(new Rectangle(0, 0, 480, 130));
-        outItemsPauseButton.setBackground(Color.yellow);
-        outItemsPauseButton.setText("Resume");
-        outItemsPauseButton.setVisible(false);
-        outItemsPauseButton.setBounds(new Rectangle(540, 200, 100, 100));
-        outItemsPauseButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    pendelPause_actionPerformed(e);
-                } catch (IOException f) {System.out.println(f.getMessage());}
                 
-                
-                
-            }
-        });
-        
-        outItemsDeleteUnusedButton.setText("Delete Selected");
-        outItemsDeleteUnusedButton.setBounds(new Rectangle(370, 20, 130, 25));
-        outItemsDeleteUnusedButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    outItemsDeleteAllButton_actionPerformed(e);
-                } catch (IOException f) {System.out.println(f.getMessage());}
-                
-                
-                
-            }
-        });
-        
-        outItemsDeleteAllButton.setText("Delete Selected");
-        outItemsDeleteAllButton.setBounds(new Rectangle(370, 250, 130, 25));
-        outItemsDeleteAllButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    outItemsDeleteAllButton_actionPerformed(e);
-                } catch (IOException f) {System.out.println(f.getMessage());}
-                
-                
-                
-            }
-        });
-        
         // File Panel
         filePanel.setLayout(null);
         fileOutPanel.setBorder(BorderFactory.createEtchedBorder());
@@ -932,24 +848,8 @@ public class RecognizerPanel extends WortschatzModul {
         parametersPanel.add(jLabel2, null);
         parametersPanel.add(getStartNoSpiner(), null);
         parametersPanel.add(getEndnoSpinner(), null);
-        PendelTabbedPane.add(outputItemsPanel, "Output Items");
-        outputItemsPanel.add(outItemsUnusedlLabel, null);
-        outputItemsPanel.add(outItemsUnusedScrollPane, null);
-        outputItemsPanel.add(outItemsAllItemsLabel, null);
-        outputItemsPanel.add(outItemsAllScrollPane, null);
-        outputItemsPanel.add(outItemsStartButton, null);
-        outputItemsPanel.add(outItemsStopButton, null);
-        outputItemsPanel.add(outItemsPauseButton, null);
-        outputItemsPanel.add(outItemsDeleteUnusedButton, null);
-        outputItemsPanel.add(outItemsDeleteAllButton, null);
         parametersPanel.add(jLabel3, null);
         parametersPanel.add(getSamplesSpinner(), null);
-        outItemsAllScrollPane.getViewport().add(outItemsAllTable, null);
-        outItemsUnusedScrollPane.getViewport().add(outItemsUnusedTable, null);
-        
-        // Data Init
-        
-        
         
     }
 //  tagEncode Buttons
@@ -979,6 +879,7 @@ public class RecognizerPanel extends WortschatzModul {
         klassKeysNameTable.putAll(loader);
         tagCodeLoadPane.setText(filename);
         tagEncodeTable=nameTable2jTable(klassKeysNameTable);
+        tagCodeLoadPane.setText(filename);
         tagEncodeScrollPane.getViewport().add(tagEncodeTable, null);
         this.setVisible(true);
     }
@@ -1098,6 +999,7 @@ public class RecognizerPanel extends WortschatzModul {
         tagRegexpLoadPane.setText(filename);
     	NameTable loader=NameTable.loadFromFile(filename);
         regexpNameTable.putAll(loader);
+        tagRegexpLoadPane.setText(filename);
         tagRegexpTable=nameTable2jTable(regexpNameTable);
         tagRegexpScrollPane.getViewport().add(tagRegexpTable, null);
         this.setVisible(true);
@@ -1544,30 +1446,39 @@ public class RecognizerPanel extends WortschatzModul {
     
     
     void fileConfSaveButton_actionPerformed(ActionEvent e) throws IOException {
-    	Config c=new Config();
-    	getDBConfigPanelAkt().saveToConfig(c,"AKT");
-    	getDBConfigPanelWs().saveToConfig(c,"WS");
-    	getBaseTaggerPanel().addYourConfig(c);
-    	c.set("OPTION.ACCEPTITEM",paraThreshPane.getText());
-    	c.set("OPTION.STARTNO",((Integer)startNoSpiner.getValue()).toString());
-    	c.set("OPTION.ENDNO",((Integer)endnoSpinner.getValue()).toString());
-    	c.set("OPTION.NUMOFTHREADS",numOfThreadField.getText());
-    	c.set("OPTION.CANDIDATESNO",paraVerNrField.getText());
-    	c.set("OPTION.VERSION",getVersionTf().getText());
-		//TODO NERecogCB fuer NE erkennung!
-		//TODO samples!
-    	c.set("IN.KNOWLEDGE",inItemsBackLoadField.getText());
-    	c.set("IN.PATFILENE",extrPatsFileNamePane.getText());
-    	c.set("IN.PATFILE",classRulesFileNamePane.getText());
-    	c.set("IN.REGEXP",tagRegexpLoadPane.getText());
-    	c.set("IN.CLASSNAMES",tagCodeLoadPane.getText());
-    	c.set("OUT.ITEMSFOUND",fileOutNewItemsPane.getText());
-    	c.set("OUT.CONTEXT",fileOutRuleContextPane.getText());
-    	c.set("OUT.MAYBE",fileOutMaybeItemsPane.getText());
-    	c.set("OUT.COMPLEXNAMES",fileOutExtrPatsPane.getText());
-    	c.set("OUT.LOGFILE",fileOutLogPane.getText());
+        File f=FileSelector.getUserSelectedFile(RecognizerPanel.this,"Save configuration...", 
+                getConfigFileFilter(),FileSelector.SAVE_DIALOG);
+        if(f != null) {
+            Config c=getConfigFromGui();
+            c.saveToFile(f);
+        }
+        
     }
-    
+    public Config getConfigFromGui() {
+        Config c=new Config();
+        getDBConfigPanelAkt().saveToConfig(c,"AKT");
+        getDBConfigPanelWs().saveToConfig(c,"WS");
+        getBaseTaggerPanel().addYourConfig(c);
+        c.set("OPTION.ACCEPTITEM",paraThreshPane.getText());
+        c.set("OPTION.STARTNO",((Integer)startNoSpiner.getValue()).toString());
+        c.set("OPTION.ENDNO",((Integer)endnoSpinner.getValue()).toString());
+        c.set("OPTION.NUMOFTHREADS",numOfThreadField.getText());
+        c.set("OPTION.CANDIDATESNO",paraVerNrField.getText());
+        c.set("OPTION.VERSION",getVersionTf().getText());
+        //TODO NERecogCB fuer NE erkennung!
+        //TODO samples!
+        c.set("IN.KNOWLEDGE",inItemsBackLoadField.getText());
+        c.set("IN.PATFILENE",extrPatsFileNamePane.getText());
+        c.set("IN.PATFILE",classRulesFileNamePane.getText());
+        c.set("IN.REGEXP",tagRegexpLoadPane.getText());
+        c.set("IN.CLASSNAMES",tagCodeLoadPane.getText());
+        c.set("OUT.ITEMSFOUND",fileOutNewItemsPane.getText());
+        c.set("OUT.CONTEXT",fileOutRuleContextPane.getText());
+        c.set("OUT.MAYBE",fileOutMaybeItemsPane.getText());
+        c.set("OUT.COMPLEXNAMES",fileOutExtrPatsPane.getText());
+        c.set("OUT.LOGFILE",fileOutLogPane.getText());
+        return c;
+    }
     void fileConfLoadButton_actionPerformed(ActionEvent e) throws IOException {
     	File f=FileSelector.getUserSelectedFile(RecognizerPanel.this,"Open configuration...", 
     			getConfigFileFilter(),FileSelector.OPEN_DIALOG);
@@ -1627,186 +1538,11 @@ public class RecognizerPanel extends WortschatzModul {
 			
 		};
 	}
-	public void softsupdate() {
-        outItemsAllTable=nameTable2jTable(Pendel.allesWissen);
-        outItemsAllScrollPane.getViewport().add(outItemsAllTable, null);
-        NameTable joiner=new NameTable();
-        joiner.putAll(Pendel.actItems);
-        joiner.putAll(Pendel.neueItems);
-        outItemsUnusedTable=nameTable2jTable(joiner);
-        outItemsUnusedScrollPane.getViewport().add(outItemsUnusedTable, null);
-        outRulesUseTable=rules2jTable(Pendel.rules);
-        
-        
-        
-        
-        
-        this.setVisible(true);
-        this.repaint();
-        
-    }
-    
-    //outItemsButtons
-    
-    void outItemsDeleteAllButton_actionPerformed(ActionEvent e) throws IOException {
-        
-        
-        String delItem="";
-        int rowCount=outItemsAllTable.getSelectedRowCount();
-        int[] selectedRows=outItemsAllTable.getSelectedRows();
-        for (int i=0;i<rowCount;i++) {
-            delItem=(String)outItemsAllTable.getValueAt(selectedRows[i],0);
-            System.out.println("deletion of: "+delItem);
-            pendelProcess.allesWissen.remove(delItem);
-        } //rof
-        
-        outItemsAllTable=nameTable2jTable(pendelProcess.allesWissen);
-        outItemsAllScrollPane.getViewport().add(outItemsAllTable, null);
-        this.setVisible(true);
-        this.repaint();
-    }
     
     
-    void outItemsDeleteUnusedButton_actionPerformed(ActionEvent e) throws IOException {
-        
-        
-        String delItem="";
-        int rowCount=outItemsUnusedTable.getSelectedRowCount();
-        int[] selectedRows=outItemsUnusedTable.getSelectedRows();
-        for (int i=0;i<rowCount;i++) {
-            delItem=(String)outItemsUnusedTable.getValueAt(selectedRows[i],0);
-            System.out.println("deletion of: "+delItem);
-            pendelProcess.actItems.remove(delItem);
-        } //rof
-        
-        outItemsUnusedTable=nameTable2jTable(pendelProcess.actItems);
-        outItemsUnusedScrollPane.getViewport().add(outItemsUnusedTable, null);
-        this.setVisible(true);
-        this.repaint();
-    }
     
     
-    // PEndel Pause
-    void pendelPause_actionPerformed(ActionEvent e) throws IOException {
-        String buttonState=outItemsPauseButton.getText();
-        if (buttonState.equals("Pause")) {
-            outItemsPauseButton.setText("Continue");
-            pendelProcess.pause();
-            watcherProcess.watchThread.suspend();
-            outItemsDeleteUnusedButton.setVisible(true);
-            outItemsDeleteAllButton.setVisible(true);
-        } else
-            if (buttonState.equals("Continue")) {
-                outItemsPauseButton.setText("Pause");
-                pendelProcess.weiter();
-                watcherProcess.watchThread.resume();
-                outItemsDeleteUnusedButton.setVisible(false);
-                outItemsDeleteAllButton.setVisible(false);
-            } else
-                if (buttonState.equals("Resume")) {
-                    outItemsPauseButton.setText("Pause");
-                    outItemsPauseButton.setVisible(true);
-                    outItemsPauseButton.repaint();
-                    outItemsDeleteUnusedButton.setVisible(true);
-                    outItemsDeleteAllButton.setVisible(true);
-                    
-                    // Parameters
-                    int n_search=new Integer(numOfThreadField.getText()).intValue();
-                    int n_cands=new Integer(paraVerNrField.getText()).intValue();
-                    int min_count=new Integer(paraMinCountPane.getText()).intValue();
-                    int min_rulecount= new Integer(paraMinCountRulePane.getText()).intValue();
-                    double thresh_item=new Double(paraThreshPane.getText()).doubleValue();
-                    double thresh_rule=new Double(paraThreshRulePane.getText()).doubleValue();
-                    String dbString=paraDBnamePane.getText()+"?user="+paraUserPane.getText()+"&password="+paraPasswdField.getText();
-                    
-                    String fileItems=fileOutNewItemsPane.getText();
-                    String fileContexts=fileOutRuleContextPane.getText();
-                    String fileMaybes=fileOutMaybeItemsPane.getText();
-                    String fileEntities=fileOutExtrPatsPane.getText();
-                    String fileLog=fileOutLogPane.getText();
-                    boolean boolItems=fileOutNewItemCheckbox.isSelected();
-                    boolean boolContexts=fileOutRuleContextCheckbox.isSelected();
-                    boolean boolMaybes=fileOutMaybeItemCheckbox.isSelected();
-                    boolean  boolEntities=fileOutExtrPatsCheckbox.isSelected();
-                    boolean boolLog=fileOutLogCheckbox.isSelected();
-                    
-                    pendelProcess=new Pendel(n_search,n_cands,min_count,min_rulecount,
-                            thresh_item,thresh_rule,dbString,
-                            klassKeysNameTable,regexpNameTable,
-                            Pendel.rules,extrPats, Pendel.actItems, Pendel.allesWissen,
-                            fileItems,boolItems,fileContexts,boolContexts,
-                            fileMaybes, boolMaybes, fileEntities, boolEntities,
-                            fileLog,boolLog);
-                    
-                    watcherProcess = new Watcher(this);
-                }
-        outItemsPauseButton.repaint();
-    }
-    
-    // PendelStart
-    void pendelStart_actionPerformed(ActionEvent e) throws IOException {
-        System.out.println("Start!");
-        outItemsPauseButton.setText("Pause");
-        outItemsPauseButton.setVisible(true);
-        outItemsDeleteUnusedButton.setVisible(false);
-        outItemsDeleteAllButton.setVisible(false);
-        outItemsPauseButton.repaint();
-        
-        // Parameters
-        int n_search=new Integer(numOfThreadField.getText()).intValue();
-        int n_cands=new Integer(paraVerNrField.getText()).intValue();
-        int min_count=new Integer(paraMinCountPane.getText()).intValue();
-        int min_rulecount= new Integer(paraMinCountRulePane.getText()).intValue();
-        double thresh_item=new Double(paraThreshPane.getText()).doubleValue();
-        double thresh_rule=new Double(paraThreshRulePane.getText()).doubleValue();
-        String dbString=paraDBnamePane.getText()+"?user="+paraUserPane.getText()+"&password="+paraPasswdField.getText();
-        
-        String fileItems=fileOutNewItemsPane.getText();
-        String fileContexts=fileOutRuleContextPane.getText();
-        String fileMaybes=fileOutMaybeItemsPane.getText();
-        String fileEntities=fileOutExtrPatsPane.getText();
-        String fileLog=fileOutLogPane.getText();
-        boolean boolItems=fileOutNewItemCheckbox.isSelected();
-        boolean boolContexts=fileOutRuleContextCheckbox.isSelected();
-        boolean boolMaybes=fileOutMaybeItemCheckbox.isSelected();
-        boolean  boolEntities=fileOutExtrPatsCheckbox.isSelected();
-        boolean boolLog=fileOutLogCheckbox.isSelected();
-        
-        if (pendelProcess!=null) {pendelProcess.stop();
-        watcherProcess.running=false;
-        }
-        
-        NameTable inItems=new NameTable();
-        inItems.insert(inItemsNameTable);
-        
-        pendelProcess=new Pendel(n_search,n_cands,min_count,min_rulecount,
-                thresh_item,thresh_rule,dbString,
-                klassKeysNameTable,regexpNameTable,
-                classRules,extrPats, inItems, inItemsBackNameTable,
-                fileItems,boolItems,fileContexts,boolContexts,
-                fileMaybes, boolMaybes, fileEntities, boolEntities,
-                fileLog,boolLog);
-        
-        watcherProcess = new Watcher(this);
-        
-    }
-    
-    
-    void pendelStop_actionPerformed(ActionEvent e) {
-        if (pendelProcess!=null) {pendelProcess.stop();}
-        if (watcherProcess!=null) watcherProcess.stop();
-        outItemsPauseButton.setText("Resume");
-        outItemsPauseButton.setVisible(false);
-        
-        outItemsDeleteUnusedButton.setVisible(true);
-        outItemsDeleteAllButton.setVisible(true);
-        
-        this.repaint();
-        pendelProcess.actItems=new NameTable();
-        pendelProcess.allesWissen=new NameTable();
-        softsupdate();
-        System.out.println("Stop!");
-    }
+
     /**
      * This method initializes versionTf	
      * 	
