@@ -51,6 +51,7 @@ import javax.swing.border.TitledBorder;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.table.DefaultTableModel;
 
+import namerec.FileDataSource;
 import namerec.MatcherNam;
 import namerec.NameTable;
 import namerec.Pattern;
@@ -201,6 +202,12 @@ public class RecognizerPanel extends WortschatzModul {
     private JTextField sentenceTf = null;
     private JButton singleSentenceButton = null;
     private JScrollPane scrollPane;
+    private JPanel sourcePanel;
+    private JLabel jLabel5 = null;
+    private JTextField fileSourceTf = null;
+    private JButton fileSourceButton = null;
+    private JButton runFileDatasourceButton = null;
+    private JCheckBox runNECb = null;
     //Frame konstruieren
     public RecognizerPanel(WortschatzTool wTool)
     {
@@ -1484,7 +1491,7 @@ public class RecognizerPanel extends WortschatzModul {
         c.set("OPTION.NUMOFTHREADS",numOfThreadField.getText());
         c.set("OPTION.CANDIDATESNO",paraVerNrField.getText());
         c.set("OPTION.VERSION",getVersionTf().getText());
-        //TODO NERecogCB fuer NE erkennung!
+        c.set("OPTION.NERECOG",Boolean.toString(runNECb.isSelected()));
         //TODO samples!
         c.set("IN.KNOWLEDGE",inItemsBackLoadField.getText());
         c.set("IN.PATFILENE",extrPatsFileNamePane.getText());
@@ -1509,8 +1516,8 @@ public class RecognizerPanel extends WortschatzModul {
     		numOfThreadField.setText(cfg.getString("OPTION.NUMOFTHREADS","10"));
     		paraVerNrField.setText(cfg.getString("OPTION.CANDIDATESNO","30"));
     		getVersionTf().setText(cfg.getString("OPTION.VERSION","NameRec 1.1neu"));
-    		//TODO NERecogCB fuer NE erkennung!
-    		samplesSpinner.setValue(new Integer(cfg.getInteger("OPTION.SAMPLES",100)));
+            runNECb.setSelected(cfg.getBoolean("OPTION.NERECOG",true));
+            samplesSpinner.setValue(new Integer(cfg.getInteger("OPTION.SAMPLES",100)));
     		
     		getBaseTaggerPanel().loadFromConfig(cfg);
     		getDBConfigPanelAkt().loadFromConfig(cfg,"AKT");
@@ -1587,6 +1594,7 @@ public class RecognizerPanel extends WortschatzModul {
     	}
     	return baseTaggerPanel;
     }
+    
     /**
      * This method initializes DBConfigPanelAkt	
      * 	
@@ -1596,7 +1604,7 @@ public class RecognizerPanel extends WortschatzModul {
     	if (DBConfigPanelAkt == null) {
     		DBConfigPanelAkt = new DBConfigPanel();
     		DBConfigPanelAkt.setBounds(14, 267, 367, 185);
-    		DBConfigPanelAkt.setTitle("DB Aktuell");
+    		DBConfigPanelAkt.setTitle("DB verification");
     	}
     	return DBConfigPanelAkt;
     }
@@ -1609,7 +1617,7 @@ public class RecognizerPanel extends WortschatzModul {
     	if (DBConfigPanelWs == null) {
     		DBConfigPanelWs = new DBConfigPanel();
     		DBConfigPanelWs.setBounds(402, 269, 367, 185);
-    		DBConfigPanelWs.setTitle("DB Wissen");
+    		DBConfigPanelWs.setTitle("DB New");
     	}
     	return DBConfigPanelWs;
     }
@@ -1659,8 +1667,11 @@ public class RecognizerPanel extends WortschatzModul {
      */    
     private JPanel getRunnerPanel() {
     	if (runnerPanel == null) {
+    		jLabel5 = new JLabel();
+    		jLabel5.setBounds(17, 406, 105, 26);
+    		jLabel5.setText("Use fileinput:");
     		jLabel4 = new JLabel();
-    		jLabel4.setBounds(22, 444, 105, 24);
+    		jLabel4.setBounds(16, 442, 105, 31);
     		jLabel4.setText("Use sentence:");
     		runnerPanel = new JPanel();
     		runnerPanel.setLayout(null);
@@ -1669,13 +1680,18 @@ public class RecognizerPanel extends WortschatzModul {
     		runnerPanel.add(jLabel4, null);
     		runnerPanel.add(getSentenceTf(), null);
     		runnerPanel.add(getSingleSentenceButton(), null);
+    		runnerPanel.add(jLabel5, null);
+    		runnerPanel.add(getFileSourceTf(), null);
+    		runnerPanel.add(getFileSourceButton(), null);
+    		runnerPanel.add(getRunFileDatasourceButton(), null);
+    		runnerPanel.add(getRunNECb(), null);
     	}
     	return runnerPanel;
     }
     private JScrollPane getScrollPane() {
         if(scrollPane == null) {
             scrollPane=new JScrollPane(getTextArea(), JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);            
-            scrollPane.setBounds(17, 5, 625, 400);
+            scrollPane.setBounds(17, 5, 625, 350);
         }
         return scrollPane;
     }
@@ -1702,8 +1718,8 @@ public class RecognizerPanel extends WortschatzModul {
     private JButton getStartButton() {
     	if (startButton == null) {
     		startButton = new JButton();
-    		startButton.setBounds(689, 120, 71, 33);
-    		startButton.setText("Run");
+    		startButton.setBounds(641, 360, 134, 26);
+    		startButton.setText("Run DB");
             startButton.addActionListener(new java.awt.event.ActionListener() { 
                 public void actionPerformed(java.awt.event.ActionEvent e) {    
                     Config cfg=getConfigFromGui();
@@ -1726,7 +1742,7 @@ public class RecognizerPanel extends WortschatzModul {
     private JTextField getSentenceTf() {
     	if (sentenceTf == null) {
     		sentenceTf = new JTextField();
-    		sentenceTf.setBounds(141, 443, 494, 29);
+    		sentenceTf.setBounds(132, 442, 503, 31);
     	}
     	return sentenceTf;
     }
@@ -1738,7 +1754,7 @@ public class RecognizerPanel extends WortschatzModul {
     private JButton getSingleSentenceButton() {
     	if (singleSentenceButton == null) {
     		singleSentenceButton = new JButton();
-    		singleSentenceButton.setBounds(641, 442, 136, 31);
+    		singleSentenceButton.setBounds(641, 442, 136, 26);
     		singleSentenceButton.addActionListener(new java.awt.event.ActionListener() { 
     			public void actionPerformed(java.awt.event.ActionEvent e) {    
     			    Config cfg=getConfigFromGui();
@@ -1758,7 +1774,6 @@ public class RecognizerPanel extends WortschatzModul {
                             return "END";
                         }                        
                     };
-                    Recognizer rec;
                     doTheCalculation(cfg, ds);
                 }
     		});
@@ -1775,7 +1790,8 @@ public class RecognizerPanel extends WortschatzModul {
                 try {
                     rec = new Recognizer(cfg,ds);
                     rec.doTheRecogBoogie();
-                    rec.runNERecognition();
+                    if(cfg.getBoolean("OPTION.NERECOG",false))
+                        rec.runNERecognition();
                 } catch (Exception e1) {
                     e1.printStackTrace();
                 }
@@ -1812,6 +1828,78 @@ public class RecognizerPanel extends WortschatzModul {
         };
         System.setOut(ps);
         System.setErr(ps);
+    }
+    /**
+     * This method initializes fileSourceTf	
+     * 	
+     * @return javax.swing.JTextField	
+     */    
+    private JTextField getFileSourceTf() {
+    	if (fileSourceTf == null) {
+    		fileSourceTf = new JTextField();
+    		fileSourceTf.setBounds(188, 407, 444, 26);
+    	}
+    	return fileSourceTf;
+    }
+    /**
+     * This method initializes fileSourceButton	
+     * 	
+     * @return javax.swing.JButton	
+     */    
+    private JButton getFileSourceButton() {
+    	if (fileSourceButton == null) {
+    		fileSourceButton = new JButton();
+    		fileSourceButton.setBounds(130, 404, 47, 26);
+    		fileSourceButton.addActionListener(new java.awt.event.ActionListener() { 
+    			public void actionPerformed(java.awt.event.ActionEvent e) {    
+                    File f=FileSelector.getUserSelectedFile(RecognizerPanel.this,"Find pattern file...", null,FileSelector.OPEN_DIALOG);
+                    if(f != null) {
+                        String filename=f.getAbsolutePath();
+                        fileSourceTf.setText(filename);
+                    }
+                }
+    		});
+    		fileSourceButton.setText("...");
+    	}
+    	return fileSourceButton;
+    }
+    /**
+     * This method initializes runFileDatasourceButton	
+     * 	
+     * @return javax.swing.JButton	
+     */    
+    private JButton getRunFileDatasourceButton() {
+    	if (runFileDatasourceButton == null) {
+    		runFileDatasourceButton = new JButton();
+    		runFileDatasourceButton.setBounds(642, 405, 131, 26);
+    		runFileDatasourceButton.addActionListener(new java.awt.event.ActionListener() { 
+    			public void actionPerformed(java.awt.event.ActionEvent e) {    
+                    Config cfg=getConfigFromGui();
+                    try {
+                        redirectSysOut();
+                        SatzDatasource ds=new FileDataSource(fileSourceTf.getText());
+                        doTheCalculation(cfg, ds);
+                    } catch (IOException e2) {
+                        e2.printStackTrace();
+                    }
+                }
+    		});
+    		runFileDatasourceButton.setText("Run file");
+    	}
+    	return runFileDatasourceButton;
+    }
+    /**
+     * This method initializes runNECb	
+     * 	
+     * @return javax.swing.JCheckBox	
+     */    
+    private JCheckBox getRunNECb() {
+    	if (runNECb == null) {
+    		runNECb = new JCheckBox();
+    		runNECb.setBounds(127, 486, 251, 21);
+    		runNECb.setText("run NE recognition afterwards");
+    	}
+    	return runNECb;
     }
     
     
