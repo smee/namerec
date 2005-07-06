@@ -1,10 +1,4 @@
 
-//Titel:      Wortschatz-Tool
-//Version:
-//Copyright:  Copyright (c) 1999
-//Autor:     C. Biemann
-//Organisation:    Uni Leipzig
-//Beschreibung:Ihre Beschreibung
 package namerec.gui;
 
 import java.awt.Color;
