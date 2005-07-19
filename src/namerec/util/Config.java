@@ -6,12 +6,19 @@
  */
 package namerec.util;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Properties;
+import java.util.Set;
 
 /**
  * @author sdienst
@@ -114,6 +121,46 @@ public class Config {
     }
     public void saveToFile(File f) throws FileNotFoundException, IOException {
         prop.store(new FileOutputStream(f),null);
+    }
+    public void updateConfigFile(String filename)  throws IOException{
+        
+            BufferedReader in= new BufferedReader(new FileReader(filename));
+            StringBuffer sb= new StringBuffer();
+            String temp,line;
+            
+            Set s = new HashSet(prop.keySet()); //alle mir bekannten Parameter
+            
+            while((line = in.readLine()) != null) {
+                temp=line.trim();
+                if (!temp.startsWith("#") && temp.indexOf('=') != -1) {
+                    temp= temp.substring(0, temp.indexOf('=')).trim();
+                    if(temp.length() > 0){
+                        sb.append(temp + '=');
+                        sb.append(prop.getProperty(temp) + '\n');
+                        s.remove(temp);//hat mer schon
+                    }else {//mir nicht bekannter parameter
+                        if(!"=".equals(line.trim()))//einzelnes = lassen wir weg
+                            sb.append(line + '\n');
+                    }
+                } else {//kommentar oder unsinnige zeile, kein Parameter
+                    //wird weggelassen, weil es ja eh n problem beim spaeteren einlesen geben wuerde.
+                    //System.out.println("unknown parameterline: "+temp);
+                    sb.append(line + '\n');
+                }
+            }
+            in.close();
+            //add remaining Parameters
+            for (Iterator it = s.iterator(); it.hasNext();) {
+                String key = (String) it.next();
+                sb.append(key); sb.append('=');
+                temp = prop.getProperty(key);
+                if(temp != null)
+                    sb.append(temp);
+                sb.append('\n');
+            }
+            BufferedWriter out= new BufferedWriter(new FileWriter(filename));
+            out.write(sb.toString());
+            out.close();
     }
     public boolean getBoolean(String key, boolean deflt) {
         if(!prop.containsKey(key))

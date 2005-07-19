@@ -27,6 +27,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.PrintStream;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Enumeration;
@@ -47,6 +48,7 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingConstants;
+import javax.swing.SwingUtilities;
 import javax.swing.border.TitledBorder;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.table.DefaultTableModel;
@@ -191,7 +193,6 @@ public class RecognizerPanel extends WortschatzModul {
     tagEncodeAddClassField=new JTextField(),
     tagRegexpLoadPane=new JTextField(),
     tagRegexpAddRegexpField=new JTextField(),tagRegexpAddClassField=new JTextField();
-    private KlassTagPanel tagEncodeAddCodeField=new KlassTagPanel();
     private JScrollPane tagEncodeScrollPane=new JScrollPane(),tagRegexpScrollPane=new JScrollPane();
     private JTable tagEncodeTable=new JTable(),tagRegexpTable=new JTable();
     private JLabel jLabel3 = null;
@@ -209,6 +210,9 @@ public class RecognizerPanel extends WortschatzModul {
     private JButton fileSourceButton = null;
     private JButton runFileDatasourceButton = null;
     private JCheckBox runNECb = null;
+	private JScrollPane jScrollPane = null;
+	private KlassTagPanel klassTagPanel = null;
+	private JButton jButton = null;
     //Frame konstruieren
     public RecognizerPanel(WortschatzTool wTool)
     {
@@ -295,7 +299,6 @@ public class RecognizerPanel extends WortschatzModul {
         				writer.patterns=extrPats;
         				writer.saveFile(filename);
         				classRulesFileNamePane.setText(filename);
-        				System.out.println("File saved: "+filename);
         			} catch (IOException ioe) {System.out.println(ioe.getMessage());}
         		}
         	}				
@@ -629,7 +632,6 @@ public class RecognizerPanel extends WortschatzModul {
         tagEncodeAutoButton.setBounds(new Rectangle(80, 460, 70, 25));
 
         tagEncodeAddClassField.setBounds(new Rectangle(55, 430, 40, 25));
-        tagEncodeAddCodeField.setBounds(new Rectangle(100, 430, 200, 40));
         tagEncodeClassLabel.setFont(new java.awt.Font("Dialog", 0, 10));
         tagEncodeClassLabel.setBorder(titledBorder1);
         tagEncodeClassLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -820,7 +822,6 @@ public class RecognizerPanel extends WortschatzModul {
         tagSystemPanel.add(tagEncodeAddButton, null);
         tagSystemPanel.add(tagEncodeDeleteButton, null);
         tagSystemPanel.add(tagEncodeAutoButton, null);
-        tagSystemPanel.add(tagEncodeAddCodeField, null);
         tagSystemPanel.add(tagEncodeAddClassField, null);
         tagSystemPanel.add(tagEncodeClassLabel, null);
         tagSystemPanel.add(tagEncodeCodeLable, null);
@@ -866,6 +867,7 @@ public class RecognizerPanel extends WortschatzModul {
         inputItemsPanel.add(inItemsBackLoadButton, null);
         inputItemsPanel.add(inItemsBackSaveFileButtonm, null);
         inputItemsPanel.add(inItemBackAddButton, null);
+        tagSystemPanel.add(getJScrollPane(), null);
         inputItemsPanel.add(inItemBackDeleteButton, null);
         inputItemsPanel.add(inItemBackItemLabel, null);
         inputItemsPanel.add(inItemBackClassLabel, null);
@@ -882,7 +884,6 @@ public class RecognizerPanel extends WortschatzModul {
 //  tagEncode Buttons
 
     void tagEncodeClearButton_actionPerformed(ActionEvent e) {
-       System.out.println("Clear KlassKeys");
         klassKeysNameTable=new NameTable();
         tagEncodeTable=nameTable2jTable(klassKeysNameTable);
         tagEncodeScrollPane.getViewport().add(tagEncodeTable, null);
@@ -912,7 +913,7 @@ public class RecognizerPanel extends WortschatzModul {
     }
     void tagEncodeAddButton_actionPerformed(ActionEvent e) throws IOException {
         String newItem=tagEncodeAddClassField.getText();
-        String newClass=tagEncodeAddCodeField.getTag();
+        String newClass=getKlassTagPanel().getTag();
         NameTable adder=new NameTable();
         adder.put(newItem, newClass);
         klassKeysNameTable.putAll(adder);
@@ -962,7 +963,6 @@ public class RecognizerPanel extends WortschatzModul {
             code=code*2;
         }
 
-        System.out.println(autoTable.toString());
         klassKeysNameTable = new NameTable();
         klassKeysNameTable.putAll(autoTable);
         tagEncodeTable=nameTable2jTable(klassKeysNameTable);
@@ -978,7 +978,6 @@ public class RecognizerPanel extends WortschatzModul {
           int[] selectedRows=tagEncodeTable.getSelectedRows();
           for (int i=0;i<rowCount;i++) {
                 delItem=(String)tagEncodeTable.getValueAt(selectedRows[i],0);
-                System.out.println("deletion of: "+delItem);
                 klassKeysNameTable.remove(delItem);
           } //rof
 
@@ -995,7 +994,6 @@ public class RecognizerPanel extends WortschatzModul {
         if(f != null) {
             String filename=f.getAbsolutePath();
             klassKeysNameTable.writeFile(filename,false);
-            System.out.println("File saved: "+filename);
         }
     }
 
@@ -1003,7 +1001,6 @@ public class RecognizerPanel extends WortschatzModul {
    //tagRegexpButtons
 
     void tagRegexpClearButton_actionPerformed(ActionEvent e) {
-       System.out.println("Clear Regexps");
         regexpNameTable=new NameTable();
         tagRegexpTable=nameTable2jTable(regexpNameTable);
         tagRegexpScrollPane.getViewport().add(tagRegexpTable, null);
@@ -1036,7 +1033,6 @@ public class RecognizerPanel extends WortschatzModul {
        if(f != null) {
            String filename=f.getAbsolutePath();
            regexpNameTable.writeFile(filename,false);
-           System.out.println("Regexp File saved: "+filename);
        }}
 
       void tagRegexpAddButton_actionPerformed(ActionEvent e) throws IOException {
@@ -1058,7 +1054,6 @@ public class RecognizerPanel extends WortschatzModul {
           int[] selectedRows=tagRegexpTable.getSelectedRows();
           for (int i=0;i<rowCount;i++) {
                 delItem=(String)tagRegexpTable.getValueAt(selectedRows[i],0);
-                System.out.println("deletion of: "+delItem);
                 regexpNameTable.remove(delItem);
           } //rof
 
@@ -1083,7 +1078,6 @@ public class RecognizerPanel extends WortschatzModul {
         
         for(Enumeration e=twee.elements();e.hasMoreElements();) {
             Object obj=e.nextElement();
-            System.out.println(obj.getClass());
             actPat=(Pattern)obj;
             if (!(stringRules.contains(actPat.toString()))) {
                 terug.addElement(actPat);
@@ -1144,7 +1138,6 @@ public class RecognizerPanel extends WortschatzModul {
             for (int j=0;j<actRule.length;j++) { // Zielpos markieren
                 patString+=actPattern[j]+" ";  
             } // rof
-            System.out.println(patString);
             if(patString.length() > 0)
                 patString=patString.substring(0,patString.length()-1);
             
@@ -1188,7 +1181,6 @@ public class RecognizerPanel extends WortschatzModul {
     
     // extrPats Buttons
     void extrPatsClearButton_actionPerformed(ActionEvent e) {
-        System.out.println("Clear!");
         extrPats=new Vector();
         extrPatsTable=pats2jTable(extrPats);
         extrPatsScrollPane.getViewport().add(extrPatsTable, null);
@@ -1251,7 +1243,6 @@ public class RecognizerPanel extends WortschatzModul {
         int[] selectedRows=extrPatsTable.getSelectedRows();
         for (int ij=0;ij<rowCount;ij++) {
             delItem=(String)extrPatsTable.getValueAt(selectedRows[ij],0);
-            System.out.println("contains: "+delItem);
             StringTokenizer delPats=new StringTokenizer(delItem," ");
             int gC=-1, i=0;
             String[] tempPats=new String[100]; // sollte reichen :) (unsauber)
@@ -1295,13 +1286,11 @@ public class RecognizerPanel extends WortschatzModul {
     		MatcherNam writer= new MatcherNam(null);
     		writer.patterns=extrPats;
     		writer.saveFile(filename);
-    		System.out.println("File saved: "+filename);
     	}
     }
     
     // classRule Buttons
     void classRulesClearButton_actionPerformed(ActionEvent e) {
-        System.out.println("Clear!");
         classRules=new Vector();
         classRulesTable=rules2jTable(classRules);
         classRulesScrollPane.getViewport().add(classRulesTable, null);
@@ -1366,7 +1355,6 @@ public class RecognizerPanel extends WortschatzModul {
         int[] selectedRows=classRulesTable.getSelectedRows();
         for (int ij=0;ij<rowCount;ij++) {
             delItem=(String)classRulesTable.getValueAt(selectedRows[ij],0);
-            System.out.println("contains: "+delItem);
             StringTokenizer delPats=new StringTokenizer(delItem," ");
             int gC=-1, i=0;
             String[] tempPats=new String[100]; // sollte reichen :) (unsauber)
@@ -1400,7 +1388,6 @@ public class RecognizerPanel extends WortschatzModul {
     // InItemsBack Buttons
     
     void inItemBackClearButton_actionPerformed(ActionEvent e) {
-        System.out.println("Clear!");
         inItemsBackNameTable=new NameTable();
         inItemBackTable=nameTable2jTable(inItemsBackNameTable);
         inItemBackScrollPane.getViewport().add(inItemBackTable, null);
@@ -1443,7 +1430,6 @@ public class RecognizerPanel extends WortschatzModul {
         int[] selectedRows=inItemBackTable.getSelectedRows();
         for (int i=0;i<rowCount;i++) {
             delItem=(String)inItemBackTable.getValueAt(selectedRows[i],0);
-            System.out.println("contains: "+delItem);
             inItemsBackNameTable.remove(delItem);
         } //rof
         
@@ -1477,7 +1463,7 @@ public class RecognizerPanel extends WortschatzModul {
                 getConfigFileFilter(),FileSelector.SAVE_DIALOG);
         if(f != null) {
             Config c=getConfigFromGui();
-            c.saveToFile(f);
+            c.updateConfigFile(f.getAbsolutePath());
         }
         
     }
@@ -1670,10 +1656,10 @@ public class RecognizerPanel extends WortschatzModul {
     private JPanel getRunnerPanel() {
     	if (runnerPanel == null) {
     		jLabel5 = new JLabel();
-    		jLabel5.setBounds(17, 406, 105, 26);
+    		jLabel5.setBounds(12, 62, 105, 26);
     		jLabel5.setText("Use fileinput:");
     		jLabel4 = new JLabel();
-    		jLabel4.setBounds(16, 442, 105, 31);
+    		jLabel4.setBounds(11, 98, 105, 31);
     		jLabel4.setText("Use sentence:");
     		runnerPanel = new JPanel();
     		runnerPanel.setLayout(null);
@@ -1687,13 +1673,14 @@ public class RecognizerPanel extends WortschatzModul {
     		runnerPanel.add(getFileSourceButton(), null);
     		runnerPanel.add(getRunFileDatasourceButton(), null);
     		runnerPanel.add(getRunNECb(), null);
+    		runnerPanel.add(getJButton(), null);
     	}
     	return runnerPanel;
     }
     private JScrollPane getScrollPane() {
         if(scrollPane == null) {
             scrollPane=new JScrollPane(getTextArea(), JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);            
-            scrollPane.setBounds(17, 5, 625, 350);
+            scrollPane.setBounds(30, 166, 602, 329);
         }
         return scrollPane;
     }
@@ -1720,7 +1707,7 @@ public class RecognizerPanel extends WortschatzModul {
     private JButton getStartButton() {
     	if (startButton == null) {
     		startButton = new JButton();
-    		startButton.setBounds(641, 360, 134, 26);
+    		startButton.setBounds(640, 17, 134, 26);
     		startButton.setText("Run DB");
             startButton.addActionListener(new java.awt.event.ActionListener() { 
                 public void actionPerformed(java.awt.event.ActionEvent e) {    
@@ -1744,7 +1731,7 @@ public class RecognizerPanel extends WortschatzModul {
     private JTextField getSentenceTf() {
     	if (sentenceTf == null) {
     		sentenceTf = new JTextField();
-    		sentenceTf.setBounds(132, 442, 503, 31);
+    		sentenceTf.setBounds(127, 98, 503, 31);
     	}
     	return sentenceTf;
     }
@@ -1756,7 +1743,7 @@ public class RecognizerPanel extends WortschatzModul {
     private JButton getSingleSentenceButton() {
     	if (singleSentenceButton == null) {
     		singleSentenceButton = new JButton();
-    		singleSentenceButton.setBounds(641, 442, 136, 26);
+    		singleSentenceButton.setBounds(640, 99, 136, 26);
     		singleSentenceButton.addActionListener(new java.awt.event.ActionListener() { 
     			public void actionPerformed(java.awt.event.ActionEvent e) {    
     			    Config cfg=getConfigFromGui();
@@ -1791,6 +1778,7 @@ public class RecognizerPanel extends WortschatzModul {
                 Recognizer rec=null;
                 try {
                     rec = new Recognizer(cfg,ds);
+                    enableStopButton(Thread.currentThread());
                     rec.doTheRecogBoogie();
                     if(cfg.getBoolean("OPTION.NERECOG",false))
                         rec.runNERecognition();
@@ -1801,9 +1789,24 @@ public class RecognizerPanel extends WortschatzModul {
             }
             public void finished() {
                 RecognizerPanel.this.setCursor(Cursor.getDefaultCursor());
+                getJButton().setEnabled(false);
             }
         };
         sw.start();
+    }
+    protected void enableStopButton(final Thread t) {
+        SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                getJButton().setEnabled(true);
+                getJButton().addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        t.interrupt();
+                        getJButton().setEnabled(false);
+                        RecognizerPanel.this.setCursor(Cursor.getDefaultCursor());
+                    }
+                });
+            }
+        });
     }
     protected void redirectSysOut() throws IOException {
         final BufferedWriter bw=new BufferedWriter(new FileWriter(fileOutLogPane.getText(),true));
@@ -1839,7 +1842,7 @@ public class RecognizerPanel extends WortschatzModul {
     private JTextField getFileSourceTf() {
     	if (fileSourceTf == null) {
     		fileSourceTf = new JTextField();
-    		fileSourceTf.setBounds(188, 407, 444, 26);
+    		fileSourceTf.setBounds(183, 63, 444, 26);
     	}
     	return fileSourceTf;
     }
@@ -1851,7 +1854,7 @@ public class RecognizerPanel extends WortschatzModul {
     private JButton getFileSourceButton() {
     	if (fileSourceButton == null) {
     		fileSourceButton = new JButton();
-    		fileSourceButton.setBounds(130, 404, 47, 26);
+    		fileSourceButton.setBounds(125, 60, 47, 26);
     		fileSourceButton.addActionListener(new java.awt.event.ActionListener() { 
     			public void actionPerformed(java.awt.event.ActionEvent e) {    
                     File f=FileSelector.getUserSelectedFile(RecognizerPanel.this,"Find pattern file...", null,FileSelector.OPEN_DIALOG);
@@ -1873,7 +1876,7 @@ public class RecognizerPanel extends WortschatzModul {
     private JButton getRunFileDatasourceButton() {
     	if (runFileDatasourceButton == null) {
     		runFileDatasourceButton = new JButton();
-    		runFileDatasourceButton.setBounds(642, 405, 131, 26);
+    		runFileDatasourceButton.setBounds(641, 62, 131, 26);
     		runFileDatasourceButton.addActionListener(new java.awt.event.ActionListener() { 
     			public void actionPerformed(java.awt.event.ActionEvent e) {    
                     Config cfg=getConfigFromGui();
@@ -1898,13 +1901,55 @@ public class RecognizerPanel extends WortschatzModul {
     private JCheckBox getRunNECb() {
     	if (runNECb == null) {
     		runNECb = new JCheckBox();
-    		runNECb.setBounds(127, 486, 251, 21);
+    		runNECb.setBounds(122, 142, 251, 21);
     		runNECb.setText("run NE recognition afterwards");
     	}
     	return runNECb;
     }
     
     
-}
+	/**
+	 * This method initializes jScrollPane	
+	 * 	
+	 * @return javax.swing.JScrollPane	
+	 */    
+	private JScrollPane getJScrollPane() {
+		if (jScrollPane == null) {
+			jScrollPane = new JScrollPane() {
+                public String getToolTipText() {
+                    return getKlassTagPanel().getToolTipText();
+                }         
+            };
+            jScrollPane.setViewportView(getKlassTagPanel());
+			jScrollPane.setBounds(110, 423, 219, 35);
+		}
+		return jScrollPane;
+	}
+	/**
+	 * This method initializes klassTagPanel	
+	 * 	
+	 * @return namerec.gui.KlassTagPanel	
+	 */    
+	private KlassTagPanel getKlassTagPanel() {
+		if (klassTagPanel == null) {
+			klassTagPanel = new KlassTagPanel();
+			klassTagPanel.setBounds(130, 400, 685, 40);
+		}
+		return klassTagPanel;
+	}
+	/**
+	 * This method initializes jButton	
+	 * 	
+	 * @return javax.swing.JButton	
+	 */    
+	private JButton getJButton() {
+		if (jButton == null) {
+			jButton = new JButton("Stop");
+            jButton.setEnabled(false);
+			jButton.setBounds(639, 274, 95, 34);
+		}
+		return jButton;
+	}
+   }
 
 

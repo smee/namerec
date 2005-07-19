@@ -3,6 +3,7 @@ package namerec.gui;
 import javax.swing.BoxLayout;
 import javax.swing.JCheckBox;
 import javax.swing.JComponent;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
@@ -10,15 +11,13 @@ public class KlassTagPanel extends JPanel {
     JCheckBox[] boxes=new JCheckBox[32];
     
     public KlassTagPanel() {
-        JPanel panel=new JPanel();
-        panel.setLayout(new BoxLayout(panel,BoxLayout.X_AXIS));
-        JScrollPane pane=new JScrollPane(panel,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-        
+        setLayout(new BoxLayout(this,BoxLayout.X_AXIS));
         for (int i = 0; i < boxes.length; i++) {
+            if(i>0 && i%4==0)
+                add(new JLabel("|"));
             boxes[i]=new JCheckBox();
-            panel.add(boxes[i]);
+            add(boxes[i]);
         } 
-        add(pane);
     }
     public String getTag() {
         String tag="";
@@ -30,5 +29,11 @@ public class KlassTagPanel extends JPanel {
             }
         }
         return tag;
+    }
+    /* (non-Javadoc)
+     * @see javax.swing.JComponent#getToolTipText()
+     */
+    public String getToolTipText() {
+        return getTag();
     }
 }

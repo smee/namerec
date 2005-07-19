@@ -129,12 +129,17 @@ public class DBConfigPanel extends JPanel {
         c.set("DB.DBNAME"+suffix,getDbnameTf().getText());
         c.set("DB.USERNAME"+suffix,getUsernameTf().getText());
         c.set("DB.PASSWORD"+suffix,getPasswordTf().getText());
+        if(getWriteBackCB().isVisible())
+            c.set("DB.WRITEBACK",
+                    Boolean.toString(getWriteBackCB().isSelected()));
     }
     public void loadFromConfig(Config cfg, String suffix) {
         getHostnameTf().setText(cfg.getString("DB.HOST"+suffix,""));
         getDbnameTf().setText(cfg.getString("DB.DBNAME"+suffix,""));
         getUsernameTf().setText(cfg.getString("DB.USERNAME"+suffix,""));
         getPasswordTf().setText(cfg.getString("DB.PASSWORD"+suffix,""));
+        if(getWriteBackCB().isVisible())
+            getWriteBackCB().setSelected(cfg.getBoolean("DB.WRITEBACK",true));
     }
 	/**
 	 * This method initializes jTextField	
