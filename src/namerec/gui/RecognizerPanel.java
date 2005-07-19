@@ -1,4 +1,10 @@
 
+//Titel:      Wortschatz-Tool
+//Version:
+//Copyright:  Copyright (c) 1999
+//Autor:     C. Biemann
+//Organisation:    Uni Leipzig
+//Beschreibung:Ihre Beschreibung
 package namerec.gui;
 
 import java.awt.Color;
@@ -182,9 +188,10 @@ public class RecognizerPanel extends WortschatzModul {
     tagRegexpSaveButton=new JButton(),tagRegexpAddButton=new JButton(),tagRegexpClearButton=new JButton(),
     tagRegexpDeleteButton=new JButton();
     private JTextField tagCodeLoadPane=new JTextField(),
-    tagEncodeAddClassField=new JTextField(),tagEncodeAddCodeField=new JTextField(),
+    tagEncodeAddClassField=new JTextField(),
     tagRegexpLoadPane=new JTextField(),
     tagRegexpAddRegexpField=new JTextField(),tagRegexpAddClassField=new JTextField();
+    private KlassTagPanel tagEncodeAddCodeField=new KlassTagPanel();
     private JScrollPane tagEncodeScrollPane=new JScrollPane(),tagRegexpScrollPane=new JScrollPane();
     private JTable tagEncodeTable=new JTable(),tagRegexpTable=new JTable();
     private JLabel jLabel3 = null;
@@ -622,7 +629,7 @@ public class RecognizerPanel extends WortschatzModul {
         tagEncodeAutoButton.setBounds(new Rectangle(80, 460, 70, 25));
 
         tagEncodeAddClassField.setBounds(new Rectangle(55, 430, 40, 25));
-        tagEncodeAddCodeField.setBounds(new Rectangle(100, 430, 50, 25));
+        tagEncodeAddCodeField.setBounds(new Rectangle(100, 430, 200, 40));
         tagEncodeClassLabel.setFont(new java.awt.Font("Dialog", 0, 10));
         tagEncodeClassLabel.setBorder(titledBorder1);
         tagEncodeClassLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -905,7 +912,7 @@ public class RecognizerPanel extends WortschatzModul {
     }
     void tagEncodeAddButton_actionPerformed(ActionEvent e) throws IOException {
         String newItem=tagEncodeAddClassField.getText();
-        String newClass=tagEncodeAddCodeField.getText();
+        String newClass=tagEncodeAddCodeField.getTag();
         NameTable adder=new NameTable();
         adder.put(newItem, newClass);
         klassKeysNameTable.putAll(adder);
@@ -1597,8 +1604,9 @@ public class RecognizerPanel extends WortschatzModul {
     private DBConfigPanel getDBConfigPanelAkt() {
     	if (DBConfigPanelAkt == null) {
     		DBConfigPanelAkt = new DBConfigPanel();
-    		DBConfigPanelAkt.setBounds(14, 267, 367, 185);
-    		DBConfigPanelAkt.setTitle("DB verification");
+    		DBConfigPanelAkt.setBounds(14, 267, 367, 195);
+    		DBConfigPanelAkt.setTitle("DB new");
+            DBConfigPanelAkt.showWriteBackCb(true);
     	}
     	return DBConfigPanelAkt;
     }
@@ -1610,8 +1618,8 @@ public class RecognizerPanel extends WortschatzModul {
     private DBConfigPanel getDBConfigPanelWs() {
     	if (DBConfigPanelWs == null) {
     		DBConfigPanelWs = new DBConfigPanel();
-    		DBConfigPanelWs.setBounds(402, 269, 367, 185);
-    		DBConfigPanelWs.setTitle("DB New");
+    		DBConfigPanelWs.setBounds(402, 269, 367, 195);
+    		DBConfigPanelWs.setTitle("DB verification");
     	}
     	return DBConfigPanelWs;
     }

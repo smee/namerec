@@ -11,8 +11,14 @@ import javax.swing.JPanel;
 import namerec.util.Config;
 
 import java.awt.GridBagLayout;
+import java.awt.Insets;
+
 import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
+import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 /**
@@ -31,6 +37,7 @@ public class DBConfigPanel extends JPanel {
 	private JTextField dbnameTf = null;
 	private JTextField usernameTf = null;
 	private JPasswordField passwordTf = null;
+    private JCheckBox writeBack = null;
 	/**
 	 * This is the default constructor
 	 */
@@ -111,6 +118,11 @@ public class DBConfigPanel extends JPanel {
 		this.add(getDbnameTf(), gridBagConstraints6);
 		this.add(getUsernameTf(), gridBagConstraints7);
 		this.add(getPasswordTf(), gridBagConstraints8);
+        GridBagConstraints gbc9=new GridBagConstraints();
+        gbc9.gridx=0;
+        gbc9.gridy=4;
+        gbc9.insets=new Insets(10,10,10,10);
+		this.add(getWriteBackCB(), gbc9);
 	}
     public void saveToConfig(Config c, String suffix) {
         c.set("DB.HOST"+suffix,getHostnameTf().getText());
@@ -135,6 +147,26 @@ public class DBConfigPanel extends JPanel {
 		}
 		return hostnameTf;
 	}
+    public void showWriteBackCb(boolean val) {
+        getWriteBackCB().setVisible(val);
+    }
+    private JCheckBox getWriteBackCB() {
+        if(writeBack == null) {
+            writeBack = new JCheckBox("Enable writeback");
+            writeBack.setSelected(true);
+            writeBack.setVisible(false);
+            writeBack.addItemListener(new ItemListener() {
+                public void itemStateChanged(ItemEvent e) {
+                    boolean sel=e.getStateChange()==ItemEvent.SELECTED;
+                    getHostnameTf().setEnabled(sel);
+                    getDbnameTf().setEnabled(sel);
+                    getPasswordTf().setEnabled(sel);
+                    getUsernameTf().setEnabled(sel);
+                }
+            });
+        }
+        return writeBack;
+    }
 	/**
 	 * This method initializes jTextField1	
 	 * 	

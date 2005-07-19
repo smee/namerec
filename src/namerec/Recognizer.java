@@ -219,6 +219,11 @@ public class Recognizer {
         String text = "Prof. Dr. Dr. Georg Freiherr von Salis Soglio ist ein ziemlich langer Name.";
         
         while(!(text.equals("END"))) {
+            if(Thread.currentThread().isInterrupted()) {
+                itemrec.workers.stop();
+                SentenceFetcher.stopThread();
+                return;
+            }
             rules.resetRules(); 
             
             NameTable Kandidaten=textProc.getCandidatesOfText(text,rules);
@@ -235,6 +240,7 @@ public class Recognizer {
         System.out.println("verification done!");
     }
     
+
     /**
      * @throws Exception
      */

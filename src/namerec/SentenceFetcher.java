@@ -7,6 +7,8 @@ import namerec.util.BlockingQueue;
 
 
 class SentenceFetcher extends Thread implements SatzDatasource{
+    private static Thread thread;
+
     BlockingQueue sentences;
     
     private final DBaccess dbaccess;
@@ -25,9 +27,11 @@ class SentenceFetcher extends Thread implements SatzDatasource{
         sentences=new BlockingQueue(10000);
         setDaemon(true);
         start();
+        
     }
     
     public void run() {
+        thread=Thread.currentThread();
         while(true) {
             if(dbaccess.retrieveNextSentences(this, pos, Math.min(pos+NUM,endNr)) == false) {
                 System.out.println("enqueuing END");
@@ -45,5 +49,9 @@ class SentenceFetcher extends Thread implements SatzDatasource{
 
     public String getNextSentence() {
         return (String) sentences.dequeue();
+    }
+
+    public static void stopThread() {
+        thread.stop();        
     }
 }
