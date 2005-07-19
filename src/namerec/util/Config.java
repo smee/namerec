@@ -134,7 +134,7 @@ public class Config {
                 temp=line.trim();
                 if (!temp.startsWith("#") && temp.indexOf('=') != -1) {
                     temp= temp.substring(0, temp.indexOf('=')).trim();
-                    if(temp.length() > 0){
+                    if(temp.length() > 0 && prop.containsKey(temp)){
                         sb.append(temp + '=');
                         sb.append(prop.getProperty(temp) + '\n');
                         s.remove(temp);//hat mer schon
