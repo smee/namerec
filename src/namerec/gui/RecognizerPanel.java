@@ -768,6 +768,7 @@ public class RecognizerPanel extends WortschatzModul {
 //      this.getContentPane().add(pendelFramePanel, null);
         this.add(pendelFramePanel, null);
         pendelFramePanel.add(PendelTabbedPane, null);
+        PendelTabbedPane.add(new WelcomePanel(),"Welcome");
         PendelTabbedPane.add(filePanel, "File Management");
         filePanel.add(fileOutPanel, null);
         fileOutPanel.add(fileOutLabel, null);
@@ -1479,7 +1480,6 @@ public class RecognizerPanel extends WortschatzModul {
         c.set("OPTION.CANDIDATESNO",paraVerNrField.getText());
         c.set("OPTION.VERSION",getVersionTf().getText());
         c.set("OPTION.NERECOG",Boolean.toString(runNECb.isSelected()));
-        //TODO samples!
         c.set("IN.KNOWLEDGE",inItemsBackLoadField.getText());
         c.set("IN.PATFILENE",extrPatsFileNamePane.getText());
         c.set("IN.PATFILE",classRulesFileNamePane.getText());
