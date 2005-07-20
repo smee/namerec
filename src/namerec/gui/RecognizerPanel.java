@@ -193,7 +193,7 @@ public class RecognizerPanel extends WortschatzModul {
     tagEncodeAddClassField=new JTextField(),
     tagRegexpLoadPane=new JTextField(),
     tagRegexpAddRegexpField=new JTextField(),tagRegexpAddClassField=new JTextField();
-    private JScrollPane tagEncodeScrollPane=new JScrollPane(),tagRegexpScrollPane=new JScrollPane();
+    private JScrollPane tagEncodeScrollPane=new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED),tagRegexpScrollPane=new JScrollPane();
     private JTable tagEncodeTable=new JTable(),tagRegexpTable=new JTable();
     private JLabel jLabel3 = null;
     private JSpinner samplesSpinner = null;
@@ -1201,9 +1201,10 @@ public class RecognizerPanel extends WortschatzModul {
         sorter.setTableHeader(returnTable.getTableHeader());
         returnTable.getColumnModel().getColumn(0).setMaxWidth(50);
         returnTable.getColumnModel().getColumn(0).setWidth(40);
+        returnTable.getColumnModel().getColumn(1).setCellEditor(new TagEditor());
         return returnTable;
     }
-    private static String addBarsTo(String s) {
+    public static String addBarsTo(String s) {
         StringBuffer sb=new StringBuffer(s.length()+s.length()/4);
         for(int i=0;i<s.length();i++) {
             if(i>0 && i%4==0)

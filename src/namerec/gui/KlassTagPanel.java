@@ -6,6 +6,8 @@ import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 public class KlassTagPanel extends JPanel {
     JCheckBox[] boxes=new JCheckBox[32];
@@ -34,6 +36,17 @@ public class KlassTagPanel extends JPanel {
      * @see javax.swing.JComponent#getToolTipText()
      */
     public String getToolTipText() {
+        return getTag();
+    }
+    public void setTag(String s) {
+        s=s.replaceAll("\\|","");
+        for(int i=0;i<s.length();i++)
+            if(s.charAt(i)=='1')
+                boxes[i].setSelected(true);
+            else
+                boxes[i].setSelected(false);
+    }
+    public String toString() {
         return getTag();
     }
 }
