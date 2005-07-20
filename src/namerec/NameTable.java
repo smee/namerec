@@ -44,6 +44,7 @@ public class NameTable extends java.util.Hashtable {
 		 if (outChar=='{') { continue;}
 		 if (outChar=='}') { continue;}
 		 if (outChar==' ') { continue;}
+		 if (outChar=='|') { continue;}
 		 if (outChar==',') {file.write(13);file.write(10);continue;} // Neue Zeile
 		 if (outChar=='=') {file.write(9);continue;} // Tabulator
 		 

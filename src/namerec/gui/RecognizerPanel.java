@@ -89,7 +89,7 @@ public class RecognizerPanel extends WortschatzModul {
     public JPanel getModulePanel() {return this;};
     public char getMnemonic() {return (char)(88);};
     public String getName() {return "NameRec";};
-    public Icon getIcon() { return this.createImageIcon("Pen.jpg");}
+    public Icon getIcon() { return this.createImageIcon("namerec.jpg");}
     
     
     JPanel pendelFramePanel = new JPanel();  // Main Panel
@@ -886,7 +886,7 @@ public class RecognizerPanel extends WortschatzModul {
 
     void tagEncodeClearButton_actionPerformed(ActionEvent e) {
         klassKeysNameTable=new NameTable();
-        tagEncodeTable=nameTable2jTable(klassKeysNameTable);
+        tagEncodeTable=nameTable2jTable2(klassKeysNameTable);
         tagEncodeScrollPane.getViewport().add(tagEncodeTable, null);
         this.setVisible(true);
         this.repaint();
@@ -907,7 +907,7 @@ public class RecognizerPanel extends WortschatzModul {
         NameTable loader=NameTable.loadFromFile(filename);
         klassKeysNameTable.putAll(loader);
         tagCodeLoadPane.setText(filename);
-        tagEncodeTable=nameTable2jTable(klassKeysNameTable);
+        tagEncodeTable=nameTable2jTable2(klassKeysNameTable);
         tagCodeLoadPane.setText(filename);
         tagEncodeScrollPane.getViewport().add(tagEncodeTable, null);
         this.setVisible(true);
@@ -918,7 +918,7 @@ public class RecognizerPanel extends WortschatzModul {
         NameTable adder=new NameTable();
         adder.put(newItem, newClass);
         klassKeysNameTable.putAll(adder);
-        tagEncodeTable=nameTable2jTable(klassKeysNameTable);
+        tagEncodeTable=nameTable2jTable2(klassKeysNameTable);
         tagEncodeScrollPane.getViewport().add(tagEncodeTable, null);
         this.setVisible(true);
    }
@@ -966,7 +966,7 @@ public class RecognizerPanel extends WortschatzModul {
 
         klassKeysNameTable = new NameTable();
         klassKeysNameTable.putAll(autoTable);
-        tagEncodeTable=nameTable2jTable(klassKeysNameTable);
+        tagEncodeTable=nameTable2jTable2(klassKeysNameTable);
         tagEncodeScrollPane.getViewport().add(tagEncodeTable, null);
         this.setVisible(true);
         this.repaint();
@@ -983,7 +983,7 @@ public class RecognizerPanel extends WortschatzModul {
           } //rof
 
 
-        tagEncodeTable=nameTable2jTable(klassKeysNameTable);
+        tagEncodeTable=nameTable2jTable2(klassKeysNameTable);
         tagEncodeScrollPane.getViewport().add(tagEncodeTable, null);
         this.setVisible(true);
         this.repaint();
@@ -1179,7 +1179,39 @@ public class RecognizerPanel extends WortschatzModul {
         returnTable.getColumnModel().getColumn(0).setWidth(50);
         return returnTable;
     }
-    
+    private static JTable nameTable2jTable2(NameTable source) {
+        
+        String actItem;
+        String actClass;
+        
+        String columns[]={"Item","Class" };
+        String rows[][]= new String[source.size()][2];
+        
+        int i=0;
+        for (Enumeration e=source.keys();e.hasMoreElements();) {
+            actItem=(String)e.nextElement();
+            actClass=(String)source.get(actItem);
+            rows[i][0]=actItem;
+            rows[i][1]=addBarsTo(actClass);
+            i++;
+        } // rof enum e
+        DefaultTableModel model = new DefaultTableModel(rows,columns);
+        TableSorter sorter=new TableSorter(model);
+        JTable returnTable= new JTable(sorter);
+        sorter.setTableHeader(returnTable.getTableHeader());
+        returnTable.getColumnModel().getColumn(0).setMaxWidth(50);
+        returnTable.getColumnModel().getColumn(0).setWidth(40);
+        return returnTable;
+    }
+    private static String addBarsTo(String s) {
+        StringBuffer sb=new StringBuffer(s.length()+s.length()/4);
+        for(int i=0;i<s.length();i++) {
+            if(i>0 && i%4==0)
+                sb.append('|');
+            sb.append(s.charAt(i));
+        }
+        return sb.toString();
+    }
     // extrPats Buttons
     void extrPatsClearButton_actionPerformed(ActionEvent e) {
         extrPats=new Vector();

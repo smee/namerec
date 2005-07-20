@@ -47,12 +47,21 @@ public class Config {
     public int getInteger(String key, int deflt) {
         if(!prop.containsKey(key))
             return deflt;
-        return Integer.parseInt(prop.getProperty(key));
+        try {
+            int res= Integer.parseInt(prop.getProperty(key));
+            return res;
+        } catch (NumberFormatException e) {
+            return deflt;
+        }        
     }
     public double getDouble(String key, double deflt) {
         if(!prop.containsKey(key))
             return deflt;
-        return Double.parseDouble(prop.getProperty(key));
+        try {
+            return Double.parseDouble(prop.getProperty(key));
+        } catch (NumberFormatException e) {
+            return deflt;
+        }
     }
     public void set(String key, String prop) {
         this.prop.setProperty(key,prop);
