@@ -315,7 +315,8 @@ public class Recognizer {
      */
     public RulesNE createRulesNE(DBaccess db) {
         try {
-            return new RulesNE(db,cfg.getString("IN.PATFILENE","patPers.txt"),cfg.getString("OUT.COMPLEXNAMES","NEs.txt"));
+            return new RulesNE(db,cfg.getString("IN.PATFILENE","patPers.txt"),
+                    cfg.getString("OUT.COMPLEXNAMES","NEs.txt"),cfg.getBoolean("DB.WRITEBACK",false));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             return null;

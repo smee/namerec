@@ -18,11 +18,13 @@ public class RulesNE extends Rules{
     
     static boolean d=false; //debugging aus
     private DBaccess db;
+    private final boolean doInsert;
     
     
-    public RulesNE(DBaccess db, String patfile, String fileContexts) throws FileNotFoundException, IOException {
+    public RulesNE(DBaccess db, String patfile, String fileContexts,boolean writeBack) throws FileNotFoundException, IOException {
         super(patfile,fileContexts);
         this.db=db;
+        this.doInsert=writeBack;
     }
     
     private void dbInsertPerson(Pattern pat) {
@@ -97,7 +99,8 @@ public class RulesNE extends Rules{
     
     
     protected synchronized void output(Pattern pat)  {
-        dbInsertPerson(pat);//soll waehrend des testens nicht verwendet werden!
+        if(doInsert)
+            dbInsertPerson(pat);//soll waehrend des testens nicht verwendet werden!
         StringBuffer outstr=new StringBuffer();
         
         for(int i=0;i<pat.length;i++) {
