@@ -54,4 +54,8 @@ class SentenceFetcher extends Thread implements SatzDatasource{
     public static void stopThread() {
         thread.stop();        
     }
+
+    public int getNumOfSentences() {
+        return dbaccess.getNumOfSentences();
+    }
 }

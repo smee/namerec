@@ -272,7 +272,28 @@ public class DBaccess implements Cloneable{
         try {
             return Ergebnis.getInt(1);
         } catch (SQLException e) {
-            System.out.println("Fehler beim Empfangen der groessten Satxnummer!");
+            System.out.println("Fehler beim Empfangen der groessten Satznummer!");
+            return Integer.MAX_VALUE;
+        }
+    }
+
+    public int getNumOfSentences() {
+        String Anfrage= "Select count(*) from saetze";   
+        ResultSet Ergebnis=null;
+        try{
+            Statement SQLAbfrage = Verbindung_ws.createStatement();
+            Ergebnis = SQLAbfrage.executeQuery(Anfrage);
+        }
+        catch (SQLException e) {
+            System.out.println("Datenbankfehler!");
+            e.printStackTrace();
+        }
+        
+        // Nun Umwandlen ResultSet in int
+        try {
+            return Ergebnis.getInt(1);
+        } catch (SQLException e) {
+            System.out.println("Fehler beim Empfangen der groessten Satznummer!");
             return Integer.MAX_VALUE;
         }
     }

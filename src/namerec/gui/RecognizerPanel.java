@@ -1724,9 +1724,8 @@ public class RecognizerPanel extends WortschatzModul {
     private JTextPane getTextArea() {
     	if (textArea == null) {
     		textArea = new JTextPane();
-            textArea.setEditable(false);
-    		//textArea.setPreferredSize(new java.awt.Dimension(500,400));
-    		textArea.setBounds(17, 5, 625, 400);
+            textArea.setEditable(true);
+//    		textArea.setBounds(17, 5, 625, 400);
             textArea.setDocument(new CyclicDocument(1000000));
     	}
     	return textArea;
@@ -1745,11 +1744,6 @@ public class RecognizerPanel extends WortschatzModul {
             startButton.addActionListener(new java.awt.event.ActionListener() { 
                 public void actionPerformed(java.awt.event.ActionEvent e) {    
                     Config cfg=getConfigFromGui();
-                    try {
-                        redirectSysOut();
-                    } catch (IOException e2) {
-                        e2.printStackTrace();
-                    }
                     doTheCalculation(cfg, null);
                 }
             });
@@ -1780,11 +1774,6 @@ public class RecognizerPanel extends WortschatzModul {
     		singleSentenceButton.addActionListener(new java.awt.event.ActionListener() { 
     			public void actionPerformed(java.awt.event.ActionEvent e) {    
     			    Config cfg=getConfigFromGui();
-                    try {
-                        redirectSysOut();
-                    } catch (IOException e2) {
-                        e2.printStackTrace();
-                    }
     			    cfg.set("OPTION.NUMOFTHREADS","1");
                     SatzDatasource ds=new SatzDatasource() {
                         boolean isDone=false;
@@ -1807,6 +1796,11 @@ public class RecognizerPanel extends WortschatzModul {
     	return singleSentenceButton;
     }
     private void doTheCalculation(final Config cfg, final SatzDatasource ds) {
+        try {
+            redirectSysOut();
+        } catch (IOException e2) {
+            e2.printStackTrace();
+        }
         RecognizerPanel.this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
         
         SwingWorker sw=new SwingWorker() {
@@ -1827,8 +1821,12 @@ public class RecognizerPanel extends WortschatzModul {
             private Observer getObserver() {
                 return new Observer(){
                     public void update(Observable o, Object arg) {
-                        Object[] arr=(Object[]) arg;
-                        outputColoredSentence((NameTable)arr[0],(String)arr[1]);
+                        final Object[] arr=(Object[]) arg;
+                        SwingUtilities.invokeLater(new Runnable(){
+                            public void run() {
+                                outputColoredSentence((NameTable)arr[0],(String)arr[1]);
+                            }
+                        });
                     }
                    
                 };
@@ -1856,27 +1854,29 @@ public class RecognizerPanel extends WortschatzModul {
     }
 
     private void outputColoredSentence(NameTable table, String string) {
+        if(string==null || string.length()==0)
+            return;
         JTextPane p=getTextArea();
         StringTokenizer st=new StringTokenizer(string," \t\n.,:;!?-/\\",true);
         while (st.hasMoreTokens()) {
             String s=st.nextToken();
-            if(table.containsKey(s)){
+            Object val=table.get(s);
+            if(val!=null && (val.equals("VN") || val.equals("NN") || val.equals("TIT"))){//XXX sollten eigentlich Zielklassen spezifiziert werden koennen
                 append(p,Color.RED,s);
             }else
                 append(p,Color.BLACK,s);
         }
+        append(p,Color.BLACK,"\n");
     }
-    private void append(JTextPane p,Color c, String s) { // better implementation--uses
-        // StyleContext
+    private void append(JTextPane p,Color c, String s) {
         StyleContext sc = StyleContext.getDefaultStyleContext();
         AttributeSet aset = sc.addAttribute(SimpleAttributeSet.EMPTY,
             StyleConstants.Foreground, c);
 
-        int len = p.getDocument().getLength(); // same value as
-                           // getText().length();
-        p.setCaretPosition(len); // place caret at the end (with no selection)
+        int len = p.getDocument().getLength(); 
+        p.setCaretPosition(len); 
         p.setCharacterAttributes(aset, false);
-        p.replaceSelection(s); // there is no selection, so inserts at caret
+        p.replaceSelection(s); 
       }
     protected void redirectSysOut() throws IOException {
         final BufferedWriter bw=new BufferedWriter(new FileWriter(fileOutLogPane.getText(),true));
@@ -1888,7 +1888,6 @@ public class RecognizerPanel extends WortschatzModul {
                     bw.write("\n");
                 } catch (IOException e) {
                 }
-                getTextArea().setCaretPosition(getTextArea().getText().length() - 1);
             }
             public void print(String x) {
                 try {
@@ -1899,7 +1898,7 @@ public class RecognizerPanel extends WortschatzModul {
             }
         };
         System.setOut(ps);
-        System.setErr(ps);
+        //System.setErr(ps);
     }
     /**
      * This method initializes fileSourceTf	
@@ -1948,7 +1947,6 @@ public class RecognizerPanel extends WortschatzModul {
     			public void actionPerformed(java.awt.event.ActionEvent e) {    
                     Config cfg=getConfigFromGui();
                     try {
-                        redirectSysOut();
                         SatzDatasource ds=new FileDataSource(fileSourceTf.getText());
                         doTheCalculation(cfg, ds);
                     } catch (IOException e2) {
@@ -1982,7 +1980,7 @@ public class RecognizerPanel extends WortschatzModul {
         if (jProgressBar == null) {
             jProgressBar = new JTextField();
             jProgressBar.setEditable(false);
-            jProgressBar.setBounds(new java.awt.Rectangle(17,365,612,23));
+            jProgressBar.setBounds(new java.awt.Rectangle(13,18,612,23));
         }
         return jProgressBar;
     }

@@ -244,9 +244,10 @@ public class Recognizer extends Observable{
             bspnr++;
             est.unitCompleted();
             if(bspnr%samples==0)
-                RecognizerPanel.getInstance().setStatus("Stage 1: Time remaining till sentences scanned: "+ProcessEstimator.getTimeString(est.projectedTimeRemaining()/1000));
+                RecognizerPanel.getInstance().setStatus("Stage 1: Time remaining till sentences tested: "+ProcessEstimator.getTimeString(est.projectedTimeRemaining()/1000));
         } 
         itemrec.waitTillJobsDone(samples,"Stage 2: Estimated time till verification completed: ");
+        RecognizerPanel.getInstance().setStatus("First pass done.");
         System.out.println("verification done!");
     }
     
@@ -269,6 +270,11 @@ public class Recognizer extends Observable{
         System.out.println("reviewing sentences for NEs....");
         int i=0;
         while(!(text.equals("END"))) {
+            if(Thread.currentThread().isInterrupted()) {
+                itemrec.workers.stop();
+                SentenceFetcher.stopThread();
+                return;
+            }
             i++;
             itemrec.addTask(text);
             text=src.getNextSentence();      
@@ -278,6 +284,7 @@ public class Recognizer extends Observable{
         }
         int samples=cfg.getInteger("OPTION.SAMPLES",100);
         itemrec.waitTillJobsDone(samples,"Stage 4: Estimated time till NE recognition completed: ");
+        RecognizerPanel.getInstance().setStatus("NE recognition pass done.");
         System.out.println("NE recognition done!");
     }
 
@@ -319,7 +326,8 @@ public class Recognizer extends Observable{
     public void addWissen(NameTable table, String sentence) {
         allesWissen.putAll(table);
         setChanged();
-        notifyObservers(new Object[]{table,sentence});
+        System.out.println("Notifying obersvers of new knowledge...");
+        notifyObservers(new Object[]{allesWissen,sentence});
     }
 
     /**

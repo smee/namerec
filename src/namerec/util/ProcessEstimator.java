@@ -60,7 +60,14 @@ public class ProcessEstimator {
         long hours=timesec/3600;
         long mins=(timesec-(hours*3600))/60;
         long secs=(timesec-(hours*3600)-(mins*60));
-        sb.append(timesec).append("s -> ").append(hours).append(":").append(mins).append(":").append(secs);
+        sb.append(timesec).append("s -> ").append(hours).append("h ");
+        if(mins<10)
+            sb.append('0');
+        sb.append(mins).append("min ");
+        if(secs<10)
+            sb.append('0');
+        sb.append(secs);
+        sb.append("s");
         return sb.toString();
     }    
 }

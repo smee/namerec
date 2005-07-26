@@ -18,9 +18,11 @@ import java.io.IOException;
  */
 public class FileDataSource implements SatzDatasource {
 	private final BufferedReader br;
+    private int count;
 	
 	public FileDataSource(String filename) throws IOException{
 		br=new BufferedReader(new FileReader(filename));
+        count =-1;
 	}
 	public String getNextSentence() {
 		try {
@@ -35,5 +37,24 @@ public class FileDataSource implements SatzDatasource {
 		}
 		
 	}
+    /**
+     * Vorsicht, danach liefert getNextSentence wieder den ersten Satz!
+     */
+    public int getNumOfSentences() {
+        if(count ==-1){
+            int c=0;
+            try {
+                br.reset();
+                count = 0;
+                while(br.readLine()!=null)
+                    c++;
+                br.reset();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            this.count=c;
+        }
+        return this.count;
+    }
 
 }
