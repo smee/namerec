@@ -207,6 +207,9 @@ public class RecognizerPanel extends WortschatzModul {
     private JButton runFileDatasourceButton = null;
     private JCheckBox runNECb = null;
     private JTextField jProgressBar = null;
+    private JButton jButton;
+    private KlassTagPanel klassTagPanel;
+    private JScrollPane jScrollPane;
     //Frame konstruieren
     public RecognizerPanel(WortschatzTool wTool)
     {
@@ -324,21 +327,21 @@ public class RecognizerPanel extends WortschatzModul {
             public void actionPerformed(ActionEvent e) {
                 try {
                     classRulesAddFileButton_actionPerformed(e);
-                } catch (IOException f) {System.out.println(f.getMessage());}
+                } catch (IOException f) {f.printStackTrace();}
             }
         });
         classRulesAddButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
                     classRulesAddButton_actionPerformed(e);
-                } catch (IOException f) {System.out.println(f.getMessage());}
+                } catch (IOException f) {f.printStackTrace();}
             }
         });
         classRulesDeleteutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
                     classRulesDeleteButton_actionPerformed(e);
-                } catch (IOException f) {System.out.println(f.getMessage());}
+                } catch (IOException f) {f.printStackTrace();}
             }
         });
         
