@@ -51,4 +51,16 @@ public class ProcessEstimator {
     public int getCompleted( ) { 
         return completed; 
     }
+    /**
+     * @param l
+     * @return
+     */
+    public static String getTimeString(long timesec) {
+        StringBuffer sb=new StringBuffer(9);
+        long hours=timesec/3600;
+        long mins=(timesec-(hours*3600))/60;
+        long secs=(timesec-(hours*3600)-(mins*60));
+        sb.append(timesec).append("s -> ").append(hours).append(":").append(mins).append(":").append(secs);
+        return sb.toString();
+    }    
 }

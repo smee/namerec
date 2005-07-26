@@ -2,10 +2,11 @@ package namerec.gui;
 
 import javax.swing.text.AttributeSet;
 import javax.swing.text.BadLocationException;
+import javax.swing.text.DefaultStyledDocument;
 import javax.swing.text.Document;
 import javax.swing.text.PlainDocument;
 
-public class CyclicDocument extends PlainDocument implements Document {
+public class CyclicDocument extends DefaultStyledDocument{
 
     private int maxlen;
     public CyclicDocument(int maxlen) {

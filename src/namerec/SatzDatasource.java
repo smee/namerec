@@ -11,4 +11,6 @@ public interface SatzDatasource {
      */
     public abstract String getNextSentence(); // getBsp
 
+    public abstract int getNumOfSentences();
+
 }

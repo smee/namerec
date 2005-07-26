@@ -6,7 +6,10 @@
  */
 package namerec;
 
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import java.util.Vector;
 
@@ -23,6 +26,7 @@ public class NewItemRecognizer{
     private double schwelle;
     private Vector rules;
     private BlockingQueue toTest;
+    private Map sentenceMap;
     
     Set threads=new HashSet();
     ThreadGroup workers;
@@ -34,6 +38,7 @@ public class NewItemRecognizer{
         this.rules=rules;
         this.rec=rec;
         toTest=new BlockingQueue(100000);
+        sentenceMap=Collections.synchronizedMap(new HashMap());
         
         if(threadnum <=0)
             threadnum=1;
@@ -61,8 +66,9 @@ public class NewItemRecognizer{
             Object o = toTest.dequeue();
             if(o instanceof NameTable) {
                 NameTable kandidaten=(NameTable) o;
-                if(kandidaten.size() > 0)
-                    rec.addWissen(rec.checkCandidates(kandidaten,schwelle,rules,db));
+                if(kandidaten.size() > 0){
+                    rec.addWissen(rec.checkCandidates(kandidaten,schwelle,rules,db),(String)sentenceMap.remove(kandidaten));
+                }
             }else {//List von String tokens, also NE-erkennung
                 String text =(String)o;
                 rec.findNEs(text, rules_ne);
@@ -70,12 +76,14 @@ public class NewItemRecognizer{
         }
     }
     }
-    public void addTask(NameTable kandidaten) {
+    public void addTask(NameTable kandidaten, String sentence) {
+        sentenceMap.put(kandidaten,sentence);
         toTest.enqueue(kandidaten);
+        
     }
 
-    public void waitTillJobsDone(int samples) {
-        toTest.waitTillEmpty(samples);
+    public void waitTillJobsDone(int samples, String prefix) {
+        toTest.waitTillEmpty(samples,prefix);
     }
 
     /**

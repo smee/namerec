@@ -4,9 +4,14 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Enumeration;
 import java.util.Iterator;
+import java.util.Observable;
 import java.util.Vector;
 
+import org.apache.commons.math.stat.descriptive.moment.FirstMoment;
+
+import namerec.gui.RecognizerPanel;
 import namerec.util.Config;
+import namerec.util.ProcessEstimator;
 
 /* Recognizer
  Findet Namen in der Wortschatz-Datenbank WDTAKTUELL,
@@ -20,7 +25,7 @@ import namerec.util.Config;
 
 
 
-public class Recognizer {
+public class Recognizer extends Observable{
     
     static boolean d=true; //debugging an
    
@@ -47,10 +52,11 @@ public class Recognizer {
     private NewItemRecognizer itemrec;
     private Annotate anno;
 
-    private Config cfg;
-
+    private final Config cfg;
+    private ProcessEstimator est=null;
     private SatzDatasource ds;
-
+    private final int samples;
+    
     public Recognizer(Config cfg, SatzDatasource ds) throws IOException {
         this.cfg=cfg;
         n_cands=cfg.getInteger("OPTION.CANDIDATESNO",30);
@@ -60,6 +66,7 @@ public class Recognizer {
         acceptItem=cfg.getDouble("OPTION.ACCEPTITEM",0.1);
         itemFile=cfg.getString("OUT.ITEMSFOUND","itemsFound.txt");
         maybeFile = cfg.getString("OUT.MAYBE","maybe.txt");
+        samples=cfg.getInteger("OPTION.SAMPLES",100);
         db=new DBaccess(cfg);
         this.ds=ds;
         init(cfg);        
@@ -215,8 +222,9 @@ public class Recognizer {
     public void doTheRecogBoogie() throws Exception {
         SatzDatasource src=getSatzDatasource();
         int bspnr=startNr;
-        //String text = "Müller, Huber, Seifert, Bodden, Abel, Schnoor und ich.";
-        String text = "Prof. Dr. Dr. Georg Freiherr von Salis Soglio ist ein ziemlich langer Name.";
+        String text = "";
+        int numOfSentences=src.getNumOfSentences();
+        initTimeEstimator(numOfSentences);
         
         while(!(text.equals("END"))) {
             if(Thread.currentThread().isInterrupted()) {
@@ -224,37 +232,52 @@ public class Recognizer {
                 SentenceFetcher.stopThread();
                 return;
             }
+            text=src.getNextSentence();
             rules.resetRules(); 
             
             NameTable Kandidaten=textProc.getCandidatesOfText(text,rules);
             if(Kandidaten.size() > 0) {
                 System.out.println(bspnr+": "+text);
                 System.out.println(Kandidaten.toString());
-                itemrec.addTask(Kandidaten);
+                itemrec.addTask(Kandidaten,text);
             }            
             bspnr++;
-            text=src.getNextSentence();
+            est.unitCompleted();
+            if(bspnr%samples==0)
+                RecognizerPanel.getInstance().setStatus("Stage 1: Time remaining till sentences scanned: "+ProcessEstimator.getTimeString(est.projectedTimeRemaining()/1000));
         } 
-        int samples=cfg.getInteger("OPTION.SAMPLES",100);
-        itemrec.waitTillJobsDone(samples);
+        itemrec.waitTillJobsDone(samples,"Stage 2: Estimated time till verification completed: ");
         System.out.println("verification done!");
     }
     
+
+    private void initTimeEstimator(int numOfSentences) {
+        if(est!=null){
+            est.stop();
+        }
+        est=new ProcessEstimator(numOfSentences,samples);
+        est.start();
+    }
 
     /**
      * @throws Exception
      */
     public void runNERecognition() throws Exception {
         SatzDatasource src=getSatzDatasource();
+        initTimeEstimator(src.getNumOfSentences());
         String text=src.getNextSentence();
         System.out.println("reviewing sentences for NEs....");
-        
+        int i=0;
         while(!(text.equals("END"))) {
+            i++;
             itemrec.addTask(text);
-            text=src.getNextSentence();            
+            text=src.getNextSentence();      
+            est.unitCompleted();
+            if(i%samples==0)
+                RecognizerPanel.getInstance().setStatus("Stage 3: Time remaining till sentences scanned for NEs: "+ProcessEstimator.getTimeString(est.projectedTimeRemaining()/1000));
         }
         int samples=cfg.getInteger("OPTION.SAMPLES",100);
-        itemrec.waitTillJobsDone(samples);
+        itemrec.waitTillJobsDone(samples,"Stage 4: Estimated time till NE recognition completed: ");
         System.out.println("NE recognition done!");
     }
 
@@ -291,9 +314,12 @@ public class Recognizer {
 
     /**
      * @param table
+     * @param sentence 
      */
-    public void addWissen(NameTable table) {
+    public void addWissen(NameTable table, String sentence) {
         allesWissen.putAll(table);
+        setChanged();
+        notifyObservers(new Object[]{table,sentence});
     }
 
     /**

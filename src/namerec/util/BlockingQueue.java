@@ -18,6 +18,8 @@ package namerec.util;
  
 import java.util.LinkedList;
 
+import namerec.gui.RecognizerPanel;
+
 
 public class BlockingQueue 
 {
@@ -122,12 +124,11 @@ public class BlockingQueue
 
     private int oldsize=-1, oldmod=-1;
     
-    public synchronized void waitTillEmpty(int samples) {
+    public synchronized void waitTillEmpty(int samples, String prefix) {
         ProcessEstimator est=null;
         while( !empty() ) {
             int aktsize=size();
             if(est==null) {
-                System.out.println("using timestimator for "+aktsize+" units, outputting time every "+samples+" samples");
                 est=new ProcessEstimator(aktsize,samples);
                 est.start();
                 oldsize=aktsize;
@@ -136,7 +137,7 @@ public class BlockingQueue
             est.unitsCompleted(oldsize-aktsize);
             oldsize=aktsize;
             if(oldmod > aktsize/samples) {
-                System.out.println("Estimated time till verification completed: "+getTimeString(est.projectedTimeRemaining()/1000));
+                RecognizerPanel.getInstance().setStatus(prefix+ProcessEstimator.getTimeString(est.projectedTimeRemaining()/1000));
                 oldmod=aktsize/samples;
             }
             try {
@@ -147,17 +148,6 @@ public class BlockingQueue
         notifyAll();
     }
 
-    /**
-     * @param l
-     * @return
-     */
-    private String getTimeString(long timesec) {
-        StringBuffer sb=new StringBuffer(9);
-        long hours=timesec/3600;
-        long mins=(timesec-(hours*3600))/60;
-        long secs=(timesec-(hours*3600)-(mins*60));
-        sb.append(timesec).append("s -> ").append(hours).append(":").append(mins).append(":").append(secs);
-        return sb.toString();
-    }    
+
 
 }

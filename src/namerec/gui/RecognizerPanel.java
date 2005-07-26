@@ -8,50 +8,48 @@
 package namerec.gui;
 
 import java.awt.Color;
-import java.awt.Component;
-import java.awt.Container;
 import java.awt.Cursor;
 import java.awt.Dimension;
+import java.awt.EventQueue;
 import java.awt.Insets;
 import java.awt.Rectangle;
-import java.awt.ScrollPane;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.PrintStream;
-import java.lang.reflect.InvocationTargetException;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Enumeration;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
-import javax.swing.AbstractButton;
 import javax.swing.BorderFactory;
 import javax.swing.Icon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
 import javax.swing.JScrollPane;
+import javax.swing.JSpinner;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.JTextPane;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.border.TitledBorder;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.AttributeSet;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyleContext;
 
 import namerec.FileDataSource;
 import namerec.MatcherNam;
@@ -65,15 +63,13 @@ import namerec.util.SwingWorker;
 
 import com.biemann.pendel.Pendel;
 import com.biemann.pendel.Watcher;
-import com.bordag.klf.util.StringUtils;
 
 import de.wortschatz.WortschatzModul;
 import de.wortschatz.WortschatzTool;
-import javax.swing.JSpinner;
-import javax.swing.JTextArea;
 
 
 public class RecognizerPanel extends WortschatzModul {
+    private static RecognizerPanel instance;
     NameTable inItemsNameTable = new NameTable();
     NameTable inItemsBackNameTable = new NameTable();
     NameTable regexpNameTable = new NameTable();
@@ -198,7 +194,7 @@ public class RecognizerPanel extends WortschatzModul {
     private JLabel jLabel3 = null;
     private JSpinner samplesSpinner = null;
     private JPanel runnerPanel = null;
-    private JTextArea textArea = null;
+    private JTextPane textArea = null;
     private JButton startButton = null;
     private JLabel jLabel4 = null;
     private JTextField sentenceTf = null;
@@ -210,13 +206,15 @@ public class RecognizerPanel extends WortschatzModul {
     private JButton fileSourceButton = null;
     private JButton runFileDatasourceButton = null;
     private JCheckBox runNECb = null;
-	private JScrollPane jScrollPane = null;
-	private KlassTagPanel klassTagPanel = null;
-	private JButton jButton = null;
+    private JTextField jProgressBar = null;
+    private JButton jButton;
+    private KlassTagPanel klassTagPanel;
+    private JScrollPane jScrollPane;
     //Frame konstruieren
     public RecognizerPanel(WortschatzTool wTool)
     {
         super(wTool);
+        RecognizerPanel.instance=this;
         try
         {
             jbInit();
@@ -1706,6 +1704,7 @@ public class RecognizerPanel extends WortschatzModul {
     		runnerPanel.add(getFileSourceButton(), null);
     		runnerPanel.add(getRunFileDatasourceButton(), null);
     		runnerPanel.add(getRunNECb(), null);
+    		runnerPanel.add(getStatusBar(), null);
     		runnerPanel.add(getJButton(), null);
     	}
     	return runnerPanel;
@@ -1722,9 +1721,9 @@ public class RecognizerPanel extends WortschatzModul {
      * 	
      * @return javax.swing.JTextArea	
      */    
-    private JTextArea getTextArea() {
+    private JTextPane getTextArea() {
     	if (textArea == null) {
-    		textArea = new JTextArea();
+    		textArea = new JTextPane();
             textArea.setEditable(false);
     		//textArea.setPreferredSize(new java.awt.Dimension(500,400));
     		textArea.setBounds(17, 5, 625, 400);
@@ -1732,6 +1731,7 @@ public class RecognizerPanel extends WortschatzModul {
     	}
     	return textArea;
     }
+    
     /**
      * This method initializes startButton	
      * 	
@@ -1794,6 +1794,9 @@ public class RecognizerPanel extends WortschatzModul {
                                 return sentenceTf.getText();
                             }
                             return "END";
+                        }
+                        public int getNumOfSentences() {
+                            return 1;
                         }                        
                     };
                     doTheCalculation(cfg, ds);
@@ -1812,6 +1815,7 @@ public class RecognizerPanel extends WortschatzModul {
                 try {
                     rec = new Recognizer(cfg,ds);
                     enableStopButton(Thread.currentThread());
+                    rec.addObserver(getObserver());
                     rec.doTheRecogBoogie();
                     if(cfg.getBoolean("OPTION.NERECOG",false))
                         rec.runNERecognition();
@@ -1820,6 +1824,15 @@ public class RecognizerPanel extends WortschatzModul {
                 }
                 return rec;
             }
+            private Observer getObserver() {
+                return new Observer(){
+                    public void update(Observable o, Object arg) {
+                        Object[] arr=(Object[]) arg;
+                        outputColoredSentence((NameTable)arr[0],(String)arr[1]);
+                    }
+                   
+                };
+            }
             public void finished() {
                 RecognizerPanel.this.setCursor(Cursor.getDefaultCursor());
                 getJButton().setEnabled(false);
@@ -1827,7 +1840,7 @@ public class RecognizerPanel extends WortschatzModul {
         };
         sw.start();
     }
-    protected void enableStopButton(final Thread t) {
+        protected void enableStopButton(final Thread t) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 getJButton().setEnabled(true);
@@ -1841,13 +1854,35 @@ public class RecognizerPanel extends WortschatzModul {
             }
         });
     }
+
+    private void outputColoredSentence(NameTable table, String string) {
+        JTextPane p=getTextArea();
+        StringTokenizer st=new StringTokenizer(string," \t\n.,:;!?-/\\",true);
+        while (st.hasMoreTokens()) {
+            String s=st.nextToken();
+            if(table.containsKey(s)){
+                append(p,Color.RED,s);
+            }else
+                append(p,Color.BLACK,s);
+        }
+    }
+    private void append(JTextPane p,Color c, String s) { // better implementation--uses
+        // StyleContext
+        StyleContext sc = StyleContext.getDefaultStyleContext();
+        AttributeSet aset = sc.addAttribute(SimpleAttributeSet.EMPTY,
+            StyleConstants.Foreground, c);
+
+        int len = p.getDocument().getLength(); // same value as
+                           // getText().length();
+        p.setCaretPosition(len); // place caret at the end (with no selection)
+        p.setCharacterAttributes(aset, false);
+        p.replaceSelection(s); // there is no selection, so inserts at caret
+      }
     protected void redirectSysOut() throws IOException {
         final BufferedWriter bw=new BufferedWriter(new FileWriter(fileOutLogPane.getText(),true));
         bw.write("########### new start: "+new Date());
         PrintStream ps =  new PrintStream(System.out) {
             public void println(String x) {
-                getTextArea().append(x);
-                getTextArea().append("\n");
                 try {
                     bw.write(x);
                     bw.write("\n");
@@ -1856,12 +1891,11 @@ public class RecognizerPanel extends WortschatzModul {
                 getTextArea().setCaretPosition(getTextArea().getText().length() - 1);
             }
             public void print(String x) {
-                getTextArea().append(x);
                 try {
                     bw.write(x);
                 } catch (IOException e) {
                 }
-                getTextArea().setCaretPosition(getTextArea().getText().length() - 1);
+                //getTextArea().setCaretPosition(getTextArea().getText().length() - 1);
             }
         };
         System.setOut(ps);
@@ -1938,6 +1972,33 @@ public class RecognizerPanel extends WortschatzModul {
     		runNECb.setText("run NE recognition afterwards");
     	}
     	return runNECb;
+    }
+    /**
+     * This method initializes jProgressBar	
+     * 	
+     * @return javax.swing.JProgressBar	
+     */
+    private JTextField getStatusBar() {
+        if (jProgressBar == null) {
+            jProgressBar = new JTextField();
+            jProgressBar.setEditable(false);
+            jProgressBar.setBounds(new java.awt.Rectangle(17,365,612,23));
+        }
+        return jProgressBar;
+    }
+    public static RecognizerPanel getInstance() {
+        return instance;
+    }
+    public void setStatus(final String string) {
+        if(EventQueue.isDispatchThread()){
+            getStatusBar().setText(string);
+        }else{
+            SwingUtilities.invokeLater(new Runnable(){
+                public void run() {
+                    getStatusBar().setText(string);
+                }
+            });
+        }
     }
     
     
