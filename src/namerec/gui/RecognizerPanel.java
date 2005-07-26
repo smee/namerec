@@ -207,9 +207,6 @@ public class RecognizerPanel extends WortschatzModul {
     private JButton runFileDatasourceButton = null;
     private JCheckBox runNECb = null;
     private JTextField jProgressBar = null;
-    private JButton jButton;
-    private KlassTagPanel klassTagPanel;
-    private JScrollPane jScrollPane;
     //Frame konstruieren
     public RecognizerPanel(WortschatzTool wTool)
     {
