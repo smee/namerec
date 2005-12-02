@@ -56,6 +56,7 @@ public class ProcessEstimator {
      * @return
      */
     public static String getTimeString(long timesec) {
+        timesec=Math.max(timesec,0);
         StringBuffer sb=new StringBuffer(9);
         long hours=timesec/3600;
         long mins=(timesec-(hours*3600))/60;

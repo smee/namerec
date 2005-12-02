@@ -1744,6 +1744,7 @@ public class RecognizerPanel extends WortschatzModul {
             startButton.addActionListener(new java.awt.event.ActionListener() { 
                 public void actionPerformed(java.awt.event.ActionEvent e) {    
                     Config cfg=getConfigFromGui();
+                    setStatus("Stage 0: initializing");
                     doTheCalculation(cfg, null);
                 }
             });
@@ -1861,10 +1862,15 @@ public class RecognizerPanel extends WortschatzModul {
         while (st.hasMoreTokens()) {
             String s=st.nextToken();
             Object val=table.get(s);
-            if(val!=null && (val.equals("VN") || val.equals("NN") || val.equals("TIT"))){//XXX sollten eigentlich Zielklassen spezifiziert werden koennen
-                append(p,Color.RED,s);
-            }else
-                append(p,Color.BLACK,s);
+            if(val!=null) {
+                if((val.equals("VN") || val.equals("NN") || val.equals("TIT"))){//XXX sollten eigentlich Zielklassen spezifiziert werden koennen
+                    append(p,Color.RED,s);
+                }else
+                    append(p,Color.BLACK,s);
+                append(p,Color.gray,"{");
+                append(p,Color.gray,val.toString());
+                append(p,Color.gray,"}");
+            }
         }
         append(p,Color.BLACK,"\n");
     }

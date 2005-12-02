@@ -7,7 +7,6 @@ import java.util.Iterator;
 import java.util.Observable;
 import java.util.Vector;
 
-import org.apache.commons.math.stat.descriptive.moment.FirstMoment;
 
 import namerec.gui.RecognizerPanel;
 import namerec.util.Config;
