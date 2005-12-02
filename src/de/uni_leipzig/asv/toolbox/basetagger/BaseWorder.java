@@ -8,7 +8,7 @@
  */
 
 
-package basetagger;
+package de.uni_leipzig.asv.toolbox.basetagger;
 
 
 
